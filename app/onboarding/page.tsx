@@ -9,18 +9,18 @@ import { completeOnboarding } from './actions'
 import type { QuizAnswers } from '@/lib/difficultyEngine'
 
 const MOTIVATIONS = [
-  { id: 'productivity', emoji: '\u26A1', label: 'Be more productive at work' },
+  { id: 'productivity', emoji: '⚡', label: 'Be more productive at work' },
   { id: 'career',       emoji: '🚀', label: 'Career advancement' },
   { id: 'keep-up',      emoji: '📡', label: 'Keep up with industry changes' },
-  { id: 'build-tools',  emoji: '🛠\uFE0F', label: 'Build AI-powered tools or workflows' },
+  { id: 'build-tools',  emoji: '🛠', label: 'Build AI-powered tools or workflows' },
   { id: 'lead',         emoji: '🎯', label: 'Lead AI initiatives on my team' },
   { id: 'curiosity',    emoji: '🔍', label: 'Personal curiosity' },
   { id: 'other',        emoji: '💡', label: 'Other' },
 ]
 
 const GOALS = [
-  { id: 'prompts',   emoji: '\u270D\uFE0F', label: 'Write effective prompts' },
-  { id: 'projects',  emoji: '\u2699\uFE0F', label: 'Set up AI projects and workflows' },
+  { id: 'prompts',   emoji: '✍️', label: 'Write effective prompts' },
+  { id: 'projects',  emoji: '⚙️', label: 'Set up AI projects and workflows' },
   { id: 'confident', emoji: '🤝', label: 'Use Claude or ChatGPT confidently' },
   { id: 'automate',  emoji: '🔄', label: 'Automate repetitive tasks' },
   { id: 'custom',    emoji: '🧩', label: 'Build custom AI tools' },
@@ -501,11 +501,43 @@ function StepInterests({ selected, onToggle }: { selected: string[]; onToggle: (
   const secondaryColor = useColorModeValue('#6B7280', '#9CA3AF')
   const cardBg = useColorModeValue('#FFFFFF', '#1A1A1A')
   const unselectedBorder = useColorModeValue('#E5E7EB', '#2D2D2D')
+  const overviewBg = useColorModeValue('#F9FAFB', '#161616')
+  const overviewBorder = useColorModeValue('#E5E7EB', '#2D2D2D')
+  const pillBg = useColorModeValue('#F3F4F6', '#2D2D2D')
+  const pillColor = useColorModeValue('#374151', '#D1D5DB')
 
   return (
     <Box display="flex" flexDirection="column" gap={5} pt={2}>
-      <StepHeader emoji="🗺\uFE0F" heading="What do you want to learn?" sub="You can always change this later." />
-      <Box display="flex" flexDirection="column" gap={3}>
+      {/* Header */}
+      <Box>
+        <Text fontSize="24px" fontWeight="bold" color={primaryColor} lineHeight="tight" mb={1}>
+          Pick your first track
+        </Text>
+        <Text fontSize="15px" color={secondaryColor}>You can always switch or add more later.</Text>
+      </Box>
+
+      {/* How it works */}
+      <Box borderRadius="xl" border="1px solid" borderColor={overviewBorder} bg={overviewBg} p={4} display="flex" flexDirection="column" gap={3}>
+        <Text fontSize="12px" fontWeight="bold" textTransform="uppercase" letterSpacing="widest" color={secondaryColor}>
+          How AI Fluency works
+        </Text>
+        <Flex gap={3}>
+          {[
+            { icon: '📖', label: 'Bite-sized lessons', desc: '5–10 min each' },
+            { icon: '✍️', label: 'Hands-on exercises', desc: 'AI grades your work' },
+            { icon: '🔁', label: 'Daily review', desc: 'Spaced repetition' },
+          ].map(item => (
+            <Box key={item.label} flex={1} display="flex" flexDirection="column" alignItems="center" textAlign="center" gap={1}>
+              <Text fontSize="22px" lineHeight={1}>{item.icon}</Text>
+              <Text fontSize="11px" fontWeight="semibold" color={primaryColor} lineHeight="snug">{item.label}</Text>
+              <Text fontSize="11px" color={secondaryColor}>{item.desc}</Text>
+            </Box>
+          ))}
+        </Flex>
+      </Box>
+
+      {/* Track cards — compact horizontal layout */}
+      <Box display="flex" flexDirection="column" gap={2}>
         {INTEREST_AREAS.map(area => {
           const isSelected = selected.includes(area.id)
           const maxReached = selected.length >= 3 && !isSelected
@@ -516,49 +548,55 @@ function StepInterests({ selected, onToggle }: { selected: string[]; onToggle: (
               onClick={() => !maxReached && onToggle(area.id)}
               disabled={maxReached}
               textAlign="left"
-              borderRadius="2xl"
+              borderRadius="xl"
               overflow="hidden"
               border="2px solid"
               borderColor={isSelected ? '#E8601C' : unselectedBorder}
+              bg={cardBg}
               transition="all 0.15s"
               opacity={maxReached ? 0.5 : 1}
               cursor={maxReached ? 'not-allowed' : 'pointer'}
+              display="flex"
+              alignItems="stretch"
             >
-              <Box p={5} position="relative" style={{ background: area.gradient }}>
-                {isSelected && (
-                  <Box
-                    position="absolute"
-                    top={3}
-                    right={3}
-                    h={6}
-                    w={6}
-                    borderRadius="full"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    style={{ background: 'rgba(255,255,255,0.3)', backdropFilter: 'blur(4px)' }}
-                  >
-                    <svg style={{ height: '14px', width: '14px', color: 'white' }} fill="currentColor" viewBox="0 0 20 20">
+              {/* Color bar + emoji */}
+              <Box
+                w="56px"
+                flexShrink={0}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                style={{ background: area.gradient }}
+              >
+                <Text fontSize="22px" lineHeight={1}>{area.emoji}</Text>
+              </Box>
+
+              {/* Content */}
+              <Box flex={1} px={3} py="12px" display="flex" flexDirection="column" gap="4px}>
+                <Text fontSize="14px" fontWeight="semibold" color={isSelected ? '#E8601C' : primaryColor} lineHeight="snug">
+                  {area.title}
+                </Text>
+                <Text fontSize="12px" color={secondaryColor} lineHeight="snug">{area.desc}</Text>
+                <Flex gap="4px" mt={1} flexWrap="wrap">
+                  {area.bullets.map(b => (
+                    <Box key={b} px="6px" py="2px" borderRadius="full" bg={pillBg} fontSize="10px" color={pillColor}>
+                      {b}
+                    </Box>
+                  ))}
+                </Flex>
+              </Box>
+
+              {/* Checkmark */}
+              <Box w="40px" flexShrink={0} display="flex" alignItems="center" justifyContent="center">
+                {isSelected ? (
+                  <Box h={5} w={5} borderRadius="full" bg="#E8601C" display="flex" alignItems="center" justifyContent="center">
+                    <svg style={{ height: '11px', width: '11px', color: 'white' }} fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </Box>
+                ) : (
+                  <Box h={5} w={5} borderRadius="full" border="2px solid" borderColor={unselectedBorder} />
                 )}
-                <Text fontSize="40px" mb={2}>{area.emoji}</Text>
-                <Text fontSize="11px" fontWeight="bold" color="whiteAlpha.700" textTransform="uppercase" letterSpacing="widest" mb={1}>Course</Text>
-                <Text fontSize="18px" fontWeight="bold" color="white" lineHeight="snug">{area.title}</Text>
-              </Box>
-              <Box bg={cardBg} px={4} py={3} display="flex" flexDirection="column" gap={2}>
-                <Text fontSize="sm" color={secondaryColor}>{area.desc}</Text>
-                <Box as="ul" display="flex" flexDirection="column" gap={1} listStyleType="none">
-                  {area.bullets.map(b => (
-                    <Flex key={b} alignItems="center" gap={2} fontSize="xs" color={primaryColor}>
-                      <svg style={{ height: '14px', width: '14px', color: '#059669', flexShrink: 0 }} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {b}
-                    </Flex>
-                  ))}
-                </Box>
               </Box>
             </Box>
           )
@@ -578,7 +616,7 @@ function StepTimeCommitment({ selected, onSelect }: { selected: string; onSelect
 
   return (
     <Box display="flex" flexDirection="column" gap={5} pt={2}>
-      <StepHeader emoji="\u23F1\uFE0F" heading="How much time do you want to spend learning?" sub="You can always change this goal later." />
+      <StepHeader emoji="⏱" heading="How much time do you want to spend learning?" sub="You can always change this goal later." />
       <Box display="flex" flexDirection="column" gap={2}>
         {TIME_OPTIONS.map(opt => {
           const isSelected = selected === opt.id
@@ -669,7 +707,7 @@ function StepLoading() {
 
       <Box>
         <Text fontSize="22px" fontWeight="bold" color={primaryColor} mb={2}>
-          Building your learning path\u2026
+          Building your learning path…
         </Text>
         <Text fontSize="15px" color={secondaryColor}>Personalizing your curriculum</Text>
       </Box>
@@ -758,7 +796,7 @@ function StepRecommendation({
     >
       <Box display="flex" flexDirection="column" gap={5} pt={2} pb={8}>
         <Box>
-          <Text fontSize="sm" fontWeight="semibold" color="#E8601C" mb={1}>Your learning path is ready \u2713</Text>
+          <Text fontSize="sm" fontWeight="semibold" color="#E8601C" mb={1}>Your learning path is ready ✓</Text>
           <Text fontSize="26px" fontWeight="bold" color={primaryColor} lineHeight="tight">
             We recommend starting here
           </Text>

@@ -398,7 +398,7 @@ export function LessonClient({ lesson }: LessonClientProps) {
         <Box
           position="fixed"
           bottom={0}
-          left={0}
+          left={{ base: 0, lg: '240px' }}
           right={0}
           zIndex={20}
           bg={bgColor}
@@ -424,7 +424,7 @@ export function LessonClient({ lesson }: LessonClientProps) {
               _hover={{ opacity: 0.9 }}
               style={{ backgroundColor: trackColor }}
             >
-              {currentSection < total - 1 ? 'Continue \u2192' : 'Finish lesson \u2192'}
+              {currentSection < total - 1 ? 'Continue →' : 'Finish lesson →'}
             </Box>
           </Box>
         </Box>
