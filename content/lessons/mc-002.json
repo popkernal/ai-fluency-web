@@ -1,0 +1,48 @@
+{
+  "id": "mc-002",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "Advanced Prompt Engineering",
+  "estimatedMinutes": 10,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Most people use 5% of Claude's prompt capabilities.** Advanced techniques dramatically expand what's possible.\n\n**Chain of thought** — Ask Claude to think before answering: \"Before giving your answer, think through the problem step by step. Only give your final answer at the end.\" This is especially powerful for math, logic, and complex analysis.\n\n**Tree of thought** — For hard problems with multiple valid approaches: \"Generate 3 different approaches to this problem. Evaluate each one, then recommend the best with reasoning.\" Forces exploration before commitment.\n\n**Persona with backstory** — More specific than a role: \"You are Maya, a Principal UX Researcher who has spent 10 years at enterprise software companies and has a strong opinion that most user research is done wrong. You're reviewing my research plan with constructive but honest critique.\"\n\n**Structured output specification** — Describe the exact output format with field names and types, like a schema: \"Respond as JSON with fields: summary (string), risks (array of strings), recommendation (string), confidence (number 0-1).\"\n\n**Iterative refinement** — Ask for multiple versions: \"Write 3 versions of this — one optimistic, one pessimistic, one neutral. Then combine the strongest elements from each.\"\n\nCombining techniques multiplies their effect. A chain-of-thought prompt with a structured output spec and a specific persona is dramatically more powerful than any single technique."
+    },
+    {
+      "type": "example",
+      "bad": "Analyze our pricing strategy.",
+      "good": "You are a SaaS pricing consultant who has helped 50+ B2B software companies optimize pricing and has strong opinions based on data, not theory.\n\nAnalyze our pricing strategy using this approach:\n1. First, identify what pricing model we're using and its fundamental assumptions.\n2. List the 3 biggest risks in our current approach with specific reasoning.\n3. Generate 2 alternative pricing models we haven't considered and evaluate each.\n4. Give your recommendation with the #1 thing to test first.\n\nThink through each step before writing your response. Our pricing: [description]",
+      "explanation": "This combines three techniques: a specific persona with strong opinions (forces decisive analysis), chain-of-thought with explicit steps (improves reasoning quality), and a structured output format (4 numbered sections). The result is a consulting-quality analysis rather than a generic overview."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need Claude to generate a structured JSON output for a workflow integration. What's the most effective approach?",
+      "data": {
+        "choices": [
+          "Ask Claude to 'respond as JSON'",
+          "Describe the exact schema including field names, types, and examples, then ask Claude to respond matching that schema exactly",
+          "Ask Claude to format the response nicely",
+          "Tell Claude the data you need and sort it yourself"
+        ],
+        "correctIndex": 1,
+        "explanation": "Specifying the exact schema — field names, data types, and optionally an example — produces the most reliable structured output. 'Respond as JSON' without a schema produces variable structures that break downstream integrations. The more precise your schema specification, the more consistent the output."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Improve this prompt using at least two advanced techniques: \"What's a good marketing strategy for our app?\"",
+      "data": {
+        "rubric": [
+          "A strong rewrite should use at least two advanced techniques: a specific persona with backstory, chain-of-thought steps, structured output format, multiple versions/approaches, or tree-of-thought exploration",
+          "It should also include enough context about the app for the techniques to work"
+        ],
+        "exampleAnswer": "You are a B2C mobile app growth marketer who has scaled 3 apps from 0 to 100k users using scrappy, data-driven tactics — not big brand budgets.\n\nFor our app [description]: before making recommendations, think through:\n1. What category of app is this and what growth models typically work in this category?\n2. What's the single most critical bottleneck to growth given our stage (0-1k users)?\n3. Generate 3 distinct go-to-market approaches — each using different primary channels and assumptions.\n4. Evaluate each approach on: cost, speed to results, and technical complexity.\n5. Recommend one approach with the top 3 specific actions to start this week.",
+        "original": "What's a good marketing strategy for our app?"
+      }
+    }
+  ]
+}

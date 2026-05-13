@@ -1,0 +1,47 @@
+{
+  "id": "mk-005",
+  "trackId": "mk",
+  "streamId": "role-tracks",
+  "title": "Analyze Your Audience",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**From Raw Feedback to Audience Intelligence**\n\nYour customers are telling you exactly what they need, what's frustrating them, and what they'd pay more for. It's buried in NPS comments, reviews, support tickets, survey responses, and social mentions. The bottleneck isn't access to feedback — it's finding the patterns in thousands of unstructured data points.\n\nAI synthesizes this type of qualitative data faster than any other tool available to marketers — and it's surprisingly good at surfacing themes you weren't looking for.\n\n**Where to find the raw material:**\n- NPS survey open-text responses\n- G2, Capterra, or App Store reviews\n- Support ticket subject lines and first messages\n- Post-purchase survey responses\n- Lost deal notes from your sales CRM\n- Social comments and mentions\n\n**The synthesis workflow:**\n1. Export or collect 50–200 raw data points (more is better)\n2. Paste in batches and ask AI to identify recurring themes — include direct quotes as evidence\n3. Ask AI specifically for negative themes separately from positive — they require different treatment\n4. Ask what's missing: what do customers want that they're not getting?\n5. Ask for \"signal vs. noise\" assessment: which themes appear frequently vs. which are vivid but isolated\n\n**What to do with the output:**\nAI-synthesized themes are hypotheses, not facts. Use them to guide where you do deeper investigation — whether that's a follow-up survey, a customer call, or a sales conversation. Never make major strategic decisions from synthesized feedback alone without validating the patterns."
+    },
+    {
+      "type": "example",
+      "bad": "Here are some customer reviews. What do customers think?",
+      "good": "I've collected 80 G2 reviews for our project management tool from the past 6 months. I'll paste them in batches below.\n\nPlease synthesize them with the following structure:\n1. **Top 4 positive themes** — what customers consistently love. Include 1–2 direct quotes per theme.\n2. **Top 4 negative themes / pain points** — what customers consistently criticize or wish were different. Include 1–2 direct quotes per theme.\n3. **Unmet needs** — things customers say they want but don't have. These are often phrased as 'I wish it could...' or 'the one thing missing is...'.\n4. **Competitive mentions** — any tools customers compare us to (positively or negatively).\n5. **Signal vs. noise** — which themes appear in many reviews vs. which are mentioned by only 1–2 reviewers but feel significant?\n\nReviews: [paste reviews]",
+      "explanation": "The vague prompt produces a vague summary. The structured prompt asks for five specific outputs and includes the key instruction to separate signal from noise — which is where most synthesis fails. Vivid one-off complaints feel important and can bias strategy if they're not identified as outliers."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to synthesize customer feedback from a real or plausible feedback source (NPS responses, reviews, support tickets, or survey data). Include enough context that AI can produce structured, actionable insights rather than a generic summary.",
+      "data": {
+        "rubric": [
+          "Strong prompts specify: the source of the feedback (type, quantity, time period), the product or service being reviewed, specific output structure requested (positive themes, negative themes, unmet needs, competitive mentions), a request for direct quotes as evidence, and a signal/noise check",
+          "Weak prompts paste feedback and ask 'what do customers think?' without structure"
+        ],
+        "exampleAnswer": "I've collected 120 post-purchase survey responses from customers who bought our online course on financial modeling in the last 3 months. The survey had one open-text question: 'What would make this course better or more valuable?' I'll paste the responses below.\n\nPlease synthesize into:\n1. **Top recurring improvement requests** (4–5 themes): What do customers most consistently say they want added, changed, or improved? Include 1–2 representative quotes per theme.\n2. **Positive mentions** (even though it's an improvement question, note any praise that appears frequently)\n3. **Unmet needs that suggest new products or upsells** — are customers asking for something we don't offer yet?\n4. **Signal vs. noise** — identify which themes appear in 15+ responses vs. which are mentioned by only 1–3 people\n5. **One recommended action** — based purely on the frequency and strength of the themes, what single change would most improve customer satisfaction?\n\nResponses: [paste responses]"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "AI synthesizes 200 customer reviews and identifies 'lack of mobile app' as the #1 theme. Your team takes this directly to leadership as a strategic priority. What step was skipped?",
+      "data": {
+        "choices": [
+          "The reviews should have been translated before analysis",
+          "Validating whether this theme represents your target segment or a segment you don't want to serve",
+          "Running the synthesis through a second AI tool to confirm the findings",
+          "Getting legal review before using customer review data"
+        ],
+        "correctIndex": 1,
+        "explanation": "Synthesized feedback tells you what people are saying — it doesn't tell you which people. 'Lack of mobile app' might be a dominant theme because reviewers skew toward a demographic or use case that doesn't match your target segment. Before elevating an AI-synthesized theme to a strategic priority, validate: are these the customers you want to serve? Do the customers who churn mention this? Do your best customers mention this? AI synthesis surfaces patterns — your judgment determines which patterns matter."
+      }
+    }
+  ]
+}

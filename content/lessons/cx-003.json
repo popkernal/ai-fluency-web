@@ -1,0 +1,47 @@
+{
+  "id": "cx-003",
+  "trackId": "cx",
+  "streamId": "role-tracks",
+  "title": "Turn Feedback Into Insights",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**From Feedback Volume to Actionable Themes**\n\nCustomer feedback is one of the richest sources of product and service intelligence available — and one of the most underused. Support teams see patterns in the tickets they handle. But translating those patterns into actionable insights that reach product, operations, or leadership teams requires synthesis work that rarely gets done.\n\nAI makes feedback synthesis fast enough to become a regular practice rather than a quarterly exercise.\n\n**The types of feedback worth synthesizing:**\n- NPS open-text responses (especially detractors)\n- Support ticket categories and recurring themes\n- Post-support CSAT survey comments\n- App store and review site comments\n- Cancellation survey responses (\"why are you leaving?\")\n\n**What good synthesis produces:**\n- Recurring themes (with frequency — how many customers mentioned this?)\n- Representative quotes for each theme (for use in product pitches or leadership reports)\n- Emerging themes that weren't present in the previous period\n- Severity signal: is this causing churn? Or is it a mild annoyance?\n- Actionable \"if we fixed X, the feedback suggests Y would improve\"\n\n**The crucial step after synthesis:**\nAI-synthesized themes are hypotheses about what matters to customers. Before acting on them, validate: do your highest-value customers (by revenue or lifetime value) mention these themes? Or is the volume driven by a segment you're not focused on? A complaint that appears in 40% of feedback may matter less than a complaint that appears in 80% of your enterprise customer feedback.\n\n**Regular cadence:**\nMonthly synthesis of support themes, shared with product and ops, turns customer support from a cost center into a product intelligence function."
+    },
+    {
+      "type": "example",
+      "bad": "Here are 50 customer feedback comments. What are customers saying?",
+      "good": "I've collected 80 post-support survey comments from customers who rated their support experience 3/5 or below (dissatisfied customers) in the last month. Here they are: [paste comments].\n\nPlease synthesize them with the following structure:\n1. **Top 4 recurring themes** — what are dissatisfied customers most often frustrated about? For each theme, include: a description, an estimate of how many comments mention it, and 2 representative quotes.\n2. **Is the problem the support interaction or the underlying product/feature?** For each theme, indicate whether customers seem frustrated by the support response itself or by an underlying product issue that support can't fix.\n3. **Severity signal** — are any of these themes associated with customers saying they'll leave or have already left?\n4. **One thing we could change in our support process** — based on the themes that are about the support interaction (not the product), what's the most common improvable failure point?\n5. **One thing worth bringing to the product team** — which product-related theme appears most consistently and has the strongest language (suggesting it's causing real pain)?",
+      "explanation": "The vague prompt produces a vague summary. The structured prompt targets dissatisfied customers specifically, asks AI to distinguish between support failures and product failures (a critical distinction for routing feedback correctly), asks for severity signals, and asks for two actionable outputs: one for the support team and one for the product team. This is the kind of synthesis that actually drives change."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to synthesize customer feedback from a support queue, NPS responses, or review site for your product or service. Design the output to be immediately useful for both the CX team and the product or operations team.",
+      "data": {
+        "rubric": [
+          "Strong prompts specify: the feedback source and volume, the customer segment (all customers, or a filtered group like detractors or churned customers), a structured output format (themes with frequency and quotes), a request to distinguish support failures from product or process failures, a severity or churn signal, and at least one actionable recommendation",
+          "Weak prompts paste feedback and ask for a summary without structure"
+        ],
+        "exampleAnswer": "I've collected 60 cancellation survey responses from customers who churned in the last 30 days. The survey question was: 'What was the primary reason you decided to cancel?' I'll paste the responses below.\n\nPlease synthesize with this structure:\n1. **Top 5 cancellation reasons** — ranked by frequency. For each: a 1–2 sentence description, the estimated number of responses mentioning it, and 2 direct quotes.\n2. **Product vs. commercial vs. experience reasons** — categorize each theme: is it a product gap, a pricing/value issue, or a support/experience failure?\n3. **Recoverable vs. unrecoverable churn** — for each theme, is this a reason we could have prevented with a different intervention (proactive outreach, a feature, a price exception)? Or was this customer unlikely to stay regardless?\n4. **Early warning signals** — based on the language, are there any signs these customers showed before canceling that could be monitored proactively?\n5. **One recommendation each for:** (a) the CX team — something we can start doing immediately, (b) the product team — the feature or fix most likely to prevent this type of churn.\n\nResponses: [paste responses]"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "AI synthesizes 200 NPS comments and identifies 'slow loading times' as the most frequently mentioned complaint. What should you do before escalating this to the engineering team?",
+      "data": {
+        "choices": [
+          "Escalate immediately — frequency in NPS data is sufficient evidence for engineering prioritization",
+          "Run the same analysis on a different AI tool to confirm the finding",
+          "Validate whether this theme is concentrated in a specific customer segment, device type, or geographic region before escalating",
+          "Dismiss the finding because NPS comments are subjective and not reliable data"
+        ],
+        "correctIndex": 2,
+        "explanation": "Segmenting the finding before escalating is critical. 'Slow loading times' mentioned by 40% of NPS respondents could mean different things: it might be concentrated in mobile users (a different fix than desktop), in a specific geographic region (a CDN issue), in customers on older plan tiers (different infrastructure), or in enterprise customers (a high-priority problem) vs. free users (lower priority). Escalating without segmentation sends engineering to fix a symptom without knowing where to look. Option A skips this step. Option B doesn't solve the segmentation problem. Option D is wrong — NPS comments are imprecise but highly valuable signal when synthesized properly."
+      }
+    }
+  ]
+}

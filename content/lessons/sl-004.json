@@ -1,0 +1,45 @@
+{
+  "id": "sl-004",
+  "trackId": "sl",
+  "streamId": "role-tracks",
+  "title": "Handle Objections With Confidence",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Objections aren't obstacles — they're questions in disguise.** A prospect who says \"it's too expensive\" is really asking: \"can you help me justify this?\" A prospect who says \"we need to think about it\" is usually saying: \"I don't have enough information to move forward yet.\"\n\nAI can help you prepare for objections in two ways: by helping you craft better responses, and by stress-testing those responses before you're in front of a buyer.\n\n**The four objection categories every seller faces:**\n- **Price:** \"It's too expensive\" / \"We don't have budget right now\"\n- **Timing:** \"Now's not a good time\" / \"We're focused on other priorities\"\n- **Competition:** \"We're already using [competitor]\" / \"We looked at you but went with someone else\"\n- **Stall:** \"I need to think about it\" / \"Send me more information\"\n\n**How to structure a good objection response:**\n1. Acknowledge — don't dismiss the concern\n2. Clarify — make sure you understand what's actually behind it\n3. Reframe — shift the frame from cost/risk to value/opportunity\n4. Validate — let them confirm whether your response addressed it\n\n**Use AI as a skeptical buyer:**\nThe most underused sales prep technique is asking AI to roleplay as a skeptical version of your prospect and push back hard on your pitch. Tell AI your product, your target buyer, and the objection you're practicing. Ask it to keep pressing until your response is actually convincing — not just polished."
+    },
+    {
+      "type": "example",
+      "bad": "Use AI prompt: 'Write me responses to common sales objections for my SaaS product.'",
+      "good": "Use AI prompt: 'I sell a sales coaching platform priced at $800/seat/year. My prospect is a VP of Sales at a 50-person company. They just said: \"We can't justify the cost right now — we're in a tight budget cycle.\" Play the role of a skeptical VP of Sales and push back on my response. I'll respond, and you keep pressing until my answer would actually satisfy a real buyer. Start with the objection: I can't justify the cost right now.'",
+      "explanation": "The first prompt gets generic objection scripts. The second sets up a live practice session — specific product, specific buyer, specific objection — and asks AI to keep pushing back, not just hand over a polished answer. You learn by defending your position under pressure, not by reading a template."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A sales rep is responding to this objection: 'We're already using a competitor product and just renewed our contract six months ago.' Read the rep's response and identify the key mistake.",
+      "data": {
+        "text": "Rep response: 'I completely understand — switching costs are real. But honestly, our platform is significantly better than theirs. Most customers who switch from [Competitor] tell us the transition was smoother than they expected and they wished they'd done it sooner. I'd love to show you a comparison so you can see the difference. Can we set up a demo this week?'",
+        "errorDescription": "The rep dismisses the timing objection and immediately pivots to a demo ask, skipping the clarify step entirely.",
+        "explanation": "The rep heard 'competitor' and jumped straight into competitive positioning and a demo push. But the real objection is timing — the prospect just renewed six months ago, so switching isn't realistic regardless of product quality. A better response acknowledges the contract reality ('that makes sense — you're locked in for now'), asks a clarifying question to understand when the contract is up for renewal, and focuses on planting a seed for the future rather than forcing urgency that doesn't exist. Pushing for a demo when switching is genuinely impossible damages trust and wastes everyone's time."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What is the most important thing a strong objection response does?",
+      "data": {
+        "choices": [
+          "Immediately provides data or case studies that disprove the objection",
+          "Acknowledges the concern and asks a clarifying question before reframing",
+          "Pivots quickly to a different value proposition to change the subject",
+          "Reassures the prospect that the concern is not valid"
+        ],
+        "correctIndex": 1,
+        "explanation": "Jumping straight to evidence or reframing before acknowledging the concern makes the prospect feel dismissed, not persuaded. The most effective objection responses start by making the prospect feel heard, then ask a clarifying question to make sure you're responding to the real concern — not the surface version of it. 'That makes sense — can I ask what's driving that concern?' opens a conversation. 'Actually, our pricing is very competitive' closes one."
+      }
+    }
+  ]
+}

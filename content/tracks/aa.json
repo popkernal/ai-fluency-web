@@ -1,0 +1,9 @@
+{
+  "id": "aa",
+  "streamId": "power-user",
+  "title": "Agents & Automation",
+  "description": "Build AI workflows that work without you — from simple automations to multi-step agents.",
+  "color": "#1D4ED8",
+  "lessonIds": ["aa-001", "aa-002", "aa-003", "aa-004", "aa-005", "aa-006", "aa-007", "aa-008"],
+  "requiredTrackIds": ["mc"]
+}

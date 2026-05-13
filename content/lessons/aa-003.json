@@ -1,0 +1,47 @@
+{
+  "id": "aa-003",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "No-Code AI Automations",
+  "estimatedMinutes": 9,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**You don't need to write code to build powerful AI automations.** No-code tools like Zapier, Make (Integromat), and n8n can connect AI to your existing tools and trigger workflows automatically.\n\nThe pattern is always the same:\n```\nTrigger → AI step(s) → Action\n```\n\n**Example automations you can build today:**\n\n- **New email in Gmail** → AI summarizes and classifies → Adds to task list with priority\n- **New row in Google Sheets** → AI generates personalized outreach email → Saves draft in Gmail\n- **Slack message in #support** → AI drafts response → Posts to a review channel for approval\n- **New form submission** → AI generates follow-up email draft → Sends for human review\n- **Daily at 8am** → AI fetches calendar events → Writes daily briefing → Sends to Slack\n\n**Getting started:**\n1. Identify one task you do repeatedly that involves reading something and writing something in response\n2. Map the trigger (what starts it?) and action (what should happen?)\n3. Build it in Zapier or Make using their AI step modules\n4. Test with real inputs before enabling\n5. Add a human review step for anything externally-facing\n\n**Cost:** Most no-code tools have free tiers sufficient for 10-20 automations per day. AI calls cost fractions of a cent."
+    },
+    {
+      "type": "example",
+      "bad": "Manually reading every new customer review and copy-pasting to Slack with a comment.",
+      "good": "Automation: New review on G2/Trustpilot (via webhook or RSS) → AI analyzes sentiment and extracts key theme → Posts to #product-feedback Slack channel with: 'New [positive/negative] review: [theme]. Key quote: [quote].' Human team sees it instantly with context, no manual processing needed.",
+      "explanation": "The manual process takes 2-5 minutes per review and requires someone to remember to check. The automation is instant, consistent, and zero-effort once built. The AI does the analysis and formatting; the team gets actionable signal without context-switching to review sites."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which automation scenario is most appropriate to deploy without human review in the final step?",
+      "data": {
+        "choices": [
+          "AI sends customer refund decisions automatically",
+          "AI posts social media responses to complaints on your behalf",
+          "AI adds a 'summary' note to a new CRM entry for your team's internal use",
+          "AI sends onboarding emails to new customers"
+        ],
+        "correctIndex": 2,
+        "explanation": "Internal CRM notes are low-stakes — a wrong summary affects only your team's context, is easy to fix, and doesn't impact customers or your public presence. Customer-facing actions (refunds, social responses, onboarding emails) should have human review until you've validated the automation's accuracy and tone across many real cases."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Design an AI automation for a task you do repeatedly. Describe: the trigger, the AI processing step (what prompt you'd use), and the action output. Include a human review step if appropriate.",
+      "data": {
+        "rubric": [
+          "Strong designs have a specific, realistic trigger (not vague), a clear AI prompt that specifies input, processing, and output format, a concrete action step, and a human review step for any externally-facing output",
+          "The automation should solve a real repetitive task"
+        ],
+        "exampleAnswer": "Automation: Weekly competitor monitoring\n\nTrigger: Every Monday at 8am\n\nAI step: Search for news about [Competitor A, B, C] from the past 7 days. For each, extract: any product updates, pricing changes, funding news, or marketing campaigns. Format as a brief 3-bullet summary per competitor.\n\nAction: Post to #competitive-intel Slack channel with the formatted summary.\n\nHuman review: Not needed for internal intelligence posting. Team members follow up on items of interest. A team member adds a 'so what' comment weekly."
+      }
+    }
+  ]
+}

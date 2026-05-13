@@ -1,0 +1,44 @@
+{
+  "id": "dw-004",
+  "trackId": "dw",
+  "streamId": "core-skills",
+  "title": "Documents That Write Themselves",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The heaviest document work is structure and first draft — both of which AI handles well.**\n\nFor any document over a page, the process is the same:\n\n1. **Establish the purpose and audience** — who is reading this and what decision or action should it drive?\n2. **Ask AI to propose an outline** — review it, modify it, approve it\n3. **Section by section** — have AI draft each section with relevant information you provide\n4. **Review and integrate** — combine sections, adjust transitions, add your specific knowledge\n5. **Polish pass** — ask AI to check for consistency, tone, and any missing pieces\n\nThis works for: strategy docs, project proposals, SOPs, technical specs, one-pagers, research reports, annual reviews, and more.\n\n**Two rules:**\n- Never ask AI to write a document from nothing. Give it the key points and let it structure and expand.\n- Always read the full document before sending. AI can miss nuances, add unnecessary caveats, or subtly change your meaning."
+    },
+    {
+      "type": "example",
+      "bad": "Write a strategy document for our new product launch.",
+      "good": "Help me write a product launch strategy doc. Let's do it in stages:\n\nStage 1: First, propose an outline (no more than 8 sections) for a 3-page strategy doc. Our product is a B2B invoicing tool, launching Q2, targeting 10-50 person companies. Main stakeholders who'll read this: CEO and VP Sales.\n\nI'll approve the outline before you draft anything.",
+      "explanation": "Asking for a complete strategy document produces a generic template. The staged approach lets you shape the structure before any content is written — saving you from 3 pages of content that's structured wrong. The key is getting outline approval first, then filling it section by section with your real strategic information."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What's the most important thing to provide before asking AI to draft a document?",
+      "data": {
+        "choices": [
+          "A word count target",
+          "The document's purpose, audience, and the key information/decisions it needs to communicate",
+          "A list of company values",
+          "Examples of similar documents from competitors"
+        ],
+        "correctIndex": 1,
+        "explanation": "Purpose and audience are the two most critical inputs — they determine structure, tone, depth, and what to include vs. exclude. Without them, AI writes a generic document. With them, it writes something shaped around the actual decision or action you need the document to drive."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "The two rules for AI-assisted documents: never ask AI to write from ___ — give it key ___ first. And always ___ the full document before sending.",
+      "data": {
+        "blanks": ["nothing", "points", "read"],
+        "hint": "Think about what you give to a human writer versus what you'd expect them to invent."
+      }
+    }
+  ]
+}

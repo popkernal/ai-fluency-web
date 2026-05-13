@@ -1,0 +1,44 @@
+{
+  "id": "qw-001",
+  "trackId": "qw",
+  "streamId": "quick-wins",
+  "title": "Your First AI Win",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**You don't need to understand how AI works to benefit from it.** You just need to know what to ask.\n\nAI tools like Claude can handle a surprising range of everyday tasks: drafting emails, summarizing documents, brainstorming ideas, answering questions, editing text. Most people get their first real win within minutes of trying.\n\nThe key insight: **AI responds to natural language.** You can speak to it like a knowledgeable colleague — describe what you need, give relevant context, and let it do the work. No special commands, no programming required.\n\nThe best place to start is a task you already do that involves writing or research. That's where AI saves the most time."
+    },
+    {
+      "type": "example",
+      "bad": "Summarize this.",
+      "good": "Summarize this meeting transcript in 5 bullet points. Focus on decisions made and action items. Keep each bullet under 20 words.",
+      "explanation": "The first prompt gives the AI no direction — it doesn't know the format, length, or focus you want. The second prompt is specific about format (bullet points), quantity (5), focus (decisions and actions), and length constraint. Specific requests get specific, useful outputs."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want to use AI to help with your work. What's the best first task to try?",
+      "data": {
+        "choices": [
+          "Writing a complex legal contract",
+          "Drafting a reply to a routine email you've been putting off",
+          "Predicting next quarter's sales figures",
+          "Managing your calendar automatically"
+        ],
+        "correctIndex": 1,
+        "explanation": "Routine writing tasks — emails, summaries, first drafts — are the perfect starting point. They're low-risk, fast to verify, and immediately show AI's value. Complex legal, financial, or calendar-automation tasks require more setup, expertise verification, or integrations."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the sentence: AI responds to ___ language, which means you can describe what you need as if talking to a ___.",
+      "data": {
+        "blanks": ["natural", "knowledgeable colleague"],
+        "hint": "Think about how you'd ask a helpful coworker for assistance."
+      }
+    }
+  ]
+}

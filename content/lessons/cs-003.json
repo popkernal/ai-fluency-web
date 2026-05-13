@@ -1,0 +1,47 @@
+{
+  "id": "cs-003",
+  "trackId": "cs",
+  "streamId": "core-skills",
+  "title": "System Prompts and Persistent Instructions",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**A system prompt is context you set once that applies to every response in a session.**\n\nInstead of re-explaining your role, company, and preferences every time, you can write a system prompt (also called a \"custom instructions\" or \"pre-prompt\") that establishes the baseline for all interactions.\n\nEffective system prompts include:\n- **Who you are:** Your role, industry, experience level\n- **What you're working on:** Current project, company type, team size\n- **Communication preferences:** Format defaults, level of detail, formality\n- **What to avoid:** Things AI tends to do that annoy you (excessive caveats, overly formal tone, etc.)\n\nExample system prompt for a product manager:\n> I'm a Senior PM at a Series B SaaS company (100 employees, HR tech). When I ask for documents, default to bullet points unless I say otherwise. Skip lengthy preambles — get to the content quickly. When you're unsure, ask a clarifying question rather than guessing. Avoid corporate jargon.\n\nOnce set, every interaction in that session benefits from this context without you needing to re-state it."
+    },
+    {
+      "type": "example",
+      "bad": "Starting every conversation by typing 3 paragraphs of background before getting to your actual question.",
+      "good": "Setting a system prompt once: 'I'm a marketing director at a fintech startup. My audiences are: executives (need high-level), dev teams (need technical precision), customers (need plain English). When I ask for writing, always ask which audience first unless it's obvious from context.' Then asking: 'Draft an announcement for the new API rate limits.'",
+      "explanation": "Without a system prompt, every conversation requires re-establishing context. With a system prompt, AI already knows your role, audiences, and preferences. The AI in the example will now automatically ask 'which audience?' before writing the announcement — which is exactly the behavior you want, with no additional prompting."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a system prompt for yourself that you could use at the start of a working session. Include: your role/context, your preferred output format, at least one thing AI should always ask before doing, and one habit to avoid.",
+      "data": {
+        "rubric": [
+          "A strong system prompt includes role and industry context, specific format preferences (default to bullets? short answers?), a clarifying question trigger, and at least one explicit avoidance instruction",
+          "It should be clear and usable — not a paragraph of aspirations"
+        ],
+        "exampleAnswer": "I'm a Head of Customer Success at a 80-person B2B SaaS company. Default format: bullet points with bold key terms. Length: concise unless I ask for depth. Before drafting any customer-facing communication, ask me: what's the customer's sentiment and desired outcome? Avoid: starting responses with 'Certainly!' or 'Of course!', and skip the 'I hope this helps' sign-offs."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What's the main benefit of a system prompt compared to including context in each individual prompt?",
+      "data": {
+        "choices": [
+          "System prompts make AI smarter",
+          "You only have to define your context once, and it applies to every response in the session — saving time and improving consistency",
+          "System prompts override AI's safety guidelines",
+          "System prompts are permanent across all future sessions"
+        ],
+        "correctIndex": 1,
+        "explanation": "System prompts set context once for an entire session. Instead of re-explaining your role, preferences, and constraints in every prompt, you define them at the start and AI applies them consistently. Note: they're typically session-scoped (not permanent) — check your specific tool's implementation."
+      }
+    }
+  ]
+}

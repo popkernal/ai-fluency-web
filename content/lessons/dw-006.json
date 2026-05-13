@@ -1,0 +1,46 @@
+{
+  "id": "dw-006",
+  "trackId": "dw",
+  "streamId": "core-skills",
+  "title": "Build Reusable Prompt Workflows",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The highest-leverage AI habit is templating.** When you find a prompt that works well for a recurring task, save it as a template. Future you will be glad.\n\nA prompt template is a proven prompt with placeholders for the parts that change each time:\n\n```\nTask: [WHAT YOU'RE WRITING]\nAudience: [WHO WILL READ IT]\nKey points to cover: [YOUR POINTS]\nTone: [professional / friendly / urgent]\nFormat: [bullets / paragraphs / sections]\nLength: [word count or section count]\n```\n\nBuild templates for tasks you do at least weekly:\n- Weekly status updates\n- Client check-in emails\n- Performance feedback\n- Slack announcements\n- Proposal sections\n\nBonus technique: **chained workflow templates.** For multi-step tasks (like a full campaign brief), build a sequence of prompts — Prompt A produces output that becomes input for Prompt B. Document the chain so anyone on your team can run it.\n\nA library of 10-15 well-tested templates can cut your daily AI time in half while improving consistency."
+    },
+    {
+      "type": "example",
+      "bad": "Writing a new prompt from scratch every time you need to write a weekly team update.",
+      "good": "Saving this template: 'Write a weekly team update for [TEAM NAME]. Audience: the team and our manager. Tone: direct and positive. Format: 3 sections — (1) Top wins this week (3 bullets), (2) In progress (2 bullets), (3) Blockers or needs (1-2 bullets). Keep total under 150 words. This week's content: [PASTE NOTES]' — and filling in the variables each Monday.",
+      "explanation": "The template took 10 minutes to write once. Now it takes 90 seconds to fill in each week. Over a year, that's hours saved — plus consistent quality. The team always knows what to expect from your updates."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a reusable prompt template for a task you do regularly. Include at least 3 placeholders (in [CAPS] or {{brackets}}) for the parts that change each time.",
+      "data": {
+        "rubric": [
+          "A strong template: addresses a real recurring task, has at least 3 distinct placeholders, specifies format and tone clearly, is immediately usable by filling in the blanks, and produces a consistent output type each time"
+        ],
+        "exampleAnswer": "Write a follow-up email after [TYPE OF MEETING/CALL] with [PERSON'S NAME AND ROLE] from [COMPANY]. Goal: [DESIRED OUTCOME — schedule next step / send materials / confirm decision]. Key points to reference from the meeting: [YOUR BULLET POINTS]. Tone: [professional and warm / direct and brief / enthusiastic]. Include a clear single call to action at the end. Keep it under 150 words."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You have a template that works well for one-on-one feedback. Your colleague asks you to share it. What's the best practice?",
+      "data": {
+        "choices": [
+          "Keep it private since it gives you a competitive advantage",
+          "Share the template and document any best practices for using it (what context to add, what outputs to expect)",
+          "Share the raw template with no explanation",
+          "Tell them to build their own"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sharing well-documented templates creates team-level leverage. Adding usage notes — what context makes it work best, what outputs to expect, how to iterate on results — means your colleague can use it effectively from day one. This is how AI productivity multiplies across teams instead of staying individual."
+      }
+    }
+  ]
+}

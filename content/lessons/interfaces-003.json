@@ -1,0 +1,50 @@
+{
+  "id": "interfaces-003",
+  "trackId": "interfaces",
+  "streamId": "tools-reference",
+  "title": "Navigating Gemini and Perplexity",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Google Gemini** (gemini.google.com)\n\nGemini's biggest advantage is its integration with Google's ecosystem.\n\n**Key features:**\n- **Google Workspace integration** — Connect Gemini to Gmail, Docs, Drive, Calendar, and Meet. It can read your emails, summarise documents in your Drive, or schedule meetings.\n- **Gems** — Custom AI assistants (similar to ChatGPT's Custom GPTs). Pre-built Gems exist for coding, writing, research, and more.\n- **1M token context** — Gemini 1.5 Pro can handle extremely long documents, entire codebases, or hours of video transcripts.\n- **Multimodal** — Upload images, PDFs, audio, and video. Gemini can analyse them all.\n- **'Deep Research'** — An agentic mode that researches a topic across multiple web sources and produces a structured report.\n\n---\n\n**Perplexity** (perplexity.ai)\n\nPerplexity is an AI-powered search engine, not a general chat tool.\n\n**Key features:**\n- **Always fresh** — Every response cites web sources and is based on current information. Ideal for anything time-sensitive.\n- **Citations** — Every claim is numbered and linked to a source. Easy to verify.\n- **Spaces** — Shared workspaces for teams researching a topic together.\n- **Focus modes** — Restrict search to specific domains (academic papers, Reddit, YouTube, etc.).\n- **Pro Search** — More thorough, multi-step research for complex queries (uses more credits).\n\n**When to use Perplexity:** News, market research, competitive intelligence, 'what's the latest on X', checking recent documentation versions."
+    },
+    {
+      "type": "example",
+      "bad": "Ask a standard ChatGPT session: 'What are the latest AI model releases this month?' and trust the answer.",
+      "good": "Use Perplexity for this query. It will search the web, pull current information, and cite each model release with a link so you can verify.",
+      "explanation": "ChatGPT and Claude have knowledge cutoffs — they don't know about events after their training date. Perplexity is built for current information. Use the right tool for the right job."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want to get a summary of all emails in your Gmail inbox from a specific client this week. Which tool is best suited?",
+      "data": {
+        "choices": [
+          "Perplexity — it searches the web for your emails",
+          "Claude — upload your Gmail export",
+          "Gemini — with Google Workspace connected, it can read your Gmail directly",
+          "ChatGPT — paste the emails into the chat"
+        ],
+        "correctIndex": 2,
+        "explanation": "Gemini has native Google Workspace integration. With Gmail connected, it can read, search, and summarise your emails without any exporting or pasting. This is one of its core differentiating features."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A researcher needs to write a report on the current state of mRNA vaccine trials. Which tool provides the most reliable, up-to-date sourced information?",
+      "data": {
+        "choices": [
+          "Claude — best for long documents",
+          "ChatGPT — largest user base so most knowledge",
+          "Perplexity with Academic focus mode — cites recent papers with links",
+          "Gemini — integrates with Google Scholar automatically"
+        ],
+        "correctIndex": 2,
+        "explanation": "Perplexity's Academic focus mode searches and cites recent academic papers. For a research report on a rapidly evolving field, this gives you current, verifiable, sourced information — exactly what a researcher needs."
+      }
+    }
+  ]
+}

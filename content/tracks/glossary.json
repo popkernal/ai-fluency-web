@@ -1,0 +1,14 @@
+{
+  "id": "glossary",
+  "streamId": "tools-reference",
+  "title": "AI Glossary",
+  "description": "Clear definitions of the terms you'll encounter when working with AI — no jargon, no fluff.",
+  "color": "#059669",
+  "lessonIds": [
+    "glossary-001",
+    "glossary-002",
+    "glossary-003",
+    "glossary-004"
+  ],
+  "requiredTrackIds": []
+}

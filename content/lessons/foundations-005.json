@@ -1,0 +1,50 @@
+{
+  "id": "foundations-005",
+  "trackId": "foundations",
+  "streamId": "foundations",
+  "title": "Tokens: The AI Currency You Should Know About",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## Why your very long document might get a patchy summary\n\nHave you ever pasted a long document into AI and noticed the summary seemed thin on the later sections? There's a specific reason for that — and once you understand it, you can work around it easily.\n\nAI doesn't process text the way a human reads it. It works with chunks called **tokens** — roughly 3–4 characters each, or about 750 tokens per 1,000 words. Every word, punctuation mark, and space gets broken into tokens before AI processes it.\n\nThe important number is the **context window**: the maximum amount of text the model can \"see\" at once — both your input and its output, combined. Think of it as the model's working memory. Once you exceed the limit, earlier content starts to fall outside the window. The model doesn't see it. It can't summarise what it can't read.\n\nContext windows have grown dramatically — many models now handle 100,000 tokens or more (roughly 75,000 words). For most day-to-day tasks, you'll never hit the limit.\n\nBut for genuinely long documents — a 200-page report, a large codebase, a book — it still matters. The practical workaround: break the document into sections and process each one separately, then combine the results. It's a little more work, but you'll get far better output.\n\nIf you're using AI via an API (building tools rather than just using them), tokens also determine cost — so understanding them helps you build efficiently."
+    },
+    {
+      "type": "example",
+      "bad": "A consultant pastes a 50-page strategy document into AI and asks for a summary. The summary is detailed on the executive overview and early sections, but the implementation risks and recommendations — covered in the final 15 pages — are barely mentioned. She doesn't notice until she's in the client meeting.",
+      "good": "Knowing about context limits, the same consultant splits the document into four logical sections (context, findings, risks, recommendations) and runs a separate summary prompt on each. She then asks AI to synthesise the four section summaries into a final overview. The result covers the full document accurately.",
+      "explanation": "The second approach takes a few extra minutes but produces a summary that actually reflects the whole document. When the content you care about is at the end of a long file, chunking is the reliable solution. The consultant who knows this produces better work — and doesn't get caught out in a client meeting."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're using a model with a 100,000 token context window. Roughly how many words can you include as input while still leaving room for the model's response?",
+      "data": {
+        "choices": [
+          "Exactly 100,000 words — tokens and words are the same thing",
+          "About 75,000 words — leaving reasonable space for the output",
+          "About 10,000 words — most of the context window is reserved for the response",
+          "As many words as you like — context windows only apply to the output"
+        ],
+        "correctIndex": 1,
+        "explanation": "The rough rule of thumb is 750 tokens per 1,000 words, which means 100,000 tokens is approximately 75,000 words. But the context window covers both your input and the model's output combined, so in practice you'd want to leave a meaningful portion available for the response. Around 75,000 words of input is a reasonable working estimate for a 100,000 token window."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to summarise a 40,000-word report, but your model has a 32,000 token context limit (roughly 24,000 words of usable input). What's the best approach?",
+      "data": {
+        "choices": [
+          "Paste the full report in and hope the model handles it — it might work",
+          "Split the report into logical sections and summarise each one separately, then combine",
+          "This isn't a problem — AI can process unlimited text regardless of context limits",
+          "Compress the document file to a smaller size before pasting it in"
+        ],
+        "correctIndex": 1,
+        "explanation": "When your document exceeds the context window, pasting it all in means the model will silently ignore or truncate the content that doesn't fit — you'll get an incomplete result with no warning. Splitting into sections and summarising each is the reliable workaround. Compressing the file doesn't help — what matters is the number of tokens in the text, not the file size."
+      }
+    }
+  ]
+}

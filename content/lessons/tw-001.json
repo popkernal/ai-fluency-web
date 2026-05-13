@@ -1,0 +1,44 @@
+{
+  "id": "tw-001",
+  "trackId": "tw",
+  "streamId": "core-skills",
+  "title": "AI as a Thinking Partner",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The most underused AI skill is thinking out loud.** Most people use AI for output — drafts, summaries, lists. But AI is remarkably useful for the thinking process itself.\n\nAI makes an exceptional thinking partner because it:\n- Never gets bored or impatient\n- Has no political stake in your decisions\n- Can take any position you ask it to\n- Draws on a broad base of frameworks and precedents\n- Will push back if you ask it to\n\nThinking partnership modes:\n\n**1. Rubber duck with depth** — Explain your problem to AI in detail. The act of articulating it often clarifies it. AI can then ask clarifying questions or point out what you haven't considered.\n\n**2. Steel-manning** — Ask AI to make the strongest possible case for a position you disagree with. Engaging with the best version of opposing arguments improves your thinking.\n\n**3. Pre-mortem** — Ask AI to assume your plan failed and explain why. This surfaces risks you've overlooked.\n\n**4. Framework application** — Ask AI to apply a specific analytical framework (SWOT, Jobs To Be Done, etc.) to your problem."
+    },
+    {
+      "type": "example",
+      "bad": "Is my idea good?",
+      "good": "I'm considering [describe idea fully]. Play devil's advocate: make the strongest case for why this idea will fail. Be specific — not generic risks, but risks specific to my situation as described. Don't hold back to be polite. After making the case against, give me the 2 things you think are genuinely strong about it.",
+      "explanation": "Asking 'is my idea good?' produces a polite, balanced, non-committal answer. Asking AI to actively argue against your idea with specificity forces it to identify real weaknesses — which is far more valuable. The 'don't hold back' instruction matters: AI defaults to diplomatic; you need to explicitly give it permission to be critical."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're about to make an important decision. Which AI prompt is most useful for stress-testing it?",
+      "data": {
+        "choices": [
+          "Is this a good decision?",
+          "What are some pros and cons?",
+          "Assume this decision turned out to be a mistake 12 months from now. What are the 5 most likely reasons it failed? Be specific to the details I've described.",
+          "What would you do in my situation?"
+        ],
+        "correctIndex": 2,
+        "explanation": "The pre-mortem prompt ('assume it failed, why?') forces AI to generate specific failure modes rather than generic risks. This is a proven decision-making technique — by assuming failure and reasoning backward, you surface risks you'd overlook with forward-looking analysis. 'Is this good?' and 'pros and cons' produce surface-level answers."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "When you ask AI to ___ a position you disagree with, you're forcing yourself to engage with the ___ possible opposing argument.",
+      "data": {
+        "blanks": ["steel-man", "strongest"],
+        "hint": "This is the opposite of a 'straw man' argument."
+      }
+    }
+  ]
+}

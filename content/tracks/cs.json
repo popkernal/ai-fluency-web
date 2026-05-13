@@ -1,0 +1,9 @@
+{
+  "id": "cs",
+  "streamId": "core-skills",
+  "title": "Context and Structure",
+  "description": "Master how context shapes AI outputs — learn to frame requests that get professional results every time.",
+  "color": "#F59E0B",
+  "lessonIds": ["cs-001", "cs-002", "cs-003", "cs-004", "cs-005"],
+  "requiredTrackIds": ["pw"]
+}

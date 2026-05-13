@@ -1,0 +1,49 @@
+{
+  "id": "op-006",
+  "trackId": "op",
+  "streamId": "role-tracks",
+  "title": "Stakeholder Communication at Every Level",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Same Message, Different Frequencies**\n\nOne of the highest-leverage skills in ops and PM is knowing how to communicate the same underlying information differently depending on who's receiving it. A CTO wants different things from a project update than an engineer, who wants different things than a sales rep whose deals are affected.\n\nAI can produce audience-specific versions of the same content at speed — but you have to give it clear guidance on who the audience is and what they care about.\n\n**The four dimensions of audience adaptation:**\n1. **Level of detail** — Executives want the headline and the so-what. Technical teams want specifics. End users want what it means for them.\n2. **Language register** — Technical jargon is appropriate for engineers. Plain language is required for everyone else.\n3. **What they'll do with the information** — Is the audience making a decision, staying informed, or taking action? Each requires a different structure.\n4. **What they're worried about** — An executive worries about risk and cost. An engineer worries about technical feasibility. A customer worries about service disruption.\n\n**Practical approach:**\nDraft once — the full, detailed version. Then tell AI: \"Here is a [message type]. Rewrite it for [specific audience]. They care primarily about [their main concern]. The format should be [email / Slack message / slide bullet / verbal update]. Keep it to [length].\"\n\n**The danger of over-adapting:**\nSimplifying for an executive audience should never mean removing bad news. Stakeholders at every level need accurate information — the adaptation is about framing and detail level, not sanitizing reality."
+    },
+    {
+      "type": "example",
+      "bad": "Here's a technical update. Can you make it simpler?",
+      "good": "Here's a technical status update for our API migration project:\n\n[Paste full technical update]\n\nPlease rewrite this for two audiences:\n\n1. **CEO (non-technical):** She needs to know whether the project is on track, whether there are any business risks, and whether any decisions are needed from her. Max 5 sentences. No technical jargon.\n\n2. **Enterprise Sales team:** They need to know if there will be any customer-facing downtime during the migration, which customers might be affected, and what talking points they should use if customers ask. Plain language, focused on customer impact and what to communicate.",
+      "explanation": "The bad prompt gives AI no information about the audience — 'simpler' could mean anything. The good prompt specifies each audience, names what they care about, sets a length constraint for the executive version, and asks for sales-relevant framing for the second version. The result is two immediately usable messages rather than one vaguely simplified draft."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this technical project update for a CEO who is non-technical. She needs to know: (1) is this on track? (2) is there any business risk? (3) does she need to make any decisions? Keep it to 4–5 sentences maximum.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: avoids all technical jargon (no 'Kubernetes', 'microservices', 'LDAP', 'cluster'), communicates on-track vs",
+          "at-risk status clearly, explains the business consequence of the risk in plain terms, and ends with a clear ask if a decision is needed — or explicitly says no decision is needed yet",
+          "It should be 4–5 sentences maximum"
+        ],
+        "exampleAnswer": "The infrastructure upgrade project is slightly behind schedule — we're 2 days delayed and working through a technical complexity we didn't fully anticipate in the login system component. No business disruption so far, and all customer-facing systems are running normally. If we can't resolve the technical issue by Thursday, we'll need to extend the project timeline by one week or handle the login system in a separate phase. We'll have a clear recommendation for you by Thursday — no decisions needed from you before then.",
+        "original": "The Kubernetes cluster migration is 60% complete. We've successfully moved 8 of 14 microservices to the new infrastructure. Currently working on the authentication service migration which has a dependency on the legacy LDAP integration — this is the highest-risk component due to the undocumented configurations in the old system. We're running 2 days behind the original migration schedule because of the LDAP discovery work. If we can't resolve the LDAP configuration issues by Thursday, we'll need to either extend the migration window by 1 week or scope out the auth service migration to a separate track."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "When adapting a message for a CEO or senior executive audience, which consideration matters most?",
+      "data": {
+        "choices": [
+          "Using formal business language and avoiding contractions",
+          "Making the message positive and avoiding mention of risks",
+          "Leading with the business impact and what, if anything, is needed from them",
+          "Providing full technical detail so they can make an informed decision"
+        ],
+        "correctIndex": 2,
+        "explanation": "Executives need two things above all: (1) what does this mean for the business, and (2) do I need to do anything? Leading with business impact respects their attention and gets to the point. Option A (formal language) is less important than clarity and directness. Option B is actively harmful — executives need accurate risk information to make good decisions. Option D misunderstands the audience — full technical detail is appropriate for technical reviewers, not executives who delegate technical judgment."
+      }
+    }
+  ]
+}

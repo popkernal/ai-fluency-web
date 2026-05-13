@@ -1,0 +1,44 @@
+{
+  "id": "cs-004",
+  "trackId": "cs",
+  "streamId": "core-skills",
+  "title": "Constraints Are Your Friends",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Constraints produce better outputs than freedom.** This is counterintuitive but consistent.\n\nWhen you give AI unlimited latitude, it defaults to safe, generic, comprehensive answers — the textbook response. When you impose constraints, AI must make choices that produce more focused, creative, and useful results.\n\nPowerful constraint types:\n\n- **Length constraints:** \"In exactly 3 sentences\" / \"Under 50 words\" / \"2 paragraphs max\"\n- **Format constraints:** \"No bullet points\" / \"Write as a dialogue\" / \"Use only plain English\"\n- **Exclusion constraints:** \"Don't mention price\" / \"No technical jargon\" / \"Avoid using the word 'leverage'\"\n- **Audience constraints:** \"For someone who has never heard of us\" / \"For a CFO who only cares about ROI\"\n- **Perspective constraints:** \"Argue the opposite of my position\" / \"As a skeptic\" / \"As our most critical customer\"\n\nConstraints also prevent AI's tendency toward exhaustive lists. Asking for \"the 3 most important\" instead of \"all the important\" forces prioritization — which is usually what you actually need."
+    },
+    {
+      "type": "example",
+      "bad": "Give me feedback on my strategy document.",
+      "good": "Give me feedback on this strategy document. Constraints: (1) only identify the 3 most critical gaps — not every possible improvement, (2) frame each gap as a question the document doesn't answer, (3) no more than 2 sentences per gap, (4) if you think the strategy is fundamentally flawed, say that first.",
+      "explanation": "Without constraints, AI gives exhaustive generic feedback that's hard to prioritize. With constraints, you get exactly 3 critical gaps, framed as questions, in a digestible format — plus a 'fundamentally flawed' flag if needed. The constraints force the output to be immediately actionable."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "When you ask AI for 'all the important considerations' instead of 'the ___ most important,' AI defaults to ___ lists that require additional ___ from you.",
+      "data": {
+        "blanks": ["3", "exhaustive", "prioritization"],
+        "hint": "Think about what happens when there's no upper limit on how many items to include."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which constraint will most improve this prompt: \"Write a value proposition for our software\"?",
+      "data": {
+        "choices": [
+          "\"Write a good value proposition for our software\"",
+          "\"Write a value proposition for our software. One sentence only. No technical terms. Must include a specific measurable outcome (e.g., saves X hours, reduces Y by Z%).\"",
+          "\"Write a detailed value proposition for our software\"",
+          "\"Write a comprehensive value proposition for our software covering all features\""
+        ],
+        "correctIndex": 1,
+        "explanation": "The second option adds three powerful constraints: length (one sentence), language (no jargon), and quality bar (specific measurable outcome). These constraints force AI to make the hard choices — prioritizing, simplifying, quantifying — that produce genuinely useful marketing copy rather than generic filler."
+      }
+    }
+  ]
+}

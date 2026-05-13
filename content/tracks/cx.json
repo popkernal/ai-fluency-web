@@ -1,0 +1,9 @@
+{
+  "id": "cx",
+  "streamId": "role-tracks",
+  "title": "AI for Customer Experience",
+  "description": "Handle support faster, personalize at scale, and turn customers into advocates.",
+  "color": "#84CC16",
+  "lessonIds": ["cx-001", "cx-002", "cx-003", "cx-004", "cx-005"],
+  "requiredTrackIds": ["dw"]
+}

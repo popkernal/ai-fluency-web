@@ -1,0 +1,47 @@
+{
+  "id": "pw-002",
+  "trackId": "pw",
+  "streamId": "quick-wins",
+  "title": "Give AI a Role",
+  "estimatedMinutes": 6,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**One of the fastest ways to improve AI outputs is to give the model a role to play.**\n\nWhen you tell AI to respond as an expert in a specific domain, it shifts its output style, vocabulary, depth, and perspective to match. You're not tricking it — you're efficiently communicating what kind of knowledge and framing you want.\n\nEffective role prompts have three elements:\n1. **The role:** \"You are a senior UX designer\"\n2. **The context:** \"with 10 years of experience in mobile apps\"\n3. **The task framing:** \"Review this design and give me the 3 most critical issues to fix before launch\"\n\nRoles also set the level of assumed knowledge. \"Explain this to a senior data scientist\" vs. \"Explain this to a non-technical CEO\" will produce very different outputs for the same topic.\n\n**Use roles when:** you need expert-level analysis, a specific professional perspective, or consistent output style across multiple prompts."
+    },
+    {
+      "type": "example",
+      "bad": "Review my business plan.",
+      "good": "You are a venture capitalist who has reviewed hundreds of early-stage SaaS startups and funded 12 of them. Review this business plan with the critical eye of someone deciding whether to invest $500k. Identify: (1) the 3 biggest red flags, (2) the 2 strongest points, (3) the one question you'd ask in a pitch meeting.",
+      "explanation": "Without a role, you get generic feedback. With the VC role and specific context, you get the expert perspective of someone who knows what good looks like — and the structured output format (red flags, strong points, key question) makes the feedback immediately actionable."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Add a clear role and context to improve this prompt: \"Check my presentation for problems.\"",
+      "data": {
+        "rubric": [
+          "A good rewrite should include: a specific role with expertise relevant to the task, context about the presentation (audience, purpose, length), and a structured ask for what to find/evaluate"
+        ],
+        "exampleAnswer": "You are an executive communications coach who has helped Fortune 500 leaders prepare for board presentations. Review this investor presentation for a Series A fundraise. Identify: (1) slides where the narrative loses clarity, (2) any claims that need stronger evidence, (3) structural improvements to strengthen the story arc.",
+        "original": "Check my presentation for problems."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're writing a technical document for non-technical stakeholders. Which role instruction best sets up the AI for this task?",
+      "data": {
+        "choices": [
+          "You are a technical writer.",
+          "You are a senior software engineer who has spent the last 5 years explaining complex systems to non-technical executives and has mastered making technical concepts clear without jargon.",
+          "Be an expert.",
+          "Help me write a document."
+        ],
+        "correctIndex": 1,
+        "explanation": "The second option wins because it specifies the role (software engineer), the relevant experience (5 years explaining to non-technical people), and the specific skill (clarity without jargon) — which is exactly what the task requires. 'Technical writer' is generic, 'Be an expert' is too vague, and the fourth isn't a role at all."
+      }
+    }
+  ]
+}

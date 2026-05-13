@@ -1,0 +1,9 @@
+{
+  "id": "fn",
+  "streamId": "role-tracks",
+  "title": "AI for Finance",
+  "description": "Analyze data faster, write financial narratives, and automate reporting with AI.",
+  "color": "#14B8A6",
+  "lessonIds": ["fn-001", "fn-002", "fn-003", "fn-004", "fn-005"],
+  "requiredTrackIds": ["dw"]
+}

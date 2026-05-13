@@ -1,0 +1,47 @@
+{
+  "id": "pw-005",
+  "trackId": "pw",
+  "streamId": "quick-wins",
+  "title": "Few-Shot: Show, Don't Just Tell",
+  "estimatedMinutes": 7,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The fastest way to get exactly the output you want is to show AI an example of it.**\n\nThis technique is called \"few-shot prompting\" — you include one or more examples of the desired output in your prompt. AI learns the pattern and applies it to new inputs.\n\nFew-shot prompting is especially powerful for:\n- **Maintaining a specific voice or style** (show 2-3 examples of your writing)\n- **Custom data transformation** (show input → output, then give new input)\n- **Consistent formatting** (show the exact format you want, then ask for more)\n- **Niche tasks** that are hard to describe in words but obvious from examples\n\nThe structure is simple:\n```\n[Task description]\n\nExample 1:\nInput: [example input]\nOutput: [example output]\n\nExample 2:\nInput: [example input]\nOutput: [example output]\n\nNow do the same for:\nInput: [your actual input]\n```\n\nYou need as few as one good example to see significant improvement."
+    },
+    {
+      "type": "example",
+      "bad": "Write a short product update tweet.",
+      "good": "Write a product update tweet in our company's style.\n\nExamples of our tweet style:\n\"Just shipped dark mode. Your retinas are now safe. 🌙\"\n\"Search is now 3x faster. We noticed you were waiting. We fixed it.\"\n\"New: bulk export. You asked. We listened. Here it is.\"\n\nNew feature to announce: AI-powered invoice matching that finds duplicates automatically.",
+      "explanation": "The weak prompt produces a generic tweet. The few-shot prompt shows AI exactly what your brand voice sounds like — concise, direct, slightly witty, no hype — and AI applies that voice to the new feature. Three examples is enough to establish a clear pattern."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "When is few-shot prompting most useful?",
+      "data": {
+        "choices": [
+          "When asking factual questions with known answers",
+          "When you need output that matches a specific style, format, or pattern that's hard to describe but easy to demonstrate",
+          "When summarizing long documents",
+          "When AI's first attempt is already good"
+        ],
+        "correctIndex": 1,
+        "explanation": "Few-shot prompting shines when you have a specific pattern to match — a brand voice, a data format, a structural template — that's easier to show than to explain. For factual questions or summaries, examples aren't needed. If the first attempt is good, you don't need more examples."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Improve this prompt by adding at least one example to make the output style clearer: \"Write a one-line description for each of our product features.\"",
+      "data": {
+        "rubric": [
+          "Good rewrites include at least one concrete example showing input feature → output description, make the style/voice clear from the example, and then ask for the actual features"
+        ],
+        "exampleAnswer": "Write a one-line description for each of our product features. Keep them benefit-focused, not technical.\n\nExample:\nFeature: Automated invoice processing\nDescription: Stop manually entering invoices — it happens automatically.\n\nNow write descriptions for these features:\n- Real-time collaboration\n- Custom approval workflows\n- One-click reporting",
+        "original": "Write a one-line description for each of our product features."
+      }
+    }
+  ]
+}

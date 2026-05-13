@@ -1,0 +1,50 @@
+{
+  "id": "mc-001",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "How Claude Thinks",
+  "estimatedMinutes": 8,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Understanding how Claude processes prompts makes you dramatically better at using it.**\n\nClaude is a large language model trained using constitutional AI methods — it's designed to be helpful, harmless, and honest. Unlike some AI systems, Claude is trained to reason through problems, acknowledge uncertainty, and decline requests that conflict with its values.\n\nKey facts about how Claude works:\n\n**Context window** — Claude processes your entire conversation as a single context window. Earlier messages influence later responses. Long conversations can 'lose' earlier details as context fills up — if something important was said early, reference it again in later prompts.\n\n**Instruction following** — Claude follows the most recent, most explicit instruction. If you give conflicting instructions, later ones win. If you want a behavior to persist, reinforce it periodically in long conversations.\n\n**Calibrated uncertainty** — Claude is trained to say 'I don't know' and express uncertainty rather than hallucinate confidently. You can ask Claude to rate its own confidence — and it will often give useful signals about where to verify.\n\n**Extended thinking** — On harder reasoning problems, Claude can work through multi-step logic explicitly. Asking it to 'think step by step' or 'show your reasoning' produces better results on analytical tasks."
+    },
+    {
+      "type": "example",
+      "bad": "Ask Claude a complex question and accept the answer without checking confidence level.",
+      "good": "After getting Claude's answer to an important factual or analytical question, follow up: 'How confident are you in this answer? What parts are you most uncertain about, and what would you recommend I verify independently?'",
+      "explanation": "Claude is calibrated to express genuine uncertainty when it has it. Asking directly for confidence levels and verification recommendations surfaces areas where Claude's training is weaker or where the information may be outdated — exactly where you should do additional checking before acting on the answer."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're in a long conversation with Claude and it seems to have forgotten instructions you gave at the start. What's the most likely explanation?",
+      "data": {
+        "choices": [
+          "Claude is being insubordinate",
+          "The conversation has grown long enough that early context is receiving less attention — re-state important instructions",
+          "Claude deleted your earlier messages",
+          "You need to start a new conversation"
+        ],
+        "correctIndex": 1,
+        "explanation": "In very long conversations, Claude processes the entire context but may give less weight to distant earlier content. The practical fix is to re-state important persistent instructions (\"remember, always respond in bullet points\") when you notice the behavior drifting. You can also summarize key constraints at the start of each major new task within a long conversation."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You ask Claude to analyze a complex situation and want the best reasoning. Which instruction improves the quality?",
+      "data": {
+        "choices": [
+          "Answer quickly.",
+          "Be comprehensive.",
+          "Think through this step by step. Show your reasoning before giving a conclusion.",
+          "Give me the answer directly without explanation."
+        ],
+        "correctIndex": 2,
+        "explanation": "'Think step by step' is one of the most reliably useful instructions for complex reasoning. It prompts Claude to work through intermediate steps explicitly rather than jumping to a conclusion, which catches logical errors and produces more defensible analysis. The transparency also lets you spot where the reasoning goes wrong."
+      }
+    }
+  ]
+}

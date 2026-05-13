@@ -1,0 +1,46 @@
+{
+  "id": "prompting-008",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Prompt Evaluation & Iteration",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "Great prompts are rarely written in one shot. **Prompt engineering is an iterative process** — you write, test, observe failure modes, and refine.\n\nA systematic approach:\n1. **Write** your initial prompt\n2. **Test** it on 3–5 representative inputs\n3. **Identify** the failure mode (wrong format? wrong length? wrong tone? hallucination?)\n4. **Hypothesize** a fix (add a constraint? add an example? change the instruction order?)\n5. **Measure** — did the fix work without breaking other cases?\n\nCommon failure modes and fixes:\n- *Too verbose* → Add: \"Be concise. Maximum 3 sentences.\"\n- *Wrong format* → Add an example output or explicit schema\n- *Hallucination* → Add: \"Only use information explicitly stated in the input. If unsure, say 'I don't know.'\"\n- *Inconsistent tone* → Add persona instruction in system prompt"
+    },
+    {
+      "type": "example",
+      "bad": "Summarize this article. [article pasted]",
+      "good": "Summarize this article in exactly 3 bullet points. Each bullet must:\n- Be 1 sentence long (max 20 words)\n- State a specific fact, not a general theme\n- Not repeat information from other bullets\n\n[article pasted]",
+      "explanation": "The original produces summaries that vary wildly in length and detail. The improved version was developed by noticing two failure modes: (1) summaries were too long, and (2) bullet points repeated the same point in different words. Each constraint directly addresses a specific observed failure."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A user has this prompt: \"Translate the following to Spanish.\" It works for short sentences but gives inconsistent results for long paragraphs. Identify the problem and suggest one specific fix.",
+      "data": {
+        "statement": "The prompt 'Translate the following to Spanish' is sufficient for all translation tasks.",
+        "error": "The prompt lacks guidance for long texts — it doesn't specify whether to preserve formatting, handle idioms, maintain formal/informal register, or how to handle untranslatable terms.",
+        "explanation": "For a short sentence, the missing constraints don't matter. For a long paragraph, these ambiguities surface. A better prompt adds: 'Preserve paragraph structure. Use formal Spanish (usted). If an idiom doesn't translate directly, use the closest Spanish equivalent and add [note: original idiom was X] in brackets.'"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these prompt iteration steps in the correct order:",
+      "data": {
+        "steps": [
+          "Identify the specific failure mode in the output",
+          "Write your initial prompt",
+          "Hypothesize a targeted fix for the failure",
+          "Test the prompt on representative inputs",
+          "Apply the fix and re-test"
+        ],
+        "correctOrder": [1, 3, 0, 2, 4],
+        "explanation": "The correct order is: Write → Test → Identify failure → Hypothesize fix → Apply and re-test. Trying to fix a prompt before testing it leads to over-engineering. Always observe actual failures first."
+      }
+    }
+  ]
+}

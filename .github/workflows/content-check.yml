@@ -1,0 +1,37 @@
+name: Content Check
+
+on:
+  push:
+    paths:
+      - 'content/**'
+      - 'lib/validators.ts'
+      - 'scripts/validate-content.ts'
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'lib/validators.ts'
+      - 'scripts/validate-content.ts'
+
+jobs:
+  validate:
+    name: Validate Content Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Validate all content
+        run: bun run validate:content
+
+      - name: Report results
+        if: failure()
+        run: |
+          echo "::error::Content validation failed. Check the output above for invalid lesson or track JSON files."
+          echo "Run 'bun run validate:content' locally to see the full error list."

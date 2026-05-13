@@ -1,0 +1,50 @@
+{
+  "id": "models-006",
+  "trackId": "models",
+  "streamId": "tools-reference",
+  "title": "Which AI Tool Should I Use?",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "There's no single 'best' AI. Different tools are better for different things. Here's a simple guide:\n\n**ChatGPT** — Best all-rounder. Great for writing, answering questions, brainstorming, coding help, and general tasks. Most people's default. Has image generation (DALL-E) and voice mode on paid plans.\n\n**Claude** — Excellent for reading and working with long documents, nuanced writing, following detailed instructions, and tasks that need careful, thoughtful responses. Many writers prefer it.\n\n**Gemini** — Best if you live in Google's world (Gmail, Docs, Drive). Can read your emails and documents directly. Also handles images and YouTube videos well.\n\n**Perplexity** — Best for research and anything where you need current, sourced information. Always cites its sources. Think of it as a smarter Google.\n\n**A simple decision guide:**\n- Everyday writing, drafting, brainstorming → **ChatGPT or Claude**\n- Working with a long document or PDF → **Claude**\n- Researching something current → **Perplexity**\n- Integrating with your Google tools → **Gemini**\n- Creating an image → **ChatGPT (DALL-E)** or **Midjourney**\n\nMost people settle on one or two tools for 90% of their work. There's no need to use all of them."
+    },
+    {
+      "type": "example",
+      "bad": "I use a different AI for every single task and I'm never sure which one to open.",
+      "good": "I use Claude for anything involving documents or detailed writing, and Perplexity whenever I need to research something current. For everything else, ChatGPT is my default. That's it.",
+      "explanation": "Simplicity beats optimisation. Pick one primary tool, add a second for its specific strength, and you're set. Constantly switching between five AI tools adds friction without much benefit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to research what competitors have announced in the past two weeks. Which tool is most appropriate?",
+      "data": {
+        "choices": [
+          "Claude — best for careful, detailed responses",
+          "ChatGPT without web search — most popular tool",
+          "Perplexity — searches the web in real time and cites sources",
+          "Gemini — integrates with your Google account"
+        ],
+        "correctIndex": 2,
+        "explanation": "Competitor announcements from the past two weeks are recent news — well within a training cutoff. Perplexity searches the live web and shows you sources, making it the right choice for anything time-sensitive."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You have a 40-page contract PDF that you need to summarise and ask questions about. Which tool handles this best?",
+      "data": {
+        "choices": [
+          "Perplexity — searches for legal documents",
+          "Claude — designed to work with long documents and gives careful, detailed responses",
+          "ChatGPT free tier — most widely used",
+          "Gemini — reads Google Drive files"
+        ],
+        "correctIndex": 1,
+        "explanation": "Claude is specifically strong at reading long documents and giving detailed, careful responses. Upload the PDF and ask your questions directly. Claude will read the whole thing and answer accurately."
+      }
+    }
+  ]
+}

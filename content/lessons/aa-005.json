@@ -1,0 +1,44 @@
+{
+  "id": "aa-005",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "Evaluating and Improving Agent Output",
+  "estimatedMinutes": 9,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Good agents don't just run — they self-evaluate.** The most robust agent workflows include an evaluation step: after producing output, the agent checks its own work against defined criteria.\n\nThis is called an 'LLM-as-judge' pattern: you use one AI call to evaluate the output of another. The evaluator can check for:\n- Completeness: did it address all requirements?\n- Accuracy: are there any obvious factual errors?\n- Format compliance: does it match the specified format?\n- Quality criteria: does it meet specific standards (e.g., appropriate tone, right length)?\n\n**Simple evaluation pattern:**\n```\nStep 1: Agent produces output\nStep 2: Evaluation prompt: \"Review this output against these criteria: [list]. Give each a pass/fail with brief reason. Flag any critical issues.\"\nStep 3: If critical issues found, retry Step 1 with the evaluation feedback\n```\n\n**When evaluation is most valuable:**\n- High-stakes outputs (customer-facing, financial, legal)\n- Long chain outputs where errors compound\n- Outputs that need to meet specific format requirements\n- When you're building automation and need confidence before full deployment\n\n**Limitation:** AI evaluators can be wrong too. They're better than nothing, but don't replace human review for truly high-stakes outputs."
+    },
+    {
+      "type": "example",
+      "bad": "Build an agent that generates contract summaries and deploys it to your legal team immediately after building.",
+      "good": "Build the contract summary agent, then add a second evaluation step: 'Review this summary against the original contract. Check: (1) are all key dates present and accurate? (2) are all monetary amounts correct? (3) are any obligations missing? Report: pass/fail for each, and quote any discrepancy.' Review the evaluator's output on 20 real contracts before giving the system to the legal team.",
+      "explanation": "Adding an evaluation step catches systematic errors before deployment. Running the evaluation on 20 real examples gives you data on the agent's accuracy rate — and the types of errors it makes. This is how you build confidence in automation responsibly: validate first, deploy after."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your AI agent generates outreach emails. What's the most useful evaluation criterion to check automatically?",
+      "data": {
+        "choices": [
+          "Whether the email is exactly 150 words",
+          "Whether the prospect's name and company are correctly referenced (personalization accuracy)",
+          "Whether the email uses sophisticated vocabulary",
+          "Whether the email mentions all product features"
+        ],
+        "correctIndex": 1,
+        "explanation": "Personalization accuracy is the highest-value check for outreach emails — a wrong name or company name is a critical error that immediately destroys credibility. The evaluator can check: does the email reference the correct company name, rep name (from input data), and relevant prospect detail? Word count, vocabulary, and feature mentions are secondary quality considerations."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A team deploys an AI agent to generate and send weekly customer health score emails. They tested it on 3 examples, all looked good, and deployed it to 2,000 customers.",
+      "data": {
+        "errorDescription": "Deploying after too few test cases and without a staged rollout or human review step",
+        "explanation": "3 test cases is insufficient to validate an agent sending 2,000 customer emails. Edge cases, unusual customer names, missing data fields, and format variations don't show up in 3 samples. The right approach: test on 50-100 diverse examples, fix issues, then do a staged rollout (50 customers → review → 500 → review → full send). For customer-facing automated sends, a human spot-check of a random sample before each batch is a minimum safeguard."
+      }
+    }
+  ]
+}

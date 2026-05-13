@@ -1,0 +1,50 @@
+{
+  "id": "interfaces-001",
+  "trackId": "interfaces",
+  "streamId": "tools-reference",
+  "title": "Navigating ChatGPT",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**ChatGPT** (chat.openai.com) is OpenAI's consumer interface for GPT models. It's the most widely used AI chat interface in the world.\n\n**Key features to know:**\n\n**Model selector** — At the top of the chat window, you can switch between GPT-4o, GPT-4o mini, o1, and others (availability depends on your plan). GPT-4o is the default for most tasks.\n\n**Memory** — ChatGPT can remember facts about you across conversations (name, preferences, job role). Found in Settings → Personalization → Memory. Toggle on/off as needed.\n\n**Custom GPTs** — Pre-configured assistants built for specific tasks (coding, writing, research). Access them via the sidebar or the GPT store. You can also create your own.\n\n**Canvas** — A split-screen editor for longer writing or coding tasks. The AI and your document appear side by side. Great for iterative editing.\n\n**File uploads** — Upload PDFs, spreadsheets, images, or code files. GPT-4o will read and analyse them.\n\n**Web search** — GPT-4o can search the web when it needs fresh information. Look for the globe icon or it activates automatically.\n\n**Conversation management** — Left sidebar shows all past conversations. You can rename, archive, or delete them. Use rename to keep important threads findable."
+    },
+    {
+      "type": "example",
+      "bad": "Start a new conversation every time, never name them, and rely on memory for context.",
+      "good": "Rename important conversations immediately (e.g. 'Q3 Report Draft' or 'Python ETL Project'). Use file uploads for documents rather than pasting text. Switch to Canvas when doing iterative edits on a document.",
+      "explanation": "ChatGPT's interface rewards intentional organisation. Unnamed conversations become unsearchable clutter. Using file uploads instead of pasting preserves formatting and reduces token waste. Canvas makes back-and-forth editing significantly faster."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You've been working with ChatGPT on a long market research project. You return the next day and start a new conversation. ChatGPT doesn't remember the project. What happened?",
+      "data": {
+        "choices": [
+          "ChatGPT deleted your account data",
+          "New conversations don't share history — context from previous chats isn't carried over automatically",
+          "Memory was turned off globally",
+          "The project exceeded ChatGPT's storage limit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Each conversation is isolated. ChatGPT's Memory feature only remembers specific facts you've told it, not the full content of previous conversations. For ongoing projects, keep working in the same conversation thread, or paste a project summary at the start of each new session."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want ChatGPT to analyse a 50-page PDF. What's the best approach?",
+      "data": {
+        "choices": [
+          "Copy and paste all the text into the chat window",
+          "Summarise the document yourself and paste the summary",
+          "Use the file upload button to attach the PDF directly",
+          "Ask ChatGPT to search the web for the document"
+        ],
+        "correctIndex": 2,
+        "explanation": "ChatGPT supports direct PDF uploads. Uploading the file preserves formatting, avoids copy-paste errors, and is more efficient than pasting raw text. GPT-4o will read and analyse the document directly."
+      }
+    }
+  ]
+}

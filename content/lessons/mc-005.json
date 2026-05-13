@@ -1,0 +1,51 @@
+{
+  "id": "mc-005",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "Multi-Turn Conversation Design",
+  "estimatedMinutes": 8,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Long conversations with Claude can be powerful — if you design them deliberately.**\n\nMost AI interactions are single-turn: one question, one answer. But the best work often happens over a series of turns that build context, iterate on outputs, and converge on a result.\n\nDesigning a good multi-turn conversation:\n\n**Opening turn — establish context:** Your first message sets the stage. Include who you are, what you're working on, and the overall goal. The more complete this is, the better every subsequent turn will be.\n\n**Working turns — focused increments:** Each turn should have one clear purpose. Don't pile 5 asks into one message. Get the output from each turn before asking for the next thing.\n\n**Checkpoint turns:** Periodically ask Claude to summarize what's been established: \"Before we continue, summarize the key decisions we've made so far.\" This keeps both of you aligned.\n\n**Closing turn:** \"Review everything we've covered. What did we miss? What should I double-check?\"\n\n**Pitfalls:**\n- Pivoting topic mid-conversation without flagging it (Claude will blend contexts)\n- Forgetting that earlier instructions don't automatically carry to new topics\n- Treating a long conversation as equivalent to retained memory across sessions (it's not)"
+    },
+    {
+      "type": "example",
+      "bad": "Starting a conversation mid-task without context, then asking 5 different questions in one message, and ending without reviewing the work.",
+      "good": "Turn 1: 'We're going to work on a fundraising pitch deck. I'm the CEO of a fintech startup, pre-revenue, targeting seed funding. I'll give you sections one at a time and we'll refine each before moving on.'\n\nTurn 2: 'Here's my problem statement section: [text]. Two specific things: is the problem clearly articulated? And is the market size framing compelling?'\n\nTurn 5: 'Before we work on the financial projections slide, summarize the story we've built so far so we can make sure the numbers connect to it.'",
+      "explanation": "The good example sets context in Turn 1 (so it doesn't need repeating), handles one section at a time in working turns, and uses a checkpoint turn to ensure coherence before moving to a new section. This is conversation design — deliberate, incremental, with verification points built in."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Arrange these turns in the ideal order for a multi-turn conversation to develop a strategy document:",
+      "data": {
+        "steps": [
+          "Ask Claude to review the full document and identify gaps",
+          "Set context: who you are, the document's purpose, the audience, and how you'll work together",
+          "Draft each section one at a time, reviewing before proceeding",
+          "Ask for a summary of key decisions made so far",
+          "Work on the executive summary last, based on the full document"
+        ],
+        "correctOrder": [1, 2, 3, 4, 0],
+        "explanation": "Open with context (Turn 1), then draft section by section (Turns 2-N), use a checkpoint summary turn to verify alignment, write the exec summary last (since it should reflect the full document), and close with a gap review. The executive summary last is intentional — it's easier to summarize what exists than to predict what you'll write."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You've been working with Claude for 30 messages on a complex strategy. Claude starts giving advice that contradicts what you agreed on in message 3. What should you do?",
+      "data": {
+        "choices": [
+          "Start a new conversation from scratch",
+          "Re-state the key constraint or decision from earlier and ask Claude to revise with that constraint in mind",
+          "Accept that Claude changed its mind",
+          "Ask Claude why it's being inconsistent"
+        ],
+        "correctIndex": 1,
+        "explanation": "In long conversations, early context gets diluted by later messages. The fix is to re-surface the specific constraint: 'Earlier we established that [X]. Your last response seems to contradict that — please revise with that constraint in mind.' This is more efficient than starting over and preserves the context you've built."
+      }
+    }
+  ]
+}

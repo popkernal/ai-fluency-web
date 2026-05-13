@@ -1,0 +1,46 @@
+{
+  "id": "dw-001",
+  "trackId": "dw",
+  "streamId": "core-skills",
+  "title": "AI-Powered Email",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Email is where most professionals will save the most time with AI.** Drafting, responding, summarizing threads, tone-checking — all of it can be accelerated dramatically.\n\nFour high-impact email use cases:\n\n**1. First drafts** — Tell AI who you're writing to, what outcome you want, and the key points to cover. Review and personalize.\n\n**2. Thread summaries** — Paste in a long email thread and ask for a summary of decisions, open questions, and who needs to act.\n\n**3. Tone adjustment** — Write what you want to say (even bluntly), then ask AI to rewrite it with the right tone: professional, diplomatic, firm, warm.\n\n**4. Difficult messages** — Giving bad news, pushing back on a request, following up without nagging. Describe the situation and ask AI to draft an approach.\n\nKey principle: **AI drafts, you personalize.** The last 10% — the specific detail, the personal reference, the relationship nuance — is yours to add. That's what makes it feel human."
+    },
+    {
+      "type": "example",
+      "bad": "Write an email to my client.",
+      "good": "Draft a follow-up email to a client who missed our scheduled call yesterday. Goal: reschedule without sounding frustrated. Context: this is the second time they've no-showed. I want to keep the relationship but also signal that my time matters. Tone: professional, warm, with a subtle firmness. Offer two specific times to reschedule this week.",
+      "explanation": "The vague prompt produces a generic follow-up. The specific prompt gives AI the situation, emotional goal, relationship context, tone nuances, and a specific action (offer two times). The result is a draft that handles a genuinely difficult interpersonal situation in exactly the right register."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to decline a vendor's proposal without damaging the relationship. What's the best AI approach?",
+      "data": {
+        "choices": [
+          "Ask AI to write a decline email with no context",
+          "Write your raw thoughts (possibly blunt), then ask AI to rewrite them diplomatically while keeping the core message",
+          "Ask AI to make up a reason for the decline",
+          "Have AI write a fake compliment to soften the blow"
+        ],
+        "correctIndex": 1,
+        "explanation": "Writing your real thoughts first — even bluntly — ensures the core message stays true. Then asking AI to rewrite diplomatically preserves your authentic intent while improving the tone and framing. Never ask AI to fabricate reasons or fake enthusiasm — it undermines trust if the vendor later learns the truth."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write an AI prompt to help you summarize a long email thread and identify what action you need to take.",
+      "data": {
+        "rubric": [
+          "A strong prompt specifies: what to extract (decisions, open questions, action items), who is involved, what format to use, and your role in the thread so AI knows whose actions to highlight"
+        ],
+        "exampleAnswer": "Summarize this email thread. I am the Product Manager. Extract: (1) decisions that have been made, (2) open questions still unresolved, (3) my specific action items with deadlines if mentioned, (4) who is waiting on what from whom. Format: 4 labeled bullet-point sections. Keep it under 150 words total."
+      }
+    }
+  ]
+}

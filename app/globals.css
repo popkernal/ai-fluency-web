@@ -1,0 +1,58 @@
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Layout helpers */
+.main-content {
+  padding-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding-left: 240px;
+  }
+}
+
+/* Mobile bottom nav padding */
+@media (max-width: 767px) {
+  .main-content {
+    padding-bottom: 64px;
+  }
+}
+
+.content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  padding: 20px 12px;
+}
+
+@media (min-width: 640px) {
+  .content-wrapper {
+    padding: 24px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 24px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    padding: 32px 24px;
+  }
+}

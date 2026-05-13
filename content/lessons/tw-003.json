@@ -1,0 +1,44 @@
+{
+  "id": "tw-003",
+  "trackId": "tw",
+  "streamId": "core-skills",
+  "title": "Challenging Your Own Thinking",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Confirmation bias is one of the most expensive cognitive errors in business.** We naturally seek information that confirms what we already believe and discount information that challenges it.\n\nAI is unusually useful for countering this bias — because it has no ego investment in your conclusion, and you can explicitly direct it to challenge you.\n\nFour techniques for using AI to challenge your thinking:\n\n**1. The opposing expert** — \"You are a skeptical investor. What are the 3 weakest parts of my thesis?\"\n\n**2. Assumption audit** — \"List every assumption my plan relies on, then rate each one on how likely it is to be wrong.\"\n\n**3. The critic role** — \"Be a harsh but fair critic of this strategy. What would the smartest critic say?\"\n\n**4. Disconfirming evidence** — \"What evidence would you expect to see if my hypothesis is wrong? Have I looked for that?\"\n\nThese techniques work because they **deliberately create friction** with your existing beliefs. The discomfort is the point — it surfaces what you've been protecting from scrutiny."
+    },
+    {
+      "type": "example",
+      "bad": "Does my analysis look right?",
+      "good": "I've concluded that we should expand to the enterprise segment. Before I finalize this recommendation:\n\n1. List every assumption my reasoning depends on.\n2. For each assumption, give it a confidence rating (high/medium/low) and explain what would make it wrong.\n3. What's the strongest argument a smart skeptic would make against this conclusion?\n4. Is there any data I'm likely over-weighting because it confirms what I wanted to find?",
+      "explanation": "Asking 'does this look right?' invites agreement. The structured challenge forces AI to identify hidden assumptions, rate their reliability, voice the skeptic's argument, and flag potential confirmation bias. This is the difference between a rubber stamp and a genuine thinking partner."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You've built a financial model showing your new product will be profitable. What's the most useful way to use AI to challenge it?",
+      "data": {
+        "choices": [
+          "Ask AI to confirm your numbers are right",
+          "Ask AI to list the assumptions your model depends on, rate each one, and identify which one failure would most destroy your profitability case",
+          "Ask AI if the market is large enough",
+          "Ask AI to improve the formatting of your model"
+        ],
+        "correctIndex": 1,
+        "explanation": "Financial models are only as good as their assumptions. Asking AI to surface and rate the assumptions — especially which single assumption failure would be most damaging — is the highest-value stress test. It forces you to confront which assumptions are load-bearing before you commit resources."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Confirmation bias means we naturally ___ information that confirms our beliefs and ___ information that challenges them.",
+      "data": {
+        "blanks": ["seek", "discount"],
+        "hint": "Think about how people typically react to news that agrees with them versus news that contradicts them."
+      }
+    }
+  ]
+}

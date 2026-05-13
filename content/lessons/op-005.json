@@ -1,0 +1,47 @@
+{
+  "id": "op-005",
+  "trackId": "op",
+  "streamId": "role-tracks",
+  "title": "Risk and Issue Tracking",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Turning Gut Instinct Into a Structured Risk Register**\n\nEvery experienced PM or ops lead carries a mental list of things that could go wrong. The problem is that list lives in one person's head, never gets written down until something blows up, and never gets updated once it is.\n\nAI can help you move from intuition to a structured, actionable risk register — and can surface risks you might have missed by drawing on common patterns for your type of project.\n\n**What a useful risk register includes:**\n- **Risk description** — what could go wrong, written as \"[Event] happens, causing [impact]\"\n- **Likelihood** — High / Medium / Low (or a 1–5 scale)\n- **Impact** — High / Medium / Low\n- **Owner** — who is responsible for monitoring and responding\n- **Mitigation** — what action reduces the likelihood or impact\n- **Contingency** — if it happens anyway, what's the response plan\n- **Status** — Open / Monitoring / Triggered / Closed\n\n**Using AI for risk identification:**\nDescribe your project, timeline, team, and known constraints. Ask AI to suggest a risk register for your project type — it will surface common risks you may not have thought to document. Then add the project-specific risks only you know about.\n\n**The pre-mortem technique:**\nA pre-mortem is a structured exercise where you imagine the project has already failed and work backwards to figure out why. It's one of the most effective risk identification tools — and AI is excellent at facilitating it. Tell AI your project and ask it to imagine all the ways it could fail."
+    },
+    {
+      "type": "example",
+      "bad": "What risks should I think about for my project?",
+      "good": "I'm managing a 3-month ERP migration project for a 200-person manufacturing company. We're moving from a legacy system (15 years old) to SAP. Timeline: go-live in 90 days. Team: 2 internal ops people, 4 SAP consultants from the vendor, and 1 internal IT person who is part-time on this project. Key constraints: we can't go live during the last 2 weeks of any quarter due to financial close. Known issues: the data quality in the legacy system is poor and hasn't been audited in years.\n\nPlease: (1) generate a risk register with 8–10 risks specific to this type of ERP migration, formatted as a table with columns for Risk, Likelihood (H/M/L), Impact (H/M/L), Owner role, Mitigation, and Contingency. (2) Then run a pre-mortem — assume it's 4 months from now and the project failed. List the 5 most likely reasons why.",
+      "explanation": "The vague prompt will produce a generic list of project risks that applies to any project. The specific prompt gives the project type, team size, constraints, and known issues — so AI can generate risks that are actually relevant to an ERP migration with data quality problems and a part-time IT resource. The pre-mortem add-on surfaces risks the register might miss."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the risk entry below for a risk register. Fill in the blanks with the correct risk register components.\n\nRisk: The third-party payment processor experiences an outage during peak checkout period.\nLikelihood: Medium\nImpact: ___[1]___\nOwner: ___[2]___\nMitigation: ___[3]___\nContingency: ___[4]___",
+      "data": {
+        "blanks": [
+          "High",
+          "Engineering Lead / CTO",
+          "Establish a backup payment processor and test failover quarterly",
+          "Activate backup processor immediately; communicate estimated downtime to customers; issue discount codes for affected orders"
+        ],
+        "hint": "Think about: what happens to revenue if checkout fails (Impact), who in the org owns payment infrastructure (Owner), what you do before it happens to reduce risk (Mitigation), and what you do the moment it does happen (Contingency)."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a pre-mortem prompt for a real project you're working on or have recently completed. A pre-mortem assumes the project has already failed and asks what went wrong. Your prompt should give AI enough context to surface failure modes that are specific to your situation.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: a description of the project (type, scope, timeline), the team and key dependencies, any known constraints or risks, and an explicit instruction to imagine failure has occurred and identify the most likely causes",
+          "The best prompts also ask AI to prioritize the failure modes by likelihood",
+          "Weak prompts don't describe the project or ask a generic question about project risks"
+        ],
+        "exampleAnswer": "I'm launching a new customer self-service portal in 8 weeks. The portal will let customers submit support tickets, track orders, and manage their subscriptions without calling our support team. Dependencies: 2 frontend developers, 1 backend developer, our CRM vendor (Zendesk) for API integration, and a UX designer who is only available for the first 4 weeks. Our support team needs 2 weeks of training before go-live.\n\nRun a pre-mortem on this project. Assume it's 10 weeks from now and the launch was a failure — it either didn't ship on time, launched with critical bugs, or customers aren't using it. List the 6 most likely reasons the project failed, ranked from most to least likely, with a one-sentence explanation for each."
+      }
+    }
+  ]
+}

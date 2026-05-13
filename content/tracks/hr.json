@@ -1,0 +1,9 @@
+{
+  "id": "hr",
+  "streamId": "role-tracks",
+  "title": "AI for HR",
+  "description": "Hire better, onboard faster, and build a stronger culture with AI support.",
+  "color": "#FB923C",
+  "lessonIds": ["hr-001", "hr-002", "hr-003", "hr-004", "hr-005"],
+  "requiredTrackIds": ["dw"]
+}

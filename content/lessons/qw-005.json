@@ -1,0 +1,44 @@
+{
+  "id": "qw-005",
+  "trackId": "qw",
+  "streamId": "quick-wins",
+  "title": "AI Won't Replace You — Here's Why",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI is a tool, not a replacement.** The people who use AI most effectively don't fear it — they treat it as a very capable assistant that still needs their judgment, knowledge, and direction.\n\nHere's what AI does well:\n- Generating first drafts and variations\n- Summarizing and synthesizing text\n- Answering questions based on its training\n- Following formatting and structural instructions\n- Explaining concepts at different levels\n\nHere's what AI can't do (yet):\n- Access your private knowledge and company context\n- Verify its own outputs against current facts\n- Understand the politics, relationships, and history of your workplace\n- Make judgment calls that require your professional experience\n- Take responsibility for outcomes\n\n**The people who thrive are those who combine AI speed with their own expertise.** Your judgment, relationships, and domain knowledge are what make AI outputs actually useful."
+    },
+    {
+      "type": "example",
+      "bad": "I'll just use whatever AI writes. If it's wrong, that's the AI's fault.",
+      "good": "AI drafts the first version. I review it, add my specific knowledge, adjust the tone to match our company voice, verify any facts or numbers, and take responsibility for the final output.",
+      "explanation": "The first approach treats AI as infallible and abandons professional responsibility. The second treats AI as a capable first-drafter while keeping the human in the loop for what matters: accuracy, context, judgment, and accountability. The second approach also produces better results."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A manager asks you to analyze the impact of a new policy on team morale. AI can help, but which part requires your judgment?",
+      "data": {
+        "choices": [
+          "Formatting the analysis as a structured report",
+          "Suggesting potential frameworks for analyzing morale impact",
+          "Understanding how this specific team has historically responded to changes and the informal dynamics at play",
+          "Writing a clear executive summary"
+        ],
+        "correctIndex": 2,
+        "explanation": "AI can format reports, suggest frameworks, and write summaries — but it has no knowledge of your specific team's history, culture, relationships, or informal dynamics. That insider knowledge is what transforms a generic analysis into an accurate, actionable one. That's your irreplaceable contribution."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete this statement: AI is most useful when combined with your ___, ___, and domain ___.",
+      "data": {
+        "blanks": ["judgment", "relationships", "knowledge"],
+        "hint": "Think about what you bring to work that AI cannot access from training data."
+      }
+    }
+  ]
+}

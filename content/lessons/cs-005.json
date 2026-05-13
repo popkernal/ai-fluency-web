@@ -1,0 +1,46 @@
+{
+  "id": "cs-005",
+  "trackId": "cs",
+  "streamId": "core-skills",
+  "title": "Building a Personal Context Library",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Power users don't re-type context — they paste it.** Building a personal context library means creating reusable blocks of context you can drop into any conversation.\n\nA context library has three tiers:\n\n**Tier 1 — Personal context block:** Who you are, your role, company, typical audiences, communication preferences. You paste this at the start of sessions.\n\n**Tier 2 — Project context blocks:** Background on specific ongoing projects — objectives, key stakeholders, decisions made, current status. You paste the relevant one when starting project work.\n\n**Tier 3 — Task templates:** Proven prompts for tasks you do repeatedly — performance reviews, weekly updates, customer emails, analysis frameworks. You paste the template and fill in the variables.\n\nBuilding this library takes 30 minutes upfront but saves hours every week. The best way to start: next time you write a long context-setting prompt that gets a great result, save it. After a month, you'll have a powerful personal toolkit.\n\nStore them in a notes app, a document, or anywhere you can quickly copy-paste from."
+    },
+    {
+      "type": "example",
+      "bad": "Starting every Monday by typing out your company background, your role, and the project context from scratch.",
+      "good": "Keeping a 'Monday Standup Context' block saved: 'Context: I'm the lead for Project Phoenix — a Q4 CRM migration for our 200-person sales team. Key constraints: go-live is Dec 1, budget is fixed at $80k, the VP of Sales is the main stakeholder and she's risk-averse. Current status: data mapping is 70% complete, vendor onboarding delayed by 2 weeks.' Pasting this at the start of any AI conversation about the project.",
+      "explanation": "The saved context block takes 30 seconds to paste and immediately gives AI all the relevant background. Without it, you either type it out every time (slow) or omit it (getting generic advice). Saved context blocks are one of the highest-leverage productivity habits for AI power users."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a Tier 1 personal context block for yourself — the reusable intro you'd paste at the start of an AI work session. Include: role, company type, typical work tasks, audience types you write for, and 2-3 format preferences.",
+      "data": {
+        "rubric": [
+          "A strong Tier 1 block is concise (5-10 sentences), covers role and industry context, lists typical tasks, specifies 2-3 audiences, includes clear format preferences, and reads like a briefing to a new smart assistant"
+        ],
+        "exampleAnswer": "I'm a Senior Marketing Manager at a 150-person B2B software company in the legal tech space. I primarily work on: content strategy, campaign briefs, email programs, and thought leadership. My main audiences are: CMO (strategic, metrics-focused), legal professionals (formal, detail-oriented), and prospects (pain-focused, business ROI). Format defaults: bullet points for internal docs, paragraph form for external content, headers for anything over 300 words. Avoid jargon and hype. Always ask for the intended audience if it's not obvious."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You use AI heavily for work. Which habit will save the most time over the course of a month?",
+      "data": {
+        "choices": [
+          "Typing out your context fresh each day so it stays current",
+          "Never providing context — AI is smart enough without it",
+          "Saving reusable context blocks and prompt templates for tasks you do repeatedly",
+          "Using a different AI tool for each task type"
+        ],
+        "correctIndex": 2,
+        "explanation": "Saving context blocks and prompt templates is the highest-leverage AI habit. Each saved template replaces 5-15 minutes of setup work every time you use it. Over a month of regular use, that compounds to hours saved — plus you get better outputs because your saved prompts have been refined over time."
+      }
+    }
+  ]
+}

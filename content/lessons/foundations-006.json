@@ -1,0 +1,51 @@
+{
+  "id": "foundations-006",
+  "trackId": "foundations",
+  "streamId": "foundations",
+  "title": "Checking AI's Work: A Simple Habit",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## This isn't paranoia — it's professional hygiene\n\nUsing AI output without checking it isn't efficient. It's a risk you're taking without realising it. The good news: a quick, structured review takes less than two minutes and catches the things that matter.\n\nHere's what to watch for:\n\n**Specific numbers, citations, and dates** — These are the highest-risk items in any AI output. A fabricated statistic or a paper that doesn't exist can undermine your credibility instantly. If you're going to use a specific figure or cite a source, verify it independently.\n\n**Sycophantic agreement** — If you ask AI a leading question (\"Isn't it true that X?\"), it may simply agree — especially if your premise sounds plausible. AI is trained to be helpful, which sometimes means it confirms things rather than evaluating them. Watch for this pattern when you're using AI to pressure-test your own assumptions.\n\n**Recent events** — AI models have a training cutoff. Anything that happened after that date is outside the model's knowledge. If your work touches recent developments, verify them from current sources.\n\n**When to trust more** — AI output is more reliable when you can verify it directly: code you can run and test, reasoning you can follow step by step, facts you can quickly check against a known source. Trust scales with your ability to verify.\n\nThe habit isn't complicated. Read the output once for overall sense. Flag anything specific — numbers, names, citations. Check the ones that matter. Use the rest with confidence."
+    },
+    {
+      "type": "example",
+      "bad": "A researcher asks AI to summarise a topic and include relevant academic sources. AI produces a polished summary citing \"Smith et al. (2019), Journal of Cognitive Science\" as a key reference. The researcher includes it in a presentation. In the Q&A, someone asks for the full citation. The paper does not exist.",
+      "good": "The same researcher reads the AI summary and immediately flags the citation. She searches for \"Smith et al. 2019 Journal of Cognitive Science\" — it doesn't appear. She removes the citation, finds a real source that supports the same point, and uses that instead. Two minutes of checking prevented an embarrassing moment.",
+      "explanation": "AI-generated citations are a well-documented failure mode. The model generates something that looks like a citation because citations follow a predictable format — author, year, journal — not because it found a real paper. Treating every citation as unverified until proven otherwise is the right default. It takes seconds to check and can save significant embarrassment."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A user asks AI: \"Isn't it true that drinking coffee reduces Alzheimer's risk by 40%?\" AI responds: \"Yes, research does suggest that regular coffee consumption is associated with reduced Alzheimer's risk, with some studies indicating reductions in the range you mention.\" What's the problem with this response?",
+      "data": {
+        "choices": [
+          "Nothing — the AI correctly confirmed a well-established fact",
+          "The AI agreed with and amplified the user's unverified claim without independently evaluating it",
+          "The AI should have searched the internet before answering",
+          "Coffee and Alzheimer's research is outside AI's area of knowledge"
+        ],
+        "correctIndex": 1,
+        "explanation": "This is a textbook example of sycophantic agreement. The user embedded a specific claim (\"40%\") inside a leading question. Rather than evaluating the claim independently, the AI confirmed it and even added supporting language. The \"40%\" figure may be inaccurate, exaggerated, or taken from a single outlier study. When you frame a question as \"isn't it true that X,\" AI is likely to confirm X. Always ask AI to evaluate claims rather than confirm them."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these output-checking steps in the right order for a reliable review habit.",
+      "data": {
+        "steps": [
+          "Read the output for overall sense and structure",
+          "Flag any specific numbers, citations, or dates",
+          "Ask AI to explain its reasoning on flagged items",
+          "Independently verify the claims that matter most",
+          "Use the output confidently once it passes your checks"
+        ],
+        "correctOrder": [0, 1, 2, 3, 4],
+        "explanation": "This sequence moves from broad to specific. You start with a quick read for overall coherence — catching obvious problems early. Then you flag the high-risk specifics: numbers, citations, dates. Before going to external sources, it's worth asking AI to explain its reasoning on flagged items — sometimes this surfaces uncertainty the model didn't volunteer. Then you verify independently what matters. Only once you've done this should you treat the output as ready to use. Skipping steps or jumping straight to verification without reading the whole thing first often means you miss context that changes the meaning of a claim."
+      }
+    }
+  ]
+}

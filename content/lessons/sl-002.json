@@ -1,0 +1,48 @@
+{
+  "id": "sl-002",
+  "trackId": "sl",
+  "streamId": "role-tracks",
+  "title": "Write Outreach That Gets Replies",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Getting a reply is a different problem than writing a good email.** Most AI-generated outreach is grammatically correct, professionally worded, and completely ignored. The issue isn't quality — it's that it reads like everyone else's AI-generated outreach.\n\nThe AIDA structure (Attention, Interest, Desire, Action) is a useful frame for cold outreach:\n- **Attention:** Your subject line or opening sentence earns a read. Be specific, not clever.\n- **Interest:** One sentence on why this is relevant to them right now. Not your product — their situation.\n- **Desire:** One concrete outcome they'd get. Frame it as a result, not a feature.\n- **Action:** One low-friction ask. A reply, a 15-minute call, a question — not a demo or a proposal.\n\n**How to use AI to test multiple angles:**\nBefore committing to one version, ask AI to write the same outreach three ways — each leading with a different pain point or a different CTA. Then evaluate which one is most honest, most specific, and most likely to feel relevant to your actual prospect.\n\n**What makes a reply-worthy subject line:**\nThe best cold email subject lines are short, specific, and slightly incomplete. They create a question in the reader's mind that only the email can answer. \"Question about your SDR ramp time\" outperforms \"Improve your sales team's performance by 40%.\" One signals a conversation; the other signals a pitch."
+    },
+    {
+      "type": "example",
+      "bad": "Subject: Improve your sales performance\n\nHi [Name],\n\nI hope this email finds you well. I wanted to reach out because I think our platform could be a great fit for your team. We help sales organizations increase revenue and improve efficiency. I'd love to schedule a quick call to share how we've helped companies like yours.\n\nBest,\nAlex",
+      "good": "Subject: SDR ramp time at Meridian\n\nHi Sarah,\n\nYou've posted 12 SDR roles in the last 60 days — that's a lot of new reps to ramp at once.\n\nWe help sales teams cut new rep ramp time by 30% using structured AI coaching during the first 90 days. One customer onboarded 8 reps last quarter and hit quota attainment within 10 weeks instead of 18.\n\nWould it be useful to see how that works? Happy to share a 2-minute overview — no call needed.\n\nAlex",
+      "explanation": "The first email could have been sent to anyone. The second opens with a specific signal Sarah would recognize (her own hiring activity), frames the value as a result not a feature, and uses a proof point with real numbers. The CTA is low-friction: not a demo, just a 2-minute overview. Every sentence earns its place."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this generic cold email so it gets replies. The sender sells project management software for construction companies. The prospect is a VP of Operations at a mid-size general contractor that recently won a large government contract.",
+      "data": {
+        "rubric": [
+          "Strong rewrites: open with the specific trigger (the government contract win), name one concrete problem that creates for a VP of Ops, frame the product value as an outcome relevant to that problem, use a real or plausible proof point, and close with a low-friction ask — not a 30-minute demo",
+          "Cut filler phrases like 'hope you're having a great week' and 'looking forward to connecting.'"
+        ],
+        "exampleAnswer": "Subject: Managing the compliance load on a government job\n\nHi [Name],\n\nCongrats on the [contract name] win — government work is great revenue, but the documentation and reporting requirements are brutal compared to private projects.\n\nWe build project management software specifically for general contractors handling government contracts. Teams typically cut their compliance reporting time by 40% and stop chasing subcontractors for updated schedules.\n\n[Contractor name] used it on a similar federal job last year and stayed on schedule through three scope changes.\n\nWorth a 15-minute conversation? I can show you exactly how the compliance tracking works.\n\n[Name]",
+        "original": "Hi there,\n\nI hope you're having a great week! I wanted to reach out because I believe our project management solution could really help your team. We offer a comprehensive platform with features including scheduling, budgeting, document management, and reporting. Many companies in the construction industry have found it very useful.\n\nI'd love to set up a 30-minute demo at your convenience to show you everything our platform can do. Please let me know a time that works for you.\n\nLooking forward to connecting!"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What is the most important factor in whether a cold email gets a reply?",
+      "data": {
+        "choices": [
+          "Email length — shorter is always better",
+          "The quality of the subject line, since most emails are never opened",
+          "Whether the email demonstrates genuine relevance to the prospect's current situation",
+          "Sending on a Tuesday or Thursday morning"
+        ],
+        "correctIndex": 2,
+        "explanation": "Timing and subject lines matter at the margins, but the single biggest driver of replies is relevance. If a prospect reads your email and thinks 'this person understands my situation,' they reply. If they read it and think 'this is a template,' they don't — regardless of when it was sent or how punchy the subject line was. AI helps you build relevance by doing research faster, not by writing catchier templates."
+      }
+    }
+  ]
+}

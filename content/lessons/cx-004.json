@@ -1,0 +1,48 @@
+{
+  "id": "cx-004",
+  "trackId": "cx",
+  "streamId": "role-tracks",
+  "title": "Personalize at Scale",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Personalization Matters More Than Speed**\n\nCustomers can tell the difference between a response that was written for them and one that was written for a category of people they belong to. Generic responses are efficient — but they signal that the customer is a ticket number, not a person. In high-stakes interactions (renewals, complaints, high-value customers), personalization often determines the outcome.\n\nThe challenge is personalizing efficiently. AI helps you build systems where personalization is built into the workflow rather than added by the occasional agent who goes the extra mile.\n\n**The elements of meaningful personalization in CX:**\n- **Using the customer's name** — table stakes, but not sufficient on its own\n- **Referencing their specific situation** — what plan are they on? What did they just experience? What did they buy?\n- **Acknowledging history** — if this is their third contact on the same issue, acknowledge that. Don't make them explain it again.\n- **Tone matching** — a casual customer who writes informally doesn't want a formal corporate response\n- **Relevant recommendations** — connecting solutions to their specific use case, not a generic list\n\n**Where personalization matters most:**\n- Renewal outreach and win-back campaigns\n- High-value customer interactions (enterprise, top tier)\n- Post-incident recovery (when you've let a customer down)\n- First contact from a new customer (sets the relationship tone)\n\n**The practical approach:**\nBuild templates that have explicit personalization slots — not just [FIRST NAME] but [ACCOUNT CONTEXT], [SPECIFIC ISSUE THEY MENTIONED], [THEIR USE CASE]. AI can help populate these slots from ticket data or CRM notes before agents send. This is faster than writing from scratch and better than sending a template without personalization."
+    },
+    {
+      "type": "example",
+      "bad": "Hi [Name], thank you for being a valued customer. I wanted to reach out about your upcoming renewal. Please let us know if you have any questions.",
+      "good": "Hi Sarah,\n\nYour Harrow Pro subscription renews on March 15th — about 3 weeks away. I noticed your team has been using the project templates feature heavily over the last couple of months, which is great to see.\n\nBefore your renewal, I wanted to make sure you're getting the most out of the features you're paying for. Two things that complement templates and that similar teams in professional services firms have found valuable: the client portal view (lets your clients track project status without you sending updates manually) and the recurring task automation. I'd love to do a quick 20-minute call to show you how those work — happy to fit around your schedule.\n\nEither way, no action needed on the renewal — it'll continue automatically. But if you have any questions about your plan or if anything isn't working as expected, I'm here.",
+      "explanation": "The generic version is technically personalized (first name, renewal mention) but reads as an automated message. The specific version references what Sarah's team actually uses, connects additional features to her specific context (professional services), offers something of value rather than just asking her to renew, and ends without pressure. This is the difference between a renewal email that gets ignored and one that gets a reply."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this generic support response template to be more meaningfully personalized using the customer context provided. Customer context: Long-time customer (3 years), enterprise plan, primary use case is team project tracking, has contacted support twice before about the same integration issue with Salesforce.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: acknowledges the customer's history with this specific issue (third contact — shows you know they've been through this), references their specific integration (Salesforce, not 'an integration'), reflects their tenure as a customer, gives a more committed resolution path than '24 hours / we'll look into it', and if possible, escalates the handling given the repeat nature",
+          "It should feel like it was written for this specific customer by someone who looked at their account"
+        ],
+        "exampleAnswer": "Hi Marcus,\n\nI can see this is the third time you've reached out about the Salesforce integration — and you've been with us for three years. That's not an acceptable experience, and I want to make sure this is the last time you have to contact us about it.\n\nI've pulled your previous tickets and I'm escalating this to our integrations engineering team directly — not the standard queue. I'll personally follow up with you by EOD tomorrow with a specific update on what's causing the issue and a timeline for the fix.\n\nIf you're in a position where this is blocking your team's work today, let me know and I'll get on a call with you within the hour.",
+        "original": "Hi [Name], thank you for contacting support. I understand you're having an issue with one of our integrations. Our team is looking into this and will get back to you within 24 hours. We appreciate your patience."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What matters most in personalized CX communication for high-value or at-risk customers?",
+      "data": {
+        "choices": [
+          "Using the customer's first name in every message",
+          "Referencing their specific situation, history, and context — showing you know who they are",
+          "Sending messages from a real person's email address rather than a support@ address",
+          "Personalizing the greeting and sign-off while keeping the body of the message standardized"
+        ],
+        "correctIndex": 1,
+        "explanation": "For high-value or at-risk customers, what matters most is demonstrating that you know their situation — their history with the product, their specific problem, their use case. This is what separates genuine personalization from cosmetic personalization. First names (option A) are expected but not sufficient. Person-level email addresses (option C) help with approachability but don't address the core issue. Personalizing only the greeting and sign-off (option D) is often transparent and can feel worse than a well-designed template — customers know when the body of a message wasn't written for them."
+      }
+    }
+  ]
+}

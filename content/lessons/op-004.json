@@ -1,0 +1,47 @@
+{
+  "id": "op-004",
+  "trackId": "op",
+  "streamId": "role-tracks",
+  "title": "Build SOPs in Half the Time",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**SOPs Nobody Uses vs. SOPs That Actually Work**\n\nStandard Operating Procedures fail for predictable reasons: they're too long, too vague, written in passive voice, or skipped steps the author assumed were obvious. AI can help you avoid every one of these problems — if you start with the right inputs.\n\n**What makes a good SOP:**\n- **Numbered steps, not paragraphs** — each step is a single action\n- **Active voice with a named actor** — \"The account manager sends the contract\" not \"The contract is sent\"\n- **Decision points clearly marked** — \"If X, go to step 7. If Y, continue to step 4.\"\n- **Defined start and end state** — what triggers the process, what does \"done\" look like?\n- **Edge cases documented** — the 20% of situations that aren't the happy path\n\n**The AI-assisted SOP workflow:**\n1. Brain-dump: describe the process in your own words, as rough notes or voice-to-text\n2. Give AI the rough notes plus the audience (who will follow this SOP)\n3. Ask AI to convert to numbered steps, flag any ambiguities it spots, and suggest missing edge cases\n4. Review the output: correct anything AI assumed incorrectly, add the edge cases you know about\n5. Have someone unfamiliar with the process try to follow it — their questions reveal gaps\n\n**Time savings in practice:**\nThe blank-page problem is the biggest time sink in SOP writing. AI eliminates it. You spend your time reviewing and refining — not structuring from scratch."
+    },
+    {
+      "type": "example",
+      "bad": "Write me an SOP for our client invoicing process.",
+      "good": "I need to write an SOP for our client invoicing process. The audience is new account managers who've never done it before. Here are my rough notes on how it works:\n\n- Happens at end of each month or project milestone\n- Pull hours from Harvest (our time tracker), filter by client and billing period\n- Cross-check against the signed SOW to confirm what's billable\n- Build invoice in QuickBooks — use the client's specific template if they have one saved\n- PDF and send via email to the billing contact (in Salesforce under Contacts)\n- Log the invoice number and amount in the client tracker spreadsheet (link: [URL])\n- If no payment in 30 days, send the first reminder (use template in shared drive)\n- Escalate to finance manager if 60+ days outstanding\n\nPlease: (1) convert this into a clean numbered SOP with active voice, (2) mark any decision points clearly, (3) flag any steps where you think I've left something ambiguous, and (4) suggest any edge cases I might have missed.",
+      "explanation": "The bad prompt produces a generic invoicing SOP that uses none of your actual systems or process. The good prompt gives AI the actual steps, the specific tools, the audience, and asks for four specific outputs. The result will be immediately usable with minimal editing."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're reviewing an AI-drafted SOP and one step reads: \"The appropriate team member should review the document as needed before it is sent.\" What's wrong with this step?",
+      "data": {
+        "choices": [
+          "It's too short — SOP steps should always be at least two sentences",
+          "It uses passive voice, doesn't name who does the review, and 'as needed' is ambiguous",
+          "It should include the specific software tool used for reviewing",
+          "Nothing is wrong — this is an acceptable SOP step"
+        ],
+        "correctIndex": 1,
+        "explanation": "This step has three problems: passive voice (\"should be reviewed\" instead of \"[Name/Role] reviews\"), an unnamed actor (who is \"the appropriate team member\"?), and a vague trigger (\"as needed\" gives no guidance on when this step applies). A corrected version might read: \"The account manager reviews the document for accuracy before sending. If the contract value exceeds $50k, the VP of Sales also approves before sending.\""
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to get AI to help you build an SOP for a process you own or are familiar with. The SOP needs to be usable by someone new to the role. Include your rough notes on the process in the prompt.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: the audience for the SOP (new employee, contractor, cross-functional team), a description of the process in rough notes or bullet form using your actual tools and systems, a clear ask for numbered steps with active voice, and a request to flag ambiguities and suggest edge cases",
+          "Weak prompts ask AI to write an SOP without providing any process details"
+        ],
+        "exampleAnswer": "I need an SOP for our weekly social media posting process. Audience: a new social media coordinator joining next month with no knowledge of our tools. Here are my rough notes:\n\n- Content calendar lives in Notion — new posts planned 2 weeks out by content team\n- Each Monday, pull the week's approved posts from Notion\n- Download final images from the Assets folder in Google Drive (organized by week)\n- Schedule posts in Buffer: LinkedIn posts at 9am Tue/Thu, Twitter daily at 11am, Instagram Tue/Fri at 6pm\n- Tag each post with the campaign label in Buffer for analytics tracking\n- Check on Tuesday morning that all scheduled posts went live — screenshot and log in the weekly tracker\n- If a post fails to publish (it happens), re-post manually and note it in the tracker\n\nPlease write this as a clean numbered SOP with: (1) active voice throughout, (2) decision points clearly marked, (3) any ambiguities flagged, and (4) common edge cases I should add."
+      }
+    }
+  ]
+}

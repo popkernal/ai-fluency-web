@@ -1,0 +1,73 @@
+{
+  "id": "sl-006",
+  "trackId": "sl",
+  "streamId": "role-tracks",
+  "title": "Follow Up Without Being Annoying",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The difference between persistent and annoying is value.** A follow-up that adds something — a relevant article, a useful insight, a specific question — earns a response. A follow-up that's just \"checking in\" or \"circling back\" is noise.\n\nMost deals don't close on the first email. Research consistently shows that 80% of sales require five or more follow-ups, but most reps give up after two. The reps who stay in deals longer without burning bridges are the ones who make each follow-up worth reading.\n\n**The value-first follow-up framework:**\nEvery follow-up should answer one question: \"what am I giving them today?\" The options are:\n- A relevant piece of information (article, data, case study) tied to something they mentioned\n- A specific answer to a question they raised\n- A new angle or insight they haven't considered\n- A concrete, low-friction next step\n\n**Writing a 3-5 touch sequence:**\n- **Touch 1:** Your original outreach\n- **Touch 2 (2-3 days later):** Add one piece of relevant value. Reference something specific.\n- **Touch 3 (5-7 days later):** A different angle — try a different pain point or format (a question instead of a pitch)\n- **Touch 4 (1-2 weeks later):** Social proof or a specific proof point relevant to their industry\n- **Touch 5 (2 weeks later):** The honest close. \"I don't want to keep emailing if this isn't the right time. Happy to reconnect when the timing works — just let me know.\"\n\n**When to stop:** After the breakup email (Touch 5). If they don't respond, move them to a low-frequency nurture track and stop active outreach. Respect is a long-game competitive advantage.\n\n**How AI helps:** Give AI your original email and the sequence framework. Ask it to write each follow-up, specifying what value to add in each one. Then edit for your voice. AI is excellent at varying tone and angle across a sequence so they don't all sound like the same message with different dates."
+    },
+    {
+      "type": "example",
+      "bad": "Hi Sarah,\n\nJust wanted to follow up on my last email and see if you had a chance to look at what I sent over. Let me know if you have any questions or would like to set up a call.\n\nThanks,\nAlex",
+      "good": "Hi Sarah,\n\nI came across this piece on ramping SDR teams faster during high-growth periods — thought it might be useful given the hiring push you're in the middle of. The section on structured 30-60-90 day frameworks is particularly relevant.\n\n[link]\n\nHappy to share how we approach this with other teams your size if it's useful. No pressure either way.\n\nAlex",
+      "explanation": "The first follow-up is pure friction — it asks Sarah to do work (look at the original email, respond, schedule something) without offering anything in return. The second follow-up leads with something useful for Sarah right now, ties it to her specific situation (the hiring push), and makes the CTA easy to decline. It moves the conversation forward without demanding anything."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the value-first follow-up formula. Each blank is a key component of a follow-up that earns a response.",
+      "data": {
+        "template": "Every follow-up should open with {{blank_0}}, connect it to {{blank_1}}, and close with {{blank_2}}.",
+        "blanks": [
+          {
+            "hint": "Something you're giving the prospect — not asking for",
+            "acceptable": [
+              "a specific piece of value",
+              "value",
+              "something valuable",
+              "a relevant insight",
+              "a useful insight"
+            ]
+          },
+          {
+            "hint": "Something you learned about the prospect during research or a previous conversation",
+            "acceptable": [
+              "their specific situation",
+              "their situation",
+              "something they mentioned",
+              "their context",
+              "their role"
+            ]
+          },
+          {
+            "hint": "An ask that's easy to say yes or no to — not a full meeting request",
+            "acceptable": [
+              "a low-friction CTA",
+              "a low friction CTA",
+              "an easy CTA",
+              "a simple ask",
+              "a low-friction call to action"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this follow-up as Touch 3 in a sequence. The prospect is a VP of Marketing at a retail company. They went quiet after your initial demo two weeks ago. You sell email marketing automation software. Add a different angle and a piece of relevant value.",
+      "data": {
+        "rubric": [
+          "Strong rewrites: acknowledge the silence without being passive-aggressive, try a different angle than the original demo pitch (a new pain point, a proof point, a question), add something specific and valuable for a VP of Marketing in retail, and use a low-friction CTA",
+          "Avoid phrases like 'circling back,' 'following up on my follow-up,' 'I know you're busy,' or 'just wanted to check in.'"
+        ],
+        "exampleAnswer": "Hi [Name],\n\nI've been thinking about what you mentioned during the demo — that your team is manually segmenting lists for seasonal campaigns.\n\nWe just published a short breakdown of how three retail brands automated their holiday segmentation last year and cut campaign setup time by 60%. It's two pages — might be worth a quick read given Q4 is coming up faster than it feels.\n\n[link]\n\nHappy to walk through how we'd set this up specifically for your catalog size — or if the timing's off, no problem. Just let me know.\n\n[Name]",
+        "original": "Hi [Name],\n\nI'm following up to see if you've had a chance to think about what we discussed. I know things get busy, so I wanted to make sure you didn't miss my previous email. We'd love to move forward and think this could be a great fit for your team. Please let me know if you'd like to schedule a next step.\n\nThanks so much for your time!"
+      }
+    }
+  ]
+}

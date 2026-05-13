@@ -1,0 +1,45 @@
+{
+  "id": "fn-001",
+  "trackId": "fn",
+  "streamId": "role-tracks",
+  "title": "Financial Narratives That Land",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Translating Numbers Into a Story That Gets Read**\n\nFinancial reports that lead with tables and end with bullet points get skimmed. Financial narratives that tell a clear story get read, remembered, and acted on.\n\nAI is excellent at turning a set of pre-verified financial findings into a clear, well-structured narrative — but the numbers and the interpretation must come from you.\n\n**The components of a financial narrative that works:**\n- **The headline result:** Lead with the most important number and whether it's good, bad, or mixed\n- **Context:** What were the drivers? Revenue up 12% — because of what? New customers, pricing, upsell?\n- **Variance explanation:** What was different from plan or prior period, and why?\n- **Forward-looking connection:** What do these results mean for the next period or full year?\n- **Decision or action:** Is there anything the reader needs to do with this information?\n\n**The AI workflow for financial narratives:**\n1. Run your analysis — calculate the numbers, identify the key variances, determine the drivers\n2. Write the key findings as bullet points: the facts, the drivers, the context\n3. Give AI the bullet points and ask it to write the narrative for a specific audience\n4. Specify tone: board report language is different from a team update\n5. Review for accuracy — AI cannot know whether your narrative interpretation is correct\n\n**What AI cannot do:**\nAI doesn't know if the story you're telling about the numbers is accurate. If you tell AI \"revenue was up because of strong enterprise sales,\" it will write a compelling narrative around that — whether or not it's true. The interpretation is your responsibility."
+    },
+    {
+      "type": "example",
+      "bad": "Here are our Q3 financials. Can you write a summary for the board?",
+      "good": "I need to write the narrative section of our Q3 board report. Here are the key findings from my analysis:\n\n- Revenue: $4.2M, +18% vs Q3 last year, +6% vs Q2 (ahead of $4.0M plan)\n- Gross margin: 71%, down 2pp vs Q3 last year — driven by increased cloud infrastructure costs as we scaled\n- EBITDA: $840k, 20% margin — in line with plan\n- Key revenue driver: Enterprise segment grew 34% YoY (from 8 to 14 enterprise clients). SMB segment flat.\n- One concern: Customer acquisition cost increased 22% — mainly higher paid media CPCs in our core channels\n- One highlight: Net revenue retention hit 112% for the first time\n\nAudience: 5-person board with mixed financial/operational backgrounds. Some are non-financial. They need to understand the story and any decisions required.\n\nPlease write a 3-paragraph narrative that: (1) leads with the overall performance signal, (2) explains the key drivers (enterprise growth, margin compression), and (3) flags the CAC trend as a watch item for Q4 without being alarmist. Plain language — no excessive jargon.",
+      "explanation": "The vague prompt hands AI a data dump with no findings or interpretation. AI will write something but it will be structurally generic and might emphasize the wrong things. The good prompt brings pre-analyzed findings, named drivers, a specific audience description, and a clear request for what the three paragraphs should cover. The human controlled the interpretation — AI wrote the narrative."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this financial summary so it reads as a clear narrative rather than a list of numbers — suitable for a quarterly board report. The audience has mixed financial and non-financial backgrounds.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: opens with an overall performance signal (strong quarter, mixed quarter, challenging quarter), explains the revenue beat in terms of what drove it (not just the number), addresses the margin compression with a reason (even if you have to note the reason is unknown), connects the metrics to tell a coherent story rather than listing them in sequence, and ends with a forward-looking observation or watch item"
+        ],
+        "exampleAnswer": "Q2 was a strong quarter on revenue and a watch-item quarter on margin. Revenue came in at $3.1M — 7% ahead of budget — driven by a strong finish in new customer acquisition (23 new customers in the quarter) and low churn (3 customer losses, our best quarterly churn result in 18 months). Net retention continues to improve.\n\nGross margin came in at 68%, down 3 percentage points from the same period last year. This compression reflects higher infrastructure costs as we scale — a trend we flagged in Q1. At 15.5%, EBITDA margin remains within our target range, but maintaining it in H2 will depend on whether infrastructure costs stabilize as expected.\n\nHeadcount stands at 47 FTE, in line with the hiring plan. The key watch item for Q3 is margin: if the infrastructure cost trend continues, we'll bring a specific remediation plan to the September board meeting.",
+        "original": "Q2 Results: Revenue $3.1M. Budget $2.9M. Variance: +$200k (+6.9%). Gross margin 68%. Prior year 71%. EBITDA $480k. EBITDA margin 15.5%. Headcount 47 FTE. New customers: 23. Churn: 3 customers."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to get AI to help you write commentary on a financial variance — when actual results differ from budget or prior year. Include the key numbers and drivers before asking AI to write the narrative.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: the actual vs",
+          "plan or prior period numbers, the identified drivers of the variance (not just the variance itself), the audience for the commentary, the tone required (board, investor, internal team), and specific guidance on what the narrative should and shouldn't emphasize",
+          "Weak prompts paste a table of numbers and ask AI to write the commentary without providing the interpretation"
+        ],
+        "exampleAnswer": "I need to write variance commentary for our monthly finance report. Here are the key numbers and my analysis of what drove them:\n\nOperating expenses came in at $1.8M in October vs. $1.5M budget — a $300k unfavorable variance (+20%).\n\nDrivers:\n- $150k: Annual software renewals that were budgeted in Q4 but renewed in October (timing, not overspend)\n- $80k: Two new engineer hires started 3 weeks earlier than planned (positive for delivery, negative for short-term opex)\n- $70k: Unbudgeted conference sponsorship approved in September after budget was set\n\nOf the $300k variance, approximately $230k is timing or approved one-time items. The remaining $70k (conference) was a business decision made outside the budget process.\n\nAudience: CFO and Finance Director (financially sophisticated, want precision)\n\nPlease write 2–3 sentences of variance commentary that: (1) states the variance clearly, (2) breaks down the drivers in order of size, (3) makes clear which portion is timing vs. incremental spend, and (4) uses precise finance language appropriate for a CFO audience."
+      }
+    }
+  ]
+}

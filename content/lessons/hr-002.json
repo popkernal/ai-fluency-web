@@ -1,0 +1,49 @@
+{
+  "id": "hr-002",
+  "trackId": "hr",
+  "streamId": "role-tracks",
+  "title": "Interview Prep and Debrief",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Structured Interviews Outperform Unstructured Ones — Every Time**\n\nResearch consistently shows that unstructured interviews (where interviewers ask whatever comes to mind) are among the least predictive hiring tools available. Yet most interviews remain unstructured because creating consistent, role-specific interview guides takes time.\n\nAI dramatically reduces the time to create a rigorous, structured interview process — and helps run better post-interview debriefs.\n\n**What makes interview questions bias-resistant:**\n- **Behavioral questions** — \"Tell me about a time when...\" rather than \"What would you do if...\"\n- **Tied to specific competencies** — each question targets a defined skill or behavior you've identified as critical for success\n- **Consistent across candidates** — same questions in the same order for every candidate for the same role\n- **Scored on a rubric** — what does a strong answer look like vs. a weak one?\n\n**Common interview question problems AI helps fix:**\n- Questions that are really preference tests (\"Where do you see yourself in 5 years?\" tests ambition signals, not job-relevant skills)\n- Hypotheticals that smart candidates can answer theoretically without evidence (\"What would you do if...\")\n- Questions that can reveal protected characteristics indirectly (\"Do you have commitments outside work that might affect your schedule?\")\n- Inconsistency — interviewers asking different questions to different candidates for the same role\n\n**AI-assisted debrief preparation:**\nAfter interviews, structured debriefs produce better decisions than unstructured ones. AI can generate a scorecard template tied to your competencies that forces evaluators to score evidence before the group discussion — reducing the influence of the loudest voice in the room."
+    },
+    {
+      "type": "example",
+      "bad": "Can you write interview questions for a product manager?",
+      "good": "I'm building a structured interview guide for a Senior Product Manager role at a B2B SaaS company. The role focuses on enterprise product development — working closely with large customers, managing complex stakeholders, and making prioritization decisions with limited data.\n\nI've identified 4 core competencies for this role:\n1. **Customer empathy and discovery** — ability to deeply understand enterprise customer needs\n2. **Stakeholder management** — navigating competing priorities across engineering, sales, and executives\n3. **Prioritization under ambiguity** — making confident decisions without complete information\n4. **Communication and influence** — persuading without authority\n\nFor each competency, please write:\n- 2 behavioral interview questions (past behavior, not hypotheticals)\n- A 3-level scoring rubric for each question (Strong / Adequate / Weak) describing what each level of answer looks like\n- One follow-up probe question for when a candidate gives a surface-level answer\n\nAvoid questions that could inadvertently reveal or probe protected characteristics.",
+      "explanation": "The vague prompt produces generic PM interview questions. The good prompt defines the specific role context, names the four competencies being evaluated, requests behavioral questions (not hypotheticals), asks for scoring rubrics (so evaluation is consistent), and asks for follow-up probes. The output is an interview guide that can be used consistently across all candidates for this role."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to generate structured behavioral interview questions for a specific role you hire for. Include the role context, 3–4 competencies you want to assess, and instructions for the scoring rubric.",
+      "data": {
+        "rubric": [
+          "Strong prompts specify: the role and its key challenges (not just the job title), 3–4 named competencies relevant to this specific role, a request for behavioral questions (not hypotheticals), a request for scoring rubrics that describe what strong vs",
+          "weak answers look like, and follow-up probe questions",
+          "They also note to avoid questions that could probe protected characteristics",
+          "Weak prompts just ask for interview questions for a job title without competency context"
+        ],
+        "exampleAnswer": "Please build a structured interview guide for a Customer Success Manager role at a B2B software company. The CSM works with enterprise accounts (100+ employee companies), manages renewals, runs quarterly business reviews, and is expected to drive upsell/expansion conversations.\n\nCore competencies to evaluate:\n1. **Relationship depth and executive presence** — ability to build trusted relationships at VP and C-level\n2. **Proactive problem identification** — spotting customer risk before the customer raises it\n3. **Commercial awareness** — comfortable having expansion and upsell conversations as a natural part of the relationship\n4. **Handling difficult conversations** — managing escalations, renewals at risk, executive disappointment\n\nFor each competency:\n- 2 behavioral questions ('Tell me about a time...')\n- A 3-level scoring rubric: Strong (what does a great answer include?), Adequate (what does an acceptable answer include?), Weak (what signals a poor answer?)\n- 1 follow-up probe for when an answer is vague or surface-level\n\nPlease also suggest a debrief scorecard template that interviewers complete individually before the group discussion — I want to reduce anchoring on the first opinion shared."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which interview question is most effective at reducing bias and predicting job performance?",
+      "data": {
+        "choices": [
+          "\"Where do you see yourself in 5 years?\" — tests ambition and goal-orientation",
+          "\"How would you handle a situation where a key stakeholder disagreed with your recommendation?\" — tests conflict handling",
+          "\"Tell me about a specific time you had to change a stakeholder's mind on a direction they were resistant to. What was the situation and what did you do?\" — tests influence with behavioral evidence",
+          "\"Are you a team player or do you prefer to work independently?\" — tests work style fit"
+        ],
+        "correctIndex": 2,
+        "explanation": "Option C is a behavioral question tied to a specific competency (influence without authority). It requires the candidate to describe actual past behavior — which is a stronger predictor of future behavior than hypotheticals or self-assessments. Option A tests stated preferences, not demonstrated skills. Option B is a hypothetical — candidates can give textbook answers without evidence of actual behavior. Option D is a false dichotomy that signals preferred answer and produces unreliable data. Behavioral questions with evidence requirements are the foundation of structured interviewing."
+      }
+    }
+  ]
+}

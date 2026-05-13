@@ -1,0 +1,51 @@
+{
+  "id": "aa-006",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "Responsible Automation",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Automation amplifies both the good and the bad.** An automation that works correctly sends the right email to 1,000 people. An automation with a bug sends the wrong email to 1,000 people.\n\nResponsible automation design means thinking through failure modes before you build.\n\n**The five failure mode questions:**\n1. **What's the worst case if the AI output is wrong?** If the answer is serious (legal, financial, reputational), require human review.\n2. **Is the data input reliable?** Agents can only be as good as their inputs. Missing or wrong data produces wrong outputs.\n3. **Are there edge cases that break the logic?** Test with unusual inputs: very long content, missing fields, non-standard formats.\n4. **What happens if the automation runs twice?** Design for idempotency — running twice shouldn't double the actions.\n5. **How do you turn it off quickly?** Every automation should have a clear kill switch, and someone should know how to use it.\n\n**The two categories of automation risk:**\n- **Reversible mistakes** — A wrong internal note, a mis-filed document. Easy to fix.\n- **Irreversible mistakes** — An email sent, a customer refund issued, a contract signed. Require more human oversight.\n\nAlways design more human oversight into irreversible actions, especially early in deployment."
+    },
+    {
+      "type": "example",
+      "bad": "Build a refund automation that processes all refund requests under $100 automatically with no human review.",
+      "good": "Build a refund workflow that: classifies refund requests by type and amount, auto-approves a pre-defined set of clean cases (e.g., subscription cancellations within 7 days by first-time customers), queues edge cases and high-value requests for human review, and sends a daily report of all auto-processed refunds for spot-checking. Start with a narrow set of auto-approve criteria and expand as confidence grows.",
+      "explanation": "The fully automatic approach will inevitably approve some fraudulent requests and decline some legitimate ones. The supervised approach starts narrow (auto-approve only clear-cut cases) and expands based on observed accuracy. The daily report allows ongoing oversight without reviewing every case. This is how to build automation you can trust."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're building an automation that parses incoming invoices and enters data into your accounting system. Which failure mode should concern you most?",
+      "data": {
+        "choices": [
+          "The automation takes too long to run",
+          "The automation correctly processes invoices but enters wrong amounts due to parsing errors — creating financial data errors in your books",
+          "The automation uses too many API calls",
+          "The automation can't handle PDF invoices"
+        ],
+        "correctIndex": 1,
+        "explanation": "Financial data errors that get entered into accounting systems are serious — they affect financial reporting, reconciliation, and potentially tax filings. This is an example of an irreversible (or at least high-effort to reverse) error. Before deploying, validate the parsing accuracy on 50+ invoice samples from your real vendors, and add a human spot-check step for high-value invoices."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these responsible automation deployment steps in the correct order:",
+      "data": {
+        "steps": [
+          "Monitor the first week of production with frequent spot-checks",
+          "Test with 50+ diverse real examples and document failure modes",
+          "Design the automation with human review for irreversible actions",
+          "Identify the worst-case failure scenario and decide if it's acceptable",
+          "Deploy to production with a kill switch in place"
+        ],
+        "correctOrder": [3, 2, 1, 4, 0],
+        "explanation": "Start by identifying acceptable failure modes (so you design appropriate safeguards), then design with human review in mind, test extensively with real data, deploy with a kill switch, and monitor closely at launch. The worst-case analysis at the start shapes all subsequent decisions — don't skip it."
+      }
+    }
+  ]
+}

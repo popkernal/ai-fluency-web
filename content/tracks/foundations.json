@@ -1,0 +1,16 @@
+{
+  "id": "foundations",
+  "streamId": "foundations",
+  "title": "AI Fundamentals",
+  "description": "Understand how large language models work, what they can and can't do, and how to think about AI as a tool.",
+  "color": "#6366F1",
+  "lessonIds": [
+    "foundations-001",
+    "foundations-002",
+    "foundations-003",
+    "foundations-004",
+    "foundations-005",
+    "foundations-006"
+  ],
+  "requiredTrackIds": []
+}

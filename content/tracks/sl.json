@@ -1,0 +1,9 @@
+{
+  "id": "sl",
+  "streamId": "role-tracks",
+  "title": "AI for Sales",
+  "description": "Prospect faster, write better outreach, prep for calls, and close more deals with AI.",
+  "color": "#0EA5E9",
+  "lessonIds": ["sl-001", "sl-002", "sl-003", "sl-004", "sl-005", "sl-006"],
+  "requiredTrackIds": ["dw"]
+}

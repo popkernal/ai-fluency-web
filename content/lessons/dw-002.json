@@ -1,0 +1,51 @@
+{
+  "id": "dw-002",
+  "trackId": "dw",
+  "streamId": "core-skills",
+  "title": "Meeting-Ready in Minutes",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI can cut your meeting prep time by 80%.** Before, during, and after meetings, AI handles the scaffolding so you can focus on the substance.\n\n**Before meetings:**\n- Generate agendas from a brief description of the meeting's goal\n- Draft pre-read documents and briefings\n- Summarize background material so you arrive informed\n- Prepare talking points and anticipated objections\n\n**During meetings (real-time):**\n- Some tools offer live transcription and note-taking\n- You can capture rough notes and ask AI to clean them up immediately after\n\n**After meetings:**\n- Transform raw notes into structured meeting summaries\n- Extract action items with owners and deadlines\n- Draft follow-up emails and Slack messages\n- Turn decisions into documentation\n\nThe highest-ROI meeting use: **converting rough notes to structured summaries in 60 seconds.** Paste your notes, ask for decisions + action items + owners, get a clean document you can send immediately."
+    },
+    {
+      "type": "example",
+      "bad": "Summarize my meeting notes.",
+      "good": "Convert these rough meeting notes into a structured summary. Participants: Alice (CEO), Bob (CTO), me (Product Manager). Include: (1) decisions made with who made them, (2) action items in a table with columns: Owner, Task, Deadline, (3) open questions still unresolved, (4) a one-sentence TL;DR for the top of the email. My notes: [paste notes]",
+      "explanation": "The vague prompt produces a paragraph retelling. The specific prompt produces a structured, formatted, immediately shareable summary. The table format for action items is particularly useful — it's easy to scan and holds people accountable. Always specify the participants so AI knows context."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these meeting workflow steps in the right order for maximum efficiency:",
+      "data": {
+        "steps": [
+          "Use AI to draft the follow-up email and action item list",
+          "Generate an agenda using AI based on meeting goal and participants",
+          "Take rough notes during the meeting",
+          "Send the follow-up to participants",
+          "Paste notes into AI and generate a structured summary"
+        ],
+        "correctOrder": [1, 2, 4, 0, 3],
+        "explanation": "The efficient workflow: draft agenda before (so everyone comes prepared), take notes during, clean them up with AI immediately after, draft and send the follow-up. The critical step is doing the AI processing right after the meeting while context is fresh — waiting 24 hours means cold notes that need more work."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which AI-assisted meeting task will have the highest impact on your team's productivity?",
+      "data": {
+        "choices": [
+          "Having AI attend meetings instead of you",
+          "Converting rough notes to structured summaries with action items, owners, and deadlines immediately after every meeting",
+          "Having AI write your meeting contributions in advance",
+          "Using AI to generate automated meeting invites"
+        ],
+        "correctIndex": 1,
+        "explanation": "Post-meeting action item documentation is the highest-leverage meeting task because it directly determines follow-through. Most meetings lose momentum because action items aren't captured clearly or shared promptly. AI can produce a clean, shareable summary in under 2 minutes — making consistent follow-through effortless."
+      }
+    }
+  ]
+}

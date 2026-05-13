@@ -1,0 +1,45 @@
+{
+  "id": "prompting-003",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Temperature & Randomness",
+  "estimatedMinutes": 5,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Temperature** controls how \"creative\" or \"focused\" an AI's responses are. It's a number (typically 0–1) that adjusts randomness in word selection.\n\n- **Low temperature (0–0.3):** Deterministic, consistent, conservative. Good for: factual Q&A, code generation, data extraction.\n- **Medium temperature (0.4–0.7):** Balanced. Good for: summarization, rewriting, explanations.\n- **High temperature (0.8–1.0):** Creative, varied, sometimes unpredictable. Good for: brainstorming, creative writing, generating diverse options.\n\nYou don't always set temperature directly — but understanding it helps you know *why* the same prompt gives different results each time, and how to prompt for more or less creativity."
+    },
+    {
+      "type": "example",
+      "bad": "Generate a creative tagline for my coffee brand.",
+      "good": "Generate 5 tagline options for a premium cold brew coffee brand called 'Slate'. Each should be under 8 words. Make them varied — some bold, some subtle, some witty.",
+      "explanation": "Instead of relying on temperature settings (which you often can't control directly), ask for multiple options and describe the variation you want. This gets you the benefit of creative diversity without depending on technical parameters."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're building a customer support bot that needs to give consistent, accurate answers about return policies. Which temperature setting is most appropriate?",
+      "data": {
+        "choices": [
+          "High (0.9) — so it sounds more human and friendly",
+          "Medium (0.5) — for a balance of accuracy and personality",
+          "Low (0.1) — for consistent, factual responses",
+          "Temperature doesn't matter for customer support"
+        ],
+        "correctIndex": 2,
+        "explanation": "For factual, policy-based answers, low temperature ensures consistency. If the bot gives different answers to the same question each time, customers lose trust. Save higher temperatures for creative tasks."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A developer says: \"I set temperature to 0, so my AI will always give the exact same answer.\" What's wrong with this assumption?",
+      "data": {
+        "statement": "Temperature 0 guarantees identical outputs every single time for any prompt.",
+        "error": "Temperature 0 makes outputs highly consistent but not guaranteed identical — other factors like model updates, sampling hardware differences, and prompt context can still cause minor variations.",
+        "explanation": "Temperature reduces randomness but doesn't make the model a pure deterministic function. For mission-critical consistency (like test assertions), always validate outputs rather than assuming identical results."
+      }
+    }
+  ]
+}

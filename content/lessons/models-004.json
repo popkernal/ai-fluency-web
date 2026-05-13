@@ -1,0 +1,50 @@
+{
+  "id": "models-004",
+  "trackId": "models",
+  "streamId": "tools-reference",
+  "title": "Free vs Paid AI Plans",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "Most AI tools offer a free tier and paid plans. Here's what that actually means in practice.\n\n**What free plans give you:**\n- Access to a capable model — usually good enough for everyday tasks\n- A limited number of messages per day (ChatGPT free: limited GPT-4o messages, then falls back to a basic model)\n- Basic file uploads on some tools\n- The tool may use your conversations to improve the model\n\n**What paid plans add (typically $20–$25/month):**\n- The most powerful model without limits\n- Faster responses, especially when the service is busy\n- Higher message limits or no limits\n- Better privacy — most paid plans don't use your chats for training\n- More features (memory, longer documents, voice, image generation)\n- Priority access when servers are under load\n\n**ChatGPT Plus (~$20/month):** Full GPT-4o, image generation (DALL-E), memory, voice mode, Custom GPTs, file uploads.\n\n**Claude Pro (~$20/month):** More messages with Opus and Sonnet, Projects (persistent context), longer conversations, priority access.\n\n**Gemini Advanced (~$20/month):** Gemini Ultra model, Google Workspace integration (Gmail, Docs, Drive), longer context.\n\n**Perplexity Pro (~$20/month):** More Pro searches per day, access to different AI models, file uploads.\n\n**When the free plan is enough:** Personal use, occasional tasks, getting started, testing if AI is useful for you.\n\n**When to upgrade:** You're hitting message limits, you need the most capable model for important work, or privacy matters for your use case."
+    },
+    {
+      "type": "example",
+      "bad": "Sign up for every paid AI plan to make sure you always have the best tool available.",
+      "good": "Start with free plans. If you find yourself frustrated by message limits or hitting the cap before finishing a task, upgrade one tool — the one you use most. Most people only need one paid subscription.",
+      "explanation": "Paying for multiple AI tools you rarely use is wasted money. Try free tiers first, identify which one you reach for most, and upgrade that one if the limits become a real bottleneck."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're using a free AI plan and notice responses getting slower and less capable in the afternoon. What's the most likely explanation?",
+      "data": {
+        "choices": [
+          "Your internet connection is slow",
+          "The AI needs to be restarted",
+          "You've hit the free tier's daily usage limit and been switched to a less capable model",
+          "The AI is learning from your past messages and getting confused"
+        ],
+        "correctIndex": 2,
+        "explanation": "Free plans have usage limits. When you hit them, many tools automatically switch you to an older or less capable model rather than cutting you off entirely. Upgrading to a paid plan removes these limits and keeps you on the best model all day."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're about to use a free AI tool to help write a sensitive internal business proposal. What should you check first?",
+      "data": {
+        "choices": [
+          "Whether the tool has a dark mode",
+          "Whether the free plan uses your conversations for model training",
+          "How many messages you get per day",
+          "Whether the tool has a mobile app"
+        ],
+        "correctIndex": 1,
+        "explanation": "Many free AI tools may use your conversations to improve their models, which means humans could review them. For sensitive business content, check the privacy settings or upgrade to a paid plan that explicitly excludes training on your data."
+      }
+    }
+  ]
+}

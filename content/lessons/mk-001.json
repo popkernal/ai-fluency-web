@@ -1,0 +1,47 @@
+{
+  "id": "mk-001",
+  "trackId": "mk",
+  "streamId": "role-tracks",
+  "title": "Content That Sounds Like You",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why AI Content Sounds Generic — and How to Fix It**\n\nWhen you ask AI to write content without providing examples of your brand voice, you get the AI's default voice: confident, clean, slightly corporate, and completely interchangeable with every other brand using the same tool.\n\nThe fix isn't complicated — it just requires deliberate setup.\n\n**How to teach AI your brand voice:**\n\n1. **Provide examples, not descriptions.** \"Write in a conversational tone\" means nothing. \"Write like this example: [paste 200 words of your best-performing content]\" works.\n\n2. **Name the contrast.** Tell AI what your brand voice is NOT. \"Our brand is direct and plain-spoken — we don't use buzzwords like 'leverage', 'synergy', or 'unlock.' We don't end sentences with exclamation points.\"\n\n3. **Define the reader.** \"Write for a 35-year-old senior marketing manager at a 200-person B2B company. She reads fast, trusts specifics, and hates being talked down to.\"\n\n4. **Specify what to avoid.** The most useful voice guidance is often negative: \"Don't use rhetorical questions as headers. Don't start paragraphs with 'In today's [X] landscape.' Never use the phrase 'game-changing.'\"\n\n**Build a voice prompt you can reuse:**\nOnce you find a voice framing that produces content that sounds like your brand, save it as a reusable block. Paste it at the top of every content prompt. Updating this block when your brand evolves takes 5 minutes."
+    },
+    {
+      "type": "example",
+      "bad": "Write a LinkedIn post about our new product feature.",
+      "good": "Write a LinkedIn post announcing our new bulk export feature.\n\nBrand voice context:\n- Company: Harrow — a B2B project management tool for professional services firms\n- Voice: Direct, no-fluff, slightly irreverent. We speak like a smart colleague, not a press release.\n- Reader: Operations managers at 50–200 person consulting or agency firms\n- AVOID: buzzwords ('game-changing', 'seamless', 'powerful'), rhetorical questions as openers, exclamation points\n- EXAMPLE of our voice: [paste a past post that performed well]\n\nFeature context: Bulk export lets users export all project data (tasks, timelines, budgets) to CSV or JSON with one click. Previously required downloading reports one project at a time.\n\nFormat: 3–4 short paragraphs, no hashtags, no emoji, max 250 words.",
+      "explanation": "The bad prompt will produce generic product marketing copy. The good prompt teaches AI the voice through examples, contrast (what to avoid), and a specific reader definition. The format constraint ensures the output is immediately usable. This setup takes 3 minutes and saves 20 minutes of editing."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this AI-generated copy so it sounds like a specific, real brand voice instead of generic marketing. Choose a voice that is direct, plain-spoken, and slightly irreverent — like a smart practitioner talking to a peer, not a brand talking at a customer.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: removes all buzzwords (unlock, seamless, game-changing, innovative, drive results), replaces abstract claims with a specific, concrete benefit, drops the rhetorical question opener, matches a plain-spoken practitioner voice rather than corporate marketing voice, and makes a clear and direct call to action without an exclamation point"
+        ],
+        "exampleAnswer": "Managing projects across a distributed team gets messy fast — status lives in Slack, timelines live in spreadsheets, and nobody has the full picture. Harrow puts project status, ownership, and timelines in one place so your team stops asking you for updates and starts finding answers themselves. 14-day free trial. No credit card required.",
+        "original": "Unlock the power of seamless collaboration with our game-changing platform. In today's fast-paced business environment, teams need powerful tools that enable them to work smarter, not harder. Our innovative solution provides the visibility and alignment your organization needs to drive results and achieve your goals. Ready to transform your workflow? Start your free trial today!"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want AI to consistently produce content that matches your brand voice. Which approach will be most effective?",
+      "data": {
+        "choices": [
+          "Describe your brand voice in adjectives: 'Write in a friendly, professional, approachable tone'",
+          "Paste 2–3 examples of your best existing content alongside a list of words and phrases to avoid",
+          "Ask AI to 'write like [a famous brand]' — for example, 'write like Apple'",
+          "Write the content yourself first, then ask AI to 'improve' it"
+        ],
+        "correctIndex": 1,
+        "explanation": "Concrete examples plus specific avoidance rules produce the most consistent results. Adjective descriptions (option A) are too vague — 'friendly' means different things to different writers. Mimicking a famous brand (option C) produces that brand's voice, not yours, and may reference their products or style in unintended ways. Having AI 'improve' your writing (option D) is useful for editing but doesn't establish a reusable voice standard. Examples + avoidance list is the most transferable and scalable approach."
+      }
+    }
+  ]
+}

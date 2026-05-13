@@ -1,0 +1,47 @@
+{
+  "id": "sl-001",
+  "trackId": "sl",
+  "streamId": "role-tracks",
+  "title": "Prospecting at Scale",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Most sales outreach fails because it's generic.** AI can change that — but only if you use it to do real research, not just to write faster versions of the same templated email everyone else is sending.\n\nThe goal of AI-assisted prospecting is to find the specific context that makes a prospect think: \"this person actually understands my situation.\" That means researching before writing.\n\n**What to research for each prospect:**\n- **Company context:** Industry, size, growth stage, recent funding, products\n- **Recent news:** New hires, product launches, expansions, earnings, press\n- **Likely pain points:** Based on their role, company stage, and what you know about similar buyers\n- **Trigger events:** Anything that creates urgency — a job change, a new initiative, a competitor move\n\n**Batch personalization without sounding generic:**\nYou don't need to write every email from scratch. The trick is using AI to extract the specific hook for each prospect, then slotting that hook into a tight message structure. Even one sentence of genuine relevance outperforms three paragraphs of generic copy.\n\nA practical workflow: give AI a prospect's LinkedIn bio, company About page, and one recent news item. Ask it to surface the three most likely business problems your product could solve for them. Then write to one of those problems — not to all of them at once."
+    },
+    {
+      "type": "example",
+      "bad": "Write me a cold email to Sarah, VP of Sales at a mid-size SaaS company.",
+      "good": "Here is Sarah's LinkedIn headline: 'VP of Sales at Meridian HR | Scaling from $5M to $20M ARR | Hiring.' Their company just announced a Series B and posted 12 open SDR roles. My product is a sales coaching platform that reduces ramp time for new reps. What are the top 3 business problems Sarah is most likely experiencing right now, and what specific hook could I use in a cold email that would feel personally relevant to her situation?",
+      "explanation": "The first prompt treats Sarah as a generic title. The second gives AI the raw signals it needs to think like a good researcher: a growth milestone, a hiring push, a role change dynamic. The output isn't a finished email — it's the insight that makes the email worth writing. Research first, write second."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which element most makes AI-generated outreach feel genuinely personal to the recipient?",
+      "data": {
+        "choices": [
+          "Using the prospect's first name in the subject line",
+          "Referencing a specific trigger event or business signal relevant to their current situation",
+          "Writing longer emails with more detail about your product",
+          "Using a casual, friendly tone instead of a formal one"
+        ],
+        "correctIndex": 1,
+        "explanation": "Personalization tokens like first names are table stakes — recipients know they're automated. What actually lands is evidence that you understand their current situation: a recent hire, a funding round, a product launch, a job change. These signals show you did real research, not mail merge. AI helps you find and surface these signals at scale."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt that asks AI to research a prospect and identify the best outreach angle. Your prospect is Marcus, Director of Operations at a 200-person logistics company that recently expanded into same-day delivery. You sell workflow automation software.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: the prospect's role and company context, a specific recent signal (the same-day delivery expansion), your product category, and a clear ask — not for a finished email, but for the specific business problem or hook to lead with",
+          "Bonus: asking AI to prioritize the single strongest angle rather than listing five generic ones"
+        ],
+        "exampleAnswer": "Here is context on a prospect I'm researching before outreach:\n\n- Name: Marcus, Director of Operations\n- Company: a 200-person logistics company that recently launched a same-day delivery service\n- My product: workflow automation software that helps ops teams manage higher order volume without adding headcount\n\nBased on this context, what is the single most likely operational pain point Marcus is experiencing right now as a result of the same-day delivery expansion? Then suggest the one most compelling hook I should lead with in a cold email — something specific to his current situation, not a generic ops problem."
+      }
+    }
+  ]
+}

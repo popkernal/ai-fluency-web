@@ -1,0 +1,46 @@
+{
+  "id": "mc-003",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "Working With Documents and Files",
+  "estimatedMinutes": 8,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Claude can work with documents you paste or upload — and this changes what's possible.**\n\nWhen you provide a document to Claude, you can ask it to:\n- Analyze, summarize, and extract specific information\n- Compare multiple documents for differences or alignment\n- Find patterns across a large body of text\n- Check a document against criteria or requirements\n- Transform the content (translate, restructure, simplify)\n\n**How to work with documents effectively:**\n\n1. **Establish what you have** — Tell Claude what the document is and its context before asking questions about it.\n\n2. **Be specific about what to extract** — Don't ask \"what's in this document?\" Ask \"what are the 5 most important risk factors mentioned in Section 3?\"\n\n3. **Ask for grounding** — \"Quote the specific passage where you found that.\" This makes it easy to verify Claude's interpretation.\n\n4. **Compare intelligently** — For multiple documents, be explicit: \"Compare Document A and Document B on these 4 dimensions: [list].\"\n\n5. **Know the limits** — Very long documents may exceed Claude's context window. For book-length content, work section by section.\n\n**High-value document tasks:** contract review (finding specific clauses), market research synthesis, meeting transcript analysis, RFP response generation from source materials."
+    },
+    {
+      "type": "example",
+      "bad": "Read this contract and tell me if it's good.",
+      "good": "Review this service agreement from the perspective of a startup founder accepting a vendor contract. Specifically:\n\n1. Identify any clauses that limit our ability to cancel or switch vendors in the first 12 months.\n2. Find any liability caps and state exactly what they are in dollar terms.\n3. Flag any auto-renewal provisions and their notice requirements.\n4. List anything that would require us to share proprietary data with the vendor.\n\nFor each finding, quote the relevant section so I can locate it in the original document.",
+      "explanation": "Asking if a contract is 'good' is too vague — Claude won't know your specific concerns. The structured review asks for exactly what a startup founder should care about: exit flexibility, liability, auto-renewal, data sharing. Asking for quoted passages ensures you can verify each finding and its exact wording."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You've pasted a 10-page report and asked Claude to summarize it. Claude's summary mentions a statistic you don't recognize. What's the best next step?",
+      "data": {
+        "choices": [
+          "Trust it — Claude read the full document",
+          "Ask Claude to quote the exact passage in the document where that statistic appears",
+          "Ignore it and use the summary anyway",
+          "Discard the summary entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Asking Claude to quote the source passage serves two purposes: it confirms the statistic is actually in the document (not hallucinated), and it lets you locate the original for full context. This is 'grounding' — connecting Claude's interpretation to specific text in the source. Always use it when accuracy matters."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to have Claude compare two job candidates' resumes across 4 specific dimensions that matter most for a role you care about. Include the dimensions and make the output easy to act on.",
+      "data": {
+        "rubric": [
+          "Strong prompts specify: 4 named dimensions with clear definitions, a structured output format (table or labeled sections), explicit instructions to ground findings in specific resume text, and the role context so Claude knows what matters"
+        ],
+        "exampleAnswer": "Compare these two candidate resumes for a Senior Product Manager role at a B2B SaaS company. Evaluate each candidate on these 4 dimensions:\n\n1. B2B SaaS product experience (depth and recency)\n2. Data fluency (evidence of metrics-driven decision making)\n3. Cross-functional leadership (working with engineering, design, sales)\n4. Enterprise experience (working with large customers or complex sales cycles)\n\nFor each dimension, rate each candidate (strong / moderate / weak) and quote the specific evidence from their resume. End with a recommendation and the one biggest concern about each candidate. Format as a comparison table followed by a brief recommendation paragraph."
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "aa-001",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "What Are AI Agents?",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**An AI agent is an AI system that takes sequences of actions to accomplish a goal — not just respond to a single prompt.**\n\nThink of a regular AI interaction like a vending machine: you press a button, it gives you one thing. An agent is more like a project manager: you give it a goal, and it plans steps, uses tools (search, read files, call APIs), reviews results, and keeps going until the goal is achieved.\n\nAgents exist on a spectrum. **Simple chains** run a fixed sequence of AI steps. **Tool-using agents** can call functions like web search or code execution. **Autonomous agents** plan and execute multi-step goals with minimal human input.\n\nCurrent reality: the most reliable agent implementations are simple chains and tool-using agents. Fully autonomous agents are improving fast but still require careful design and human oversight in production.\n\nKnowing where each type fits helps you identify genuinely useful automation — and avoid expensive mistakes."
+    },
+    {
+      "type": "example",
+      "bad": "Trying to build a fully autonomous AI agent that handles all customer support without human oversight.",
+      "good": "Building a semi-automated support workflow: AI classifies incoming tickets → routes simple issues to AI-drafted responses (human reviews before sending) → flags complex issues for human handling.",
+      "explanation": "The fully autonomous approach risks sending wrong or harmful responses without any check. The semi-automated approach captures 70-80% of the efficiency gain while keeping a human in the loop. Start with human-in-the-loop designs and automate more as you build confidence."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which of these is the most appropriate early use case for an AI agent workflow?",
+      "data": {
+        "choices": [
+          "Automatically responding to all customer emails with no human review",
+          "Making autonomous financial transactions based on market conditions",
+          "Monitoring a data feed and drafting a daily summary report for a human to review and send",
+          "Making hiring decisions for job candidates"
+        ],
+        "correctIndex": 2,
+        "explanation": "The daily summary report is a good first agent use case: it's repetitive, low-stakes if imperfect, and has a human review step before anything external happens. Autonomous customer replies and financial transactions are high-stakes without oversight. Hiring decisions require human judgment and accountability."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "The most reliable early agent implementations are ___ chains and ___-using agents. Fully ___ agents require careful design and human oversight.",
+      "data": {
+        "blanks": ["simple", "tool", "autonomous"],
+        "hint": "Think about the spectrum from fixed sequences to AI-decides-everything."
+      }
+    }
+  ]
+}

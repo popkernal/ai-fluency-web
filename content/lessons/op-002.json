@@ -1,0 +1,48 @@
+{
+  "id": "op-002",
+  "trackId": "op",
+  "streamId": "role-tracks",
+  "title": "Project Updates That Don't Get Ignored",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The Problem With Most Status Updates**\n\nMost project status updates are written for the person writing them, not the person reading them. They list activity instead of progress. They bury the important stuff. They use project-internal language that means nothing to a VP skimming their inbox at 7am.\n\nAI can help you produce tighter, more readable updates — but only if you understand what makes an update actually work.\n\n**What belongs in every status update:**\n1. **Status signal** — Is this project on track, at risk, or blocked? Say it in the first line.\n2. **Progress since last update** — What moved forward? Be specific, not generic.\n3. **What's next** — The two or three most important things happening before the next update.\n4. **Risks and blockers** — What could go wrong, and what action is needed from whom?\n5. **Decisions needed** — If you need something from the reader, say so explicitly.\n\n**How to use AI for status updates:**\nFeed AI your raw notes from the week — meeting notes, Jira tickets, Slack threads, your own bullets — and ask it to draft the update in the format above. Specify your audience. Then edit for accuracy, since AI won't know about the political context or interpersonal dynamics that sometimes need softening or amplifying.\n\n**What AI can't do:**\nAI doesn't know whether \"on track\" is actually true. It doesn't know that the risk you mentioned is actually a crisis. You have to bring that judgment — AI just helps you communicate it clearly."
+    },
+    {
+      "type": "example",
+      "bad": "Update: We had our weekly sync, worked on several deliverables, and are continuing to make progress. A few things came up that we're monitoring. More updates to follow.",
+      "good": "**Status: At Risk** — Launch date is in 6 days and the payment integration is not yet tested.\n\n**Progress this week:** API contract finalized with payments vendor. QA environment set up. Two of five integration test cases passing.\n\n**This week's focus:** Complete remaining 3 test cases by Wed. Go/no-go decision by Thursday EOD.\n\n**Blocker:** Needs a decision from Sarah (Payments) on fallback behavior for declined cards — without this, we can't finish test case 4. Request sent Monday, no response yet.\n\n**Decision needed:** If payment integration isn't complete by Thursday, do we delay launch or ship without saved payment method? Need input from you by Wednesday.",
+      "explanation": "The bad update communicates nothing actionable. A stakeholder reading it has no idea if there's a problem. The good update leads with the status signal, names specific progress, flags the specific blocker, names the person responsible, and asks for a specific decision. A busy executive can read this in 30 seconds and know exactly what's happening and what they need to do."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which element of a project update is most important to put first — before anything else?",
+      "data": {
+        "choices": [
+          "The overall status signal (on track / at risk / blocked)",
+          "A summary of what the team accomplished this week",
+          "The timeline and original project scope",
+          "Any risks or issues that have come up"
+        ],
+        "correctIndex": 0,
+        "explanation": "The status signal should always come first. Stakeholders need to calibrate how to read the rest of the update before they read it. If everything is fine, they'll skim. If it's blocked, they'll read every word. Burying the status signal after a list of accomplishments means the most important information arrives last — when attention is lowest."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this status update so it's clear, scannable, and actionable for a senior stakeholder.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: leads with a clear status signal (on track / at risk / blocked), specifies what actually progressed in concrete terms, names who is doing what, identifies any specific risks or blockers (even if none, says so explicitly), and ends with a clear next step or decision needed",
+          "It removes vague language like 'various aspects', 'getting close', 'a few challenges', and 'things develop'"
+        ],
+        "exampleAnswer": "**Status: On Track**\n\n**Progress this week:** Backend data pipeline for Q3 analytics dashboard is 70% complete. Data team (Marcus, Priya) finished schema design and are building the aggregation queries. No blockers currently.\n\n**Next up:** Aggregation queries complete by Wed. Frontend team begins dashboard build Thursday.\n\n**Risk to watch:** If query performance is slow on the full dataset, we may need an extra day for optimization — will know by Wednesday.\n\n**No decisions needed this week.** Next update Friday.",
+        "original": "Hi team, wanted to share an update on the Q3 analytics dashboard project. We've been pretty busy this week working on various aspects of the project. The data team has been doing some work on the backend and I think we're getting close to where we need to be. There have been a few challenges but nothing we can't handle. We'll keep everyone posted as things develop. Let me know if you have any questions!"
+      }
+    }
+  ]
+}

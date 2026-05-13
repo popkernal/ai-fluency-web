@@ -1,0 +1,44 @@
+{
+  "id": "dw-003",
+  "trackId": "dw",
+  "streamId": "core-skills",
+  "title": "Research Without the Rabbit Hole",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI can compress hours of research into minutes — but only if you use it correctly.**\n\nAI is useful for research tasks that involve:\n- Synthesizing what's generally known about a topic\n- Explaining frameworks, models, and concepts\n- Generating search angles and research questions you haven't thought of\n- Helping you understand unfamiliar domains quickly\n\nAI is unreliable for:\n- Current events and recent data (training cutoff applies)\n- Specific statistics and citations (verify before using)\n- Primary research — AI synthesizes existing knowledge, it doesn't conduct new research\n\n**The right research workflow:**\n1. Use AI to get oriented — understand the landscape, key concepts, and main debates\n2. Use AI to generate a list of specific questions and search angles\n3. Use real sources (databases, reports, expert interviews) to find primary evidence\n4. Use AI to help synthesize and structure what you've found\n\nAI is your research assistant and your synthesis engine — not your source of truth."
+    },
+    {
+      "type": "example",
+      "bad": "Tell me the latest statistics on employee burnout rates.",
+      "good": "Give me an overview of what's generally known about employee burnout: key drivers, how it's typically measured, what interventions have the strongest evidence base. Then give me 10 specific search queries I should use to find primary research and recent statistics on this topic.",
+      "explanation": "Asking for 'latest statistics' is where AI hallucinations are most dangerous — it may invent numbers that sound authoritative. The good prompt asks for what AI is reliable at (established knowledge, frameworks, drivers) and then asks AI to generate research queries — so you do the primary source search yourself with better direction."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to understand a topic you know nothing about before a client meeting tomorrow. What's the right AI research approach?",
+      "data": {
+        "choices": [
+          "Ask AI for all the facts about the topic and use them directly in the meeting",
+          "Use AI to explain the topic's key concepts, main debates, and most important questions — then verify specific claims before the meeting",
+          "Skip the research since you can't verify AI's answers anyway",
+          "Ask AI for the top 10 statistics and cite AI as the source"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI is excellent for fast orientation — understanding the conceptual landscape, key terms, and major debates. That gives you enough to have an intelligent conversation. Verify any specific claims you plan to repeat. Never cite AI directly as a source — it's a research starting point, not a primary source."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A colleague shares this workflow: \"I needed data for our quarterly report. I asked AI for the market size of the cloud computing industry and it said $600 billion. I added that number to the report with the citation 'Source: Claude AI.'\"",
+      "data": {
+        "errorDescription": "Using an AI-generated statistic as a citable source in a formal report",
+        "explanation": "AI-generated statistics require verification against primary sources — analyst reports (Gartner, IDC), industry associations, or original research. AI may produce a number that sounds plausible but is fabricated or outdated. Additionally, 'Claude AI' is not an acceptable citation in any formal document. Always trace numbers to their original source."
+      }
+    }
+  ]
+}

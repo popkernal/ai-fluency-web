@@ -1,0 +1,50 @@
+{
+  "id": "models-002",
+  "trackId": "models",
+  "streamId": "tools-reference",
+  "title": "The Major Players: OpenAI, Anthropic, Google, Meta",
+  "estimatedMinutes": 6,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "The AI landscape is dominated by a handful of companies, each with their own model families:\n\n**OpenAI** — Makes the GPT series and o-series models. GPT-4o is their flagship general model. The o1/o3 models are slower but excel at complex reasoning. Available via ChatGPT (consumer) and API.\n\n**Anthropic** — Makes Claude. Known for being particularly strong at long documents, nuanced writing, and following complex instructions. Prioritises safety and reliability.\n\n**Google DeepMind** — Makes the Gemini series. Deep integration with Google products (Docs, Drive, Search). Gemini 1.5 Pro has a 1 million token context window. Strong multimodal (text + image + video) capabilities.\n\n**Meta** — Makes the Llama series (open-source). You can run Llama models yourself, on your own hardware, for free. Used by many companies to build private AI deployments.\n\n**Mistral** — European company making efficient open and proprietary models. Strong on multilingual tasks.\n\n**Perplexity** — Not a model itself, but an AI-powered search engine that combines web search with LLM responses. Great for research tasks where freshness matters."
+    },
+    {
+      "type": "example",
+      "bad": "I'll just use whichever AI I heard about first for everything.",
+      "good": "For a task requiring web-fresh information: Perplexity. For deep document analysis: Claude. For integration with Google Workspace: Gemini. For a private internal deployment: Llama. Match the tool to the job.",
+      "explanation": "Each company's models have different strengths, pricing structures, and use-case fits. A few minutes of thinking about the right tool saves frustration later."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your company wants to run an AI model on its own servers without sending any data to third parties. Which approach is most suited to this?",
+      "data": {
+        "choices": [
+          "Use ChatGPT's Enterprise tier",
+          "Use Claude via the Anthropic API",
+          "Deploy an open-source model like Llama",
+          "Use Perplexity for all queries"
+        ],
+        "correctIndex": 2,
+        "explanation": "Open-source models like Meta's Llama can be downloaded and run on your own infrastructure. No data leaves your servers. This is the go-to approach for enterprises with strict data privacy requirements."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A journalist needs to research a breaking news story from the past 24 hours using AI. Which tool is most appropriate?",
+      "data": {
+        "choices": [
+          "Claude — best for long documents",
+          "GPT-4o — fastest general model",
+          "Perplexity — AI search with live web access",
+          "Llama — open source and private"
+        ],
+        "correctIndex": 2,
+        "explanation": "Perplexity combines real-time web search with AI summarisation. For anything that happened recently, it's far more useful than a model with a training cutoff — which won't know about events after its cutoff date."
+      }
+    }
+  ]
+}

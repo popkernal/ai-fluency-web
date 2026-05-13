@@ -1,0 +1,44 @@
+{
+  "id": "pw-001",
+  "trackId": "pw",
+  "streamId": "quick-wins",
+  "title": "The Anatomy of a Great Prompt",
+  "estimatedMinutes": 7,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**A prompt is just an instruction.** But instructions vary enormously in quality. A vague instruction produces vague results. A precise instruction produces precise results.\n\nEvery effective prompt has some combination of these four components:\n\n1. **Task** — What do you want AI to do? (write, summarize, analyze, rewrite, explain)\n2. **Context** — What does AI need to know? (audience, purpose, background, constraints)\n3. **Format** — How should the output look? (length, structure, tone, examples)\n4. **Quality bar** — What makes a good answer? (specific criteria, what to avoid)\n\nNot every prompt needs all four. A simple question needs little context. A complex creative task benefits from all of them.\n\nThink of it like briefing a talented new employee. The more clearly you explain the task, the better their work will be — not because they're not capable, but because they can't read your mind."
+    },
+    {
+      "type": "example",
+      "bad": "Write a job description.",
+      "good": "Write a job description for a Senior Product Manager role at a 50-person B2B SaaS company. Requirements: 5+ years PM experience, strong data skills, experience with enterprise clients. Tone: professional but human — we want ambitious candidates, not risk-averse ones. Format: standard sections (About Us, Role, Requirements, Nice to Have, Benefits). Keep the whole thing under 500 words.",
+      "explanation": "The weak prompt gives AI no role level, company type, requirements, tone, or length. The strong prompt covers all four components: task (write a JD), context (company size, type, requirements), format (standard sections, under 500 words), and quality bar (tone: professional but human, attract ambitious candidates)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which component of a prompt describes HOW the output should look?",
+      "data": {
+        "choices": [
+          "Task",
+          "Context",
+          "Format",
+          "Quality bar"
+        ],
+        "correctIndex": 2,
+        "explanation": "Format covers how the output should be structured and presented: length, bullet points vs. paragraphs, tone (formal/casual), headers, word count limits, etc. Task is what to do, Context is background information, and Quality bar defines what makes a good output."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "Review this prompt and identify what's missing: \"Explain machine learning to my team.\"",
+      "data": {
+        "errorDescription": "Missing context (who is the team? what's their background?), format (how long? slides? bullet points?), and quality bar (what level of detail? what to avoid?)",
+        "explanation": "Without knowing who the team is (engineers? salespeople? executives?), AI can't calibrate the technical level. Without format guidance, you might get a textbook explanation when you needed a 3-bullet overview. Always consider: who's the audience, what format, and how detailed?"
+      }
+    }
+  ]
+}

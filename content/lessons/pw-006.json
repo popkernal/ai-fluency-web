@@ -1,0 +1,44 @@
+{
+  "id": "pw-006",
+  "trackId": "pw",
+  "streamId": "quick-wins",
+  "title": "When AI Gets It Wrong",
+  "estimatedMinutes": 7,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI makes mistakes. Knowing the most common ones makes you a better user.**\n\nThe three failure modes to watch for:\n\n**1. Hallucination** — AI confidently states something false. Statistics, citations, names, dates, product specs. Always verify factual claims from AI against primary sources, especially numbers and references.\n\n**2. Outdated knowledge** — AI's training has a cutoff date. It doesn't know about recent events, new products, or policy changes after that date. When recency matters, check.\n\n**3. Missing context** — AI doesn't know your specific situation. It will fill in gaps with assumptions that may not match your reality. The more context you give, the fewer wrong assumptions it makes.\n\nThese aren't reasons to avoid AI — they're reasons to use it like a capable but fallible colleague. You wouldn't publish a new hire's work without review. Same principle applies here.\n\n**The safeguard:** always review AI output before using it where accuracy matters. For high-stakes content (legal, medical, financial, public-facing), human expert review is essential."
+    },
+    {
+      "type": "example",
+      "bad": "Ask AI for the latest data on our market and use it in an investor report without checking.",
+      "good": "Use AI to help structure the investor report and write the narrative sections. For market data and statistics, use your actual research and sources — paste in verified numbers and ask AI to integrate them into the narrative.",
+      "explanation": "AI is unreliable for current market data, statistics, and specific numbers it can't verify. But it's excellent at structure, narrative, and clear communication. Use AI for what it's good at; supply your own verified data for what it's not. This is the hybrid approach that produces both speed and accuracy."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "AI gives you a compelling statistic in its response: \"73% of remote workers report feeling disconnected.\" What should you do?",
+      "data": {
+        "choices": [
+          "Use it — AI wouldn't include it if it weren't true",
+          "Verify the statistic with a primary source before using it in any formal communication",
+          "Add 'according to AI' as a citation",
+          "Discard the entire response because it might contain hallucinations"
+        ],
+        "correctIndex": 1,
+        "explanation": "Statistics are a common hallucination — AI produces plausible-sounding numbers that may be fabricated or misremembered. Always verify statistics with a primary source (research firms, peer-reviewed studies, official reports) before using them formally. Don't discard the whole response — just verify what's verifiable."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "Review this workflow: \"I asked AI about our competitor's recent product updates and it gave detailed answers. I included them in my competitive analysis report.\"",
+      "data": {
+        "errorDescription": "Relying on AI for current competitive intelligence without verification",
+        "explanation": "AI's training data has a cutoff date — it can't know about recent competitor product updates. It may confidently describe outdated features or even hallucinate product details that don't exist. For competitive intelligence, always verify with primary sources: competitor websites, press releases, product documentation."
+      }
+    }
+  ]
+}

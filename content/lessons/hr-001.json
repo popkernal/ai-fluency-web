@@ -1,0 +1,42 @@
+{
+  "id": "hr-001",
+  "trackId": "hr",
+  "streamId": "role-tracks",
+  "title": "Job Descriptions That Attract Right-Fit Candidates",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Most Job Descriptions Screen Out the Wrong People**\n\nThe average job description is a list of requirements written for the hiring manager's internal checklist rather than for the candidate reading it. The result: you screen out qualified candidates who don't see themselves in the language you've used, and you attract candidates who are good at matching keywords — not necessarily good at the job.\n\nAI can help you write job descriptions that are both more inclusive and more compelling — if you give it the right inputs.\n\n**The most common JD problems AI helps fix:**\n\n**Inflated requirements.** \"10 years of experience required\" for a role that could be done by someone with 5. \"Degree required\" for a role where what matters is skill. AI, when asked, will challenge these and suggest more appropriate criteria.\n\n**Gendered language.** Research shows certain words ('dominate,' 'aggressive,' 'competitive') skew applications toward men; others ('support,' 'collaborate') toward women. AI can flag and neutralize these patterns.\n\n**Benefits buried after a long requirements list.** The requirements section is often 15 bullets long; the benefits section is 3 vague lines. AI can rebalance this.\n\n**Vague culture language.** \"Fast-paced environment\" and \"team player\" communicate nothing. AI can help you replace these with specific, authentic descriptions of how your team actually works.\n\n**The inputs AI needs from you:**\n- What does this person actually do day-to-day? (Not a generic job function — specific tasks and decisions)\n- What does success look like at 6 months?\n- What are the non-negotiable requirements vs. nice-to-haves?\n- What is genuinely good about working on this team/company? (Not what's standard everywhere)"
+    },
+    {
+      "type": "example",
+      "bad": "We are looking for an experienced Marketing Manager to join our fast-growing company. The ideal candidate will be a self-starter with a proven track record of success. Must have strong communication skills and the ability to work in a fast-paced environment. 7+ years of experience required. Bachelor's degree required.",
+      "good": "**Marketing Manager — B2B SaaS (Remote)**\n\nYou'll own demand generation for our mid-market segment — managing paid channels ($400k annual budget), running campaign strategy for 6 product launches per year, and working closely with the sales team to improve pipeline quality.\n\n**In your first 6 months, you'll:**\n- Audit our current paid channel mix and recommend reallocations based on CAC data\n- Build our first content-led demand program targeting operations leaders\n- Reduce time-to-lead-qualification from 4 days to 2 days in partnership with sales ops\n\n**You'll thrive here if you:**\n- Have run B2B demand gen at a company where budget is real but not unlimited\n- Are comfortable making calls with incomplete data\n- Want a seat at the revenue strategy table, not just execution\n\n**What we actually care about (not credential proxies):**\nWe care about what you've built and what it produced — not how many years you've been doing it or where you went to school.",
+      "explanation": "The bad JD communicates nothing about the actual role, uses inflated credential requirements, and is full of phrases every job description uses. The good version tells candidates exactly what they'll own, what success looks like, who will thrive in the role, and explicitly removes credential proxies. It will attract candidates who want that specific job — not everyone who has 'marketing manager' in their LinkedIn title."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this job description to be more inclusive, more specific, and more compelling to right-fit candidates. Remove biased language, reduce inflated requirements, and add specific context about the role.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: removes coded aggressive/masculine language ('aggressive', 'dominate', 'crush'), replaces credential proxies (degree) with skill-based criteria where appropriate, replaces vague requirements ('long hours', 'excellent communication') with specific descriptions of the role, adds meaningful specifics about what success looks like and what makes this role or company genuinely compelling",
+          "The result should attract top sales talent without screening out qualified candidates who don't see themselves in aggressive language"
+        ],
+        "exampleAnswer": "**Account Executive — B2B SaaS (Mid-Market)**\n\nYou'll own a territory of 150 target accounts in the [sector] space, managing the full sales cycle from prospecting to close. You'll work with warm inbound leads and build your own outbound motion — the split is currently about 60/40.\n\n**What the role looks like:**\n- Average deal size: $28k, 45-day sales cycle\n- Quota: $800k ARR. Current team median attainment: 108%.\n- You'll have SDR support for outbound and a strong CS team who handles post-sale\n\n**What we're looking for:**\n- Experience running complex B2B sales cycles with multiple stakeholders\n- Comfortable with a consultative approach — our buyers are evaluating 3–4 vendors\n- Able to manage a pipeline of 30+ active opportunities without things falling through the cracks\n\n**What matters to us in this hire:** Track record of results and how you think about the sale. We don't have a degree requirement.",
+        "original": "We are seeking a dynamic, aggressive Sales Representative to dominate our target market and crush quota. The ideal candidate will be a competitive self-starter who thrives under pressure. Requirements: Bachelor's degree required. 5+ years of B2B sales experience. Must be willing to work long hours and do whatever it takes to close deals. Excellent communication skills. We offer a competitive salary and great benefits."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A hiring manager asks AI to write a job description for a senior data analyst. The AI output includes: '7+ years of experience required, Bachelor's degree in Computer Science or related field required, must be expert in Python, SQL, R, Tableau, Power BI, Excel, and Looker.' What's wrong with these requirements?",
+      "data": {
+        "errorDescription": "Inflated and unfocused requirements that screen out qualified candidates and signal unclear job definition",
+        "explanation": "Two problems: (1) Listing 7 different tools as required expertise is almost always unrealistic — it signals the hiring manager hasn't thought about which tools are actually core to the role vs. nice-to-have, and it will screen out excellent candidates who are expert in 3–4 of them. A better approach: identify the 2–3 tools that are core to the daily work (probably SQL + one BI tool) and list others as 'familiarity preferred.' (2) '7+ years' and a CS degree requirement may screen out highly capable analysts who built their skills through non-traditional paths. Specifying the actual skills (ability to independently analyze complex datasets, communicate findings to non-technical stakeholders) is more accurate than proxies. AI will reproduce these patterns if you paste them in — you need to explicitly ask AI to challenge inflated requirements."
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "dw",
+  "streamId": "core-skills",
+  "title": "Daily Workflows",
+  "description": "Integrate AI into your daily work: emails, documents, meetings, research, and more.",
+  "color": "#EF4444",
+  "lessonIds": ["dw-001", "dw-002", "dw-003", "dw-004", "dw-005", "dw-006"],
+  "requiredTrackIds": ["cs"]
+}

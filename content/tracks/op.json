@@ -1,0 +1,9 @@
+{
+  "id": "op",
+  "streamId": "role-tracks",
+  "title": "Ops & PM",
+  "description": "Streamline operations, run better projects, and make data-driven decisions with AI.",
+  "color": "#F97316",
+  "lessonIds": ["op-001", "op-002", "op-003", "op-004", "op-005", "op-006"],
+  "requiredTrackIds": ["dw"]
+}

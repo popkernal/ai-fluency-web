@@ -1,0 +1,49 @@
+{
+  "id": "prompting-002",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Context Windows Explained",
+  "estimatedMinutes": 5,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "Every AI conversation has a **context window** — a maximum amount of text the model can consider at once. Think of it as the model's working memory: it can only \"see\" what's inside the window.\n\nWhen a conversation exceeds the window, older messages fall out. The model doesn't remember anything outside the current window. This is why:\n- Long conversations can cause the model to \"forget\" earlier instructions\n- Pasting a huge document and asking questions about it can push your original instructions out\n- Starting a fresh conversation sometimes gives better results than a stale long one"
+    },
+    {
+      "type": "example",
+      "bad": "I've been chatting with you for an hour about my project. Now write the final summary based on everything we discussed.",
+      "good": "Here's a recap of my project: [paste key points]. Based on this context, write a 200-word executive summary highlighting the main goal, approach, and expected outcome.",
+      "explanation": "Don't rely on the model remembering a long conversation. Explicitly re-state the key context you need it to use. The improved prompt is self-contained — it works even in a fresh session."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A user pastes a 50-page document and asks: \"Summarize the key points.\" The model gives a partial, confused answer. What is the most likely cause?",
+      "data": {
+        "choices": [
+          "The model doesn't understand documents.",
+          "The document exceeded the context window, so parts were cut off.",
+          "The model needs the question repeated.",
+          "Summarization is not a capability AI models have."
+        ],
+        "correctIndex": 1,
+        "explanation": "A 50-page document is likely hundreds of tokens — potentially exceeding or nearly filling the context window. When the document is truncated, the model only processes part of it, leading to incomplete answers."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "You have a 20-page research paper and want Claude to answer questions about it. Write a prompt that handles the context window limitation effectively.",
+      "data": {
+        "topic": "Handling long documents with context windows",
+        "rubric": [
+          "Asks the model to focus on specific sections rather than the whole document",
+          "Or explicitly pastes only the relevant excerpt",
+          "Or asks the model to process the document in chunks"
+        ],
+        "exampleAnswer": "Here is section 3 of the paper (pages 8-12): [paste excerpt]. Based only on this section, what is the authors' main methodology for measuring results?"
+      }
+    }
+  ]
+}

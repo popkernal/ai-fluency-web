@@ -1,0 +1,44 @@
+{
+  "id": "glossary-001",
+  "trackId": "glossary",
+  "streamId": "tools-reference",
+  "title": "Core AI Terms",
+  "estimatedMinutes": 5,
+  "xpReward": 25,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**LLM (Large Language Model)** — An AI model trained on large amounts of text to understand and generate language. Examples: Claude, GPT-4, Gemini, Llama.\n\n**Token** — The basic unit of text an AI model processes. Roughly 3–4 characters or ¾ of a word. Pricing is calculated in tokens.\n\n**Context window** — The maximum amount of text (in tokens) a model can process at once — its working memory. Ranges from ~4k tokens (older models) to 1M+ tokens (Gemini 1.5 Pro).\n\n**Prompt** — The input you send to an AI model. Everything you type in the chat box is your prompt.\n\n**Completion / Response** — The AI's output in response to your prompt.\n\n**Hallucination** — When an AI confidently generates false or fabricated information. Not a bug, but an inherent behaviour of pattern-prediction models. Always verify critical facts.\n\n**Training data** — The text, code, and other content the model learned from. Determines what it knows and what biases it may have.\n\n**Training cutoff** — The date after which the model has no knowledge of events. A model with a January 2025 cutoff doesn't know about events in March 2025.\n\n**Parameters** — The internal numerical weights in a model that encode its 'knowledge'. More parameters generally means more capability — but also more cost and slower speed."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "An AI confidently tells you that a specific person was appointed CEO of a company last month. You check and it's wrong — the person was never appointed. What AI behaviour explains this?",
+      "data": {
+        "choices": [
+          "The AI is malfunctioning",
+          "The AI is hallucinating — generating plausible but false information",
+          "The AI searched the wrong website",
+          "The training data was deleted"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hallucination is when an AI generates confident, plausible-sounding but incorrect information. It's not a bug — it's a fundamental property of how LLMs work (pattern prediction). Always verify factual claims, especially about people, dates, or recent events."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're mid-way through a long conversation and the AI starts forgetting instructions you gave at the beginning. What is the most likely cause?",
+      "data": {
+        "choices": [
+          "The AI has a memory leak",
+          "Your internet connection dropped briefly",
+          "The conversation has exceeded or is approaching the context window limit",
+          "The AI is updating in the background"
+        ],
+        "correctIndex": 2,
+        "explanation": "When a conversation approaches the context window limit, older content — including early instructions — gets pushed out. The model can only 'see' what fits in the window. Solutions: start a new conversation with a summary, or use a model with a larger context window."
+      }
+    }
+  ]
+}

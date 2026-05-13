@@ -1,0 +1,50 @@
+{
+  "id": "prompting-004",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "System Prompts & Personas",
+  "estimatedMinutes": 6,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "A **system prompt** is a set of instructions given to an AI *before* the conversation begins. It sets the context, persona, rules, and constraints that shape every response in the session.\n\nSystem prompts let you:\n- Give the AI a specific role (\"You are a legal document reviewer\")\n- Set formatting rules (\"Always respond in bullet points\")\n- Define constraints (\"Never discuss competitor products\")\n- Provide background context (\"The user is a first-year medical student\")\n\nIf you're building a product on top of an AI, the system prompt is your most powerful tool for consistent behavior."
+    },
+    {
+      "type": "example",
+      "bad": "You are a helpful assistant. Answer questions about cooking.",
+      "good": "You are a home cooking coach for beginners. Your tone is warm and encouraging — never condescending. When someone describes a dish they want to make, always: 1) confirm you understand what they're going for, 2) list the ingredients needed, 3) give step-by-step instructions with timing. If they ask about a technique they don't know, explain it in one sentence before continuing. Never assume the user owns specialized equipment.",
+      "explanation": "The improved system prompt specifies tone, a structured response format, how to handle edge cases, and a key constraint (no specialized equipment). This produces far more consistent, useful behavior across the entire conversation."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a system prompt for an AI customer support agent for a SaaS project management tool. The agent should be professional but friendly, focused only on product questions, and should always escalate billing issues to a human.",
+      "data": {
+        "topic": "System prompt for SaaS support agent",
+        "rubric": [
+          "Defines a clear role/persona",
+          "Specifies tone (professional, friendly)",
+          "Limits scope to product questions",
+          "Handles edge case: billing escalation to human"
+        ],
+        "exampleAnswer": "You are a customer support agent for Taskflow, a project management tool. Your tone is professional and friendly — always helpful, never impatient. You answer questions about product features, how-tos, and troubleshooting. If a user asks about billing, payments, refunds, or account cancellation, say: 'For billing questions, I'll connect you with our billing team. Let me transfer you now.' Do not attempt to answer billing questions yourself."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Where in a conversation does a system prompt typically appear?",
+      "data": {
+        "choices": [
+          "After the first user message",
+          "Before the conversation begins, set by the developer or app",
+          "In the middle of the conversation when you want to change behavior",
+          "System prompts are only available in advanced AI APIs"
+        ],
+        "correctIndex": 1,
+        "explanation": "System prompts are set before the conversation starts and persist throughout. They're typically set by the developer building on an API, not by end users. This is how products like customer service bots maintain consistent behavior."
+      }
+    }
+  ]
+}

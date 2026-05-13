@@ -1,0 +1,46 @@
+{
+  "id": "tw-002",
+  "trackId": "tw",
+  "streamId": "core-skills",
+  "title": "Better Decisions With AI",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI doesn't make decisions for you — it makes you better at making them.**\n\nDecision quality improves when you:\n1. Identify all the relevant options (not just the obvious ones)\n2. Apply the right criteria\n3. Stress-test your assumptions\n4. Consider second-order effects\n\nAI can help with all four, but only if you're specific about what kind of help you need.\n\nA useful decision-support framework:\n\n**Step 1 — Expand options:** \"What options am I not considering?\" Even if you've already decided, asking this often surfaces a better alternative.\n\n**Step 2 — Define criteria:** \"Help me define the 5 most important criteria for this decision, ranked by importance.\"\n\n**Step 3 — Evaluate honestly:** Describe each option against the criteria. Ask AI to flag where you're being optimistic.\n\n**Step 4 — Consider second-order effects:** \"What are the unintended consequences of option A in 6 months? In 2 years?\"\n\n**Important:** AI is an input to your decision, not the decision itself. You have context — relationships, company dynamics, your gut — that AI doesn't."
+    },
+    {
+      "type": "example",
+      "bad": "Should I hire another engineer or a product manager?",
+      "good": "I need to make a hiring decision. Context: we're a 12-person startup, 6 months from launch, current team is 4 engineers and 1 PM. We're behind on product definition but also behind on core features. Budget for one hire only.\n\nHelp me think through this:\n1. What are the strongest arguments for each hire?\n2. What information am I missing that would change the answer?\n3. What decision would most experienced startup operators make in this situation and why?\n4. What's the risk I'm most likely underweighting?",
+      "explanation": "The bare question gets a generic answer. The structured question with context gets a real thinking session. The four sub-questions — pros for each, missing info, what experienced operators do, underweighted risk — cover the decision from multiple angles and are far more useful than a simple recommendation."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "AI recommends Option A for your decision. What should you do next?",
+      "data": {
+        "choices": [
+          "Go with Option A — AI is objective and has no biases",
+          "Ask AI to make the strongest case for Option B before deciding",
+          "Ignore AI and go with your gut",
+          "Ask AI the same question again to confirm"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI tends to recommend whichever option sounds best given your description — which may reflect your own framing bias. Before accepting a recommendation, ask AI to argue for the alternative with equal force. If it can't make a compelling case, you have more confidence in Option A. If it can, you have important new considerations."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt that uses AI to help you think through a real or hypothetical decision you're facing. Include at least 3 structured sub-questions that go beyond 'what should I do?'",
+      "data": {
+        "rubric": [
+          "Strong prompts include sufficient context about the decision, at least 3 distinct analytical sub-questions (options expansion, criteria evaluation, risk identification, second-order effects, expert perspective, etc.), and avoid asking AI to make the final decision"
+        ],
+        "exampleAnswer": "I need to decide whether to take on a large new client that would represent 40% of my consulting revenue. Context: I'm a solo consultant, currently at 80% utilization. The client is well-funded but known for demanding last-minute requests.\n\nHelp me think through this:\n1. What are the risks I'm likely underestimating about client concentration at 40%?\n2. What would a seasoned independent consultant consider before taking this on?\n3. What conditions or contract terms should I insist on to protect myself if I say yes?\n4. If I turn this down, what should I do with that capacity instead to avoid the same decision next year?"
+      }
+    }
+  ]
+}

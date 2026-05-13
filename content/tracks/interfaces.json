@@ -1,0 +1,14 @@
+{
+  "id": "interfaces",
+  "streamId": "tools-reference",
+  "title": "Navigating AI Interfaces",
+  "description": "Quick-start guides for ChatGPT, Claude, Gemini, and Perplexity — get productive fast in each platform.",
+  "color": "#0891B2",
+  "lessonIds": [
+    "interfaces-001",
+    "interfaces-002",
+    "interfaces-003",
+    "interfaces-004"
+  ],
+  "requiredTrackIds": []
+}

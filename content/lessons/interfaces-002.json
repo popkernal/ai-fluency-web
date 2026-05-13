@@ -1,0 +1,50 @@
+{
+  "id": "interfaces-002",
+  "trackId": "interfaces",
+  "streamId": "tools-reference",
+  "title": "Navigating Claude",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Claude** (claude.ai) is Anthropic's interface for their Claude models. It has a clean, focused design built for longer, more complex tasks.\n\n**Key features to know:**\n\n**Model selector** — At the bottom of the chat input. Choose between Claude Haiku (fast/cheap), Sonnet (balanced), or Opus (most capable). The default is usually Sonnet.\n\n**Projects** — Claude's version of organised workspaces. Create a Project for each ongoing area of work (e.g. 'Marketing Copy', 'Code Review'). Projects have their own persistent context: you can add a Project Description that's always included, upload files that persist across conversations, and see a shared history.\n\n**File uploads** — Supports PDFs, images, Word documents, code files, and more. Files uploaded to a Project stay available across conversations in that project.\n\n**Styles** — Claude can match your writing style or a custom tone. In a Project, you can set style instructions that persist (e.g. 'Always write in British English, professional but warm').\n\n**Artifacts** — When Claude produces code, documents, or structured content, it can render them in a side panel. Code can be executed in the browser, and documents can be copied cleanly.\n\n**No memory by default** — Unlike ChatGPT, Claude doesn't retain memory between separate conversations unless you're using Projects. Each new conversation starts fresh unless context is in the Project."
+    },
+    {
+      "type": "example",
+      "bad": "Start a new Claude conversation each time you work on a project, re-explaining context every session.",
+      "good": "Create a Claude Project for each major workstream. Add a project description with key context (your role, company, preferences). Upload relevant documents. Now every conversation in that project starts with full context — no re-explaining.",
+      "explanation": "Projects are Claude's most underused feature. They eliminate the 'context tax' of re-explaining who you are and what you're working on at the start of every session. For regular work, they're transformative."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're using Claude to help write a recurring weekly newsletter. What's the best way to ensure consistent tone across sessions?",
+      "data": {
+        "choices": [
+          "Copy and paste your style guidelines at the start of every conversation",
+          "Create a Project with a description that includes your tone and style guidelines",
+          "Use the same conversation thread forever so Claude remembers",
+          "Ask Claude to summarise the last newsletter each time"
+        ],
+        "correctIndex": 1,
+        "explanation": "A Project with a persistent description means your style guidelines are automatically included in every conversation within that project. You write them once, and they're always there — no copy-pasting needed."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Claude produces a Python script in response to your request. You want to run it immediately. What's the quickest way using the Claude interface?",
+      "data": {
+        "choices": [
+          "Copy the code, open a terminal, paste and run it manually",
+          "Ask Claude to explain the code before running anything",
+          "Use the Artifacts panel — Claude can execute code directly in the browser for supported languages",
+          "Download the code as a file, then open it in an IDE"
+        ],
+        "correctIndex": 2,
+        "explanation": "Claude's Artifacts feature can execute Python and JavaScript directly in the browser for quick validation. For supported code, this is the fastest way to check if the output is correct before copying it to your own environment."
+      }
+    }
+  ]
+}

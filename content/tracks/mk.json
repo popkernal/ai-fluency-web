@@ -1,0 +1,9 @@
+{
+  "id": "mk",
+  "streamId": "role-tracks",
+  "title": "AI for Marketing",
+  "description": "Create compelling content, run sharper campaigns, and understand your audience better.",
+  "color": "#D946EF",
+  "lessonIds": ["mk-001", "mk-002", "mk-003", "mk-004", "mk-005"],
+  "requiredTrackIds": ["dw"]
+}

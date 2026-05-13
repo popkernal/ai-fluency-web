@@ -1,0 +1,46 @@
+{
+  "id": "aa-008",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "The Future of Your Work With AI",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI capabilities are advancing faster than most people expect.** Understanding the direction of change helps you prepare for what's coming rather than being surprised by it.\n\n**Near-term developments you should prepare for:**\n\n**Longer context windows** — Models are moving from remembering a few pages to entire books in a single context. This changes how you work with documents and long projects.\n\n**More capable agents** — Agents are getting better at multi-step tasks with less supervision. Tasks that currently need human oversight may become reliably automatable.\n\n**Multimodal AI** — AI that works across text, images, video, and audio in a single workflow. More of your work — including visual and verbal — becomes AI-augmentable.\n\n**Model specialization** — More specialized models trained for specific domains (legal, medical, financial) with higher reliability in those areas.\n\n**What stays constant:**\n- The need for human judgment in high-stakes decisions\n- The value of domain expertise that AI enhances rather than replaces\n- The importance of clear communication — specifying what you need\n- The responsibility to verify AI outputs before acting on them\n\nThe professionals who thrive will be those who continuously learn what AI can do, integrate new capabilities into their practice, and maintain the human judgment that AI can't replicate."
+    },
+    {
+      "type": "example",
+      "bad": "Assume what you've learned today is sufficient for the next 5 years.",
+      "good": "Build a learning habit: spend 20 minutes every 2 weeks reading about AI advances relevant to your work. Experiment with one new AI technique per month. When new capabilities emerge (longer context, better agents, new tools), ask: 'How does this change the workflows I've built? What new things become possible?'",
+      "explanation": "AI is advancing too fast for a one-time learning approach. The professionals who maintain AI fluency treat it as a continuous skill, not a one-time course. 20 minutes every 2 weeks is a sustainable cadence — less is fine, more is better. The key behavior is translating new capabilities into updated workflows."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "As AI agents become more capable, which human skill becomes MORE valuable, not less?",
+      "data": {
+        "choices": [
+          "Manually typing and formatting documents",
+          "Memorizing large amounts of information",
+          "Judgment, accountability, and the ability to specify and evaluate AI work",
+          "Performing repetitive data entry tasks"
+        ],
+        "correctIndex": 2,
+        "explanation": "As AI handles more execution, the ability to specify what good looks like, evaluate outputs, make judgment calls, and take accountability becomes more — not less — valuable. Document typing, information memorization, and repetitive data work are exactly what AI handles well. Your judgment and accountability are what make AI outputs trustworthy."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a 90-day AI learning plan for yourself. Include: 3 new skills to develop, 3 workflows to build, a regular learning habit, and how you'll measure progress at 30, 60, and 90 days.",
+      "data": {
+        "rubric": [
+          "Strong plans are specific and realistic: skills should connect to actual work challenges, workflows should be buildable within the time frame, the learning habit should fit a real schedule, and milestones should be measurable (specific tasks completed, time saved, etc.)"
+        ],
+        "exampleAnswer": "90-Day AI Learning Plan:\n\nSkills to develop:\n1. Prompt chaining for my weekly research reports (Days 1-30)\n2. Building a no-code automation with Zapier + AI for client follow-ups (Days 31-60)\n3. Document analysis workflow for contract review (Days 61-90)\n\nWorkflows to build:\n1. Weekly report chain (3 prompts: gather → synthesize → format)\n2. Client call follow-up automation (trigger: meeting end → AI draft → Gmail draft)\n3. Contract review template with grounding prompts\n\nLearning habit: 20 minutes every other Friday — read one AI newsletter and try one new technique.\n\nMilestones:\n- Day 30: First research report chain running, measurable time comparison\n- Day 60: Follow-up automation live, tracking 10 sends vs. manual\n- Day 90: Contract template tested on 5 real contracts, accuracy reviewed"
+      }
+    }
+  ]
+}

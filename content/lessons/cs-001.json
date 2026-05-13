@@ -1,0 +1,47 @@
+{
+  "id": "cs-001",
+  "trackId": "cs",
+  "streamId": "core-skills",
+  "title": "Why Context Changes Everything",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Context is the biggest lever in AI prompting.** The same question with different context can produce wildly different — and wildly different quality — answers.\n\nAI has no persistent memory between conversations. Every conversation starts from zero. It doesn't know:\n- Who you are\n- What company you work for\n- What you've tried before\n- The history behind your request\n- What \"good\" looks like in your situation\n\nContext fills these gaps. The more relevant context you provide, the more tailored and useful the output.\n\n**Types of context that matter most:**\n- **Who:** Your role, audience, and relationship to the topic\n- **Why:** The purpose and desired outcome of the task\n- **What:** Relevant background information, constraints, and requirements\n- **What not:** Common mistakes, things to avoid, what's already been tried\n\nA useful heuristic: imagine briefing a smart new colleague on a task. What would they need to know to do it well? That's your context."
+    },
+    {
+      "type": "example",
+      "bad": "How do I increase sales?",
+      "good": "I run a 10-person B2B SaaS company selling HR software to companies with 50-200 employees. Our average deal size is $12k/year. We currently close 15% of qualified demos. I've already tried A/B testing email subject lines and adding a free trial — these didn't move the needle. What are 5 specific strategies to increase our close rate from 15% to 25%?",
+      "explanation": "The vague question returns generic sales advice you've heard before. The context-rich version specifies company size, sales model, deal size, current close rate, what's already been tried, and a specific numerical goal. AI can now give targeted advice rather than generic suggestions — because it understands your actual situation."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You start a new AI conversation to continue a project from yesterday. What must you do?",
+      "data": {
+        "choices": [
+          "Nothing — AI remembers your previous conversations",
+          "Re-provide relevant context since AI has no memory between conversations",
+          "Reference the previous conversation by date",
+          "AI automatically loads your account history"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI has no persistent memory between conversations. Each conversation starts fresh. If you want outputs that account for previous work, decisions, or context, you must provide that context again. This is why power users often keep a running context document they can paste at the start of new sessions."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Add context to make this prompt much more useful: \"Help me respond to this difficult customer complaint.\"",
+      "data": {
+        "rubric": [
+          "Good rewrites add: your role (customer success, support, etc.), the company context, what the complaint is about, the desired outcome, tone guidelines, and any relevant history with this customer"
+        ],
+        "exampleAnswer": "I'm a customer success manager at a project management SaaS company. A customer who has been with us for 3 years is threatening to churn because our latest update removed a feature they relied on. They're frustrated and feel we didn't communicate the change. Help me write a response that: acknowledges their frustration, explains why we made the change, offers a workaround, and shows we value their long-term relationship. Tone: warm, accountable, not defensive.",
+        "original": "Help me respond to this difficult customer complaint."
+      }
+    }
+  ]
+}

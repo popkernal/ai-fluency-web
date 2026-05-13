@@ -1,0 +1,54 @@
+{
+  "id": "prompting-007",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Advanced Output Formatting",
+  "estimatedMinutes": 6,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "AI models can produce structured output — JSON, Markdown tables, numbered lists, code blocks, and more. Controlling output format is one of the most underused prompting skills.\n\n**Why it matters:** Structured output is machine-readable, easier to parse downstream, and more consistent. If you're feeding AI output into another system (a spreadsheet, a database, a UI), precise formatting saves hours of cleanup.\n\n**Key techniques:**\n- Specify the exact format: \"Respond only with valid JSON\"\n- Show a template: provide the schema you want filled in\n- Constrain length: \"Each item in 15 words or fewer\"\n- Use delimiters: \"Separate each section with ---\""
+    },
+    {
+      "type": "example",
+      "bad": "Extract the name, email, and company from this email signature.",
+      "good": "Extract the name, email, and company from this email signature. Respond only with valid JSON matching this schema:\n{\n  \"name\": string,\n  \"email\": string,\n  \"company\": string\n}\nIf a field is missing, use null.",
+      "explanation": "The improved prompt makes the output directly usable in code. It defines the exact JSON schema, specifies the null handling for missing data, and eliminates prose around the JSON. This is the difference between output you can use immediately vs. output that needs parsing."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt that extracts 5 action items from a meeting transcript and returns them as a JSON array of objects with 'owner', 'task', and 'deadline' fields.",
+      "data": {
+        "topic": "Structured JSON extraction from meeting transcript",
+        "rubric": [
+          "Specifies JSON array as output format",
+          "Defines the required fields: owner, task, deadline",
+          "Handles missing deadlines (null or 'TBD')",
+          "Instructs model to return only JSON, no prose"
+        ],
+        "exampleAnswer": "Extract all action items from this meeting transcript. Return a JSON array where each object has:\n- owner: the person responsible (string)\n- task: what they need to do (string, max 15 words)\n- deadline: when it's due (string, or null if not mentioned)\n\nReturn only the JSON array with no additional text.\n\nTranscript: [paste transcript here]"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the prompt to request a Markdown table output:",
+      "data": {
+        "template": "Compare these 3 project management tools: Asana, Linear, and Trello. {{blank_0}} with columns: Tool, Best For, Pricing, and Main Limitation.",
+        "blanks": [
+          {
+            "hint": "Specify the exact output format",
+            "acceptable": [
+              "Return a Markdown table",
+              "Format your response as a Markdown table",
+              "Present this as a Markdown comparison table",
+              "Use a Markdown table"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

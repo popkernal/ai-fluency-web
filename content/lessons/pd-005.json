@@ -1,0 +1,47 @@
+{
+  "id": "pd-005",
+  "trackId": "pd",
+  "streamId": "role-tracks",
+  "title": "Roadmap Communication",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Roadmaps Communicate Strategy, Not Just a List of Features**\n\nA roadmap that's just a Gantt chart or a list of features with quarters attached isn't communicating strategy — it's communicating activity. Stakeholders reading it have no idea why you chose these items, what you're trading off, or what success looks like.\n\nAI can help you build the narrative layer that transforms a feature list into a strategic communication.\n\n**What roadmap communication needs to do:**\n- Explain the strategic logic — why these items, in this order, now\n- Make trade-offs visible — what's NOT on the roadmap and why\n- Connect features to customer and business outcomes, not just deliverables\n- Set expectations about confidence level — \"committed\" vs. \"exploring\"\n- Work for multiple audiences (engineering, sales, leadership, customers)\n\n**Where AI helps:**\n- Writing the narrative for each theme or epic (the \"why\", not just the \"what\")\n- Drafting the \"not doing\" section — explaining trade-offs to stakeholders who ask \"why isn't X on there?\"\n- Adapting the same roadmap for different audiences (investor version vs. engineering version vs. customer-facing version)\n- Generating FAQ responses for common stakeholder questions about the roadmap\n\n**The format that works:**\nGrouping features under 2–4 strategic themes is more persuasive than a flat list. Each theme should have: a one-line statement of the problem it addresses, the key features under it, and the expected outcome. AI can help you draft these theme statements and test whether they actually explain the strategy."
+    },
+    {
+      "type": "example",
+      "bad": "Q3 Roadmap:\n- User permissions\n- Bulk export\n- API v2\n- Mobile app improvements\n- Notification center\n- Dashboard redesign",
+      "good": "**Q3 Product Theme: Make Power Users More Powerful**\nOur retention data shows that users who set up advanced workflows have 3x better 12-month retention. This quarter, we're investing in the features that power users have asked for most: granular permissions, bulk export, and API v2. These aren't glamorous, but they're the features that turn active users into champions.\n\n*Key deliverables: User permissions (role-level), Bulk export (CSV/JSON), API v2 (read+write)*\n\n**What's NOT in Q3 and why:**\nMobile improvements and notification center are real priorities — they're moved to Q4 because we need the API v2 foundation in place first. Dashboard redesign is on the 12-month roadmap but requires a dedicated design sprint; committing to it in Q3 would mean cutting corners.",
+      "explanation": "The bad roadmap is a list. The good roadmap communicates strategy. It explains why these items were chosen (retention data), what the strategic theme is, and — critically — why the things NOT on the roadmap aren't there. Stakeholders who wonder 'what about mobile?' get an answer before they ask. This is the kind of roadmap communication that builds trust."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this flat roadmap description into a strategic narrative that explains the \"why\" behind the choices and proactively addresses what's not included.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: groups items under 1–3 strategic themes with a one-sentence explanation of each theme's purpose, connects items to a customer or business outcome (not just a feature description), explicitly addresses at least one thing NOT on the roadmap and explains why, and uses language that makes the strategic logic clear to a non-technical stakeholder"
+        ],
+        "exampleAnswer": "**H1 Product Strategy: Win Enterprise, Keep What We Have**\n\n**Theme 1: Remove the barriers to enterprise deals**\nOur sales team loses 30% of enterprise deals to security and IT objections. This half, we're eliminating the most common blockers: SSO/SAML support for IT compliance, and performance improvements so we can pass enterprise security reviews.\n*Features: SSO/SAML support, performance improvements*\n\n**Theme 2: Turn new users into active users**\nActivation is our biggest growth lever — users who reach 'aha moment' in week 1 have 4x better 90-day retention. The onboarding redesign and search improvements both serve this goal: get users to value faster.\n*Features: Onboarding flow redesign, search improvements*\n\n**Theme 3: Give power users reasons to stay**\nOur most engaged users are outgrowing current reporting. Slack integration and reporting v2 are the two most-requested features from this segment.\n*Features: Slack integration, reporting dashboard v2*\n\n**Not in H1:** Mobile app improvements and API documentation are real requests we're tracking. They're on the H2 plan — we can't execute them well while also delivering the enterprise features this half.",
+        "original": "H1 Roadmap:\n- Onboarding flow redesign\n- Slack integration\n- Reporting dashboard v2\n- Search improvements\n- SSO/SAML support\n- Performance improvements"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which element of roadmap communication is most often missing and most damaging when absent?",
+      "data": {
+        "choices": [
+          "Exact delivery dates for each feature",
+          "A clear explanation of what's NOT on the roadmap and why",
+          "Technical implementation details for each item",
+          "A confidence percentage for each roadmap item"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 'what's NOT on the roadmap and why' section is the most commonly missing and most valuable element. Every stakeholder has a pet feature they want included — if your roadmap doesn't explain trade-offs, every roadmap review becomes a negotiation about what to add. When you proactively explain why things didn't make the cut, you prevent those conversations, demonstrate strategic thinking, and build trust that you've thought through the full picture."
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "models-003",
+  "trackId": "models",
+  "streamId": "tools-reference",
+  "title": "Model Tiers Within a Company",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "Every major AI company offers multiple tiers of models — not just one. Understanding this saves money and improves results.\n\n**Anthropic's Claude family:**\n- **Claude Haiku** — Fastest and cheapest. Great for simple tasks, classification, or high-volume use.\n- **Claude Sonnet** — The balanced middle tier. Strong performance at moderate cost. Most tasks live here.\n- **Claude Opus** — Most capable, slowest, most expensive. Use for complex reasoning, nuanced writing, or high-stakes decisions.\n\n**OpenAI's model families:**\n- **GPT-4o mini** — Fast, cheap, good for simple tasks.\n- **GPT-4o** — Flagship general-purpose model. Strong at text, images, and audio.\n- **o1 / o3** — 'Reasoning' models. Take longer (they 'think' before responding) but handle hard logical problems better.\n\n**Google Gemini:**\n- **Gemini Flash** — Fast and affordable.\n- **Gemini Pro** — Balanced tier for most tasks.\n- **Gemini Ultra** — Most capable; also powers Google's most advanced features.\n\n**The rule of thumb:** Use the lightest (cheapest/fastest) model that reliably does the job. Escalate to a larger model only when you hit quality limits."
+    },
+    {
+      "type": "example",
+      "bad": "Always use the most powerful model — it's worth the cost.",
+      "good": "Use Claude Haiku to tag 10,000 customer support tickets as 'billing', 'technical', or 'general'. Use Claude Sonnet to draft responses to the top 20 tickets. Use Claude Opus only if a ticket involves a complex legal or contractual question.",
+      "explanation": "Matching model tier to task complexity is a core cost-optimisation skill. The most powerful model isn't always the best choice — it's slower, more expensive, and often overkill for routine tasks."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're building an app that classifies 50,000 product reviews as positive, negative, or neutral per day. Which model tier makes the most sense?",
+      "data": {
+        "choices": [
+          "The most powerful model — classification quality is critical",
+          "A fast, cheap tier model like Haiku or GPT-4o mini",
+          "An open-source model only — never pay for classification",
+          "Whichever model the API documentation features first"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sentiment classification is a simple, well-defined task. A lightweight model handles it accurately and reliably. Using a flagship model for this would cost 10–20x more with no meaningful quality gain."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A developer says: 'We standardised on GPT-4o for our entire platform to keep things simple.' What's the problem with this approach?",
+      "data": {
+        "statement": "Using one model for all tasks simplifies operations and ensures consistent quality.",
+        "error": "Consistency comes at the cost of efficiency. Simple tasks (summarisation, classification, extraction) are 10–50x cheaper on lighter models with no quality loss. Using a flagship model everywhere wastes significant budget.",
+        "explanation": "A tiered model strategy — routing tasks to the lightest model that can handle them — is standard practice in production AI systems. Most platforms use a mix of tiers based on task complexity."
+      }
+    }
+  ]
+}

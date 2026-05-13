@@ -1,0 +1,51 @@
+{
+  "id": "prompting-005",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Few-Shot Prompting",
+  "estimatedMinutes": 6,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Few-shot prompting** means giving the AI one or more examples of the task before asking it to do the real thing. Instead of describing what you want in the abstract, you *show* it.\n\nThis technique is powerful because:\n- Examples communicate format, tone, and style better than instructions\n- The model \"learns\" the pattern from your examples and applies it\n- It reduces ambiguity — the model has less to guess\n\n**Zero-shot:** No examples, just instructions.\n**One-shot:** One example.\n**Few-shot:** 2–5 examples."
+    },
+    {
+      "type": "example",
+      "bad": "Classify customer feedback as positive, negative, or neutral.",
+      "good": "Classify customer feedback as positive, negative, or neutral.\n\nExamples:\nFeedback: \"The onboarding was smooth and the UI is gorgeous.\"\nClassification: Positive\n\nFeedback: \"Couldn't figure out how to export my data. Gave up.\"\nClassification: Negative\n\nFeedback: \"It does what it says it does.\"\nClassification: Neutral\n\nNow classify:\nFeedback: \"The new dashboard is okay but I miss the old layout.\"",
+      "explanation": "The examples show the exact input/output format you want. The model now understands the classification scheme, the response format (single word), and even the types of edge cases you might send. Without examples, 'neutral' classifications are often inconsistent."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a few-shot prompt to extract the main action item from meeting notes. Include 2 examples before the real input.",
+      "data": {
+        "topic": "Few-shot extraction from meeting notes",
+        "realInput": "We discussed Q3 budget concerns. Sarah will review the vendor contracts by Friday and flag anything over $10k. Team agreed to delay the rebrand until Q4.",
+        "rubric": [
+          "Includes at least 2 input/output examples",
+          "Examples show the same format as the desired output",
+          "Real input is placed after the examples",
+          "Output format is consistent across examples"
+        ],
+        "exampleAnswer": "Extract the main action item from these meeting notes.\n\nNotes: 'Reviewed the API integration. John will update the documentation by end of week.'\nAction item: John will update the API documentation by end of week.\n\nNotes: 'Marketing discussed the new campaign. Lisa will send design mockups to the team by Tuesday.'\nAction item: Lisa will send design mockups to the team by Tuesday.\n\nNotes: 'We discussed Q3 budget concerns. Sarah will review the vendor contracts by Friday and flag anything over $10k.'\nAction item:"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "When is few-shot prompting most useful?",
+      "data": {
+        "choices": [
+          "When you want the model to be more creative",
+          "When the task has a specific format or style that's hard to describe in words",
+          "When the model keeps giving too-long answers",
+          "When you're using the model for the first time"
+        ],
+        "correctIndex": 1,
+        "explanation": "Few-shot works best when the desired format, style, or pattern is easier to demonstrate than to describe. If you want outputs in a very specific structure (like a JSON schema, a classification label, or a particular writing style), examples communicate that far more clearly than instructions alone."
+      }
+    }
+  ]
+}

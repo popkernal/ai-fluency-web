@@ -1,0 +1,53 @@
+{
+  "id": "foundations-004",
+  "trackId": "foundations",
+  "streamId": "foundations",
+  "title": "Giving AI Better Instructions",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## The clearer you are, the better it works\n\nAI doesn't know who you are, what you're trying to achieve, or who will read the output — unless you tell it. The single biggest lever you have for getting better results is simply being more specific.\n\nFour things make a huge difference:\n\n**1. Audience** — Who is this for? A technical expert needs different language than a first-time reader. A C-suite executive wants different detail than a project team.\n\n**2. Format** — Do you want bullet points, a short paragraph, a numbered list, a table? If you don't specify, AI will choose for you — often reasonably, but not always right.\n\n**3. Length** — \"Short\" means different things to different people. \"Three sentences\" or \"no more than 150 words\" leaves no ambiguity.\n\n**4. Context and purpose** — What is this for? A first draft you'll heavily edit? A final version? An internal document or something customer-facing?\n\nOne more technique that works extremely well: **show AI what you want**. If you have a previous piece of writing you liked, paste it in and say \"match this tone.\" If you want a specific structure, include an example. You're not just describing what you want — you're demonstrating it. This tends to produce much better results than description alone.\n\nNone of this requires technical knowledge. It's just good communication."
+    },
+    {
+      "type": "example",
+      "bad": "\"Summarise this report.\"\n\nResult: A generic three-paragraph summary that recaps everything equally, buries the key business finding, and uses technical language the executive won't engage with.",
+      "good": "\"Summarise this report in 3 bullet points for a non-technical executive audience. Focus on business impact and what action, if any, is recommended. Keep each bullet to one sentence.\"\n\nResult: Three sharp bullets that lead with impact, skip the methodology, and end with a clear recommendation.",
+      "explanation": "Both prompts ask for the same thing — a summary. But the second prompt gives AI the information it needs to make good decisions: who it's for, what format to use, what to prioritise, and how long to make it. The extra 20 seconds of specificity saves you significant editing time."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need AI to write a short LinkedIn post about a product update. Which prompt will get a more useful result?",
+      "data": {
+        "choices": [
+          "\"Write a LinkedIn post about our new analytics dashboard feature.\"",
+          "\"Write a 3-sentence LinkedIn post for a B2B SaaS audience announcing our new analytics dashboard. Tone: professional but conversational. End with a question to encourage comments.\"",
+          "\"Write something good about our analytics feature for LinkedIn.\"",
+          "\"Write a LinkedIn post. Make it engaging.\""
+        ],
+        "correctIndex": 1,
+        "explanation": "The second prompt specifies platform, length, audience, tone, and a structural requirement (end with a question). AI has everything it needs to make good decisions. The other prompts leave too much undefined — AI will fill the gaps with assumptions that may not match what you actually need, and you'll spend more time editing than if you'd been specific upfront."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "The prompt below is too vague to get a useful result. Rewrite it to include: who the audience is, what format and length you want, and what the key message should be.",
+      "data": {
+        "original": "Write something about our new product launch.",
+        "hints": [
+          "Who is the audience?",
+          "What format and length?",
+          "What's the one key message?"
+        ],
+        "rubric": [
+          "Specifies the target audience",
+          "States desired format or length",
+          "Includes the key message or goal"
+        ]
+      }
+    }
+  ]
+}

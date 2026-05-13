@@ -1,0 +1,16 @@
+{
+  "id": "models",
+  "streamId": "tools-reference",
+  "title": "AI Models Explained",
+  "description": "Understand the major AI models, their differences, pricing, and how to choose the right one for any task.",
+  "color": "#7C3AED",
+  "lessonIds": [
+    "models-001",
+    "models-002",
+    "models-003",
+    "models-004",
+    "models-005",
+    "models-006"
+  ],
+  "requiredTrackIds": []
+}

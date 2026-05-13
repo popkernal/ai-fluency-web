@@ -1,0 +1,45 @@
+{
+  "id": "prompting-001",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Writing Precise Instructions",
+  "estimatedMinutes": 5,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "AI models follow instructions literally. Vague instructions produce vague results. The single biggest lever you have is **specificity**: tell the model exactly what you want, what format to use, and what to avoid.\n\nThink of it like briefing a smart contractor: they'll do exactly what you say, so say exactly what you mean."
+    },
+    {
+      "type": "example",
+      "bad": "Write something about climate change.",
+      "good": "Write a 3-paragraph summary of the main causes of climate change for a high school audience. Use simple language. End with one actionable step a student can take today.",
+      "explanation": "The improved prompt specifies length (3 paragraphs), audience (high school), tone (simple language), and a concrete ending requirement. Each added constraint narrows the output space and makes the result more predictable."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this vague prompt to be specific and actionable:",
+      "data": {
+        "original": "Explain machine learning.",
+        "hints": ["Add an audience", "Specify length or format", "Add a concrete use-case or example requirement"],
+        "rubric": ["Specifies audience or expertise level", "Defines output length or structure", "Includes at least one specific format, tone, or use-case requirement (e.g. word count, style, or real-world application)"]
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which prompt is most likely to produce a useful, consistent result?",
+      "data": {
+        "choices": [
+          "Tell me about Python.",
+          "List 5 Python concepts a beginner should learn first, with a one-sentence explanation of each.",
+          "Python help.",
+          "Write about Python programming for me."
+        ],
+        "correctIndex": 1,
+        "explanation": "Option B specifies format (list of 5), audience (beginner), and per-item requirements (one-sentence explanation). The others are too open-ended to produce reliable, structured output."
+      }
+    }
+  ]
+}

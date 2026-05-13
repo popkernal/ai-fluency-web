@@ -1,0 +1,9 @@
+{
+  "id": "tw",
+  "streamId": "core-skills",
+  "title": "Thinking With AI",
+  "description": "Use AI as a thinking partner — brainstorm, analyze, debate, and make better decisions.",
+  "color": "#8B5CF6",
+  "lessonIds": ["tw-001", "tw-002", "tw-003", "tw-004", "tw-005"],
+  "requiredTrackIds": ["cs"]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "models-005",
+  "trackId": "models",
+  "streamId": "tools-reference",
+  "title": "Why AI Doesn't Know Recent News",
+  "estimatedMinutes": 4,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "AI models are trained on data up to a certain date — and then that's it. They don't keep learning after that. This is called a **training cutoff**.\n\nThink of it like a very well-read person who went on a remote expedition with no internet or news access. They know everything that happened before they left, but nothing after.\n\n**What this means practically:**\n- Ask about an event that happened last month → the AI might not know, or might give wrong information confidently\n- Ask about the current price of anything → unreliable\n- Ask who the current leader of a country is → might be wrong if there was a recent election\n- Ask about a product, software version, or law that changed recently → could give outdated info\n\n**Models typically have cutoffs 6–12 months before their release date.** So even a 'new' AI might have information that's over a year old.\n\n**The fix:** Use Perplexity or turn on web search in ChatGPT/Gemini when you need current information. These tools search the web in real time and tell you their sources.\n\n**Or just ask the AI:** 'When does your training data end?' Most models will tell you honestly."
+    },
+    {
+      "type": "example",
+      "bad": "Ask ChatGPT 'What is the current interest rate?' and use the answer in a financial report.",
+      "good": "Go to your central bank's official website for the current rate. Or use Perplexity and ask the same question — it will pull the live figure and cite the source.",
+      "explanation": "Interest rates, stock prices, election results, product releases, company leadership — anything that changes over time should never be sourced from a standard AI model without verification. Use a tool with live web access, or go directly to the source."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You ask an AI assistant: 'Who won the most recent FIFA World Cup?' It confidently names a team. What should you keep in mind?",
+      "data": {
+        "choices": [
+          "AI always has up-to-date sports results",
+          "The answer might be outdated if the most recent tournament happened after the AI's training cutoff",
+          "AI makes up sports results randomly",
+          "The answer is definitely wrong — AI can't know sports facts"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI knows sports results up to its training cutoff. If the tournament happened after that date, the AI won't know — and may confidently name the previous winner or make something up. For current sports results, check a sports site or use Perplexity."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A student says: 'I asked the AI what the latest version of a popular software app is and it told me confidently, so I downloaded that version.'",
+      "data": {
+        "statement": "The AI told me the current version number, so that must be the latest release.",
+        "error": "The AI's answer reflects its training data, which may be months or years old. Software releases constantly. The 'current version' the AI knows may be several major versions behind.",
+        "explanation": "Always check the official website or app store for current software versions. AI is not connected to the internet and cannot know about releases after its training cutoff date."
+      }
+    }
+  ]
+}

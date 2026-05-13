@@ -1,0 +1,47 @@
+{
+  "id": "qw-004",
+  "trackId": "qw",
+  "streamId": "quick-wins",
+  "title": "Brainstorm Like a Pro",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI is an exceptional brainstorming partner.** It never gets tired, never judges your ideas, and can generate dozens of options across wildly different angles in seconds.\n\nBut the quality of a brainstorm depends heavily on the question you ask. There are two failure modes:\n\n1. **Too broad:** \"Give me ideas.\" You get generic, obvious suggestions.\n2. **Too narrow:** \"Give me ideas for X.\" You get variations on one theme.\n\nThe sweet spot: **specify the problem clearly, define useful constraints, and ask for variety.** For example: \"Give me 10 ideas for increasing our newsletter open rates. Include at least 2 ideas that go against conventional wisdom, and 2 that cost nothing.\"\n\nConstraints and unusual angles push AI beyond its most obvious suggestions and into genuinely useful creative territory."
+    },
+    {
+      "type": "example",
+      "bad": "Give me ideas for our company retreat.",
+      "good": "Give me 15 company retreat ideas for a 25-person tech startup. Budget: $500/person. Goal: improve cross-team collaboration. Include a mix of: 2 adventure activities, 3 creative workshops, 2 unusual/unexpected ideas, and avoid generic team-building clichés like trust falls or escape rooms.",
+      "explanation": "The vague prompt produces a list anyone could Google. The specific prompt gives AI the team size, budget, goal, desired categories, quantity, and explicit exclusions — producing a genuinely customized list you can actually use. Constraints make brainstorms better, not worse."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this prompt to get better brainstorm results: \"Give me marketing ideas for our new product.\"",
+      "data": {
+        "rubric": [
+          "Good rewrites should add: product type/description, target audience, budget/channel constraints, number of ideas requested, at least one unusual angle or constraint, and specific goals (awareness, leads, sales)"
+        ],
+        "exampleAnswer": "Give me 10 marketing ideas for our new B2B project management app targeting small agencies (5-20 people). Budget is limited to under $500/month. Include 2 content marketing ideas, 2 partnership ideas, and 2 unconventional ideas most SaaS companies wouldn't try. Goal: generate 50 free trial signups in the first month.",
+        "original": "Give me marketing ideas for our new product."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which brainstorm prompt will generate the most useful, creative results?",
+      "data": {
+        "choices": [
+          "Give me ideas to improve our onboarding.",
+          "Give me 10 ideas to improve our SaaS onboarding. 3 must be things we can implement in one day. 3 must be based on psychology or behavioral science. Include 1 wild idea we've probably never considered.",
+          "What are some onboarding best practices?",
+          "How do other companies do onboarding?"
+        ],
+        "correctIndex": 1,
+        "explanation": "The second prompt wins because it specifies quantity (10), creates distinct categories (quick wins, behavioral science, wild card), and forces variety. The other prompts either get generic best practices, competitor research, or vague ideas — none of which drive immediate creative thinking."
+      }
+    }
+  ]
+}

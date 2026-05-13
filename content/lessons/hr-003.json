@@ -1,0 +1,50 @@
+{
+  "id": "hr-003",
+  "trackId": "hr",
+  "streamId": "role-tracks",
+  "title": "Performance Reviews Worth Reading",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Most Performance Review Feedback Fails**\n\nVague feedback is feedback that doesn't change behavior. \"Great communicator\" means nothing to someone who doesn't know what specifically they did well or should do more of. \"Needs to improve time management\" is not actionable — it doesn't tell the person what to do differently.\n\nAI can help managers write specific, evidence-based feedback faster — but only if the manager brings the observations. AI can't observe performance.\n\n**The SBI model for feedback that works:**\n\n**Situation** — When and where did this happen? Specific context, not generalized impression.\n**Behavior** — What exactly did the person do? Observable, specific action — not interpretation.\n**Impact** — What was the effect of that behavior? On the team, the customer, the project, the business?\n\n**Bad:** \"Sarah is a strong communicator.\"\n**Good (SBI):** \"In the Q3 board presentation (situation), Sarah restructured the slide deck 24 hours before the meeting to lead with the financial risk (behavior). The board spent 40 minutes on the risk discussion we needed to have, rather than the 10 minutes originally planned — that conversation shaped our Q4 strategy (impact).\"\n\n**For development areas:**\nThe same structure applies, but with a forward-looking add: what should the person do differently, and what support is available?\n\n**The AI workflow:**\n1. Write bullet notes of specific observations (situations, behaviors, outcomes you observed)\n2. Give AI your notes plus the employee's role and level\n3. Ask AI to convert to SBI-structured feedback in a professional tone\n4. Review: is every claim accurate? Is it specific enough to be actionable?\n5. Add your own voice — performance reviews should sound like the manager who knows the person, not like a generic HR document"
+    },
+    {
+      "type": "example",
+      "bad": "Alex is a hard worker who consistently goes above and beyond. He could work on his communication skills and be more proactive in sharing updates. Overall, Alex is a valuable member of the team and we look forward to seeing his continued growth.",
+      "good": "**Strengths:**\nAlex's work on the data pipeline migration was a high point this half. When the original architecture couldn't handle the data volume we discovered in testing (situation), Alex independently researched three alternative approaches, documented the trade-offs for each, and came back to the team with a recommendation within 48 hours (behavior). The migration went live on schedule with zero regressions — a result that required exactly the kind of self-directed problem-solving Alex showed in that moment (impact).\n\n**Development area:**\nDuring the last two sprint planning cycles (situation), Alex's work items had dependencies on other teams that weren't flagged until the work was already in progress (behavior). This created last-minute delays on two tickets and disrupted the sprint plan (impact). Going forward, I'd like Alex to add a 'dependencies' section to his ticket descriptions before sprint planning, and flag potential blockers in our Monday standups rather than waiting until they become issues.",
+      "explanation": "The vague review uses impressions ('hard worker', 'goes above and beyond') that are useless for growth. The specific version uses SBI for both a strength and a development area. The strength is specific enough that Alex knows exactly what to repeat. The development area is specific enough that Alex knows exactly what to do differently — it even names the specific mechanism (dependencies section in tickets, Monday standup flags)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this performance review comment using the SBI model (Situation, Behavior, Impact) to make it specific and actionable.",
+      "data": {
+        "rubric": [
+          "A strong rewrite uses a specific situation (when/where), a specific observable behavior (what exactly did Jordan do or not do), and a specific impact (what was the effect on the team, junior members, or outcomes)",
+          "The development direction should be actionable — not 'improve leadership' but a specific behavior change with a clear description of what success looks like",
+          "Note: the rewrite should acknowledge this is a development area, not a performance issue unless you have evidence of that"
+        ],
+        "exampleAnswer": "**Development area — supporting junior team members:**\nDuring the onboarding of our two new analysts in Q3 (situation), Jordan's technical mentorship was strong — she was consistently available for questions on the modeling work. However, when the analysts struggled with prioritizing their workload during the busy close period, Jordan redirected them to me rather than coaching them through the decision herself (behavior). As a result, they didn't develop the judgment skills that onboarding was meant to build, and I became a bottleneck for escalations that Jordan could have handled (impact).\n\nFor the coming year, I'd like Jordan to practice the 'ask first' approach: when a junior team member brings her a question, ask them what they think the answer is before giving her own answer. We'll check in on this in our Q1 1:1s and I'll share examples when I see her doing it well.",
+        "original": "Jordan needs to improve her leadership skills. She sometimes struggles to manage her team effectively and could do a better job supporting junior team members. This is an area for growth in the coming year."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the SBI feedback framework below by filling in what each letter stands for and what it requires.\n\nSBI Feedback Model:\nS = ___[1]___ — Describe ___[2]___ (when and where the behavior occurred)\nB = ___[3]___ — Describe ___[4]___ (the specific, observable action taken)\nI = ___[5]___ — Describe ___[6]___ (the effect on the team, project, customer, or business)",
+      "data": {
+        "blanks": [
+          "Situation",
+          "the specific context",
+          "Behavior",
+          "what the person actually did",
+          "Impact",
+          "the consequence of that behavior"
+        ],
+        "hint": "SBI is a three-part model: context (when/where), action (what exactly happened), and consequence (what changed as a result). Each part must be specific and observable — not an interpretation or judgment."
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "tw-005",
+  "trackId": "tw",
+  "streamId": "core-skills",
+  "title": "First Principles Thinking With AI",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**First principles thinking means reasoning from fundamental truths rather than analogy.**\n\nMost professional thinking is by analogy: \"We'll do what worked at my last company\" or \"The industry standard is X.\" Analogies are efficient but they inherit the assumptions and constraints of whatever they're copying.\n\nFirst principles asks: if we stripped away everything we assume, what do we know to be actually, fundamentally true? Then we build up from there.\n\nThis is hard to do alone — our assumptions are invisible to us. AI helps by:\n- Asking \"why\" repeatedly until you reach base truths\n- Identifying which constraints are real vs. assumed\n- Showing what's possible when assumptions are dropped\n- Playing the naive questioner who doesn't accept 'because that's how it's done'\n\nThe technique:\n1. State your assumption or current approach\n2. Ask AI: \"What assumptions is this based on? Which are actually true?\"\n3. For each true constraint, ask: \"Why is this a constraint? Could it be removed?\"\n4. Ask: \"If we designed this from scratch with no assumptions, what would it look like?\"\n\nFirst principles thinking is most valuable for problems where the current solution feels stuck."
+    },
+    {
+      "type": "example",
+      "bad": "How should we improve our onboarding?",
+      "good": "Help me apply first principles thinking to our user onboarding. Current approach: we send a welcome email, a 3-video tutorial series, and a setup checklist.\n\n1. What assumptions is this approach based on? List them.\n2. Which of those assumptions are actually true vs. assumed to be true?\n3. If we could only use one mechanism to get users to their first 'aha moment', what would it be and why?\n4. What would onboarding look like if we designed it from scratch assuming users have 5 minutes of patience, not 5 hours?",
+      "explanation": "Asking to 'improve onboarding' produces incremental suggestions. The first principles prompt forces examination of whether the current approach's assumptions are valid, then challenges you to design from zero with a specific constraint (5 minutes). This is how you get non-obvious solutions — not better versions of what you already have."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What makes first principles thinking different from standard problem-solving?",
+      "data": {
+        "choices": [
+          "It involves more research and data collection",
+          "It reasons from verified fundamental truths rather than from precedent or analogy, questioning inherited assumptions",
+          "It relies on AI to do the thinking",
+          "It always produces radically new solutions"
+        ],
+        "correctIndex": 1,
+        "explanation": "First principles thinking distinguishes between 'this is how we've always done it' (analogy/precedent) and 'this is fundamentally true' (first principles). It's about questioning which constraints are real vs. inherited convention. Note: it doesn't always produce radical solutions — sometimes it confirms the current approach is actually correct once you examine the foundations."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this prompt to trigger first principles thinking instead of incremental improvement: \"How can we speed up our hiring process?\"",
+      "data": {
+        "rubric": [
+          "Good rewrites ask AI to identify what assumptions the current process makes, which constraints are real vs",
+          "assumed, and what the process would look like if designed from scratch with a specific constraint or goal — rather than asking for improvements to the existing approach"
+        ],
+        "exampleAnswer": "Help me apply first principles thinking to our hiring process. We currently take 6 weeks from application to offer.\n\n1. What assumptions does a typical hiring process make? List 5-7.\n2. Which of those assumptions might be false for our specific situation (early-stage startup, hiring generalists)?\n3. What is the actual minimum information we need to make a good hiring decision? Strip away everything else.\n4. If we had to design a hiring process from scratch that takes 1 week without compromising quality, what would it look like?",
+        "original": "How can we speed up our hiring process?"
+      }
+    }
+  ]
+}

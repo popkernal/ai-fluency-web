@@ -1,0 +1,47 @@
+{
+  "id": "pd-003",
+  "trackId": "pd",
+  "streamId": "role-tracks",
+  "title": "Prioritization That Defends Itself",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Making Prioritization Decisions You Can Explain**\n\nPrioritization without a framework is just HiPPO (Highest Paid Person's Opinion). Frameworks make your decisions transparent, repeatable, and defensible when stakeholders push back.\n\nAI is useful for applying frameworks consistently and quickly — and for pressure-testing your scoring against your own assumptions.\n\n**The most common prioritization frameworks:**\n\n**RICE:** Reach x Impact x Confidence / Effort. Good for comparing features with different audience sizes. Forces you to quantify reach (how many users affected per quarter?) and confidence (how sure are you?).\n\n**ICE:** Impact x Confidence x Ease. Simpler than RICE — good for early-stage or when you don't have reliable reach data.\n\n**Impact/Effort Matrix:** 2x2 grid. Quick and intuitive. Best for rapid team alignment, not rigorous prioritization.\n\n**MoSCoW:** Must have / Should have / Could have / Won't have this cycle. Good for release scoping, not feature ranking.\n\n**Using AI for prioritization:**\n1. Define your framework and scoring criteria before using AI\n2. Describe each initiative with enough context for AI to apply the framework\n3. Ask AI to score each item and show its reasoning — then review the reasoning, not just the scores\n4. Ask AI to flag where your assumptions might be inconsistent across items\n5. Use the AI-generated scores as a starting point for team discussion, not as the final answer\n\n**The danger:**\nPrioritization frameworks produce false precision. A RICE score of 480 is not meaningfully better than 460. AI helps you apply frameworks consistently — but the judgment about what to build is still yours."
+    },
+    {
+      "type": "example",
+      "bad": "Here's our backlog. Which should we build first?",
+      "good": "I need to prioritize 4 features for our Q3 roadmap using the RICE framework. Here's the context for each:\n\n**Scoring guide I'm using:**\n- Reach: # of active users affected per quarter (based on usage data)\n- Impact: 1 (minimal) to 3 (massive) — effect on core user goal\n- Confidence: % — how confident am I in my estimates?\n- Effort: person-weeks for engineering + design\n\n**Features:**\n1. Bulk CSV import — affects power users (~200/quarter), high impact (3), 80% confident, 3 weeks effort\n2. Email digest — affects all users (~2,000/quarter), medium impact (2), 60% confident, 2 weeks effort\n3. Custom field types — affects enterprise segment (~150/quarter), high impact (3), 70% confident, 5 weeks effort\n4. In-app onboarding tour — affects new users (~400/quarter), medium-high impact (2.5), 90% confident, 4 weeks effort\n\nPlease: (1) calculate RICE scores for each, (2) rank them, (3) flag any places where my estimates seem inconsistent or where my confidence seems misaligned with the data I've provided.",
+      "explanation": "The vague prompt gives AI no way to help — it would have to make up every number. The good prompt defines the scoring guide, provides the input data for each feature, and crucially asks AI to flag inconsistencies in the estimates. The real value isn't the scores — it's catching where your own assumptions don't hold up."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your team has a large backlog and needs to decide what makes it into the next 3-month release. Which framework is best suited for this situation?",
+      "data": {
+        "choices": [
+          "RICE — to rank every backlog item by a single score and take the top items",
+          "MoSCoW — to categorize items by whether they must ship vs. should ship in this release",
+          "Impact/Effort Matrix — to create a 2x2 and pick only the high-impact, low-effort items",
+          "ICE — to score items by impact, confidence, and ease for rapid ranking"
+        ],
+        "correctIndex": 1,
+        "explanation": "MoSCoW is designed for release scoping — it answers 'what goes in this release?' rather than 'what is the single best item?' It's particularly useful when you have stakeholder pressure to include everything and need a shared language for what's required vs. optional. RICE and ICE are better for ranking across a full backlog without a fixed release scope. The Impact/Effort Matrix is good for quick alignment but doesn't provide the must/should/could categorization useful for release planning."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to apply a prioritization framework to a set of features or initiatives on your team's backlog. Choose RICE, ICE, or MoSCoW and include the context AI needs to apply it meaningfully.",
+      "data": {
+        "rubric": [
+          "Strong prompts define: the framework being used, the scoring criteria and scale (don't leave it to AI to decide), at least 3–4 features with enough description for meaningful scoring, and a request to show reasoning and flag assumption inconsistencies",
+          "Weak prompts list feature names without context and ask AI to prioritize without specifying a framework or scoring criteria"
+        ],
+        "exampleAnswer": "I need to score 4 product initiatives using the ICE framework for our next sprint planning session. My ICE scoring scale:\n- Impact: 1–10 (effect on the user's primary job — getting projects approved faster)\n- Confidence: 1–10 (how certain am I this will have the stated impact, based on user research and data)\n- Ease: 1–10 (10 = very easy, 1 = very hard — inverse of effort)\n\nInitiatives:\n1. Auto-save drafts — users currently lose work when they navigate away. Affects ~60% of users based on support tickets. We have strong evidence this is painful.\n2. PDF export — 3 enterprise customers have requested it. We don't have data on broader demand. Engineering estimates 6 weeks.\n3. Comment threading — would improve async collaboration. We have anecdotal feedback but no survey data. Engineering estimates 3 weeks.\n4. Keyboard shortcuts — power users love them; limited data on how many users qualify as 'power users'. Engineering estimates 2 weeks.\n\nPlease: (1) apply ICE scores with reasoning for each score, (2) rank the four items, (3) identify any place where my confidence scores seem too high or low given the evidence I've described."
+      }
+    }
+  ]
+}

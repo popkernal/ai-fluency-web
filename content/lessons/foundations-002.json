@@ -1,0 +1,50 @@
+{
+  "id": "foundations-002",
+  "trackId": "foundations",
+  "streamId": "foundations",
+  "title": "How AI Actually Thinks (And Why It Matters)",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## A confident answer isn't the same as a correct one\n\nImagine you ask a colleague a question and they answer immediately, in full sentences, without hesitation — but they're completely wrong. That's a useful mental model for how AI can fail.\n\nAI doesn't look things up in a database of facts. It predicts what text should come next, based on patterns learned from enormous amounts of writing. Most of the time, that works brilliantly. AI has absorbed so much human knowledge that its predictions are usually accurate and useful.\n\nBut here's the catch: the mechanism that makes AI fluent — predicting plausible text — also makes it capable of generating plausible-sounding nonsense. It doesn't \"know\" when it doesn't know something. It just keeps predicting.\n\nThis is what people in the field call a **hallucination**: when AI generates information that sounds authoritative but is factually wrong or entirely made up. It might cite a paper that doesn't exist. It might give a medication dosage that's off by a factor of ten. It might describe a historical event that never happened.\n\nThe practical takeaway isn't \"don't trust AI.\" It's \"understand what AI is good at, and verify the things that matter.\" AI is extraordinary at tasks where fluency and structure matter more than factual precision — drafting, explaining, reformatting, brainstorming. For facts that carry real consequences, always verify."
+    },
+    {
+      "type": "example",
+      "bad": "\"AI knows everything — I'll just ask it and trust the answer.\" A developer asks AI for the syntax of an obscure API function. AI gives a confident, detailed answer. The function doesn't exist. The developer wastes two hours debugging code that could never have worked.",
+      "good": "\"AI predicts plausible text — it can be confidently wrong.\" The same developer uses AI to get a starting point and understand the general pattern, then checks the official documentation before writing production code. The AI saved them time on the 80% that was right; the docs caught the 20% that wasn't.",
+      "explanation": "The second developer isn't less trusting of AI — they're using it more effectively. They understand AI's strength (fast, fluent, usually right) and its weakness (no ground truth, no awareness of its own errors). That combination — use AI for speed, verify what matters — is the professional standard."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A manager needs to confirm a medication dosage before including it in a patient-facing document. She asks AI, which gives a specific, confident number. What should she do next?",
+      "data": {
+        "choices": [
+          "Use the number — AI is trained on medical literature and is likely correct",
+          "Verify the dosage against an authoritative source such as the prescribing information or a clinical database",
+          "Ask AI the same question again to confirm the answer is consistent",
+          "Ask AI where it got the information, then use the answer if it sounds reasonable"
+        ],
+        "correctIndex": 1,
+        "explanation": "For high-stakes factual claims — especially medical, legal, or financial information — always verify against an authoritative primary source. AI may well be correct, but it has no mechanism for flagging its own uncertainty on specific facts. Asking the same question again just gets you another prediction, not a verification. A confident tone is not evidence of accuracy."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A colleague asks AI: \"What was our company's Q3 revenue?\" AI responds with a specific figure. What's the core risk here?",
+      "data": {
+        "choices": [
+          "AI might round the number differently than the finance team",
+          "AI has no access to private company data and likely fabricated a plausible-sounding number",
+          "AI's training data might be slightly out of date",
+          "The figure might be in a different currency"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI has no access to your company's internal systems, databases, or financial records. When asked a question it can't answer from its training data, it doesn't say \"I don't know\" — it predicts what a plausible answer might look like. A confidently stated revenue figure for your specific company is almost certainly fabricated. Internal data questions should always go to internal sources."
+      }
+    }
+  ]
+}

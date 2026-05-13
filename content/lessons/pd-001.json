@@ -1,0 +1,47 @@
+{
+  "id": "pd-001",
+  "trackId": "pd",
+  "streamId": "role-tracks",
+  "title": "Discovery Faster, Deeper",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**From Raw Research to Actionable Insight**\n\nUser discovery generates enormous amounts of unstructured data — interview transcripts, survey responses, support tickets, sales call notes. The bottleneck is rarely collecting the data. It's synthesizing it into something you can build on.\n\nAI dramatically accelerates the synthesis step — turning hours of pattern-finding into minutes. But it requires you to understand what AI can and can't reliably do with qualitative research.\n\n**What AI does well in discovery:**\n- Identifying recurring themes across multiple transcripts or responses\n- Surfacing quotes that exemplify a pattern you describe\n- Structuring messy notes into categories (jobs to be done, pain points, desired outcomes)\n- Generating follow-up questions you might have missed in an interview\n- Producing an initial \"insight summary\" from raw notes that you then edit and refine\n\n**What AI can't do:**\n- Tell you which insights matter most for your product strategy — that's your judgment\n- Detect nuance, hesitation, or body language from transcripts\n- Know whether a user's stated need reflects their actual behavior\n- Replace talking to users — it can only process what you've collected\n\n**The synthesis workflow:**\n1. Collect your raw materials (transcripts, notes, surveys) — aim for 5–10 sources minimum\n2. Paste them into AI in batches, asking it to identify themes and surface representative quotes\n3. Ask AI to structure themes using a framework (JTBD, pain/gain, how might we)\n4. Review critically — AI will sometimes miss nuance or conflate different user types\n5. Layer in your own interpretation before presenting to stakeholders"
+    },
+    {
+      "type": "example",
+      "bad": "Here are my user interview notes. What are the insights?",
+      "good": "I've done 7 user interviews with mid-market HR managers about their current performance review process. Here are the transcripts: [paste transcripts or summaries].\n\nPlease help me synthesize these. Specifically:\n1. Identify the top 4–5 recurring pain points across the interviews. For each, include a representative quote from the transcripts.\n2. Identify any patterns in what users said they wish the process did differently.\n3. Flag anything that surprised you — responses that don't fit the main patterns.\n4. Suggest 3 'How Might We' questions based on the themes you found.\n\nIMPORTANT: I'm targeting mid-market HR managers (50–500 employee companies). Flag anything that seems like it might be specific to a particular company size or industry rather than a general pattern.",
+      "explanation": "The vague prompt produces vague insights. The good prompt gives AI a clear structure for synthesis, asks for evidence (representative quotes), specifically requests surprises and outliers (which are often the most valuable findings), and asks for actionable HMW questions. The note about company size helps AI flag when a finding might not generalize."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "You've just completed 6 user interviews about a pain point in your product area. Write a prompt to synthesize the interviews into actionable discovery insights. Include: the user segment, what the interviews covered, and specific instructions for how AI should structure the output.",
+      "data": {
+        "rubric": [
+          "Strong prompts specify: who the users are (role, company size, industry if relevant), what the interviews covered (the problem space or question being explored), a request for themes with supporting quotes, a request for surprises or outliers, and a structured output format (numbered themes, HMW questions, or a JTBD framework)",
+          "Weak prompts paste notes and ask 'what are the insights?' without structure or context"
+        ],
+        "exampleAnswer": "I'm a product manager at a B2B SaaS company. I've completed 6 interviews with operations managers at companies with 100–500 employees about how they currently manage vendor approvals. Here are the interview transcripts: [transcripts].\n\nPlease synthesize these into a discovery summary with the following structure:\n\n1. **Top pain points** (4–5): For each, write 1–2 sentences describing the pattern and include one direct quote that best captures it.\n2. **Current workarounds**: What are users doing today to cope with the problem? List 3–4 specific workarounds mentioned.\n3. **Desired outcomes**: What does success look like to them? (Use 'so I can...' framing where possible.)\n4. **Surprises**: What did you find that doesn't fit the main patterns — anything unexpected or contradictory?\n5. **3 'How Might We' questions** based on the strongest themes.\n\nNote: these are all ops managers, not finance or procurement. Flag anything that sounds like it might be a finance/procurement concern rather than an ops concern."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You use AI to synthesize 8 user interviews and it produces a list of 5 key themes. What should you do next?",
+      "data": {
+        "choices": [
+          "Use the themes directly in your PRD — AI synthesis is more objective than human synthesis",
+          "Review each theme against the source transcripts to verify accuracy before using them",
+          "Run another round of interviews to confirm what AI found",
+          "Present the themes to stakeholders as preliminary findings without caveats"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI synthesis is a starting point, not a final output. You should always verify AI-identified themes against the source material — AI can conflate different user types, miss nuance, or amplify themes that appeared in multiple transcripts simply because they were mentioned frequently rather than because they're strategically important. The review step is where your product judgment adds value that AI can't replicate."
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "sl-003",
+  "trackId": "sl",
+  "streamId": "role-tracks",
+  "title": "Call Prep in 5 Minutes",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Walking into a sales call underprepared is a choice.** With AI, a solid call prep doc takes five minutes — not thirty. The reps who show up knowing the prospect's business, their likely concerns, and a sharp agenda consistently out-perform those who wing it.\n\n**What good call prep actually covers:**\n- **Prospect background:** Role, tenure, what they've said publicly (LinkedIn activity, company blog, news quotes)\n- **Company context:** Stage, size, recent news, key initiatives, competitive landscape\n- **Likely priorities and pain points:** Based on their role and current business situation\n- **Anticipated objections:** What pushback are you likely to hit, and what's your honest response?\n- **Questions to ask:** Open-ended, discovery-focused questions that build trust and surface real needs\n- **Call agenda:** What you want to cover, in what order, and how you'll open\n\n**How to turn raw inputs into a call prep doc:**\nPaste a prospect's LinkedIn profile, their company's About page, and any relevant news into a single AI prompt. Ask it to produce a structured prep doc. Be explicit about the format you want — a doc you can glance at 60 seconds before the call is more useful than a 600-word essay.\n\n**The 60-second rule:** Your prep doc should be scannable in under 60 seconds. If you can't use it in the parking lot before you walk in, it's too long."
+    },
+    {
+      "type": "example",
+      "bad": "Tell me about this company before my sales call: [company website URL]",
+      "good": "I have a 30-minute discovery call tomorrow with James, VP of Engineering at Cloudpath (a 150-person Series B DevOps tooling company). Below is his LinkedIn profile and their company About page.\n\n[Paste LinkedIn bio]\n[Paste About page]\n\nPlease create a brief call prep doc with these five sections:\n1. Key facts about James and Cloudpath (3-4 bullets)\n2. Top 3 business priorities James probably has right now\n3. Top 3 objections I'm likely to face and a one-line response to each\n4. 5 discovery questions I should ask\n5. Suggested opening agenda (how to open the call in the first 5 minutes)\n\nKeep each section tight — this should be scannable in 60 seconds.",
+      "explanation": "The first prompt gives AI nothing to work with. The second provides the exact inputs (LinkedIn, About page), the specific role and company stage, a structured output format, and a constraint (scannable in 60 seconds). The output is a working document, not a summary to read and ignore."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these call prep steps in the correct order for maximum effectiveness.",
+      "data": {
+        "steps": [
+          "Build your call agenda — decide how you'll open and what you want to cover",
+          "Gather raw inputs: LinkedIn profile, company website, recent news",
+          "Identify the top 2-3 discovery questions most likely to surface real needs",
+          "Paste inputs into AI and generate a structured prep doc",
+          "Anticipate the top 2-3 objections and prepare honest, specific responses",
+          "Review the prep doc in the 60 seconds before the call"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          4,
+          2,
+          5
+        ],
+        "explanation": "Good call prep starts with gathering raw inputs (you can't prep without data), then using AI to process those inputs into a structured doc. From there, you build the agenda, prepare for objections, sharpen your discovery questions, and do a final review right before the call. Skipping the input-gathering step is the most common mistake — prompting AI without context produces generic prep that doesn't reflect the actual prospect."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a call prep prompt for a discovery call tomorrow with Priya, Director of Finance at a 300-person manufacturing company that recently announced it is moving to a new ERP system. You sell financial reporting software that integrates with major ERPs.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: Priya's role and the relevant company context (the ERP transition), your product's relevance to that context, a request for structured output (not a free-form summary), specific sections asked for (background, priorities, objections, questions, agenda), and a constraint on length or scannability",
+          "The best prompts also ask AI to frame discovery questions around the ERP transition specifically, not generic finance questions"
+        ],
+        "exampleAnswer": "I have a 30-minute discovery call tomorrow with Priya, Director of Finance at a 300-person manufacturing company. They recently announced they are migrating to a new ERP system. I sell financial reporting software that integrates with SAP, Oracle, and Microsoft Dynamics.\n\nHere is Priya's LinkedIn profile: [paste]\nHere is their company About page: [paste]\n\nPlease create a call prep doc with these five sections:\n1. Key facts about Priya and her company (3 bullets max)\n2. Top 3 priorities Priya likely has right now, given the ERP migration\n3. Top 3 objections I'm likely to face and a one-sentence honest response to each\n4. 5 discovery questions focused specifically on the ERP transition and how it affects her reporting needs\n5. A suggested opening for the first 3 minutes of the call\n\nKeep it short enough to scan in under 90 seconds."
+      }
+    }
+  ]
+}

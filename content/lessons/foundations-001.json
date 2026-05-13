@@ -1,0 +1,50 @@
+{
+  "id": "foundations-001",
+  "trackId": "foundations",
+  "streamId": "foundations",
+  "title": "What You Can Do With AI Right Now",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## People are already using AI to get an edge at work\n\nYou don't need to understand how AI works to start benefiting from it. Millions of people are already using it every day for real, practical tasks — and the gap between people who use it well and people who don't is growing fast.\n\nHere's what that looks like in practice:\n\n**Writing and communication** — first drafts of emails, reports, and proposals. Rewriting something that sounds too stiff or too casual. Summarising a long thread into three bullet points.\n\n**Thinking and research** — brainstorming ideas when you're stuck. Getting a quick explanation of an unfamiliar concept. Stress-testing an argument by asking AI to push back on it.\n\n**Work tasks** — turning messy notes into a structured document. Writing a template you can reuse. Reformatting data or drafting a meeting agenda from a rough outline.\n\nThe people getting the most value aren't treating AI like a search engine or a magic oracle. They're treating it like a fast, always-available collaborator who needs clear direction.\n\nA few key behaviours make a big difference. The rest of this track will walk you through them — but the best place to start is just trying things."
+    },
+    {
+      "type": "example",
+      "bad": "Jordan tried ChatGPT once to write an email, thought the result was generic, and hasn't touched it since.",
+      "good": "Morgan uses AI every morning as a first-draft collaborator. She pastes in her rough notes, tells AI who she's writing for and what she wants the reader to do, gets a draft in 30 seconds, and edits from there. She estimates it saves her 90 minutes a day.",
+      "explanation": "The difference isn't the tool — it's the approach. Morgan gives context, stays in control of the output, and treats AI as a starting point rather than a finished product. Jordan used it like a vending machine, got a mediocre result, and gave up. You'll learn exactly what Morgan is doing differently throughout this track."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to summarise a 30-page internal report into a one-page brief for your manager. What's the right approach with AI?",
+      "data": {
+        "choices": [
+          "Paste the report into AI, give clear instructions about length and audience, then review and edit the output",
+          "Ask AI to write a summary without giving it the report, since it probably already knows the content",
+          "Ask AI to write a summary, then publish it immediately without reviewing",
+          "Summarise it yourself first, then ask AI to make it sound better"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pasting the actual content and giving AI clear instructions — length, audience, focus — is exactly the right approach. AI needs the source material to summarise it accurately. Reviewing the output before using it is essential practice, since AI can occasionally miss nuance or misread emphasis."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which of these tasks is AI least reliable for on its own, without any additional verification?",
+      "data": {
+        "choices": [
+          "Drafting a professional bio from bullet points you provide",
+          "Explaining what a P&L statement is",
+          "Confirming a company's current share price",
+          "Suggesting five subject lines for a marketing email"
+        ],
+        "correctIndex": 2,
+        "explanation": "AI models don't have live internet access by default. They can't retrieve real-time data like stock prices, today's news, or current weather. Asking for a current share price will either produce a stale figure or a hallucinated one. The other tasks — drafting, explaining concepts, generating options — are exactly where AI excels."
+      }
+    }
+  ]
+}

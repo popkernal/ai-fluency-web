@@ -1,0 +1,47 @@
+{
+  "id": "fn-002",
+  "trackId": "fn",
+  "streamId": "role-tracks",
+  "title": "Model Documentation and Assumptions",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Financial Model Documentation Matters**\n\nA financial model without documentation is a black box. When you're the only person who can explain why the model produces the numbers it produces, you become a bottleneck — and when you leave, the model dies.\n\nAI is particularly useful for model documentation because it can take dense, technical content and make it readable for non-finance stakeholders without losing accuracy.\n\n**What model documentation needs to cover:**\n\n**1. Model purpose and scope**\nWhat decisions does this model support? What time period does it cover? What is explicitly out of scope?\n\n**2. Input assumptions**\nEvery assumption that drives the model, with: the assumed value, the source or basis for the assumption, the sensitivity (how much does the output change if this assumption is wrong by 10%?), and the last time it was reviewed.\n\n**3. Key calculation logic**\nFor any formula that isn't immediately obvious, document what it calculates and why it's structured the way it is.\n\n**4. Known limitations**\nWhat is the model NOT designed to do? Where are the edges of its reliability?\n\n**5. Change log**\nWhen was it last updated, by whom, and what changed?\n\n**Using AI for model documentation:**\nDescribe each section of your model — inputs, calculations, outputs — and ask AI to write the documentation. You provide the numbers and the reasoning; AI writes the explanation that makes sense to a non-finance reader. Then review for accuracy and add anything AI couldn't know."
+    },
+    {
+      "type": "example",
+      "bad": "Can you write documentation for my financial model?",
+      "good": "I need to write documentation for our revenue forecast model so that non-finance stakeholders can understand how it works. Here are the key components to document:\n\n**Model purpose:** 3-year revenue forecast to support Series B fundraising and annual planning. Covers recurring SaaS revenue only (professional services excluded).\n\n**Key assumptions I'm using:**\n- Monthly new ARR from new customers: based on average of last 6 months ($85k/month), growing at 5% per quarter starting Q3 (based on current pipeline coverage)\n- Average contract value: $14,200 (12-month average of closed deals)\n- Gross revenue retention: 88% annually (based on last 12 months actual)\n- Net revenue retention: 108% (based on last 12 months actual)\n- No pricing changes assumed in the model period\n\n**One key formula I want documented:** MRR = (Beginning MRR) + (New MRR) - (Churned MRR) + (Expansion MRR)\n\nPlease write a 'Model Guide' document section that explains these assumptions and the MRR formula in plain language for a CEO and COO who are not finance experts. Include a note on the sensitivity of the revenue projection to the new ARR growth assumption.",
+      "explanation": "The vague prompt gives AI nothing. The good prompt provides the model's purpose, the actual assumptions with their sources and values, and the specific formula to document. Asking for plain language for a CEO and COO is the key instruction — it calibrates the documentation for its actual audience. AI can't know these numbers, but it can explain them clearly once you provide them."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What is the single most important thing to document in a financial model?",
+      "data": {
+        "choices": [
+          "The formulas used in each cell for auditing purposes",
+          "The source and basis for every key assumption, including when it was last reviewed",
+          "The name of the person who built the model and their contact information",
+          "A complete glossary of every financial term used in the model"
+        ],
+        "correctIndex": 1,
+        "explanation": "Assumptions are the most important thing to document because they're the thing most likely to be wrong, most likely to change over time, and most consequential when they do. Formulas (option A) are important but usually readable in the model itself. Model author info (option C) is useful for context but secondary. A glossary (option D) helps with comprehension but doesn't explain the model's core logic. Assumption documentation — including source, basis, and review date — is what allows others to challenge the model appropriately and update it when conditions change."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to get AI to help you document the assumptions section of a financial model you work with. Include the actual assumptions AI needs to document.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: the model's purpose and audience, a list of specific assumptions with their values and sources (not just the names of the assumptions), the level of financial sophistication of the audience (will determine how much AI needs to explain), and a specific request to include sensitivity notes or limitation flags",
+          "Weak prompts describe the model without providing the actual assumptions for AI to document"
+        ],
+        "exampleAnswer": "I need to write the assumptions documentation section for our annual operating budget model. The audience is department heads (non-finance) who need to understand what the budget is based on so they can flag if assumptions no longer hold.\n\nHere are the key assumptions to document:\n\n1. Headcount growth: We assume 12 new hires in H1 and 8 in H2. Basis: approved headcount plan from October board meeting. Sensitivity: each additional hire adds approximately $110k to annual opex (fully loaded cost).\n\n2. Revenue growth rate: 25% YoY. Basis: midpoint of management's guidance range; assumes no major product releases or customer losses outside normal churn.\n\n3. Office lease costs: Flat vs. prior year. Basis: lease renewed in September at same rate through 2026.\n\n4. Software and tooling: +15% vs. prior year. Basis: known renewals plus estimated new tool additions approved in annual planning.\n\nPlease write an 'Assumptions Guide' section in plain language that: explains what each assumption is, its basis, and the most important sensitivity note. Flag any assumption where a 10% change would materially affect the budget (more than $200k impact). Write for department heads with no finance background."
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "cx-002",
+  "trackId": "cx",
+  "streamId": "role-tracks",
+  "title": "Defuse Difficult Situations",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The Psychology of De-escalation**\n\nAn angry customer who feels heard will de-escalate faster than an angry customer who gets a technically correct response that feels dismissive. De-escalation is primarily an emotional skill — and AI can help you draft language that applies it consistently even when agents are under pressure.\n\n**The four-step de-escalation structure:**\n\n**1. Acknowledge first.** Before anything else — before explanations, before solutions, before policy — acknowledge what the customer is experiencing. \"I can see why this is incredibly frustrating\" is not a concession. It's not admitting fault. It's establishing that you're listening.\n\n**2. Take ownership of the response.** Even if you didn't cause the problem, you own the resolution from this point forward. \"I'm going to make sure we get this sorted for you\" is more de-escalating than \"I'll look into what happened.\"\n\n**3. Solve or set clear expectations.** Tell them specifically what you're going to do and when. Vague next steps feel like delay tactics to an angry customer.\n\n**4. End on an action, not an apology.** Closing with another apology can feel like you're stalling. End with a clear, specific action: \"I'm processing the refund now — you'll see it in 3–5 business days.\"\n\n**Where AI helps:**\nAI can draft responses that apply this structure consistently — particularly useful for agents who are tired, under pressure, or naturally defensive. The key instruction: always ask AI to lead with acknowledgment before any explanation or solution.\n\n**The limit of AI in escalations:**\nJudgment calls — whether to offer a refund, escalate to management, or make an exception — must remain with humans. AI provides the language. The decision is yours."
+    },
+    {
+      "type": "example",
+      "bad": "I understand you're frustrated. Our policy states that refunds are only available within 30 days of purchase. Your purchase was made 47 days ago, which is outside our refund window. We are unable to process a refund for this order. If you have other questions, please let us know.",
+      "good": "I'm really sorry this happened — receiving a product that doesn't work is genuinely frustrating, and waiting 47 days to find the fault makes it worse.\n\nI've looked at your account. While our standard window is 30 days, the fact that this is a manufacturing defect changes things — that's on us, not you. I'm processing a full refund now. You'll see it back on your original payment method within 3–5 business days.\n\nI'm also flagging this product batch for our quality team. Thank you for taking the time to report it — it genuinely helps.\n\nIs there anything else I can help you with today?",
+      "explanation": "The bad response leads with policy, uses passive voice ('we are unable'), and ends with a dismissal. It's technically correct but reads as defensive and transactional. The good response acknowledges the frustration first, takes ownership, makes a judgment call that serves the customer (overriding the 30-day window for a defect), and closes with a specific action and timeline. It turns a complaint into a positive interaction."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this response to an angry customer complaint. Apply the four-step de-escalation structure: (1) acknowledge, (2) take ownership, (3) solve with a clear next step, (4) end on an action.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: opens with genuine acknowledgment of the frustration of a double charge (not a generic 'thank you for reaching out'), takes clear personal ownership ('I will make sure...'), gives a more specific resolution timeline or better outcome than 'investigation', ends with a specific committed action rather than 'thank you for your patience'",
+          "The customer should feel like someone is actively working on their problem, not logging a ticket"
+        ],
+        "exampleAnswer": "A double charge is the last thing you want to deal with — I'm sorry this happened, and I want to get it sorted for you quickly.\n\nI can see both charges on your account from March 3rd. This was an error on our side. I'm initiating the refund for the duplicate charge now. In most cases it posts within 3–5 business days, though your bank's processing time may vary slightly.\n\nI'll send you a confirmation email with the refund reference number within the next 30 minutes so you have it on record. If you don't see the funds by March 12th, reply to that email and I'll escalate it immediately.",
+        "original": "Hi, thank you for reaching out. I have reviewed your ticket and I can see that your account was charged twice on March 3rd. This appears to have been a technical error on our end. Please allow 5-10 business days for investigation. Our team will follow up when the review is complete. Thank you for your patience."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A customer service agent receives an escalation: a customer is threatening to cancel their subscription after a series of unresolved issues. The agent copies their response into AI and asks it to 'make it sound more empathetic.' The AI version sounds warmer. The agent sends it without changes. What's the problem with this workflow?",
+      "data": {
+        "errorDescription": "Using AI to add surface-level warmth without addressing the substantive decisions the escalation requires",
+        "explanation": "Making language sound warmer doesn't de-escalate a customer who has experienced a series of unresolved issues. The customer's problem is unresolved issues — not an un-empathetic tone. Using AI to polish the language without addressing what caused the escalation and what you're actually going to do differently is a form of deception. The customer will see through it. For a customer threatening to cancel, the agent needs to: (1) understand what the unresolved issues are, (2) make a decision about what to offer (retention discount, dedicated support contact, escalated priority), and (3) communicate that decision clearly. AI can help draft the language for the response once the human has made the substantive decisions — but polishing the language is the last step, not the only step."
+      }
+    }
+  ]
+}

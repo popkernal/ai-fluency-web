@@ -1,0 +1,47 @@
+{
+  "id": "fn-004",
+  "trackId": "fn",
+  "streamId": "role-tracks",
+  "title": "Explaining Finance to Non-Finance",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Making Numbers Accessible Without Losing Accuracy**\n\nFinance professionals often underestimate how much financial jargon creates barriers for non-finance colleagues. When people don't understand financial concepts, they either disengage from financial decisions or make decisions without fully grasping the implications.\n\nYour job — and AI's job — is to make financial concepts accessible without watering them down so much they become misleading.\n\n**Principles for translating finance to non-finance audiences:**\n\n**1. Lead with the decision, not the concept.**\nInstead of defining EBITDA and then explaining what the number means for the business, start with: \"Here's what this means for how we should think about our Q3 hiring plan — and here's the metric I'm using to say that.\"\n\n**2. Use analogies to familiar concepts.**\n\"Gross margin works like a restaurant's food cost ratio — it tells you how much of every dollar of revenue is left after paying to deliver the service.\"\n\n**3. Be precise about what the number doesn't tell you.**\nA non-finance person who learns EBITDA often then over-applies it. Explain the limitations: \"EBITDA doesn't include the cash we need to invest in equipment — so a high EBITDA doesn't always mean we have cash available to spend.\"\n\n**4. Avoid the opposite problem: over-simplifying.**\nSimplifying to the point of inaccuracy creates its own risks. If a VP Marketing uses a simplified financial concept to make a decision and later finds out the explanation was misleading, trust breaks down.\n\n**Using AI for translation:**\nDescribe the concept and the audience. Ask AI to explain it using an analogy specific to that audience's world. Then review: is it accurate? Is it appropriate for the decisions this person actually makes?"
+    },
+    {
+      "type": "example",
+      "bad": "EBITDA stands for Earnings Before Interest, Taxes, Depreciation and Amortization. It represents operating profitability and removes non-operating expenses to allow comparison across companies.",
+      "good": "**For a VP of Product (non-finance background):**\n\nEBITDA is essentially our \"operating profit before the accountants get involved.\" Think of it this way: we make $5M in revenue. After paying for the people, software, and services that directly deliver that revenue, we have $1.5M left — that's our gross profit. EBITDA then subtracts our overhead (rent, admin salaries, marketing) — what's left, around $500k, is EBITDA.\n\nWhy does it matter to you? When I say our Q3 EBITDA target is $500k, I'm saying we need our revenue minus all operating costs to land there. Every hire you make and every piece of software you add affects that number. It doesn't include our loan interest payments or big capital investments — those are real cash costs but we track them separately. So a healthy EBITDA doesn't automatically mean we have cash to spend freely.",
+      "explanation": "The technical definition is accurate but inaccessible. The good version: (1) uses a concrete example with numbers, (2) connects it to decisions the VP of Product actually makes (hiring, software), and (3) proactively explains a common misinterpretation (healthy EBITDA doesn't mean cash available). Accuracy is preserved while accessibility is dramatically improved."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your Head of Sales (no finance background) asks you to explain 'gross margin' because she keeps hearing it in leadership meetings. Which explanation is best?",
+      "data": {
+        "choices": [
+          "Gross margin is revenue minus cost of goods sold, divided by revenue, expressed as a percentage.",
+          "Gross margin is how profitable we are as a company overall.",
+          "Gross margin is what's left of every dollar of revenue after we pay the direct costs of delivering the product or service — before overhead costs like your team's salaries hit the books. Ours is 72%, which means for every $1 of revenue, we keep 72 cents to cover everything else.",
+          "Gross margin is a complex metric — it's probably not the most relevant one for your role."
+        ],
+        "correctIndex": 2,
+        "explanation": "Option C is correct. It defines the concept in plain terms (no jargon), uses a concrete example ($1 of revenue, 72 cents), and contextualizes it with a real company number. Option A is technically correct but requires finance background to be useful. Option B is inaccurate — gross margin is not overall profitability, it's pre-overhead profitability, and conflating them causes real misunderstanding. Option D is condescending and unhelpful — revenue-generating leaders should understand the key unit economics of the business."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this financial explanation for a non-finance audience — specifically a Head of Marketing who needs to understand this concept to participate in budget discussions. Make it accessible without losing accuracy.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: avoids unexplained acronyms (DSO, DPO, CCC), uses a concrete analogy or example relevant to the Head of Marketing's world, explains the practical implication (what does this mean for their budget requests?), and keeps accuracy — the core message (we collect money slowly but pay suppliers quickly, so we need cash on hand to fund growth) must be preserved"
+        ],
+        "exampleAnswer": "Here's the short version for budget discussions: we collect money from customers slowly (it takes us about 45 days on average to get paid after we invoice), but we pay our own bills relatively quickly (about 28 days). That gap means we're always funding about 6–7 weeks of business activity before cash comes back in. So when we grow revenue fast, we actually need more cash upfront to fund that growth — not less. It's why I flag working capital when you're asking about accelerating a big campaign spend. It's not just about whether we have the budget line — it's about timing of when the cash is available.",
+        "original": "Our current cash conversion cycle is 67 days, driven by DSO of 45 days and DPO of 28 days. This means working capital requirements are elevated relative to peers and we need to consider the cash flow implications of any revenue growth investment."
+      }
+    }
+  ]
+}

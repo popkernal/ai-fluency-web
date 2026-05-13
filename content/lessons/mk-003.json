@@ -1,0 +1,47 @@
+{
+  "id": "mk-003",
+  "trackId": "mk",
+  "streamId": "role-tracks",
+  "title": "Headlines and Hooks",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**What Makes a Hook Actually Work**\n\nA/B testing copy is one of the highest-ROI activities in marketing — and AI makes it dramatically faster. But generating volume isn't enough. You need to understand the psychological patterns behind high-performing headlines so you can evaluate which variations are worth testing.\n\n**The psychology of headlines that get clicks:**\n\n**Specificity beats vagueness.** \"How we grew email open rates by 34%\" outperforms \"How to improve your email marketing.\" Specific numbers and named outcomes trigger credibility.\n\n**Self-interest and relevance are foundational.** The reader's first question is \"is this for me?\" Headers that name the reader's role, industry, or problem clear that barrier immediately.\n\n**The curiosity gap works — but has limits.** Curiosity-gap headlines (\"The one thing most marketers miss...\") drive clicks but often underperform on engagement because readers feel deceived when the payoff is weak. Use sparingly.\n\n**Contrast and tension create movement.** \"Why working harder is making you worse at your job\" has inherent tension that creates a question in the reader's mind. Questions create the need for answers.\n\n**For email subject lines specifically:**\n- Short (4–7 words) tends to outperform long in most B2B contexts\n- Personalization (first name, company name) still lifts open rates but is table stakes now\n- Questions as subject lines are overused — statements with inherent tension often outperform\n- All-caps or excessive punctuation reduces trust with professional audiences\n\n**Using AI for copy variations:**\nThe best workflow is to brief AI on the message, the audience, and the goal — then ask for 10–15 variations using different psychological approaches. Label which approach each variation uses. Then evaluate against your knowledge of your audience."
+    },
+    {
+      "type": "example",
+      "bad": "Write me some email subject lines for our webinar.",
+      "good": "Generate 12 email subject line variations for a webinar invitation. Here's the context:\n\nWebinar: \"How to Run Performance Reviews That Employees Don't Hate\" — a 45-minute webinar for HR Directors. Features two expert guests. Focuses on moving from annual reviews to continuous feedback.\n\nAudience: HR Directors at companies with 100–500 employees. They know their current review process is broken. They're skeptical of 'trendy' HR approaches. They respond to practical, specific guidance.\n\nGoal: Maximize open rate for this cold-ish list (opted in at a conference 3 months ago).\n\nPlease generate 12 subject lines using different approaches: curiosity gap, specificity/data, reader problem, direct benefit, tension/contrast, and question. Label which approach each one uses so I can evaluate them.",
+      "explanation": "The bad prompt produces generic subject lines. The good prompt gives AI the webinar title, the specific audience psychology ('skeptical of trendy HR approaches'), the goal, and critically — asks AI to use labeled approaches. The labels let you evaluate the output systematically rather than just picking the one that 'sounds good'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're writing subject lines for a cold email campaign targeting senior engineers at enterprise companies. Which subject line approach is most likely to perform well with this audience?",
+      "data": {
+        "choices": [
+          "\"You won't believe what this tool can do for your team \" — curiosity gap with emoji",
+          "\"How Stripe reduced deployment time by 40% with one change\" — specific, named company, concrete outcome",
+          "\"Are you making these 5 mistakes in your CI/CD pipeline?\" — numbered list with rhetorical question",
+          "\"We think you'll love our new developer tool!\" — enthusiasm-forward with personalization"
+        ],
+        "correctIndex": 1,
+        "explanation": "Senior engineers at enterprise companies are high-skepticism readers. They respond to specificity, credibility, and peer evidence. A named company (Stripe) with a concrete outcome (40% reduction in deployment time) is credible and specific — it answers 'is this worth my time?' immediately. Option A uses enthusiasm and emoji that reads as low-trust with this audience. Option C is a valid approach but rhetorical questions are overused with technical audiences. Option D is generic and sounds like every product email they receive."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to generate 10 subject line variations for an email campaign you're running or could plausibly run. Include enough context that AI can generate variations that are specific to your audience and message — not generic.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: the email's core message or offer, the specific audience (role, industry, their psychology or current beliefs), the goal (open rate, click-through, conversion), a request for labeled approaches (so you can evaluate systematically), and any constraints (length, tone, things to avoid)",
+          "Weak prompts just describe the email topic without audience or psychological context"
+        ],
+        "exampleAnswer": "Generate 10 email subject line variations for a campaign promoting a free audit tool for e-commerce marketers.\n\nContext:\n- Tool: A free Google Ads audit tool that identifies wasted spend in 5 minutes\n- Audience: E-commerce marketing managers and Directors at DTC brands with $1M–$20M in annual revenue. They're running Google Ads themselves or with a small agency. They're skeptical of free tools (worried about data privacy or being sold to). They're very focused on ROAS and reducing wasted spend.\n- Goal: Drive clicks to the landing page — open rate and CTR are the metrics\n- Core message: You're probably wasting 20–30% of your Google Ads budget without knowing it. This tool finds it in 5 minutes.\n\nPlease write 10 variations using these labeled approaches (2 each): (1) specific data/outcome, (2) direct challenge or tension, (3) time-specific benefit, (4) peer proof/social validation, (5) problem naming. Flag which 2–3 you'd recommend A/B testing first and why."
+      }
+    }
+  ]
+}

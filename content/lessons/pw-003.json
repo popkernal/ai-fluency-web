@@ -1,0 +1,44 @@
+{
+  "id": "pw-003",
+  "trackId": "pw",
+  "streamId": "quick-wins",
+  "title": "Control Tone and Format",
+  "estimatedMinutes": 6,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The same information can be written in dozens of ways.** Professional or casual. Formal or friendly. Bullet points or narrative. Brief or detailed. AI can produce any of them — but only if you tell it what you want.\n\nTwo dimensions to control:\n\n**Tone:** How the text sounds.\n- Formal: contracts, executive reports\n- Professional: most business communication\n- Conversational: internal messages, blog posts\n- Friendly: customer emails, social media\n- Urgent: deadline notices, alerts\n\n**Format:** How the text is structured.\n- Bullet points vs. paragraphs\n- Numbered steps vs. prose\n- Headers and sections vs. flowing text\n- Tables vs. lists\n- Word/sentence limits\n\nThe easiest way to get the format you want is to **show an example** or **describe it explicitly.** \"3 bullet points, each under 15 words\" is much clearer than \"brief.\""
+    },
+    {
+      "type": "example",
+      "bad": "Write an update email about our product launch.",
+      "good": "Write an internal team update email about our product launch delay. Tone: direct and honest, not corporate-speak — write like a team lead who respects their colleagues. Format: 3 short paragraphs. Paragraph 1: what happened. Paragraph 2: revised timeline. Paragraph 3: what you need from the team. Max 200 words total.",
+      "explanation": "The weak prompt leaves tone and format entirely open. The strong prompt specifies tone (direct, honest, no corporate-speak), structure (3 paragraphs with a defined purpose each), and a word limit. The result will match the actual communication style your team expects."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "The easiest way to get a specific format from AI is to either ___ an example or ___ it explicitly with details like word count and structure.",
+      "data": {
+        "blanks": ["show", "describe"],
+        "hint": "Think about what you'd do if briefing a human writer on the format you need."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to communicate a new security policy to all employees — most are non-technical. Which format instruction works best?",
+      "data": {
+        "choices": [
+          "Keep it simple.",
+          "Tone: friendly and reassuring. Format: 5 numbered steps, each in plain English with no jargon. End with a one-sentence FAQ section (3 questions). Total: under 300 words.",
+          "Write a professional email.",
+          "Make it easy to understand."
+        ],
+        "correctIndex": 1,
+        "explanation": "The second option gives precise format instructions (5 numbered steps, no jargon, FAQ, word limit) and tone guidance (friendly, reassuring). 'Keep it simple' and 'Make it easy to understand' are vague — AI can't measure simplicity. 'Write a professional email' gives format but not tone or the specific structure needed for a security policy."
+      }
+    }
+  ]
+}

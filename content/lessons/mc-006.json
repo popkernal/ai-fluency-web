@@ -1,0 +1,44 @@
+{
+  "id": "mc-006",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "When to Trust Claude (and When Not To)",
+  "estimatedMinutes": 8,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Calibrated trust is the most important skill for AI power users.**\n\nOver-trusting AI leads to using bad outputs. Under-trusting leads to not benefiting from good ones. The goal is knowing precisely which categories of output are reliable and which require verification.\n\n**High-reliability tasks (verify by spot-check):**\n- Structuring and organizing information you provide\n- Writing and editing clear prose\n- Applying well-established frameworks\n- Explaining concepts that are broadly documented\n- Generating options and ideas for you to evaluate\n\n**Medium-reliability (verify important claims):**\n- Reasoning through complex problems\n- Interpreting ambiguous situations\n- Professional domain analysis (legal, medical, financial concepts)\n\n**Low-reliability (always verify):**\n- Current events and recent data\n- Specific statistics and numerical claims\n- Citations and references to specific sources\n- Information about specific private companies\n- Anything where Claude says 'I believe' or 'I think'\n\nA practical habit: when using Claude output for anything high-stakes, ask: \"What parts of this should I verify before acting on it?\" Claude will often tell you honestly."
+    },
+    {
+      "type": "example",
+      "bad": "Using a Claude-generated competitive analysis (including market share figures and competitor pricing) directly in a board presentation without checking any of it.",
+      "good": "Using Claude to structure the competitive analysis framework and write the narrative sections. For market share data and competitor pricing, verify each specific claim with primary sources (company websites, analyst reports, direct research). Marking any statistic in the presentation with its verified source.",
+      "explanation": "Structure, narrative, and frameworks are Claude's strength — high-reliability. Specific competitive data like market share and pricing is low-reliability — these are exactly the facts Claude may confidently get wrong. Using AI for what it does well while doing primary research for what it doesn't is the hybrid approach that produces both speed and accuracy."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Claude gives you a detailed explanation of a legal concept and its implications for your contract. What's the right level of trust?",
+      "data": {
+        "choices": [
+          "Trust it fully — Claude is trained on legal texts",
+          "Use it to get oriented on the concept, but have a qualified attorney review any contract or legal decision it informs",
+          "Ignore it because AI can't do legal work",
+          "Trust it only if Claude doesn't express uncertainty"
+        ],
+        "correctIndex": 1,
+        "explanation": "Claude can explain legal concepts accurately at a general level — making it useful for orientation. But legal advice requires knowing jurisdiction-specific rules, recent case law, your specific facts, and professional accountability. Claude's confidence doesn't make it legally accurate. Use AI to get up to speed; use attorneys to make decisions. This applies equally to medical and financial advice."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "A practical trust habit: for any high-stakes Claude output, ask Claude: 'What parts of this should I ___ before ___ on it?' Claude will often tell you honestly.",
+      "data": {
+        "blanks": ["verify", "acting"],
+        "hint": "Think about the two steps: checking information and then using it."
+      }
+    }
+  ]
+}

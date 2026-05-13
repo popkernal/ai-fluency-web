@@ -1,0 +1,44 @@
+{
+  "id": "glossary-002",
+  "trackId": "glossary",
+  "streamId": "tools-reference",
+  "title": "Prompting and Output Terms",
+  "estimatedMinutes": 5,
+  "xpReward": 25,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**System prompt** — Instructions given to the AI before the conversation begins, typically by a developer or product builder. Sets the AI's persona, rules, and constraints. In consumer apps, you don't see this — it's set behind the scenes.\n\n**User message** — Your turn in the conversation. Also called the 'human turn'.\n\n**Assistant message** — The AI's turn in the conversation.\n\n**Temperature** — A setting (0–1 or 0–2) that controls response randomness. Low = consistent and conservative. High = creative and varied.\n\n**Top-p / Top-k** — Other sampling settings that control randomness. Usually left at defaults unless you're building a custom integration.\n\n**Zero-shot** — Asking the AI to do a task with no examples. 'Write a product description for this item.'\n\n**Few-shot** — Providing 1–3 examples before asking the AI to do the task. 'Here are two examples of the product descriptions I like. Now write one for this item.'\n\n**Chain of thought** — Asking the AI to reason step by step before giving a final answer. 'Think through this step by step before answering.' Improves accuracy on complex tasks.\n\n**Grounding** — Connecting AI output to verifiable sources or real data, reducing hallucination risk. Perplexity grounds by citing web sources. RAG (retrieval-augmented generation) is a technical grounding approach.\n\n**Prompt injection** — An attack where malicious content in a document or webpage tries to override an AI's instructions. Important to understand if you're building AI-powered tools."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want the AI to classify customer feedback into categories. You show it three labelled examples before asking it to classify new ones. This technique is called:",
+      "data": {
+        "choices": [
+          "Zero-shot prompting",
+          "Chain of thought prompting",
+          "Few-shot prompting",
+          "System prompting"
+        ],
+        "correctIndex": 2,
+        "explanation": "Few-shot prompting means providing a small number of examples (the 'shots') before the actual task. It helps the model understand the exact format, style, and criteria you want — especially useful for classification, formatting, or any task with specific output requirements."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You ask the AI a difficult logic puzzle. Instead of just asking for the answer, you add: 'Work through this step by step before giving your final answer.' What technique is this?",
+      "data": {
+        "choices": [
+          "Few-shot prompting",
+          "Chain of thought prompting",
+          "System prompting",
+          "Grounding"
+        ],
+        "correctIndex": 1,
+        "explanation": "Chain of thought prompting asks the model to show its reasoning before concluding. Research shows this significantly improves accuracy on math, logic, and multi-step problems — the model is less likely to jump to an incorrect answer if it has to justify each step."
+      }
+    }
+  ]
+}

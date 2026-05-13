@@ -1,0 +1,50 @@
+{
+  "id": "glossary-004",
+  "trackId": "glossary",
+  "streamId": "tools-reference",
+  "title": "What Not to Share with AI",
+  "estimatedMinutes": 4,
+  "xpReward": 25,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "When you type something into an AI chatbot, it may be stored, reviewed by the company, or used to improve the model. This matters for privacy.\n\n**Never type into a free AI chat tool:**\n- Passwords or login details\n- Credit card numbers or bank details\n- Someone else's personal information (home address, medical history, ID numbers)\n- Confidential company information (unreleased products, financials, client lists)\n- Anything your employer says is confidential\n\n**Why this matters:**\nMost free AI tools (ChatGPT free tier, Gemini free tier) may use your conversations for training or allow humans to review them for safety. Even paid tiers vary — read the terms or ask your IT team.\n\n**What's generally fine:**\n- Public information you'd find on Google\n- Your own general writing, ideas, and work tasks that aren't sensitive\n- Questions and drafts that don't contain private details\n\n**Practical rule:** Before pasting anything into an AI, ask: 'Would I be comfortable if my manager, a client, or the AI company could read this?' If no, don't paste it."
+    },
+    {
+      "type": "example",
+      "bad": "Paste a customer's full name, email, medical complaint, and account number into ChatGPT to help write a support response.",
+      "good": "Paste a version with the sensitive details removed: 'A customer is asking about a refund for a product they received damaged. Help me write a warm, helpful response that asks for their order number and explains next steps.'",
+      "explanation": "You can get the same quality of help by removing personal details before pasting. Replace real names with 'the customer', real numbers with 'their account', and real specifics with general descriptions. The AI doesn't need the real data to help you write well."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A colleague wants to use ChatGPT to help draft a performance review. They plan to paste the employee's full name, salary, and recent incidents. What should you advise?",
+      "data": {
+        "choices": [
+          "Fine — ChatGPT is secure for all business use",
+          "Remove the name, salary, and specific incidents before pasting. Describe the situation in general terms instead.",
+          "Only remove the salary — the rest is fine",
+          "Don't use AI for HR tasks at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "Employee data is sensitive personal information. Removing identifying details before using AI tools protects the employee's privacy and reduces your company's risk. Describe situations generically — the AI can still give excellent writing help."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which of these is safest to paste directly into a free AI chat tool?",
+      "data": {
+        "choices": [
+          "Your company's unreleased Q4 revenue forecast",
+          "A client's personal contact details",
+          "A draft blog post about a general industry trend",
+          "Your colleague's home address for a team mailing"
+        ],
+        "correctIndex": 2,
+        "explanation": "A draft blog post about a general topic contains no sensitive personal or business information — it's the kind of content you'd publish publicly anyway. The other options all contain confidential or personal data that shouldn't be shared with third-party tools."
+      }
+    }
+  ]
+}

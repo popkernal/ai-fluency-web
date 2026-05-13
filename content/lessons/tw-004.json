@@ -1,0 +1,47 @@
+{
+  "id": "tw-004",
+  "trackId": "tw",
+  "streamId": "core-skills",
+  "title": "Analytical Frameworks on Demand",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI knows hundreds of analytical frameworks — and can apply them to your specific situation.**\n\nFrameworks are structured ways of thinking about a problem. They're useful because they force you to consider dimensions you might otherwise overlook. The challenge: most people use the 2-3 frameworks they learned in school and ignore the dozens of others that might fit their problem better.\n\nAI gives you access to the full library. You can either:\n\n**Option A — Ask for the right framework:**\n\"What analytical frameworks are most commonly used for evaluating market entry decisions? Which would work best for a B2B software company?\"\n\n**Option B — Apply a specific framework:**\n\"Apply the Jobs To Be Done framework to our product. Based on this description, what 'jobs' are customers hiring our product to do?\"\n\n**Option C — Ask AI to choose:**\n\"I need to analyze [problem]. What's the most useful framework here and why?\"\n\nUseful frameworks to know: SWOT, Porter's Five Forces, Jobs To Be Done, the RICE prioritization model, the Eisenhower Matrix, the Ansoff Matrix, the McKinsey 7-S, first principles reasoning, and the pyramid principle for communication."
+    },
+    {
+      "type": "example",
+      "bad": "Help me decide which projects to prioritize.",
+      "good": "I need to prioritize 8 projects for next quarter. Apply the RICE framework to help me think through this. For each project I describe, ask me for: Reach (how many people), Impact (1-3 scale), Confidence (%), and Effort (person-weeks). Then calculate the RICE score and rank the projects. Let's start: [Project 1 description]",
+      "explanation": "Generic prioritization requests produce a generic list based on intuition. Using the RICE framework forces you to quantify four dimensions for each project and produces a data-driven ranking. The structured framework also makes your reasoning transparent to stakeholders who can question your inputs rather than just your conclusion."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're evaluating whether to enter a new market. Which framework is most appropriate to start with?",
+      "data": {
+        "choices": [
+          "The Eisenhower Matrix (urgency vs. importance)",
+          "Porter's Five Forces (competitive landscape analysis)",
+          "RICE prioritization (project scoring)",
+          "The Pyramid Principle (communication structure)"
+        ],
+        "correctIndex": 1,
+        "explanation": "Porter's Five Forces is designed specifically for analyzing industry attractiveness and competitive dynamics — exactly what you need for a market entry evaluation. It examines supplier power, buyer power, competitive rivalry, threat of new entrants, and threat of substitutes. The other frameworks serve different purposes: Eisenhower for task prioritization, RICE for project scoring, Pyramid Principle for structuring communication."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt that asks AI to apply a specific analytical framework to a real or hypothetical business problem you're working on. The prompt should name the framework and provide enough context for AI to apply it meaningfully.",
+      "data": {
+        "rubric": [
+          "Strong prompts name a specific framework, explain the problem with enough context for the framework to be useful, and ask for the framework's specific components or outputs (not just 'analyze this')",
+          "The framework chosen should be appropriate to the problem type"
+        ],
+        "exampleAnswer": "Apply the Jobs To Be Done framework to our project management software for freelancers. Based on this description: [product overview]. For each job, structure it as: 'When I [situation], I want to [motivation], so I can [outcome].' Identify the top 5 jobs our customers are hiring us to do. Then identify 2 jobs we probably don't serve well based on the description, and what that suggests about product gaps."
+      }
+    }
+  ]
+}

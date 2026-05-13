@@ -1,0 +1,50 @@
+{
+  "id": "glossary-003",
+  "trackId": "glossary",
+  "streamId": "tools-reference",
+  "title": "When AI Gets It Wrong",
+  "estimatedMinutes": 5,
+  "xpReward": 25,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "AI can be confidently, completely wrong. Understanding why helps you use it safely.\n\n**Hallucination** — The most important word to know. It's when AI makes something up and presents it as fact. This isn't a bug or a glitch. It's how the technology works: the AI is always trying to produce a plausible next word, not a verified true statement.\n\nHallucinations can look like:\n- A made-up statistic (\"Studies show 73% of people...\")\n- A fake quote attributed to a real person\n- A book, article, or law that doesn't exist\n- A product, company, or event that was never real\n- Confidently wrong details about a real thing\n\n**The dangerous part:** The AI doesn't signal when it's guessing. A hallucinated fact looks exactly like a real one.\n\n**What to always verify:**\n- Any specific number or statistic\n- Names, dates, and quotes\n- Anything that could get someone in trouble if wrong (medical, legal, financial)\n- Anything you'll share with others or publish\n\n**What AI is reliable for:**\n- Drafting, editing, and rewriting — you're checking the output anyway\n- Brainstorming and generating options\n- Explaining concepts in simple terms\n- Tasks where 'close enough' is fine"
+    },
+    {
+      "type": "example",
+      "bad": "Ask the AI to write a report citing recent research on a topic, then copy the citations directly into your document.",
+      "good": "Ask the AI to draft the report structure and key points. Then find real citations yourself using Google Scholar or a library database. Never use AI-generated citations without checking they exist.",
+      "explanation": "AI will confidently invent academic citations — correct-looking author names, journal titles, volume numbers, page numbers. They often don't exist. Many people have been embarrassed (or worse) by submitting reports with fake references."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You ask an AI to find three statistics about remote work productivity. It gives you three specific percentages with source names. What should you do before using them?",
+      "data": {
+        "choices": [
+          "Use them — the AI named sources so they must be real",
+          "Check that each statistic and source actually exists before using it",
+          "Ask the AI to double-check its own answers",
+          "Only use two of the three to be safe"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI will name real-sounding sources (Harvard Business Review, McKinsey, etc.) alongside completely fabricated statistics. The source name doesn't mean the statistic exists. Always verify specific numbers and citations before using them anywhere."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which of these tasks is AI LEAST likely to get wrong?",
+      "data": {
+        "choices": [
+          "Telling you the exact population of a city last year",
+          "Writing a first draft of an email in a friendly tone",
+          "Naming the CEO of a company you've never heard of",
+          "Giving you the correct date of a historical event"
+        ],
+        "correctIndex": 1,
+        "explanation": "Drafting in a specific tone is a writing task — not a factual retrieval task. AI excels at this because there's no single 'correct' answer to verify. Specific numbers, names, and dates are exactly where hallucination happens most."
+      }
+    }
+  ]
+}

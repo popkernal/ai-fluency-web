@@ -1,0 +1,44 @@
+{
+  "id": "qw-002",
+  "trackId": "qw",
+  "streamId": "quick-wins",
+  "title": "Draft Anything in Seconds",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The blank page problem is over.** AI excels at generating first drafts — and a first draft, even an imperfect one, is dramatically faster to improve than starting from nothing.\n\nThe workflow is simple: give AI your goal, audience, key points, and tone. It produces a draft. You refine it. Total time: minutes instead of hours.\n\nThis works for emails, reports, proposals, social posts, meeting agendas, job descriptions, presentations — anything that starts as text.\n\n**Important:** Think of AI output as a starting point, not a finished product. Your job shifts from writer to editor, which is almost always faster. Always read and adjust the output — it won't know your voice perfectly, and it may miss nuances only you know."
+    },
+    {
+      "type": "example",
+      "bad": "Write an email about the project delay.",
+      "good": "Write a professional email to my client informing them that the website launch is delayed by 2 weeks due to unexpected technical issues. Acknowledge the inconvenience, give a new launch date of March 15, and reassure them we're on track. Keep it concise — 3 short paragraphs.",
+      "explanation": "The vague prompt gives the AI no audience, no specific delay, no tone, and no structure. The specific prompt includes recipient (client), topic (website launch), reason (technical issues), new date, emotional goal (reassure), and format (3 short paragraphs). You get a usable draft instead of something generic."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A colleague says: \"I had AI write my entire project proposal. I copied it straight into the document without reading it and sent it to the client.\" What's the problem with this approach?",
+      "data": {
+        "errorDescription": "Sending AI output without review",
+        "explanation": "AI doesn't know your specific project details, your company's tone, confidential information, or client preferences. It may include generic filler, factual errors, or miss critical specifics. AI drafts are starting points that require your review and editing — they shouldn't be sent unread."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "When AI drafts something for you, your role shifts from ___ to ___.",
+      "data": {
+        "choices": [
+          "Editor to writer",
+          "Writer to editor",
+          "Manager to assistant",
+          "Creator to consumer"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI handles the blank-page problem by producing a first draft. Your job becomes editing — refining, personalizing, fact-checking, and adjusting tone. Editing is almost always faster than writing from scratch, which is why AI speeds up writing dramatically."
+      }
+    }
+  ]
+}

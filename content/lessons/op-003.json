@@ -1,0 +1,44 @@
+{
+  "id": "op-003",
+  "trackId": "op",
+  "streamId": "role-tracks",
+  "title": "Data Without the Spreadsheet Pain",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI Is Not a Calculator — Use It Like an Analyst**\n\nA common mistake: people paste a table of numbers into AI and ask it to \"analyze\" them. The output sounds confident but can contain calculation errors, misread patterns, or invented trends. AI is a language model — it reasons about numbers, it doesn't crunch them reliably.\n\nThe right mental model: treat AI like a smart analyst who can help you think through data, write commentary, and spot what's worth investigating — but have your own tools do the actual math.\n\n**What AI is reliable for in data work:**\n- Writing narrative commentary on metrics you've already calculated (\"here's what the numbers are — help me write the story\")\n- Suggesting what questions to ask about a dataset before you analyze it\n- Explaining what a metric or trend might mean in business terms\n- Structuring a data report or dashboard narrative\n- Drafting the \"so what\" from bullet points you provide\n\n**What AI is unreliable for in data work:**\n- Doing arithmetic on pasted tables (especially with large numbers)\n- Identifying statistically significant trends without proper statistical tools\n- Making predictions from historical data\n- Anything where being wrong has financial or compliance consequences\n\n**The practical workflow:**\nDo your analysis in Excel, Sheets, or your BI tool. Export the key findings as bullet points. Bring those bullets to AI and ask it to turn them into narrative commentary, surface implications, or help you structure a story for an audience."
+    },
+    {
+      "type": "example",
+      "bad": "Here's our sales data for Q3: [pastes 50-row table]. What trends do you see and what should we do?",
+      "good": "Here are the key findings from our Q3 sales analysis, which I've already run in our BI tool:\n- Total revenue: $2.1M, up 8% QoQ but down 3% vs. Q3 last year\n- Enterprise deals: 14 closed (avg $89k), up from 11 last quarter\n- SMB deals: 203 closed (avg $4.2k), down from 241 last quarter\n- Churn rate: 4.1%, highest in 18 months\n- Top performing rep: Jamie L. at 142% of quota\n- Region with biggest miss: Southeast at 61% of quota\n\nHelp me write a 3-paragraph narrative for our quarterly business review that explains the story in these numbers — the good, the concerning, and what it means for Q4 strategy.",
+      "explanation": "The bad prompt asks AI to do analysis on raw data — it might produce plausible-sounding numbers but they won't be reliable. The good prompt brings pre-calculated findings and asks AI to do what it's actually good at: turning structured facts into clear narrative. The human did the analysis. AI writes the story."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A project manager pastes 3 months of support ticket data (volume, category, resolution time) into Claude and asks: \"Based on this data, what is the average resolution time for billing issues and how does it compare to last quarter? What's causing the increase?\" What's wrong with this approach?",
+      "data": {
+        "errorDescription": "Asking AI to calculate averages and identify causal explanations from raw pasted data",
+        "explanation": "Two problems here. First, asking AI to calculate averages from a pasted table is unreliable — language models can misread numbers in tables and produce wrong arithmetic, especially across many rows. Use a spreadsheet or query tool for actual calculations. Second, asking 'what's causing the increase' from data alone asks AI to invent causation from correlation. AI doesn't know your staffing changes, product releases, or seasonal patterns. A better approach: calculate the averages yourself, then give AI the findings and ask it to help you write commentary or suggest hypotheses to investigate."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your team has just finished a monthly metrics review. You want to use AI to help produce the written report. Which approach is most appropriate?",
+      "data": {
+        "choices": [
+          "Export the raw data tables into AI and ask it to produce the full analysis and commentary",
+          "Run your own analysis first, then give AI the key findings as bullet points and ask it to write the narrative",
+          "Ask AI to connect to your data source and pull the numbers directly",
+          "Use AI to double-check your arithmetic before you write the report"
+        ],
+        "correctIndex": 1,
+        "explanation": "Option B is correct. AI excels at turning structured findings into clear narrative — let your analysis tools do the math, and bring AI the outputs. Option A risks calculation errors and fabricated trends. Option C is not how standard AI assistants work — they don't have live data access unless specifically configured with tools. Option D is unreliable — AI arithmetic on large tables is error-prone and should never be treated as a verification step."
+      }
+    }
+  ]
+}

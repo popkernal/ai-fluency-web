@@ -1,0 +1,48 @@
+{
+  "id": "mk-002",
+  "trackId": "mk",
+  "streamId": "role-tracks",
+  "title": "Campaign Brief in Minutes",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Campaign Briefs Fail Before the Campaign Starts**\n\nA bad campaign brief leads to creative work that misses the mark, stakeholder misalignment, and wasted budget. Most bad briefs share the same problems: unclear objectives, undefined audience, and a message that tries to say everything to everyone.\n\nAI can help you write a tight, actionable campaign brief in a fraction of the time — if you know what a brief needs to contain and what decisions you need to have made before you write it.\n\n**What a campaign brief must answer:**\n- **Objective:** What specific outcome does this campaign need to achieve? (Not 'increase awareness' — be specific: 'generate 200 qualified leads for the enterprise segment in Q3')\n- **Target audience:** Who specifically? Demographics, role, company type, current relationship to your brand (unaware, aware, considering).\n- **Key message:** The single most important thing the audience should take away. One thing. Not three.\n- **Supporting points:** The 2–3 facts or proof points that support the key message.\n- **Channels:** Where will this campaign run? Channel determines format, tone, and length.\n- **Call to action:** What do you want the audience to do? Be specific — not 'learn more' but 'book a demo' or 'download the guide'.\n- **Success metrics:** How will you know it worked? Define before launch, not after.\n- **Constraints:** Budget, timeline, brand guidelines, legal or compliance requirements.\n\n**The AI workflow:**\nAnswer these questions in rough notes first. Then give AI your rough answers and ask it to structure them into a clean, complete brief. The hard thinking is yours — AI handles the formatting and catches gaps."
+    },
+    {
+      "type": "example",
+      "bad": "Can you write a campaign brief for a new product launch?",
+      "good": "Help me write a campaign brief for a new product launch. Here are my rough answers to the key brief components:\n\n- Product: Harrow Enterprise — a new enterprise tier of our project management tool\n- Objective: Generate 150 qualified enterprise demo requests (companies 200+ employees) in Q3\n- Target audience: VP Operations and IT Directors at mid-market professional services firms (consulting, agency, legal). They're aware of project management tools but have rejected SMB tools as too lightweight. They care about security, permissions, and integrations.\n- Key message: Harrow Enterprise is the only project management tool built specifically for professional services — not retrofitted from a startup tool.\n- Supporting points: SOC 2 compliant, Salesforce/Jira integrations, custom permission levels, dedicated onboarding\n- Channels: LinkedIn ads, email to existing waitlist, outbound SDR sequences\n- CTA: Book a 30-minute demo\n- Success metric: 150 demo bookings, 40%+ show rate, 20% conversion to opportunity\n- Timeline: 8 weeks, launching July 1\n\nPlease structure this into a clean campaign brief, flag any gaps in my inputs, and suggest if the key message could be sharpened.",
+      "explanation": "The vague prompt produces a generic template. The good prompt brings completed thinking — AI's job is to structure and improve it. Note the instruction to flag gaps and sharpen the message. This is the highest-value AI editing behavior: not generating from scratch, but improving and pressure-testing what you've already built."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to get AI to help you build a campaign brief for a campaign you're planning or could plausibly plan. Include your rough answers to the key brief components before asking AI to structure them.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: a product or service being promoted, a specific measurable objective (not 'increase awareness'), a defined audience with role and company type, a single key message, 2–3 supporting points, channel selection, a specific CTA, and success metrics",
+          "They also ask AI to flag gaps and sharpen the message",
+          "Weak prompts describe the campaign vaguely and ask AI to fill in the brief components"
+        ],
+        "exampleAnswer": "Help me write a campaign brief for a lead generation campaign targeting HR Directors at companies with 100–500 employees. Here are my rough inputs:\n\n- Product: Lattice Performance — our performance management platform\n- Objective: Generate 300 MQL trial signups from HR Directors in Q4 (Oct–Dec)\n- Target audience: HR Directors and VP HR at companies 100–500 employees, currently using annual review cycles in spreadsheets or basic HRIS. They're frustrated by low adoption of performance reviews and lack of data on team performance.\n- Key message: Replace your annual performance review with continuous feedback loops that employees actually use.\n- Supporting points: 78% employee adoption rate (industry avg: 31%), integrates with Slack and HRIS, 6-week implementation\n- Channels: LinkedIn sponsored content, Google Search (keywords: 'performance management software'), partner webinar with SHRM\n- CTA: Start a free 30-day trial\n- Success metrics: 300 MQL trials, 15% trial-to-paid conversion within 90 days\n- Constraints: $40k budget, launching Oct 1, must comply with GDPR for EU audiences\n\nPlease: (1) structure this into a clean campaign brief, (2) flag any components that seem weak or missing, (3) suggest a sharpened version of the key message."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete this campaign brief template with the correct component names in the right order.\n\nA complete campaign brief includes:\n1. ___[1]___ — What specific, measurable outcome does this campaign achieve?\n2. ___[2]___ — Who exactly is the audience, including their role, company type, and relationship to your brand?\n3. ___[3]___ — The single most important takeaway for the audience\n4. ___[4]___ — Where will the campaign run?\n5. ___[5]___ — What specific action do you want the audience to take?",
+      "data": {
+        "blanks": [
+          "Objective",
+          "Target Audience",
+          "Key Message",
+          "Channels",
+          "Call to Action"
+        ],
+        "hint": "Think about the order a strategist thinks through a campaign: what do you want to achieve, who do you want to reach, what do you want to say, where will you say it, and what do you want them to do next?"
+      }
+    }
+  ]
+}

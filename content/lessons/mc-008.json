@@ -1,0 +1,46 @@
+{
+  "id": "mc-008",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "Building Your AI Workflow Stack",
+  "estimatedMinutes": 9,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**The most productive AI users don't just use AI — they have a system.**\n\nA personal AI workflow stack is the combination of tools, habits, and processes you use to integrate AI into your work consistently. It typically includes:\n\n**1. Your primary AI tool** — Usually Claude or another capable LLM for the bulk of work.\n\n**2. Your context library** — Saved system prompts, context blocks, and templates (covered in earlier lessons).\n\n**3. Integration touchpoints** — Where AI connects to your existing tools: email clients, document editors, note-taking apps, project management.\n\n**4. Verification habits** — Consistent practices for fact-checking, reviewing, and validating AI output.\n\n**5. Learning loops** — How you capture what works: saving successful prompts, noting failure modes, iterating on templates.\n\n**Building your stack:**\nStart with your highest-frequency, highest-friction tasks. The first 3-5 tasks you automate with AI will give you 80% of the value. Don't try to AI-ify everything at once.\n\n**The maintenance habit:** Once a month, review your prompt library. Retire prompts that don't work, promote prompts that consistently produce good results, and document the patterns you've learned."
+    },
+    {
+      "type": "example",
+      "bad": "Using AI ad hoc whenever you remember it exists, with no saved prompts or consistent process.",
+      "good": "A Monday workflow: (1) Open the week with a 5-minute AI session using your 'weekly setup' template to plan priorities. (2) All emails over 3 paragraphs get drafted with your 'email drafter' template. (3) Every Friday, meeting notes from the week get run through your 'meeting summary' template and sent to the team. (4) Monthly: review and update templates. Result: AI is embedded in your workflow, not an occasional experiment.",
+      "explanation": "Ad hoc AI use produces inconsistent results and rarely develops into a real productivity gain. Systematic AI use — with templates, scheduled touchpoints, and maintenance habits — compounds over time. Within 3 months of systematic use, you'll have a personal AI stack that saves hours per week."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Design your personal AI workflow stack. List: (1) your 3 highest-frequency work tasks that AI can help with, (2) a template name and description for each, (3) when in your week you'll use each one, (4) how you'll verify the output.",
+      "data": {
+        "rubric": [
+          "A strong workflow stack identifies specific recurring tasks (not vague categories), concrete template descriptions, realistic timing integrated into actual work habits, and specific (not generic) verification steps appropriate to each task type"
+        ],
+        "exampleAnswer": "My AI workflow stack:\n\n1. Task: Weekly status report to manager (Mondays)\n   Template: 'Weekly Update — fill in [wins], [in progress], [blockers]'\n   Timing: Monday morning, 9am\n   Verification: Read fully, add 1-2 specific details only I know\n\n2. Task: Customer follow-up emails after discovery calls (same day)\n   Template: 'Discovery follow-up — fill in [pain points discovered], [solutions discussed], [next step]'\n   Timing: Within 2 hours of call\n   Verification: Personalize opening sentence, confirm all specifics match call notes\n\n3. Task: Research synthesis for client proposals (ad hoc)\n   Template: 'Research synthesis — input [sources/notes], output [key findings, gaps, questions to investigate]'\n   Timing: Before starting proposal writing\n   Verification: Cross-check any statistics against original sources cited"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You've been using AI for 3 months and notice you keep rewriting the same context at the start of similar conversations. What's the right response?",
+      "data": {
+        "choices": [
+          "Accept it as a limitation of AI",
+          "Create a saved context block for that situation and start every relevant session by pasting it",
+          "Stop using AI for that task type",
+          "Ask AI to remember it for next time"
+        ],
+        "correctIndex": 1,
+        "explanation": "Repeated context retyping is a clear signal to create a saved context block. This is exactly how a prompt library grows — you identify patterns in your own AI use and codify them. The 20 minutes you spend writing a good context block will save hours over the following months. AI doesn't have persistent memory between sessions — your saved blocks are the workaround."
+      }
+    }
+  ]
+}

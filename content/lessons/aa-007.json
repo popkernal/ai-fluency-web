@@ -1,0 +1,46 @@
+{
+  "id": "aa-007",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "AI for Your Team",
+  "estimatedMinutes": 9,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Individual AI productivity is powerful. Team AI adoption is transformative.**\n\nWhen AI practices spread across a team, you get compounding benefits: shared templates improve together, everyone handles repetitive work faster, and AI-augmented processes replace bottlenecks.\n\nThe challenge: AI adoption is uneven. Early adopters get results; others skeptical or don't know where to start.\n\n**How to spread AI adoption on your team:**\n\n**1. Show, don't preach.** Demo a task you've already made 10x faster. Let the result speak — don't sell it.\n\n**2. Start with the team's biggest pain.** What does everyone complain takes forever? Build an AI solution for that specific thing.\n\n**3. Share working templates, not concepts.** Give people copy-paste-ready prompts that work, not advice about prompting principles.\n\n**4. Build a shared prompt library.** A simple shared doc or Notion page with templates anyone can grab and use.\n\n**5. Create psychological safety.** AI outputs need review, and that's expected. Make it clear that catching AI mistakes is part of the workflow, not a sign of failure.\n\n**What to avoid:**\n- Mandating AI use without training or support\n- Letting one person build all the automations (creates bottlenecks)\n- Introducing AI for low-impact tasks and expecting enthusiasm"
+    },
+    {
+      "type": "example",
+      "bad": "Send a company-wide email mandating AI use for all written communications starting next week.",
+      "good": "Start a monthly 'AI win' share in your team meeting: 3-minute slot where someone shows one thing AI helped them do faster this month, including the exact prompt they used. After 3 months, most team members have tried at least 5 things, and several will have built their own templates.",
+      "explanation": "Mandating AI creates resistance and anxiety. The 'AI win' share creates peer-to-peer learning with practical, copy-paste prompts — the kind that gets people to actually try things. Three-minute shares are low stakes and high signal. The prompt-sharing norm means the team's collective learning compounds."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your team has a shared prompt library with 30 templates. You notice that 5 templates are used frequently and 25 are never used. What's the most useful action?",
+      "data": {
+        "choices": [
+          "Add more templates to cover every possible task",
+          "Delete the 25 unused templates and promote the 5 that work",
+          "Ask team members to try the unused templates",
+          "Keep all 30 — someone might need them eventually"
+        ],
+        "correctIndex": 1,
+        "explanation": "A smaller, high-quality prompt library gets used. A large, cluttered one gets ignored. Promote the 5 that work (make them easy to find, add usage notes), retire the 25 that don't. Then investigate why those 25 aren't used — wrong task focus, unclear prompts, or low-value tasks? Use that learning to improve future additions."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a 30-60 second 'AI win' share script you could use in a team meeting to demonstrate an AI workflow that helped you. Include the specific outcome, the prompt you used, and an invitation for others to try it.",
+      "data": {
+        "rubric": [
+          "Strong scripts include: a specific measurable outcome (time saved, quality improvement), the actual prompt text (so teammates can copy it), what the output looked like, and a clear invitation to try it with minimal friction"
+        ],
+        "exampleAnswer": "Quick AI win to share: I've been spending 45 minutes every Monday writing our project status update. Now it takes 8 minutes. Here's the template I use:\n\n'Write a project status update for [PROJECT NAME]. Audience: leadership team. Format: 3 sections — (1) This week's wins (3 bullets), (2) Next week's priorities (3 bullets), (3) Blockers needing decisions (1-2 bullets). Tone: concise and direct. Content: [paste my rough notes]'\n\nI paste in my notes, review the output for 5 minutes, and it's done. Here's a copy of the template — try it for your project this week and tell me if it works for you."
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "mk-004",
+  "trackId": "mk",
+  "streamId": "role-tracks",
+  "title": "SEO Content Without the Grind",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Where AI Fits in an SEO Content Workflow**\n\nSEO content production used to be the most time-consuming part of content marketing. AI has changed the economics significantly — but not in the way most people expect. The biggest wins from AI in SEO aren't writing the full post from scratch. They're in the structural and optimization work that used to take hours.\n\n**Where AI accelerates SEO content work:**\n- **Outline generation:** Give AI a keyword, target audience, and search intent — it can produce a detailed, semantically structured outline in minutes\n- **Meta descriptions:** AI writes tight, click-worthy meta descriptions quickly and consistently\n- **Title tag variations:** Generating 10 title tag options for A/B testing takes seconds\n- **Internal link suggestions:** Describe your content and ask AI to suggest anchor text and linking strategy based on your existing content map\n- **Content gaps:** Give AI your existing post and the top-ranking posts on the keyword — ask it to identify what you're missing\n\n**Where AI creates SEO risk:**\n- **Thin or repetitive content:** AI tends to produce content that covers all the expected angles without saying anything original — which Google increasingly penalizes\n- **Factual claims:** AI will confidently state statistics and facts that may be outdated or wrong. Always verify any claim you didn't add yourself.\n- **E-E-A-T signals:** Google's quality signals reward genuine expertise, experience, and authoritativeness. Generic AI content scores poorly on these dimensions.\n\n**The right workflow:**\nAI builds the structure and handles optimization tasks. Human expertise and original insight fills the content. The result is SEO-structured writing that also ranks for quality."
+    },
+    {
+      "type": "example",
+      "bad": "Write a 1500-word blog post about project management software for small businesses. Include SEO keywords.",
+      "good": "I'm writing a blog post targeting the keyword 'project management software for small businesses' (search intent: informational — someone evaluating options).\n\nHelp me with the following:\n1. **SEO outline:** Create a detailed H1/H2/H3 structure for a 1,500-word post. Include semantically related terms I should cover (not just keyword repetition). Make sure to address the search intent — this reader is evaluating options, not looking for a how-to.\n2. **Meta description:** Write 3 meta description options under 155 characters. Lead with the primary benefit, include a soft CTA.\n3. **Title tags:** Write 5 title tag variations under 60 characters that could be A/B tested.\n4. **Content gaps check:** Here's my draft introduction: [paste draft]. What topics or angles would a top-ranking post on this keyword typically cover that I'm missing?\n\nDo NOT write the full post — I'll write the content myself. I just need the structure and optimization elements.",
+      "explanation": "The bad prompt produces a generic 1,500-word post that will be average at best. The good prompt uses AI for what it's actually efficient at — SEO structure, meta copy, and title variation — and reserves the actual content writing for the human. This approach produces content that is both well-structured for SEO and original enough to rank for quality."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A marketer asks AI to write a 2,000-word SEO blog post on 'best CRM software for real estate agents.' AI produces the post in 90 seconds. The marketer adds a featured image and publishes it immediately. What's the problem with this workflow?",
+      "data": {
+        "errorDescription": "Publishing AI-generated SEO content without fact-checking, originality review, or any human expertise added",
+        "explanation": "Several problems: (1) AI-generated posts that make no original contribution to a topic are exactly what Google's Helpful Content updates are designed to penalize. The post will compete against thousands of similar AI-generated posts with nothing to differentiate it. (2) AI will likely include specific software recommendations, statistics, or feature comparisons that may be outdated or wrong — publishing without fact-checking spreads misinformation and damages brand credibility. (3) Real estate is a domain where buyers make significant decisions based on recommendations — thin, unverified content can cause real harm. The correct workflow: use AI to build structure and write meta copy, add original expertise and verified data, then publish."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this blog post introduction to be better optimized for the target keyword while also being genuinely useful and specific — not generic AI content.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: avoids generic openers like 'in today's landscape', includes the target keyword naturally in the first 100 words, speaks to a specific reader pain point rather than a generic benefit, previews something specific and valuable in the post (not just 'we'll explore options'), and is original enough to stand out from generic AI content",
+          "Bonus: includes a specific hook (stat, scenario, or contrarian point)"
+        ],
+        "exampleAnswer": "Most small business owners don't outgrow their project management setup — they just suffer through it. Work gets tracked in a mix of Slack threads, spreadsheets, and someone's memory until a deadline is missed or a client is disappointed. The right project management software for a small business isn't the most powerful option — it's the one your team will actually use. This guide covers five tools that consistently work for teams of 5–25 people: what each one is good at, where they fall short, and which type of business tends to stick with each long-term.",
+        "original": "In today's competitive business landscape, having the right tools is more important than ever. Project management software can help your team stay organized, improve collaboration, and achieve better results. In this article, we will explore the top project management software options available for small businesses and help you find the perfect solution for your needs."
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "cx-001",
+  "trackId": "cx",
+  "streamId": "role-tracks",
+  "title": "Handle Volume Without Losing Quality",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Scaling Support Without Sacrificing the Customer Experience**\n\nThe pressure to handle more tickets faster is constant in customer support — but speed without quality is just fast failure. The challenge is maintaining response quality as volume grows.\n\nAI helps you build response infrastructure that's both fast and high-quality — not by replacing agents, but by giving agents better starting points and freeing them to focus on the responses that actually require human judgment.\n\n**What AI does well in high-volume support:**\n- Generating first-draft responses to common query types for agents to edit and send\n- Building a library of branded, quality-checked response templates for common scenarios\n- Adapting a base template for different customers (tone, plan level, history)\n- Drafting the \"bridge\" language that moves a customer from a template response to a personalized one\n- Summarizing a long ticket thread before an agent picks it up\n\n**What requires human judgment and should never be fully automated:**\n- Escalation decisions — when to involve a manager\n- Judgment calls about exceptions, refunds, or policy flexibility\n- Any response to a visibly upset or distressed customer\n- Complex or multi-issue tickets where the right solution isn't straightforward\n\n**The template library approach:**\nThe highest-leverage use of AI in volume CX is building a library of quality-reviewed response templates organized by query type. Each template: uses your brand voice, handles the specific scenario correctly, and leaves an obvious place for agent personalization. AI can draft these templates in bulk — agents then use them as starting points, not as auto-send responses."
+    },
+    {
+      "type": "example",
+      "bad": "Write a response to customer questions about billing.",
+      "good": "Write a response template for our support team to use when a customer asks why their monthly bill is higher than expected. Our product is a SaaS analytics tool. Typical reasons the bill increases: (1) they've added users to their plan, (2) they've upgraded features mid-cycle (prorated), (3) they've exceeded their data limit and moved to the next tier automatically.\n\nThe template should:\n- Acknowledge that billing surprises are frustrating (don't be defensive)\n- Offer to look into the specific reason for their account\n- Briefly explain the three most common causes\n- End with a clear next step (\"Reply to this message and I'll pull up your account and walk you through it\")\n- Tone: warm, professional, not corporate. Use 'I' not 'we' where possible.\n- Leave a clear [PERSONALIZATION NOTE] placeholder where the agent should add the specific account detail\n- Length: under 120 words",
+      "explanation": "The vague prompt produces a generic template with no brand voice, no specific causes, and no agent guidance. The good prompt specifies: the exact scenario, the three typical causes, the tone, the structure, a specific CTA, and where agents should personalize. The result is a template agents will actually use rather than rewrite from scratch."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your team handles 500 tickets/day and you want to use AI to improve response quality and consistency. Which approach is most effective?",
+      "data": {
+        "choices": [
+          "Use AI to auto-respond to all incoming tickets without agent review to maximize speed",
+          "Build a library of AI-drafted, quality-reviewed templates organized by query type — agents use them as starting points",
+          "Ask agents to write responses themselves and then use AI to 'improve' each one before sending",
+          "Use AI to triage and categorize tickets only — keep all response writing manual"
+        ],
+        "correctIndex": 1,
+        "explanation": "A quality-reviewed template library is the highest-leverage approach. It ensures consistency and quality without removing agent judgment from the loop — agents select the right template and personalize it, rather than starting from scratch or rubber-stamping an auto-response. Option A (full automation) removes quality control and human judgment from escalation decisions. Option C (AI improves each response) adds steps without the consistency benefit of standardized templates. Option D ignores the quality improvement opportunity — triage helps routing but doesn't improve the responses themselves."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to build a response template for a common customer support scenario in your industry or role. Include the scenario details, your brand voice, the template structure you want, and where agents should personalize.",
+      "data": {
+        "rubric": [
+          "Strong prompts specify: the exact query type or scenario the template addresses, the typical causes or information relevant to that scenario, tone and voice guidelines, the structure and flow of the response (acknowledgment, explanation, next step), a specific CTA, length constraint, and explicit personalization placeholders",
+          "Weak prompts ask for a generic response template for a broad category without specific scenario details"
+        ],
+        "exampleAnswer": "Write a support response template for our e-commerce platform team to use when a customer reports that their order shows 'delivered' in the tracking system but they haven't received it.\n\nContext: We're a mid-size fashion brand. Common causes: delivered to a neighbor, left in a hidden spot, carrier marked delivered early and it arrives the next day, or genuinely lost/stolen.\n\nTemplate structure:\n1. Acknowledge the frustration — it's stressful not to receive an expected package\n2. Confirm we take this seriously and will investigate\n3. Three clear next steps we'll take (check carrier GPS data, contact carrier, send replacement if unresolved after 3 business days)\n4. What we need from them (confirm delivery address is correct, check with neighbors or building management)\n5. Clear timeline: 'If you haven't received it or heard from us in 3 business days, reply here and we'll ship a replacement immediately'\n\nTone: warm, direct, proactive — we want them to feel we're on their side, not defending the carrier.\nLength: under 150 words\nInclude [PERSONALIZATION: insert order number] and [PERSONALIZATION: insert customer first name] placeholders."
+      }
+    }
+  ]
+}

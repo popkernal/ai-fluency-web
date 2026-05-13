@@ -1,0 +1,51 @@
+{
+  "id": "pw-004",
+  "trackId": "pw",
+  "streamId": "quick-wins",
+  "title": "Iterate, Don't Redo",
+  "estimatedMinutes": 6,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI conversations are not one-shot.** The best results usually come from iteration — a back-and-forth that refines the output until it's exactly right.\n\nMost people make a mistake here: when AI gives an imperfect answer, they start over with a completely new prompt. That's inefficient. Instead, **stay in the conversation and give specific feedback.**\n\nEffective iteration patterns:\n\n- **Refine the last output:** \"Make this more concise\" / \"Expand the second paragraph\" / \"Change the tone to be warmer\"\n- **Add constraints:** \"Now add a section on risks\" / \"Rewrite without using the word 'leverage'\"\n- **Try a different angle:** \"Give me an alternative version that leads with the business impact\"\n- **Ask for options:** \"Give me 3 different versions of the opening sentence\"\n\nThink of it as a collaboration. Your first prompt establishes the task; follow-up prompts shape and improve it. Each iteration builds on what's already good."
+    },
+    {
+      "type": "example",
+      "bad": "This isn't right. Let me start over and write a completely new prompt.",
+      "good": "Good start. A few changes: (1) The opening is too long — cut it to one sentence. (2) Add a specific example in the second paragraph. (3) The conclusion feels generic — make it more specific to our situation: we're a startup competing against enterprise vendors.",
+      "explanation": "Starting over throws away everything that was working. The iterative approach preserves what's good and gives precise instructions for what needs to change. Specificity in feedback ('cut it to one sentence' not 'make it shorter') produces the exact change you want in one turn."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Arrange these steps for effective AI iteration:",
+      "data": {
+        "steps": [
+          "Give specific feedback on what to change, keep, and improve",
+          "Write your initial prompt",
+          "Identify exactly what's working and what isn't in the output",
+          "Review the AI's first response",
+          "Continue iterating until the output meets your standard"
+        ],
+        "correctOrder": [1, 3, 2, 0, 4],
+        "explanation": "Start with your initial prompt, review the response, identify specifically what works and what doesn't, then give targeted feedback. Iterate until done. The key skill is being specific in step 3 — vague feedback ('make it better') produces vague improvements."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "AI wrote a 500-word analysis but it's missing your key data point and the tone is too academic. What's the best follow-up?",
+      "data": {
+        "choices": [
+          "Start over with a completely new prompt",
+          "Rewrite this in plain English and add this data point in the second paragraph: our churn rate dropped from 8% to 4% after the new onboarding flow. Keep everything else.",
+          "Make it better.",
+          "Can you improve this?"
+        ],
+        "correctIndex": 1,
+        "explanation": "The second option is precise: it specifies the tone change (plain English), where to add the data point (second paragraph), and the specific data to include, while explicitly preserving what's working. 'Make it better' and 'Can you improve this?' are too vague — AI needs to know what direction 'better' means."
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "mc",
+  "streamId": "power-user",
+  "title": "Mastering Claude",
+  "description": "Go deep on Claude's capabilities — system prompts, reasoning modes, file analysis, and more.",
+  "color": "#7C3AED",
+  "lessonIds": ["mc-001", "mc-002", "mc-003", "mc-004", "mc-005", "mc-006", "mc-007", "mc-008"],
+  "requiredTrackIds": ["tw"]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "fn-005",
+  "trackId": "fn",
+  "streamId": "role-tracks",
+  "title": "Compliance and Policy Language",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Where AI Can Help — and Where It Must Not Replace Expertise**\n\nCompliance documentation, policy language, and regulatory summaries are some of the highest-stakes writing in any organization. Getting them wrong doesn't just create confusion — it creates legal exposure.\n\nAI can genuinely accelerate the drafting and communication work around compliance — but only within a framework of mandatory human expert review.\n\n**Where AI adds real value in compliance and policy work:**\n- **First drafts of internal policies:** AI can turn regulatory requirements into plain-language internal policy documents — faster than starting from a blank page\n- **Policy summaries for non-specialist audiences:** Translating complex regulatory requirements into plain language for employees, managers, or customers\n- **Training material drafts:** AI can structure compliance training content from policy documents\n- **Checklists and procedure documents:** Converting policy requirements into step-by-step operational procedures\n- **Gap analysis support:** Give AI two policy documents and ask it to identify what the second document addresses that the first doesn't\n\n**Where AI output must always be reviewed by a qualified expert before use:**\n- Any document with legal or regulatory effect (policies employees are held to, disclosures, terms of service)\n- Anything that interprets what a regulation requires — AI can misstate regulatory requirements confidently\n- Tax guidance, accounting policy, or anything touching financial reporting standards\n- Documents that will be shared with regulators, auditors, or legal counsel\n- Any compliance content in a jurisdiction you haven't verified AI is current and accurate on\n\n**The rule of thumb:**\nAI saves time on the drafting work. Human experts save you from the liability of publishing something wrong. Both are necessary."
+    },
+    {
+      "type": "example",
+      "bad": "What does GDPR require for our privacy policy? Can you write our GDPR-compliant privacy policy?",
+      "good": "I'm updating our internal GDPR data handling policy. Our legal counsel has already reviewed the regulatory requirements and given me these key obligations our policy must address: [list of specific obligations from legal review]. I need help:\n\n1. Converting these legal obligations into plain-language internal procedures that our ops team can actually follow (not legal language — operational steps)\n2. Writing a one-page employee summary that explains what GDPR means for their day-to-day work (handling customer data, email marketing, support tickets)\n3. Creating a checklist our support team can use when a customer submits a data access request\n\nIMPORTANT: I will be submitting all of this back to legal counsel for review before it goes live. Please flag anywhere in the drafts where you're making an assumption about what the regulation requires, so my legal team knows where to focus their review.",
+      "explanation": "The bad prompt asks AI to define regulatory requirements and write a compliance document — AI will produce something that sounds authoritative and may be wrong in ways that create legal exposure. The good prompt brings pre-reviewed legal requirements and asks AI only to translate and structure them for operational use. It explicitly flags that legal review will follow, and asks AI to mark its own assumptions. This is the right division of labor."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A finance manager asks AI: 'Our company needs to comply with SOX Section 404. Can you write our internal controls documentation and management's assessment of internal controls for our annual report?' She uses the AI-generated documentation directly in the annual report filing. What's the problem?",
+      "data": {
+        "errorDescription": "Using AI-generated regulatory compliance documentation in a statutory filing without expert review",
+        "explanation": "Multiple serious problems: (1) SOX Section 404 documentation and management's assessment of internal controls is a statutory requirement with specific legal and accounting standards. AI may produce plausible-sounding documentation that fails to meet the actual regulatory requirements — and the company wouldn't know until an audit. (2) Management's assessment of internal controls must reflect actual testing of actual controls — AI cannot perform this assessment because it hasn't tested anything. (3) Using inaccurate SOX documentation in an annual report filing creates regulatory and legal exposure, including potential SEC enforcement. AI can help draft the narrative structure of internal control documentation, but it must be built on real control testing performed by qualified professionals and reviewed by auditors."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which of the following finance and compliance tasks should ALWAYS require human expert review before the AI-assisted output is used?",
+      "data": {
+        "choices": [
+          "An internal FAQ explaining what the company's expense reimbursement policy means for employees",
+          "A training slide deck summarizing the key points of an existing, already-approved internal policy",
+          "A draft interpretation of what a new accounting standard (ASC 842) requires for your specific lease agreements",
+          "A plain-language summary of a compliance checklist your legal team has already approved"
+        ],
+        "correctIndex": 2,
+        "explanation": "Option C requires mandatory expert review. Interpreting what an accounting standard requires for specific transactions is a technical accounting judgment — AI can misstate the requirements, and accounting errors in financial statements have audit, investor, and regulatory consequences. Options A and D involve translating or summarizing already-approved content — lower risk, though review is still good practice. Option B summarizes existing approved policy — similar to option D. Any time AI is asked to interpret what a regulation or standard requires (rather than just explain what a policy says), expert review is mandatory."
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "pd-002",
+  "trackId": "pd",
+  "streamId": "role-tracks",
+  "title": "Write Specs That Engineers Love",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**What Makes a Spec Actually Usable**\n\nA PRD or feature spec fails when it's vague about behavior, silent on edge cases, or forces engineers to guess at intent. Engineers don't hate specs — they hate specs that waste their time by being unclear, incomplete, or discovered to be wrong mid-sprint.\n\nAI helps you produce tighter specs by forcing structure and surfacing the questions you haven't answered yet.\n\n**The components of a spec engineers can work from:**\n- **Problem statement** — what user need or business problem does this solve? Why now?\n- **Success criteria** — how do we know this feature is working? What does \"done\" look like?\n- **User stories** — specific, testable descriptions of what users can do\n- **Acceptance criteria** — the specific conditions that must be true for each story to be complete\n- **Edge cases and error states** — what happens when things go wrong? What's out of scope?\n- **Dependencies and constraints** — what systems, data, or teams does this touch?\n- **Open questions** — what do you NOT know yet that affects the build?\n\n**The most common spec mistakes AI helps fix:**\n- Acceptance criteria that describe UI instead of behavior\n- Missing error states (what happens when the API fails?)\n- Vague verbs like \"support\", \"handle\", and \"allow\" with no specific behavior defined\n- Scope that's implied but never stated\n\n**Using AI to pressure-test your spec:**\nAsk AI to read your draft spec and list: (1) every assumption you've made that isn't stated, (2) every edge case not covered, (3) every acceptance criterion that is ambiguous or untestable. The output is a checklist of gaps to fill before you share with engineering."
+    },
+    {
+      "type": "example",
+      "bad": "Feature: Allow users to export their data.\nAC: Users can download their data in a CSV file.",
+      "good": "**Feature: User Data Export**\n\n**Problem:** Users have requested the ability to export their account data for record-keeping, audits, and data portability. Currently there is no export option, requiring support tickets to fulfil GDPR data requests.\n\n**User story:** As an account owner, I want to export all data associated with my account so that I can maintain records and comply with internal audit requirements.\n\n**Acceptance criteria:**\n- Account owner can initiate an export from Settings > Data > Export\n- Export includes: profile data, activity history (last 12 months), saved items\n- Export format: CSV with clearly labeled column headers\n- Export is delivered via a download link sent to the account email within 5 minutes\n- Download link expires after 24 hours\n- Only account owners (not team members) can initiate an export\n\n**Edge cases:**\n- If export fails, user receives an error email with a retry option\n- If account has >100k records, user is warned of longer processing time (up to 30 min)\n- Export is rate-limited: max 1 export per account per 24 hours\n\n**Out of scope:** Real-time streaming export, export of billing/payment data, exporting on behalf of team members",
+      "explanation": "The bad spec has one acceptance criterion that tells engineering almost nothing. What data is included? What's the format? How is it delivered? What are the edge cases? The good spec defines the problem (including why it matters), a testable user story, specific and testable ACs, edge cases, and explicit out-of-scope items. An engineer can build from the good spec without a single follow-up question."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "Review this acceptance criterion for a notification feature: \"The system should handle notifications appropriately and make sure users are notified when something important happens.\" What makes this acceptance criterion unusable for an engineer?",
+      "data": {
+        "errorDescription": "The acceptance criterion uses vague, subjective language with no testable behavior defined",
+        "explanation": "This AC has at least four problems: (1) 'handle appropriately' is not a behavior — it's an instruction to guess. (2) 'something important' is undefined — what triggers a notification? (3) 'notified' doesn't specify the channel (email, push, in-app, all three?). (4) There's no specified timing, format, or content. A usable AC might be: 'When a user's subscription payment fails, they receive an in-app notification and an email within 2 minutes. The notification includes the failure reason and a link to update payment details.' Every word is specific and testable."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this acceptance criterion so it is specific, testable, and complete enough for an engineer to build from without follow-up questions.",
+      "data": {
+        "rubric": [
+          "A strong rewrite defines: the specific trigger (where does the user start?), each step in the flow, what the confirmation looks like (email, on-screen message?), timing expectations, security requirements (link expiry, one-time use), and at least one error state",
+          "It avoids subjective words like 'easily', 'secure', and 'user-friendly' — those belong in design principles, not acceptance criteria"
+        ],
+        "exampleAnswer": "**Acceptance Criteria: Password Reset**\n- User can initiate a password reset from the login screen by clicking 'Forgot password?'\n- User enters their email address and clicks 'Send reset link'\n- If the email matches an account, a password reset email is sent within 60 seconds containing a single-use reset link\n- The reset link expires after 60 minutes\n- Clicking the link opens a page where the user enters and confirms a new password\n- New password must be 8+ characters and contain at least one number\n- On successful reset, user sees a confirmation message and is redirected to the login screen\n- If the email does not match any account, the same confirmation message is shown (do not reveal whether the email exists)\n- If the link has expired, user sees an error with an option to request a new link",
+        "original": "Users should be able to reset their password easily. The process should be secure and user-friendly, and users should receive confirmation when it's done."
+      }
+    }
+  ]
+}

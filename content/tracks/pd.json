@@ -1,0 +1,9 @@
+{
+  "id": "pd",
+  "streamId": "role-tracks",
+  "title": "AI for Product",
+  "description": "Accelerate product discovery, write better specs, and ship faster with AI.",
+  "color": "#EC4899",
+  "lessonIds": ["pd-001", "pd-002", "pd-003", "pd-004", "pd-005", "pd-006"],
+  "requiredTrackIds": ["dw"]
+}

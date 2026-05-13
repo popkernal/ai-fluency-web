@@ -1,0 +1,9 @@
+{
+  "id": "qw",
+  "streamId": "quick-wins",
+  "title": "AI in 15 Minutes",
+  "description": "Five lessons that show you what AI can do for you right now — each one under 15 minutes.",
+  "color": "#10B981",
+  "lessonIds": ["qw-001", "qw-002", "qw-003", "qw-004", "qw-005"],
+  "requiredTrackIds": []
+}

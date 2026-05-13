@@ -1,0 +1,45 @@
+{
+  "id": "pd-004",
+  "trackId": "pd",
+  "streamId": "role-tracks",
+  "title": "Competitive Research in 20 Minutes",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Fast Competitive Research Without False Confidence**\n\nCompetitive analysis is one of those tasks that can consume days if you let it. AI can compress the initial research phase dramatically — but it comes with a specific reliability problem you need to understand.\n\n**What AI is good for in competitive research:**\n- Generating a starter list of competitors you might not have considered\n- Summarizing publicly known positioning statements and market categories\n- Structuring a comparison framework (which dimensions matter for your category?)\n- Drafting the skeleton of a competitive matrix you'll fill with verified data\n- Helping you articulate your own differentiation against a competitor's stated positioning\n\n**What AI is unreliable for in competitive research:**\n- Current pricing, features, or recent product changes — AI's training data has a cutoff and product pages change constantly\n- Information about private companies — revenue, team size, funding details are often wrong or outdated\n- \"Who is winning\" in a market — AI will sound confident but this requires current data AI doesn't have\n- Anything you'd put in a board deck without verification — always verify against live product pages, G2/Capterra, and primary research\n\n**A reliable competitive research workflow:**\n1. Ask AI to suggest the competitive landscape categories and key players for your market\n2. Ask AI to generate the comparison framework (which dimensions to evaluate)\n3. Fill in the actual feature/pricing data yourself from live sources\n4. Come back to AI for help structuring the narrative and surfacing positioning implications\n5. Never publish competitive claims sourced from AI alone"
+    },
+    {
+      "type": "example",
+      "bad": "Who are the top competitors to our project management tool and what are their key features and pricing?",
+      "good": "I'm doing competitive research for a B2B project management tool targeting construction companies (50–500 employees). I need to build a competitive matrix.\n\nStep 1 — I'll verify all data myself. Please help me with:\n1. Suggest 6–8 potential competitors (include both direct competitors and adjacent tools construction teams commonly use as workarounds)\n2. Recommend the 8–10 evaluation dimensions most relevant for this buyer — construction operations managers who care about field/office coordination, subcontractor management, and compliance documentation\n3. Generate a blank comparison matrix template I can fill in with columns for each competitor and rows for each dimension\n\nNote: Do NOT give me feature or pricing data — I'll research that from live sources. I just need the framework and competitor list to start from.",
+      "explanation": "The bad prompt asks for feature and pricing data that AI will confidently get wrong. The good prompt uses AI only for what it's reliable at — generating the comparison framework, suggesting competitor categories, and creating a structured template. The PM then fills in the actual data from live sources. This saves setup time without introducing bad data."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these competitive research steps in the correct order for a reliable, efficient workflow.",
+      "data": {
+        "steps": [
+          "Use AI to generate the comparison framework and competitor list to start from",
+          "Validate AI-suggested competitors against current market — add or remove as needed",
+          "Use AI to help draft the positioning narrative and differentiation story",
+          "Fill in the feature and pricing data from live sources (product pages, G2, trials)",
+          "Define the buyer persona and market segment before opening AI"
+        ],
+        "correctOrder": [4, 0, 1, 3, 2],
+        "explanation": "Start with your own clarity on the buyer and market — AI will generate better frameworks if you give it that context. Use AI to build the skeleton (framework, competitor list), then validate and correct the skeleton yourself. Fill in actual data from live sources — never from AI. Return to AI at the end for narrative help, when you have accurate data to work from."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A PM asks AI: 'What is Notion's current pricing for Business plan and what features does it include compared to their Pro plan?' She gets a detailed answer and copies it directly into her competitive deck for a board presentation. What's the problem?",
+      "data": {
+        "errorDescription": "Using AI-generated pricing and feature information directly in a high-stakes document without verification",
+        "explanation": "AI training data has a cutoff date and Notion (like all SaaS products) updates pricing and feature tiers regularly. The AI's answer may reflect a plan structure from 12–18 months ago. Copying it directly into a board deck risks presenting inaccurate competitive data to senior stakeholders — which is worse than presenting no competitive data. The correct approach: use AI to identify what to research, then go directly to notion.so/pricing and G2/Capterra for current, verified information before including it in any external-facing document."
+      }
+    }
+  ]
+}

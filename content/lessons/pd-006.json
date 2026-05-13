@@ -1,0 +1,49 @@
+{
+  "id": "pd-006",
+  "trackId": "pd",
+  "streamId": "role-tracks",
+  "title": "AI-Assisted User Stories",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**User Stories That Actually Guide Development**\n\nA poorly written user story creates ambiguity that multiplies into bugs, wrong implementations, and sprint re-work. A well-written user story reduces back-and-forth between product and engineering and makes QA testable.\n\nAI can help you write better user stories and acceptance criteria — but only if you understand the patterns that make them work.\n\n**The anatomy of a useful user story:**\n- **Format:** \"As a [specific user role], I want to [perform an action] so that [I achieve a goal].\"\n- The user role should be specific — not \"user\" but \"account admin\" or \"first-time visitor\"\n- The action should be observable — something you could watch a user do\n- The goal (\"so that\") is critical — it's the why that tells the team whether the implementation serves the intent\n\n**Common user story problems AI helps fix:**\n- Vague roles: \"As a user\" tells you nothing — which user? with which permissions?\n- Missing \"so that\": stories without a goal can be implemented in ways that are technically correct but miss the point\n- Stories that are actually epics: if a story has more than 5–8 acceptance criteria, it should probably be split\n- Acceptance criteria that describe UI rather than behavior\n\n**Definition of done:**\nEvery story should have a clear Definition of Done (DoD) — the conditions that must be true before the story can be marked complete. A good DoD includes: functional acceptance criteria met, edge cases handled, tests written, accessibility checked (if applicable).\n\n**Using AI:**\nGive AI the epic or feature, the user types involved, and the goal. Ask it to generate user stories and acceptance criteria. Then review: are the roles specific? Are the ACs testable? Could this be split?"
+    },
+    {
+      "type": "example",
+      "bad": "As a user, I want to be able to manage my team so that I can use the app effectively.",
+      "good": "**Epic:** Team Management\n\n**Story 1:** As an account owner, I want to invite team members by email so that they can access the workspace without me creating accounts manually.\n- AC: Account owner can enter one or more email addresses in the invite flow\n- AC: Each invitee receives an email with a unique invite link within 2 minutes\n- AC: Invite links expire after 7 days\n- AC: If an invitee already has an account, they are added directly without needing to sign up again\n- AC: Account owner sees a pending invites list with the option to resend or revoke\n\n**Story 2:** As an account owner, I want to remove a team member so that I can control access when someone leaves the organization.\n- AC: Account owner can remove any team member from Settings > Team\n- AC: On removal, the user's session is invalidated immediately\n- AC: Removed user's data (projects, comments) is retained but attributed to [removed user]\n- AC: Account owner receives a confirmation dialog before removal is finalized",
+      "explanation": "The bad story uses a generic 'user', a vague action ('manage my team'), and a meaningless goal ('use the app effectively'). It gives engineering nothing to build from. The good version breaks the epic into two specific, testable stories. Each story names the exact role (account owner), a specific action, and a meaningful goal. The ACs are individually testable — a QA engineer can write a test case for each one."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this user story so it is specific, testable, and split into appropriate sub-stories if needed. Add acceptance criteria.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: replaces 'user' with a specific role, clarifies what 'search' covers (what is being searched? what types of results?), makes 'find things faster' into a meaningful goal, and writes 3–5 testable acceptance criteria",
+          "If the original is actually an epic covering multiple search scenarios, it should be split into 2–3 focused stories",
+          "Vague words like 'better' and 'things' must be replaced with specific, observable behaviors"
+        ],
+        "exampleAnswer": "**Story: Search across projects and tasks**\n\nAs a team member, I want to search for projects and tasks by keyword so that I can quickly navigate to work I'm looking for without browsing manually.\n\n**Acceptance criteria:**\n- Search is accessible from any page via the top navigation bar (keyboard shortcut: Cmd/Ctrl + K)\n- Search returns results from: project names, task names, and task descriptions\n- Results appear within 300ms of the user stopping typing\n- Results show the item type (project or task), the item name, and the parent project\n- Selecting a result navigates the user directly to that item\n- If no results are found, an empty state is shown with a suggestion to check spelling\n- Search only returns results the logged-in user has access to",
+        "original": "As a user, I want better search so that I can find things faster."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the user story template below. Fill in the blanks to create a well-formed user story for a password change feature.\n\nAs a ___[1]___, I want to ___[2]___ so that ___[3]___.\n\nAcceptance criteria:\n- The user can access this feature from ___[4]___\n- The change requires ___[5]___ before the new password is saved",
+      "data": {
+        "blanks": [
+          "logged-in account holder",
+          "change my password from within my account settings",
+          "I can update my credentials without contacting support if I think my account has been compromised",
+          "Settings > Security > Change Password",
+          "confirmation of the current password"
+        ],
+        "hint": "Think about: who specifically performs this action (not just 'user'), what observable action they take, what problem this solves for them, where in the UI they find this, and what security step prevents unauthorized password changes."
+      }
+    }
+  ]
+}

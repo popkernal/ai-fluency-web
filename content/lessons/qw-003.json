@@ -1,0 +1,51 @@
+{
+  "id": "qw-003",
+  "trackId": "qw",
+  "streamId": "quick-wins",
+  "title": "Summarize Anything",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Information overload is a real productivity killer.** Long emails, dense reports, sprawling meeting notes — reading and distilling them takes time you don't have.\n\nAI can summarize almost any text in seconds. The trick is being specific about what kind of summary you need:\n\n- **Format:** bullet points, paragraph, executive summary, table\n- **Length:** 3 bullets, one sentence, one page\n- **Focus:** decisions only, action items, risks, key numbers\n- **Audience:** for a CEO, for a technical team, for a new hire\n\nThe more specific you are about what matters to you, the more useful the summary. \"Summarize this\" gives you a generic overview. \"Give me the 3 most important decisions and who owns each action item\" gives you exactly what you need."
+    },
+    {
+      "type": "example",
+      "bad": "Summarize this email thread.",
+      "good": "Summarize this email thread. Extract: (1) the core disagreement, (2) each person's main position in one sentence, (3) any decisions made, (4) outstanding open questions. Use bullet points.",
+      "explanation": "The generic prompt produces a narrative retelling that may miss what you actually care about. The structured prompt specifies exactly what to extract and how to format it — you get something immediately actionable rather than something you still have to mentally process."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these steps in the right order for using AI to summarize a long report effectively:",
+      "data": {
+        "steps": [
+          "Read the AI summary and check it captures what matters",
+          "Paste the report text into your AI tool",
+          "Decide what kind of summary you need (format, length, focus)",
+          "Write a specific prompt that describes the summary you want",
+          "Make any corrections or ask for a revised summary"
+        ],
+        "correctOrder": [2, 3, 1, 0, 4],
+        "explanation": "Start by deciding what you need (so your prompt is purposeful), then write a specific prompt, paste the content, review the output, and iterate if needed. The key step most people skip is deciding what they need before writing the prompt."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to brief your CEO on a 20-page market research report. Which prompt gets you the most useful summary?",
+      "data": {
+        "choices": [
+          "Summarize this report.",
+          "Give me a TL;DR of this report.",
+          "Summarize this market research report for a CEO in 5 bullet points. Focus on market size, top opportunity, biggest risk, and recommended next step.",
+          "What's in this report?"
+        ],
+        "correctIndex": 2,
+        "explanation": "The CEO-specific prompt works best because it specifies the audience (CEO), format (5 bullets), and exactly which topics matter (market size, opportunity, risk, next step). Vague prompts return generic summaries that require additional work to make useful."
+      }
+    }
+  ]
+}

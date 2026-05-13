@@ -1,0 +1,50 @@
+{
+  "id": "foundations-003",
+  "trackId": "foundations",
+  "streamId": "foundations",
+  "title": "When to Use AI (and When Not To)",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## AI is a collaborator, not an oracle\n\nThe most useful mental shift you can make is this: AI is not a search engine that always finds the right answer. It's a collaborator that helps you think, draft, and work faster — one you should direct, not defer to.\n\nWith that in mind, here's where AI genuinely shines:\n\n**Strong use cases**\n- **Drafting and writing** — emails, reports, summaries, proposals, templates\n- **Explaining and simplifying** — making complex ideas accessible, explaining jargon\n- **Brainstorming** — generating options when you're stuck, stress-testing ideas\n- **Reformatting and structuring** — turning notes into documents, restructuring content\n- **Code** — writing, explaining, and debugging code (with testing)\n\n**Weaker use cases — proceed with care**\n- **Live data** — stock prices, news, sports scores. AI has a knowledge cutoff and no live internet access by default\n- **Private or internal data** — AI doesn't know your company's internal documents, systems, or history unless you provide them\n- **High-stakes facts** — specific statistics, citations, medical/legal/financial specifics need independent verification\n- **Nuanced human judgment** — performance reviews, hiring decisions, sensitive interpersonal situations. AI lacks context, relationships, and accountability\n\nThe pattern: AI excels at tasks where structure and fluency matter most. It needs support — your judgment, your verification, your context — on tasks where accuracy and accountability matter most."
+    },
+    {
+      "type": "example",
+      "bad": "A people manager asks AI: \"Based on what I've told you, should this employee be promoted?\" AI gives a structured recommendation with bullet points. The manager forwards it to HR as her assessment.",
+      "good": "The same manager uses AI to build a template for structuring performance review notes — sections for achievements, development areas, and impact. She fills it in herself with her own observations, then asks AI to help her make the written sections clearer and more specific.",
+      "explanation": "Promotion decisions require human judgment: context about the person, the team dynamics, what \"good\" looks like in that role, and accountability for the outcome. AI has none of that. But AI is excellent at helping you structure your thinking and communicate it clearly — which is exactly what the second use case does. Let AI handle the craft; keep the judgment yourself."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which of these scenarios is AI BEST suited for?",
+      "data": {
+        "choices": [
+          "Writing a template for a weekly team update email",
+          "Deciding which job candidate to hire from a shortlist",
+          "Checking yesterday's closing stock prices",
+          "Confirming the legal requirements for a contract in your jurisdiction"
+        ],
+        "correctIndex": 0,
+        "explanation": "Writing a reusable template is a perfect AI task — it requires structure, clear language, and no proprietary or real-time information. Hiring decisions require human judgment and full context. Stock prices require live data AI doesn't have. Legal requirements are jurisdiction-specific and high-stakes enough to need a qualified professional, not an AI prediction."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're writing a market analysis report and want to use AI. What's the most professional approach?",
+      "data": {
+        "choices": [
+          "Ask AI to write the full report and publish it directly — it's faster and the quality is usually good enough",
+          "Use AI to help structure and draft sections, but verify all statistics and claims from primary sources yourself",
+          "Only use AI for the introduction and conclusion — the middle sections are too important for AI",
+          "Avoid AI entirely for analytical work — it's only useful for creative writing"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI is a strong collaborator for structuring arguments, drafting prose, and organising findings — but market analyses often contain specific figures, citations, and claims that need to come from verified primary sources. The professional approach is to use AI for the craft of writing while owning the accuracy of the content. This gives you speed without sacrificing credibility."
+      }
+    }
+  ]
+}

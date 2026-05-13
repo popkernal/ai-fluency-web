@@ -1,0 +1,51 @@
+{
+  "id": "aa-002",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "Prompt Chaining",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Prompt chaining is using the output of one AI call as the input to the next.** It's the simplest form of automation and the foundation of more complex agent designs.\n\nWhy chain prompts instead of doing everything in one?\n- Each step can be optimized for its specific task\n- You can review and correct at intermediate stages\n- Complex tasks can be decomposed into reliable simple steps\n- Different steps can use different models or tools\n\n**A simple chain example — content creation pipeline:**\n```\nStep 1: [Research prompt] → key facts and angles\nStep 2: [Outline prompt + Step 1 output] → structured outline\nStep 3: [Draft prompt + Step 2 output] → full draft\nStep 4: [Edit prompt + Step 3 output] → polished version\n```\n\n**Designing a good chain:**\n1. Define the final output clearly\n2. Work backward to identify what each step needs to produce\n3. Make each step's output explicit and structured (easier to use in the next step)\n4. Add validation: before moving to the next step, does the current output look right?\n\nPrompt chains can be run manually (you execute each step) or automated (code or a tool like Zapier/Make runs them). Start manually to validate the chain works before automating."
+    },
+    {
+      "type": "example",
+      "bad": "One massive prompt: 'Research the competitive landscape, identify our positioning gaps, write a strategy document, create an executive summary, and design a 30-day action plan for our B2B SaaS in the HR tech space.'",
+      "good": "Chain of 4 prompts:\n1. 'Research these 5 HR tech competitors and extract: positioning statement, top 3 features, pricing tier, and primary ICP. Output as a JSON object.'\n2. 'Given this competitive data [output of step 1], identify the top 3 positioning gaps for a new entrant targeting SMB HR. Be specific.'\n3. 'Using these positioning gaps [step 2 output], write a 2-page strategy document for entering the SMB HR tech market.'\n4. 'Distill this strategy [step 3 output] into a 5-bullet executive summary for a board presentation.'",
+      "explanation": "The massive single prompt buries 5 distinct tasks. The chain handles each step optimally, uses previous outputs as structured inputs, and lets you review and correct at each stage. If Step 2 gets the gaps wrong, you fix it before Step 3 writes 2 pages of strategy based on wrong assumptions."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Design a prompt chain for creating a job description. Put these steps in the right order:",
+      "data": {
+        "steps": [
+          "Polish final JD with edits for inclusivity and tone consistency",
+          "Extract role requirements from an internal brief or existing notes",
+          "Generate full JD draft from structured requirements",
+          "Validate and structure requirements (remove redundancy, add must-haves/nice-to-haves)",
+          "Review draft and flag sections needing more specificity"
+        ],
+        "correctOrder": [1, 3, 2, 4, 0],
+        "explanation": "Extract raw requirements first, then structure and validate them (so your draft input is clean), then draft the full JD, then review for gaps, then polish. Reviewing before polishing catches structural issues while there's still room to add content — polishing a structurally weak draft wastes time."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're building a 4-step prompt chain manually. In Step 2, the AI output looks wrong. What should you do?",
+      "data": {
+        "choices": [
+          "Keep going — later steps will fix the errors",
+          "Go back to Step 1 and run the chain again from scratch",
+          "Fix the Step 2 output (or re-run Step 2 with a better prompt) before proceeding to Step 3",
+          "Skip Step 2 and go directly to Step 3"
+        ],
+        "correctIndex": 2,
+        "explanation": "Errors compound in chains — a wrong Step 2 output will produce a wrong Step 3 output based on it. Always validate each step before passing its output to the next step. Fix or re-run the failing step rather than hoping downstream steps will compensate. This is why manual chain execution (with review at each step) is better than full automation until you've validated the chain works."
+      }
+    }
+  ]
+}

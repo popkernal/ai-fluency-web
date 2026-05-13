@@ -1,0 +1,44 @@
+[
+  {
+    "id": "first-lesson",
+    "title": "First Step",
+    "description": "Completed your first lesson.",
+    "icon": "check"
+  },
+  {
+    "id": "streak-7",
+    "title": "Week Warrior",
+    "description": "7-day learning streak.",
+    "icon": "calendar"
+  },
+  {
+    "id": "streak-30",
+    "title": "Monthly Habit",
+    "description": "30-day learning streak.",
+    "icon": "calendar"
+  },
+  {
+    "id": "first-track",
+    "title": "Track Complete",
+    "description": "Finished your first full track.",
+    "icon": "star"
+  },
+  {
+    "id": "level-5",
+    "title": "Rising Expert",
+    "description": "Reached Level 5.",
+    "icon": "trophy"
+  },
+  {
+    "id": "playground-10",
+    "title": "Prompt Tinkerer",
+    "description": "Used the playground 10 times.",
+    "icon": "code"
+  },
+  {
+    "id": "all-tracks",
+    "title": "AI Fluent",
+    "description": "Completed all 12 tracks.",
+    "icon": "award"
+  }
+]

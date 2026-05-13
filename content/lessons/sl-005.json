@@ -1,0 +1,48 @@
+{
+  "id": "sl-005",
+  "trackId": "sl",
+  "streamId": "role-tracks",
+  "title": "Proposals That Close",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Most proposals are written for the person who wrote them, not the person who reads them.** They lead with vendor history, list every feature, and bury the business case on page four. Buyers — especially economic buyers — don't read proposals that way.\n\nAI can help you build proposals that are specific, buyer-focused, and structured for how decisions actually get made.\n\n**The sections that matter most to buyers:**\n1. **Executive summary:** 3-5 sentences. The decision in plain language: what's the problem, what's the solution, what's the outcome. This is the only section some buyers read.\n2. **The business case:** What does the current situation cost them (in time, money, risk, or missed opportunity)? What does the solution change?\n3. **ROI or impact estimate:** Specific numbers, even if approximate. \"Estimated 8 hours/week saved per team member\" is more persuasive than \"significantly reduces administrative overhead.\"\n4. **Scope and deliverables:** What exactly they're getting. No ambiguity.\n5. **Pricing and next steps:** Clear, simple, one ask.\n\n**How AI makes proposals stronger:**\nShare the discovery notes from your calls, the prospect's stated priorities, and any numbers they mentioned. Ask AI to help you draft the business case and ROI section using their language and their metrics — not your default template. The most persuasive proposals reflect the buyer's words back to them.\n\n**What to cut:** Vendor history, awards, generic customer logos, and any feature list that isn't tied to a specific problem the buyer mentioned. If it doesn't connect to something they said, it doesn't belong."
+    },
+    {
+      "type": "example",
+      "bad": "Founded in 2018, Acme Solutions has helped over 500 companies transform their operations. Our award-winning platform offers best-in-class features including automation, reporting, integrations, and AI-powered insights. We are proud to work with leading companies across industries including finance, healthcare, and technology.",
+      "good": "Northgate Manufacturing is currently spending approximately 12 hours per week per plant manager on manual production reporting — roughly $78,000 per year in combined labor cost across your three facilities. This proposal outlines how Acme's reporting platform would reduce that to under 2 hours per week, cut reporting errors by an estimated 60%, and give your VP of Operations a real-time dashboard they currently build manually in Excel every Monday morning.",
+      "explanation": "The first opening is about the vendor. The second opening is about the buyer's specific situation — with their numbers, their people, their problem. It answers the only question a buyer is actually asking in those first 30 seconds: 'why should I keep reading?' Vendor credentials belong at the back of the proposal, not the front."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Which section of a proposal has the highest impact on whether a deal closes?",
+      "data": {
+        "choices": [
+          "The company overview and credentials section, which establishes trust",
+          "The full feature list, which shows the complete value of the product",
+          "The executive summary, because it frames the decision for buyers who skim",
+          "The pricing section, because price is always the final decision factor"
+        ],
+        "correctIndex": 2,
+        "explanation": "The executive summary is the section that determines whether the rest of the proposal gets read — and whether it gets forwarded to the economic buyer who wasn't in your calls. If it's generic or vendor-focused, the proposal loses before the buyer reaches the business case. A strong executive summary is 3-5 sentences that state the problem, the solution, and the outcome in the buyer's language. Everything else in the proposal supports it."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this proposal opening so it leads with the buyer's business situation. The prospect is a Director of HR at a 400-person professional services firm. During discovery, they mentioned that onboarding new hires takes 6 weeks and hiring managers frequently complain about the paperwork burden. You sell HR onboarding software.",
+      "data": {
+        "rubric": [
+          "Strong rewrites: open with the buyer's specific problem (6-week onboarding, hiring manager paperwork burden), quantify the impact where possible, connect your solution directly to their stated problem, and avoid leading with vendor history or feature lists",
+          "The rewrite should make a Director of HR reading it think 'this is about my situation' within the first two sentences"
+        ],
+        "exampleAnswer": "Your current onboarding process takes six weeks from offer acceptance to productive new hire — and your hiring managers spend an estimated 4-6 hours per new hire managing paperwork that should be automated. Across 80+ annual hires, that's a significant drain on manager time and a slow start for every new employee.\n\nThis proposal outlines how Onboard Pro would cut your onboarding timeline to under three weeks, eliminate manual document routing for hiring managers, and give new hires a self-serve portal to complete paperwork before day one. Three similar professional services firms reduced their onboarding time by 45% within the first 90 days of deployment.",
+        "original": "Thank you for the opportunity to present this proposal. At Onboard Pro, we have been helping HR teams streamline their processes since 2017. Our platform is trusted by over 300 companies and has won multiple industry awards for innovation. We offer a comprehensive suite of tools designed to modernize the employee onboarding experience, including digital document management, automated workflows, e-signature, compliance tracking, and a mobile-first new hire portal."
+      }
+    }
+  ]
+}

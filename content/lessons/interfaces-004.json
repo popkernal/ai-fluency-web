@@ -1,0 +1,49 @@
+{
+  "id": "interfaces-004",
+  "trackId": "interfaces",
+  "streamId": "tools-reference",
+  "title": "Tips That Work Across All Interfaces",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "Regardless of which AI interface you use, these habits improve your results across all of them.\n\n**1. Use a fresh conversation for a new topic.**\nStale context from an earlier conversation topic can subtly influence responses. When switching focus, start fresh.\n\n**2. Put the most important instruction last.**\nModels weight the end of a prompt more than the middle. If you have a key constraint ('always respond in bullet points' or 'keep it under 100 words'), put it at the end.\n\n**3. Attach files instead of pasting.**\nFile uploads preserve formatting, reduce copy-paste errors, and are more efficient. All major interfaces support it.\n\n**4. Use regenerate / try again strategically.**\nIf a response is close but not quite right, use the regenerate or 'Try again' button with a refined version of your prompt. Don't just say 'try again' — tell it what to change.\n\n**5. Keyboard shortcuts save significant time.**\n- Most interfaces: `Enter` or `Cmd+Enter` to send\n- New line in a prompt: `Shift+Enter`\n- Some interfaces have keyboard shortcuts for new conversation, copy response, etc.\n\n**6. Copy code or formatted text using the copy button, not manual selection.**\nThe copy button on code blocks captures the exact code without extra whitespace or formatting artefacts.\n\n**7. Name your conversations.**\nAll interfaces save history. A conversation titled '2025 Product Roadmap Brainstorm' is findable in 3 months. 'New chat' is not."
+    },
+    {
+      "type": "example",
+      "bad": "When a response is wrong, just say 'try again' and hope for something different.",
+      "good": "When a response misses the mark, say: 'That was too formal. Rewrite it in a conversational tone, under 80 words, and lead with the benefit to the reader rather than the process.'",
+      "explanation": "Vague regeneration requests rarely improve results. Telling the AI exactly what was wrong and what you want instead is far more effective. Treat each iteration as a refinement, not a restart."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're asking an AI to write a product description. You have three requirements: (1) under 60 words, (2) no jargon, (3) end with a call to action. Where should you put requirement 3?",
+      "data": {
+        "choices": [
+          "At the very beginning, before all other instructions",
+          "In the middle, sandwiched between the other requirements",
+          "At the end of the prompt — models weight the end more heavily",
+          "In a separate follow-up message after the initial prompt"
+        ],
+        "correctIndex": 2,
+        "explanation": "Research and practical experience show models weight the end of a prompt more than the middle. Put your most important constraint or the core task instruction last. The call to action requirement, being the most specific output requirement, belongs at the end."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete these best practices for working across AI interfaces.",
+      "data": {
+        "blanks": [
+          "attach",
+          "last",
+          "name"
+        ],
+        "hint": "Words: 'last', 'name', 'attach' — one per blank",
+        "question": "Instead of pasting a PDF, _____ it as a file. Put your most important instruction _____ in the prompt. Always _____ your conversations so you can find them later."
+      }
+    }
+  ]
+}

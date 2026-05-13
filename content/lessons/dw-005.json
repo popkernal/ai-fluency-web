@@ -1,0 +1,47 @@
+{
+  "id": "dw-005",
+  "trackId": "dw",
+  "streamId": "core-skills",
+  "title": "Edit and Improve Existing Work",
+  "estimatedMinutes": 7,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**AI is an exceptional editor.** Improving existing text is often where AI delivers more value than drafting from scratch — because you have the substance, and AI handles the craft.\n\nFive editing use cases AI handles well:\n\n1. **Clarity editing:** \"Rewrite this paragraph to be clearer — every sentence should be understood in one read\"\n2. **Conciseness editing:** \"Cut this by 30% without losing meaning\"\n3. **Tone adjustment:** \"Make this more authoritative / friendlier / less hedging\"\n4. **Structural improvement:** \"Reorganize these 5 points in order of business impact\"\n5. **Proofreading:** \"Check for grammar, consistency, and awkward phrasing\"\n\nThe key is **specificity about what kind of editing you want.** 'Make this better' is too vague. 'Rewrite the opening paragraph to lead with the problem, not the solution — our audience needs to feel the pain before they care about the fix' is actionable.\n\nYou can also ask AI to explain its edits — which is excellent for developing your own writing skills."
+    },
+    {
+      "type": "example",
+      "bad": "Improve this report.",
+      "good": "Edit this report section. Specific goals: (1) Cut by 25% — remove any sentence that doesn't add new information, (2) Replace all passive voice with active voice, (3) The conclusion is weak — rewrite it to end with a clear, confident recommendation rather than a hedge. Keep all the data and key findings intact.",
+      "explanation": "Generic 'improve' prompts produce minor tweaks. Specific editing instructions (cut 25%, eliminate passive voice, rewrite the conclusion) guide AI to make the substantive improvements you actually want. Rule of thumb: the more specific your editing criteria, the more useful the result."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Make this editing request more specific and actionable: \"Can you make my email sound more professional?\"",
+      "data": {
+        "rubric": [
+          "A good rewrite specifies: what 'professional' means in this context (formal? authoritative? polished?), specific things to change (tone, word choice, structure), what to preserve, and the audience this email is going to"
+        ],
+        "exampleAnswer": "Edit this email to sound more professional for a C-suite audience. Specifically: (1) Replace casual phrases like 'just wanted to' and 'feel free' with more direct language, (2) Remove any unnecessary hedging ('I think', 'maybe', 'might'), (3) Make the ask in the last paragraph explicit and specific. Keep the same information and keep it under 200 words.",
+        "original": "Can you make my email sound more professional?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want to improve your writing skills, not just get better outputs. Which AI editing approach helps most with that?",
+      "data": {
+        "choices": [
+          "Have AI rewrite everything silently",
+          "Ask AI to make edits and explain why each change improves the writing",
+          "Ask AI to write fresh content instead of editing yours",
+          "Copy AI's outputs and use them as your own style going forward"
+        ],
+        "correctIndex": 1,
+        "explanation": "Asking AI to explain its edits turns every editing session into a writing lesson. You see exactly what was improved and why — whether it's active voice, clearer structure, or stronger word choice. Over time, you internalize these improvements and need less editing. Silent rewrites produce better output but teach you nothing."
+      }
+    }
+  ]
+}

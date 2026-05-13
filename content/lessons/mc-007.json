@@ -1,0 +1,47 @@
+{
+  "id": "mc-007",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "Creative and Generative Work",
+  "estimatedMinutes": 8,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Claude excels at creative work — but creative outputs require a different prompting approach.**\n\nFor analytical tasks, specificity produces accuracy. For creative tasks, specificity produces focused creativity — you're not constraining Claude, you're aiming it.\n\nCreative prompting principles:\n\n**Define the creative parameters clearly:**\n- Audience and purpose\n- Tone and voice (reference points help: \"in the style of a Basecamp blog post\" or \"conversational like Stripe's writing\")\n- Length and format\n- What to avoid (clichés, jargon, overwrought metaphors)\n\n**Ask for variations:** \"Write 3 versions — one serious, one slightly irreverent, one that leads with a surprising angle.\"\n\n**Separate generation from judgment:** First generate without criticism (\"give me 20 ideas, no filtering\"), then evaluate.\n\n**Use creative constraints:** \"Write this with no adverbs\" / \"Every paragraph must start with a question\" / \"Explain this using only analogies from cooking.\"\n\n**Collaborative mode:** Treat Claude as a creative partner, not a content vending machine. Share your reaction to each draft and build from what works.\n\nImportant: AI-generated creative work benefits enormously from human editing. The best outputs usually combine AI's generative fluency with your distinctive perspective."
+    },
+    {
+      "type": "example",
+      "bad": "Write a tagline for our startup.",
+      "good": "Write 10 tagline options for our productivity app aimed at freelancers who are overwhelmed by admin work. Tone: confident, a bit wry — we acknowledge the pain without being dramatic. Avoid: corporate jargon, 'supercharge', 'revolutionize', 'effortless', anything that sounds like it's from a 2010 startup. Length: max 7 words each.\n\nFor each tagline, add one sentence explaining what makes it work.",
+      "explanation": "Taglines are high-creative, low-stakes — perfect for AI generation with careful human selection. The good prompt gives Claude target audience, tone with a reference point, explicit exclusions, length limit, and asks for explanations. The explanations are key: they let you evaluate the thinking behind each option and remix the best elements."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're using Claude to help write a blog post and the first draft is technically correct but sounds generic. What's the most effective fix?",
+      "data": {
+        "choices": [
+          "Ask Claude to 'make it more creative'",
+          "Identify 2-3 examples of writing with the voice you want, paste them in, and ask Claude to rewrite the draft matching that voice — then add your own specific stories and examples",
+          "Ask Claude to try again with a longer output",
+          "Accept that AI writing always sounds generic"
+        ],
+        "correctIndex": 1,
+        "explanation": "Generic AI writing is a voice problem, not a capability problem. Providing reference examples and asking Claude to match the voice is the most effective fix. Then adding your own specific stories, examples, and opinions is what makes it distinctively yours — AI can't invent your perspective, only help express it."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Improve this creative prompt to get more distinctive, varied outputs: \"Write an intro paragraph for our company blog.\"",
+      "data": {
+        "rubric": [
+          "Strong rewrites specify: the blog's voice and reference examples, 3+ variations with different angles/approaches, explicit exclusions (what to avoid), the target reader, and the goal of the intro paragraph (hook? educate? provocate?)"
+        ],
+        "exampleAnswer": "Write 3 different intro paragraphs for our company blog (a B2B analytics platform for retail). Each intro should hook a retail operations director in the first sentence.\n\nVersion 1: Opens with a surprising or counterintuitive data point.\nVersion 2: Opens with a relatable painful scenario they experience weekly.\nVersion 3: Opens with a bold, slightly controversial opinion about the industry.\n\nVoice: confident and direct, like the best HBR pieces — not corporate, not casual. Max 75 words each. No starting with 'In today's...' or 'Are you...' questions.",
+        "original": "Write an intro paragraph for our company blog."
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "cx-005",
+  "trackId": "cx",
+  "streamId": "role-tracks",
+  "title": "Build a Knowledge Base Faster",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Support Tickets Are Knowledge Base Drafts You Haven't Written Yet**\n\nEvery time your team answers a support question, they're creating content that could prevent the next customer from needing to ask the same question. The problem is that most support teams answer tickets but never extract the knowledge into documentation.\n\nAI makes it fast to go from a resolved ticket to a published help article — which means your knowledge base can grow continuously rather than only when someone has time for a documentation sprint.\n\n**What good knowledge base content looks like:**\n- **Searchable title:** The title should match how a customer would search for the problem, not how your team describes it internally. \"How to export your project data\" not \"Data export functionality.\"\n- **Specific and actionable:** Step-by-step where needed, with numbered steps and screenshots placeholders\n- **Addresses the 'why':** Not just what to do, but why — so customers who hit edge cases can adapt\n- **Clear scope:** What does this article cover? What doesn't it cover (with links to the relevant articles)?\n- **Updated for product changes:** Knowledge base articles that are out of date are worse than no article at all\n\n**The AI-assisted KB workflow:**\n1. Identify the tickets that are answered repeatedly (your support tool's category data tells you this)\n2. Select a representative ticket with a good agent response\n3. Give AI the ticket and response and ask it to convert to a help article\n4. Specify the audience (customers, not agents), the format (step-by-step, FAQ, conceptual), and the tone\n5. Review for accuracy, add screenshots, publish\n\n**Building systematically:**\nA monthly process of converting your top 5 recurring tickets into knowledge base articles compounds over time. After 6 months, the most common questions are self-serve."
+    },
+    {
+      "type": "example",
+      "bad": "Here's a support ticket about password reset. Can you write a help article?",
+      "good": "Here is a support ticket and the agent's response:\n\nTicket: \"Hi, I forgot my password and tried to reset it but I never got the reset email. I've tried 3 times. My email is [redacted].\"\n\nAgent response: \"Hi! The most common cause is the email going to spam or promotions folder. Check there first. If it's not there, the second most common cause is that you signed up with a different email address — try searching your other email accounts. If neither of those works, make sure you're checking the exact email you used to sign up (we can't look up accounts by name). If you've tried all of this, reply here with your email and I'll check on the account manually.\"\n\nPlease convert this into a customer-facing help article with:\n- Title: use customer search language (how they'd search for this problem)\n- Introduction: 1–2 sentences that acknowledge the problem and what the article covers\n- Numbered troubleshooting steps (in the order most likely to resolve the issue)\n- A final step for what to do if none of the above works (contact support with specific information to provide)\n- Tone: helpful, clear, not condescending\n- Length: under 250 words",
+      "explanation": "The vague prompt produces a generic password reset article that could come from any company. The good prompt provides the actual support interaction — real customer language and real solution steps — and asks AI to convert it using customer-facing language with a specific structure. The result reflects how your actual customers describe the problem and how your team actually solves it."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these steps in the correct order for an efficient AI-assisted knowledge base article creation workflow.",
+      "data": {
+        "steps": [
+          "Review the AI-drafted article for accuracy and add screenshots or screen recordings",
+          "Identify your 5 most repeated support queries using ticket category data",
+          "Give AI the ticket and agent response with instructions to convert to a customer-facing help article",
+          "Publish the article and link to it from your chatbot or contact form for that query type",
+          "Select one representative ticket per query type that has a clear, complete agent resolution"
+        ],
+        "correctOrder": [
+          1,
+          4,
+          2,
+          0,
+          3
+        ],
+        "explanation": "Start with data — use ticket categories to find what's worth documenting rather than picking topics at random. Select a real ticket with a good response (this is your source material). Give AI the raw material with clear formatting instructions. Review for accuracy before publishing — AI will produce a good structure but you must verify the steps are correct and current. Finally, close the loop by linking the article where customers will actually find it."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt to convert a real support ticket and its resolution into a help center article. Include the ticket content, the resolution, and specific instructions for the article format.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: the actual ticket text (or a plausible realistic example), the resolution or agent response, specific instructions for the article format (title style, introduction, numbered steps, what to do if it doesn't work), tone guidelines, and a length constraint",
+          "They also specify the audience is customers, not agents",
+          "Weak prompts describe a scenario vaguely without providing the source material for AI to convert"
+        ],
+        "exampleAnswer": "Convert the following support ticket and resolution into a customer-facing help center article.\n\nTicket: 'Hi, I'm trying to connect my Google Calendar to the app but when I click 'Connect Google Calendar' it just loads for a second and then nothing happens. I've tried on Chrome and Safari. My account email is [removed].'\n\nAgent resolution: 'Hi! This is usually a browser pop-up blocker preventing the authorization window from opening. Here's the fix: In Chrome, click the small icon in the address bar that looks like a blocked pop-up, then click 'Allow pop-ups from [our domain]'. Then try connecting again. In Safari, go to Safari > Settings > Websites > Pop-up Windows and set our domain to Allow. Once pop-ups are enabled, the authorization screen will open and you can complete the connection. If this doesn't fix it, try the connection in Incognito/Private mode — if it works there, the issue is a browser extension. Reply here and tell me which extension and I can help.'\n\nPlease write a help article with:\n- Title: use the language a customer would type into a search box\n- Short intro (2 sentences): what the article covers\n- Numbered steps for Chrome, then a separate set for Safari\n- A 'Still not working?' section for the incognito/extension scenario\n- Tone: friendly, clear, under 300 words\n- Include [SCREENSHOT PLACEHOLDER] labels where visuals would help"
+      }
+    }
+  ]
+}

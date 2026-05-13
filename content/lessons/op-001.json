@@ -1,0 +1,54 @@
+{
+  "id": "op-001",
+  "trackId": "op",
+  "streamId": "role-tracks",
+  "title": "Map and Improve Any Process",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Process Documentation Fails (and How AI Fixes It)**\n\nMost process documentation is either nonexistent, outdated, or so vague it's useless. The person who knows the process best is usually too busy to document it — and when they do, they skip steps that feel obvious to them but aren't to anyone else.\n\nAI doesn't replace your process knowledge. It accelerates the documentation and improvement work that always gets deprioritized.\n\n**What AI does well in process work:**\n- Converting rough notes or bullet points into structured SOPs\n- Identifying logical gaps or missing steps in a process you describe\n- Suggesting common bottlenecks for a given process type\n- Reformatting a process for different audiences (operator vs. manager)\n- Generating RACI charts or swimlane structures from a description\n\n**What AI can't do:**\n- Know your specific constraints, systems, or team dynamics\n- Identify bottlenecks caused by politics or resource issues it hasn't been told about\n- Validate that the process you've described actually reflects what happens in practice\n\n**The right workflow:**\nStart by dumping everything you know — even messily. Tell AI the process, the players, the pain points. Then ask it to structure, identify gaps, and suggest improvements. You review and refine. This is faster than starting from a blank doc every time."
+    },
+    {
+      "type": "example",
+      "bad": "Can you help me improve our onboarding process?",
+      "good": "I'm documenting our new hire onboarding process for a 10-person ops team. Here's how it currently works: [paste rough notes]. The main pain points are: (1) new hires don't know who to go to for what in week 1, (2) IT access takes 3–5 days and blocks work, and (3) the buddy system isn't structured so it varies wildly. Can you help me: (a) structure this into a clean step-by-step process, (b) identify any logical gaps, and (c) suggest fixes for each of the three pain points I mentioned?",
+      "explanation": "The bad prompt gives AI nothing to work with — it will produce a generic onboarding checklist that doesn't reflect your actual situation. The good prompt gives the context (team size, current state, known pain points) and asks for three specific outputs. AI can now produce something immediately useful rather than something you'd have to heavily edit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "order_the_steps",
+      "prompt": "Put these process mapping steps in the correct order for getting the most value from AI-assisted process documentation.",
+      "data": {
+        "steps": [
+          "Review AI output and correct anything that doesn't reflect reality",
+          "Dump everything you know about the process in rough notes",
+          "Identify the known pain points or bottlenecks before opening AI",
+          "Ask AI to structure the notes, fill gaps, and suggest improvements",
+          "Share the final document with the team who actually runs the process"
+        ],
+        "correctOrder": [
+          2,
+          1,
+          3,
+          0,
+          4
+        ],
+        "explanation": "You get the most out of AI when you arrive with your own knowledge and pain points already surfaced. AI structures and improves what you bring — it can't discover what you haven't told it. Human review before sharing is non-negotiable because AI will fill gaps with plausible-but-wrong assumptions."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "prompt_write",
+      "prompt": "Write a prompt asking AI to help you identify bottlenecks and improvement opportunities in a process you own. Choose any real process from your work (e.g., weekly reporting, client onboarding, budget approval, hiring). Include the process description, who's involved, and where it currently breaks down.",
+      "data": {
+        "rubric": [
+          "Strong prompts include: a description of the current process steps, the stakeholders or roles involved, specific pain points or failure modes already known, and a clear ask (identify bottlenecks, suggest improvements, flag missing steps, etc.)",
+          "Weak prompts are vague about the process or ask for generic improvement advice without context"
+        ],
+        "exampleAnswer": "I manage a weekly status reporting process for a cross-functional product team of 12. Here's how it works: each team member fills in a shared Google Doc by EOD Thursday, I compile it into a summary by Friday morning, and it goes to 3 VPs by Friday noon. Pain points: (1) 4–5 people consistently miss the Thursday deadline, (2) the level of detail varies wildly — some people write 10 words, others write paragraphs, (3) I spend 2+ hours formatting and normalizing on Friday morning. Can you: (a) identify the bottlenecks in this flow, (b) suggest structural fixes for each, and (c) recommend what should be standardized in the template to reduce my formatting time?"
+      }
+    }
+  ]
+}

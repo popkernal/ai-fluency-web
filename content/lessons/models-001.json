@@ -1,0 +1,50 @@
+{
+  "id": "models-001",
+  "trackId": "models",
+  "streamId": "tools-reference",
+  "title": "What Is an AI Model?",
+  "estimatedMinutes": 5,
+  "xpReward": 30,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "An **AI model** is a software system trained on large amounts of data to perform tasks like answering questions, writing, coding, or analysing information.\n\nWhen people talk about 'AI' today, they're usually referring to **large language models (LLMs)** — models trained specifically on text. These include Claude, ChatGPT, Gemini, Llama, and others.\n\nEvery model is built by a company or research lab. They differ in:\n- **Training data** — what they learned from\n- **Size** — how many parameters (roughly: how 'smart' they are at different tasks)\n- **Specialisation** — some are better at code, others at reasoning or conversation\n- **Pricing** — cost per token (chunk of text processed)\n- **Availability** — API access, web interface, or both\n\nThe model you use matters. The same prompt can give meaningfully different results depending on which model you send it to."
+    },
+    {
+      "type": "example",
+      "bad": "Just use ChatGPT for everything — it's all the same under the hood.",
+      "good": "Different models have different strengths. Claude tends to excel at long documents and nuanced writing. GPT-4o is strong at general tasks and image understanding. Gemini integrates with Google's ecosystem. Choose based on the task.",
+      "explanation": "Treating all AI models as interchangeable means you'll often use the wrong tool. Understanding the landscape lets you route tasks to the best model — which can mean better results and lower costs."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "A colleague says 'all AI chatbots are basically the same thing.' What's the most accurate response?",
+      "data": {
+        "choices": [
+          "They're right — all LLMs produce identical outputs for the same prompt",
+          "They differ in training data, strengths, pricing, and ideal use cases",
+          "They're the same technology but different interfaces",
+          "Only open-source models are different; commercial ones are identical"
+        ],
+        "correctIndex": 1,
+        "explanation": "Models differ substantially in what they're good at, how they handle complex tasks, their context window size, pricing, and more. Knowing these differences helps you make better choices."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You need to process 200 pages of legal documents for a summary. Which factor matters most when choosing a model?",
+      "data": {
+        "choices": [
+          "Which one has the nicest interface",
+          "Which one has the largest context window",
+          "Which one was released most recently",
+          "Which one your company uses for email"
+        ],
+        "correctIndex": 1,
+        "explanation": "Context window size determines how much text a model can process at once. For long documents, a model with a large context window (e.g. 200k tokens) avoids the need to chunk and re-send the document, preserving coherence."
+      }
+    }
+  ]
+}

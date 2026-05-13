@@ -1,0 +1,9 @@
+{
+  "id": "pw",
+  "streamId": "quick-wins",
+  "title": "Prompts That Work",
+  "description": "Learn the core patterns that make AI prompts reliable and effective in any situation.",
+  "color": "#6366F1",
+  "lessonIds": ["pw-001", "pw-002", "pw-003", "pw-004", "pw-005", "pw-006"],
+  "requiredTrackIds": ["qw"]
+}

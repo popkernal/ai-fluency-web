@@ -1,0 +1,44 @@
+{
+  "id": "aa-004",
+  "trackId": "aa",
+  "streamId": "power-user",
+  "title": "AI-Powered Research Workflows",
+  "estimatedMinutes": 9,
+  "xpReward": 60,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Research is one of the highest-leverage areas for AI automation** — the combination of search, read, synthesize, and organize is exactly what AI chains handle well.\n\nA research workflow is a chain where AI:\n1. Searches for relevant sources (using a search-enabled tool or Perplexity)\n2. Reads and extracts key information from each source\n3. Synthesizes across sources to identify patterns and contradictions\n4. Formats the output for your specific use (briefing, report, decision doc)\n\n**Types of research you can automate:**\n- Competitive intelligence monitoring (ongoing)\n- Market research for proposals\n- Due diligence information gathering\n- Trend monitoring in your industry\n- Prospect research before sales calls\n- Literature review for reports\n\n**Building a research workflow:**\n1. Define the research question precisely — vague questions produce vague research\n2. Specify which types of sources matter (news, analyst reports, LinkedIn, etc.)\n3. Define the output format — what does a useful output look like for this use case?\n4. Build in source verification — ask AI to cite where each claim comes from\n5. Add human review for synthesis quality and factual accuracy\n\n**Key limitation:** AI can search and synthesize, but cannot access paywalled content, private databases, or sources requiring authentication. Design workflows around publicly accessible sources."
+    },
+    {
+      "type": "example",
+      "bad": "Ask AI 'research everything about the renewable energy market' with no structure or output specification.",
+      "good": "Structured research workflow:\n1. 'Search for the 5 most recent (last 6 months) analyst reports on offshore wind energy in the UK. For each, extract: key market size estimate, top growth driver, main risk factor, and report author/date.'\n2. 'Compare the 5 reports on these dimensions and identify: (a) where they agree, (b) where they contradict, (c) which estimate you'd weight highest and why.'\n3. 'Based on this synthesis, write a 2-paragraph executive summary for a board member evaluating a UK offshore wind investment.'",
+      "explanation": "The vague request produces a Wikipedia-style overview. The structured workflow produces a specific, sourced, synthesis that directly supports a real decision. Step 2 explicitly asks AI to surface contradictions — which is where the most important signal often lives in complex research."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're building a research workflow to monitor competitor product updates weekly. Which source type limitation must you design around?",
+      "data": {
+        "choices": [
+          "AI can't search for information published before 2020",
+          "AI can't access paywalled content, private company databases, or authenticated sources — design the workflow around public sources",
+          "AI can only research 3 competitors at a time",
+          "AI can't process information from social media"
+        ],
+        "correctIndex": 1,
+        "explanation": "Paywalled content (analyst reports, proprietary databases) and authenticated sources (Salesforce, internal CRMs, subscription tools) are inaccessible to AI search. Public sources — company websites, product pages, press releases, LinkedIn posts, public social media, tech news — are accessible. Design competitor monitoring around public sources and supplement with manual checks for high-priority private sources."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "In a research workflow, asking AI to ___ where each claim comes from is called source ___. This step is essential for verifying accuracy before acting on research.",
+      "data": {
+        "blanks": ["cite", "verification"],
+        "hint": "Think about what you'd ask a research assistant to do with their sources."
+      }
+    }
+  ]
+}

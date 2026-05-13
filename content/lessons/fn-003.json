@@ -1,0 +1,47 @@
+{
+  "id": "fn-003",
+  "trackId": "fn",
+  "streamId": "role-tracks",
+  "title": "Budget Proposals That Get Approved",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Budget Proposals Are Business Cases, Not Spreadsheets**\n\nA budget proposal that leads with numbers and ends with a spreadsheet attachment rarely gets approved on the first pass. Decision-makers approve spend when they understand the business case — the problem, the opportunity, the return, and the risk of not spending.\n\nAI helps you write the narrative case that gets a number approved — but the numbers, the business logic, and the expected outcomes must come from you.\n\n**The structure of a budget proposal that gets approved:**\n\n**1. The problem or opportunity**\nWhat business problem does this spend solve, or what opportunity does it enable? Be specific — not 'improve customer experience' but 'reduce customer support volume by 20%, which currently costs $180k/year in headcount'.\n\n**2. The proposed solution and cost**\nWhat exactly are you buying or investing in? What does it cost, broken down by component if relevant?\n\n**3. The expected return**\nWhat outcome do you expect, and on what timeline? If quantifiable, show it. If not fully quantifiable, explain the qualitative return and why it matters strategically.\n\n**4. The cost of doing nothing**\nWhat happens if this isn't approved? This is often the most persuasive section — and the most commonly skipped.\n\n**5. Alternatives considered**\nWhat other options did you evaluate and why did you choose this one? Showing your work builds credibility.\n\n**6. Risks**\nWhat could go wrong? Budget approvers who discover risks you didn't mention lose trust. Surface them yourself with your mitigation plan."
+    },
+    {
+      "type": "example",
+      "bad": "I need to justify a $50,000 budget for a new customer support tool. Can you write the business case?",
+      "good": "Help me write a budget proposal for a $48,000 investment in a customer support platform (Zendesk Enterprise). Here's the business case:\n\n**Problem:** Our support team of 8 handles 1,200 tickets/month. Current tools (shared email inbox + spreadsheet tracking) mean average response time is 18 hours vs. our SLA of 8 hours. We're breaching SLA on 34% of tickets. Two enterprise clients have flagged this as a renewal risk.\n\n**Solution and cost:** Zendesk Enterprise. $4k/month ($48k/year). Includes ticket routing, SLA automation, and reporting dashboard.\n\n**Expected return:** Based on similar implementations: reduce avg response time to under 6 hours (within SLA), reduce manual ticket routing time by ~5 hrs/week per agent (saves ~$25k/year in labor efficiency). Retention: protecting $280k in at-risk enterprise ARR.\n\n**Cost of inaction:** Continue breaching SLAs, risk losing 2 enterprise accounts ($280k ARR). Support staff burnout from manual processes — we've had 2 support hires leave in 12 months.\n\n**Alternatives:** Evaluated HubSpot Service Hub ($36k/year) — lacks the routing automation we need. Built in-house tagging in our current tool — 3-month engineering project, not core to our roadmap.\n\nPlease write a 1-page executive budget proposal using this information. Financial audience: CFO and CEO. They want the business case, not the features.",
+      "explanation": "The bad prompt gives AI nothing — it would invent the entire business case. The good prompt provides the actual numbers, the specific business problem, the return calculation, the cost of inaction, and the alternatives. AI structures these into a persuasive narrative. The result reflects your actual situation and is more likely to be approved."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this budget justification to be more compelling for a CFO audience. It should lead with business impact, quantify the return where possible, and include the cost of not approving.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: opens with the specific business problem being solved (not 'be more organized'), quantifies either the cost of the current problem or the expected return of the solution, names the specific efficiency gains or risk reductions, includes what happens if the spend is NOT approved, and is written for a CFO who cares about return on investment rather than features"
+        ],
+        "exampleAnswer": "We're requesting $30,000/year for a project management platform for the 12-person operations team.\n\n**The problem we're solving:** Without a shared system, project status lives in Slack, spreadsheets, and individuals' heads. We spend approximately 4 hours per week per person in status meetings and status requests — roughly $65k/year in labor on coordination overhead alone. We've also had two client deliverable delays in the last quarter attributable to missing handoffs.\n\n**The expected return:** Based on a 3-month pilot with 3 team members, we estimate reducing coordination overhead by 40%, saving approximately $26k/year in time. Eliminating deliverable delays has an estimated $50k+ impact in client retention risk reduction.\n\n**The cost of not investing:** Status quo means continued growth in coordination costs as the team scales, and continued exposure to client delivery risk.\n\n**ROI summary:** Estimated first-year savings and risk reduction of $76k against a $30k investment. Payback within 6 months.",
+        "original": "We are requesting $30,000 for a new project management software subscription for the operations team. This tool will help our team be more organized, improve communication, and work more efficiently. It has features like task tracking, timeline visualization, and team collaboration. We believe this investment will have a positive impact on our operations."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill_in_blank",
+      "prompt": "Complete the investment case structure below. Fill in the correct section name for each component.\n\nA compelling budget proposal includes:\n1. ___[1]___ — The specific business problem or opportunity this spend addresses\n2. ___[2]___ — The quantified return, savings, or risk reduction expected\n3. ___[3]___ — What happens if this investment is not approved\n4. ___[4]___ — Other options evaluated and why this one was chosen\n5. ___[5]___ — What could go wrong and how you'd respond",
+      "data": {
+        "blanks": [
+          "Problem or Opportunity",
+          "Expected Return",
+          "Cost of Inaction",
+          "Alternatives Considered",
+          "Risks and Mitigations"
+        ],
+        "hint": "Think about what a CFO needs to answer 'yes': what problem are we solving, what do we get back, what's the downside of saying no, did you do your homework on alternatives, and are there risks I should know about?"
+      }
+    }
+  ]
+}

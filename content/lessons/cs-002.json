@@ -1,0 +1,47 @@
+{
+  "id": "cs-002",
+  "trackId": "cs",
+  "streamId": "core-skills",
+  "title": "Structuring Complex Requests",
+  "estimatedMinutes": 8,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Multi-part requests get messy fast.** When you have a complex task with several components, how you structure the prompt determines whether AI can handle all the pieces.\n\nTwo approaches that work:\n\n**1. Numbered sections** — Break your request into clearly labeled parts. AI will address each one in order and less likely to skip any component.\n\n**2. Step-by-step decomposition** — For long tasks, have AI do it in stages: first outline, then draft, then refine. This gives you control at each stage and avoids 'lost in the middle' problems where AI forgets earlier instructions.\n\nTwo approaches to avoid:\n\n**1. Runon requests** — Burying 5 asks in one paragraph. AI may address some and miss others.\n\n**2. Contradictory instructions** — Asking for something 'brief but comprehensive' or 'formal but fun' without clarifying which dimension matters more.\n\nFor very complex tasks, a useful technique is **chain prompting**: break the work into logical stages, complete each stage, then move to the next using the prior output as context."
+    },
+    {
+      "type": "example",
+      "bad": "Analyze our Q3 performance and give me insights on what went well and what didn't and suggestions for Q4 and how to present this to the board and make it compelling.",
+      "good": "I need help with our Q3 performance review. Please do this in three parts:\n\n1. Analysis: Review these numbers and identify the 3 biggest wins and 3 biggest gaps vs. targets.\n2. Q4 Recommendations: Based on the gaps, suggest 5 specific Q4 initiatives with expected impact.\n3. Board Narrative: Write a 3-sentence executive summary that frames Q3 as a learning quarter with strong Q4 momentum.\n\n[Q3 data here]",
+      "explanation": "The runon version buries four separate asks in one sentence. AI may handle all of them, but inconsistently and without clear structure. The numbered version makes the three distinct tasks explicit, orders them logically, and produces clearly organized output you can use directly."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this run-on prompt as a properly structured multi-part request: \"Write a blog post about remote work trends and include statistics and make it SEO-friendly and add a call to action and keep it under 800 words.\"",
+      "data": {
+        "rubric": [
+          "Good rewrites break the request into numbered sections, specify each component clearly (topic, SEO keywords, CTA goal, word limit), and order the components logically"
+        ],
+        "exampleAnswer": "Write a blog post on remote work trends in 2024. Structure it as follows:\n\n1. SEO: Optimize for the keyword 'remote work statistics 2024'. Include it in the title, first paragraph, and one subheading.\n2. Content: Cover 3 major trends with at least one data point each. Keep the overall tone professional but accessible.\n3. Structure: Use H2 subheadings for each trend. Keep the full post under 800 words.\n4. CTA: End with a paragraph inviting readers to download our free Remote Work Policy Template (the link will be added later).",
+        "original": "Write a blog post about remote work trends and include statistics and make it SEO-friendly and add a call to action and keep it under 800 words."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You have a long, complex task for AI. What's the advantage of breaking it into stages (outline → draft → refine) rather than asking for everything at once?",
+      "data": {
+        "choices": [
+          "AI can only handle short prompts",
+          "You can review and course-correct at each stage, and AI is less likely to lose track of early instructions when working through long content",
+          "It's faster because AI processes shorter prompts quicker",
+          "There's no advantage — one big prompt always works better"
+        ],
+        "correctIndex": 1,
+        "explanation": "Staged prompting keeps you in control. Reviewing an outline before writing the draft means you catch structural issues before they're embedded in 2,000 words of text. AI also tends to 'lose track' of early instructions in very long, complex single prompts — stages prevent this by keeping each step focused."
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "mc-004",
+  "trackId": "mc",
+  "streamId": "power-user",
+  "title": "Code and Technical Tasks",
+  "estimatedMinutes": 8,
+  "xpReward": 55,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Claude is a capable coding assistant — and you don't need to be a programmer to benefit.**\n\nFor non-developers, Claude can:\n- Write simple scripts and formulas (Python, SQL, Excel/Sheets formulas, regex)\n- Explain what code does in plain English\n- Debug error messages by reading and interpreting them\n- Generate data transformation logic from natural language descriptions\n- Help with no-code tool configurations and logic\n\nFor developers, Claude can:\n- Write functions, classes, and modules in most languages\n- Suggest refactoring and code improvements\n- Review code for bugs, edge cases, and security issues\n- Write tests for existing code\n- Explain unfamiliar codebases or libraries\n\n**Key principle for technical tasks:** **Be specific about context.** The more Claude knows about your environment, language version, data format, and constraints, the better its technical output.\n\n**Always test code before deploying it.** Claude can and does make logic errors. Use Claude as a starting point and a reviewer — not as infallible output. For anything touching sensitive data or production systems, have a developer review Claude's output."
+    },
+    {
+      "type": "example",
+      "bad": "Write a script to process my data.",
+      "good": "Write a Python script that reads a CSV file called 'sales_data.csv'. The CSV has these columns: date (YYYY-MM-DD), rep_name, deal_value, stage. The script should: (1) filter rows where stage == 'closed_won', (2) group by rep_name, (3) sum deal_value per rep, (4) output a sorted list (highest to lowest) of rep names and their total closed revenue. Use pandas. I'm on Python 3.11.",
+      "explanation": "The vague request gives Claude no information about data format, language, libraries, or desired output. The specific request covers: file name, column names and types, filtering logic, aggregation, output format, library preference, and Python version. Claude can write a working script from this — and you can immediately run and test it."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Claude writes a SQL query for you. Before running it on your production database, what should you do?",
+      "data": {
+        "choices": [
+          "Run it immediately — Claude doesn't make SQL errors",
+          "Test it on a development database or sample data first, and have a developer review it if it modifies data",
+          "Copy it without reading it",
+          "Ask Claude to guarantee it's correct first"
+        ],
+        "correctIndex": 1,
+        "explanation": "Claude can write valid-looking SQL that has logic errors, incorrect column names, or unintended side effects — especially for DELETE, UPDATE, or complex JOIN operations. Always test on non-production data first. For queries that modify data, developer review is essential. Claude cannot guarantee correctness for your specific database schema and data."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "A non-technical product manager says: \"I needed a regex to validate email addresses. Claude gave me one. I used it directly in our sign-up form validation without testing it.\"",
+      "data": {
+        "errorDescription": "Using Claude-generated code in production without testing",
+        "explanation": "Claude's regex might reject valid email formats, accept invalid ones, or have performance issues with certain inputs. Even for something as routine as email validation, test with edge cases: plus-addressing (user+tag@domain.com), subdomains, international domains. Technical output from AI always requires testing before production use — especially code that affects user-facing behavior."
+      }
+    }
+  ]
+}

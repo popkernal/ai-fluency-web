@@ -1,0 +1,18 @@
+{
+  "id": "prompting",
+  "streamId": "foundations",
+  "title": "Prompt Engineering",
+  "description": "Master the fundamentals of writing precise, effective prompts that get reliable results from any AI model.",
+  "color": "#0EA5E9",
+  "lessonIds": [
+    "prompting-001",
+    "prompting-002",
+    "prompting-003",
+    "prompting-004",
+    "prompting-005",
+    "prompting-006",
+    "prompting-007",
+    "prompting-008"
+  ],
+  "requiredTrackIds": []
+}

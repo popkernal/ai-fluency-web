@@ -1,0 +1,49 @@
+{
+  "id": "hr-004",
+  "trackId": "hr",
+  "streamId": "role-tracks",
+  "title": "Employee Communication That Lands",
+  "estimatedMinutes": 7,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Why Company Announcements Create the Opposite of Their Intention**\n\nCompany announcements are written to keep employees informed and maintain trust. They frequently do the opposite — because they're written for legal compliance or leadership comfort, not for the employee reading them at 8am.\n\nAI can help you write announcements that are clear, honest, and human — but you have to understand what makes employee communication succeed and what makes it fail.\n\n**What employees need from company communication:**\n- **What is actually happening** — not euphemisms. 'Workforce adjustment' means nothing. 'We're reducing the team by 15%' is the truth.\n- **Why** — even if the full context is sensitive, people deserve a real reason. \"This wasn't performing\" is more respectful than \"strategic realignment.\"\n- **What it means for me specifically** — employees reading a company-wide announcement are asking one question: \"Am I affected?\"\n- **What happens next** — the timeline, the process, who to contact with questions\n- **Tone that reflects the gravity of the situation** — a layoff announcement written in the same energetic tone as a product launch is deeply tone-deaf\n\n**Common communication failures AI can help you avoid:**\n- Over-use of passive voice that obscures who made the decision (\"it was determined that...\")\n- Corporate euphemisms that make the message harder to understand\n- Burying the important information after a long preamble\n- Leading with what's good for the company before acknowledging impact on employees\n\n**The sensitive announcement rule:**\nFor layoffs, restructuring, or any announcement that affects people's livelihoods — lead with the news, not with how you feel about having to deliver it. Employees are not the audience for your feelings about delivering bad news. They are the people receiving it."
+    },
+    {
+      "type": "example",
+      "bad": "To: All Staff\n\nAs we continue to navigate an evolving landscape and position ourselves for long-term sustainable growth, we have made the difficult decision to realign our organizational structure. These changes reflect our commitment to operational excellence and ensuring we are best positioned to serve our customers going forward. We appreciate your dedication and will be sharing more information in the coming days. Thank you for your continued support.",
+      "good": "To: All Staff\n\nI'm writing to share difficult news directly: we are reducing our team by 12%, effective today. This means 23 people are leaving the company.\n\nWhy this is happening: Our revenue in H1 came in 28% below plan. We've made significant cost reductions in other areas over the past 6 months. After exploring all other options, we concluded that reducing the team size was necessary to ensure the company's financial stability.\n\nIf you are affected, you have already received or will receive a separate meeting invitation in the next 30 minutes. Everyone affected will receive [specific severance terms], continued health coverage through [date], and outplacement support.\n\nIf you are not receiving a meeting invitation today, your role is not impacted by today's changes.\n\nI know this is hard news. If you have questions, [Name] from HR is available at [contact] today and through the week.",
+      "explanation": "The bad announcement is full of euphemisms, buries the actual news in corporate language, and gives employees no actionable information. The good announcement leads with the truth (12% reduction, 23 people), explains the real reason (revenue miss), tells affected and unaffected employees what's happening to them, and provides specific next steps and contacts. It's hard to write — because the news is hard — but it respects employees enough to be direct."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What matters most when writing a sensitive employee announcement (such as a restructuring, leadership change, or policy update that affects people's work)?",
+      "data": {
+        "choices": [
+          "Using formal, neutral language to prevent emotional reactions",
+          "Leading with context about the company's position before announcing the change",
+          "Being direct about what is changing, why, and what it means for each employee",
+          "Emphasizing the positive aspects of the change before addressing concerns"
+        ],
+        "correctIndex": 2,
+        "explanation": "Directness, explanation, and personal relevance are what employees need from sensitive announcements. Formal neutral language (option A) often reads as cold and evasive — it reduces trust rather than building it. Leading with company context (option B) makes employees wait for the information they actually need: 'what does this mean for me?' Emphasizing positives before concerns (option D) is a common instinct but reads as dismissive when the news is genuinely difficult — people feel their concerns are being managed rather than acknowledged."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this company announcement so it is direct, clear, and respectful of employees — using plain language rather than corporate euphemisms.",
+      "data": {
+        "rubric": [
+          "A strong rewrite: states the actual change clearly in the first sentence (what specifically is the new policy?), explains the reason honestly (not just 'forward-thinking'), tells employees exactly what's expected of them (days in office, which teams, etc",
+          "— even if some details are TBD, say so explicitly), and matches the tone to the nature of the message — major workplace changes affect people's lives and commutes and deserve a measured, not enthusiastic, tone",
+          "Exclamation points are inappropriate here"
+        ],
+        "exampleAnswer": "Dear Team,\n\nWe're moving to a hybrid work model starting April 1st. Here's what that means in practice:\n\nExpectation: All employees will work from the office Tuesday through Thursday. Monday and Friday remain flexible — you can work from home or come in based on your work and your manager's guidance.\n\nWhy we're making this change: After 18 months of gathering data on how we work best, we've found that in-person collaboration on Tue–Thu, combined with focused individual work on Mon/Fri, produces the best outcomes — both for project quality and for how people feel about their work.\n\nWe know this is a significant change, particularly for team members who have structured their lives around a fully remote schedule. If the 3-day in-office expectation creates a real hardship for you, please speak with your manager or HR — we'll work through individual situations.\n\nFull policy details (including equipment support for your home setup) will be shared by March 15th.",
+        "original": "Dear Team,\n\nAs part of our continued commitment to innovation and growth, we are pleased to announce that we will be transitioning to a new hybrid work model effective Q2. This exciting change reflects our forward-thinking approach to the evolving nature of work and our desire to provide flexibility while maintaining our vibrant in-person culture. Additional details regarding expectations and logistics will be forthcoming. We appreciate your patience and enthusiasm as we navigate this exciting change together!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "prompting-006",
+  "trackId": "prompting",
+  "streamId": "foundations",
+  "title": "Chain-of-Thought Reasoning",
+  "estimatedMinutes": 6,
+  "xpReward": 45,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "**Chain-of-thought (CoT) prompting** asks the model to show its reasoning step-by-step before giving a final answer. This dramatically improves accuracy on complex tasks — math problems, multi-step logic, analysis, and decisions.\n\nWhy it works: when a model writes out intermediate steps, each step becomes part of its \"context\" for the next step. It's like showing your work — the process itself leads to better conclusions.\n\nKey technique: add **\"Think step by step\"** or **\"Let's work through this carefully\"** to your prompt. Or break the problem into explicit steps yourself."
+    },
+    {
+      "type": "example",
+      "bad": "A store sells apples for $0.50 each and oranges for $0.75 each. If I buy 4 apples and 3 oranges, how much do I spend?",
+      "good": "A store sells apples for $0.50 each and oranges for $0.75 each. If I buy 4 apples and 3 oranges, how much do I spend?\n\nThink step by step.",
+      "explanation": "Adding 'Think step by step' prompts the model to calculate: 4 × $0.50 = $2.00, then 3 × $0.75 = $2.25, then add them = $4.25. Without CoT, the model jumps straight to an answer and is more likely to make arithmetic errors. For complex reasoning, CoT can increase accuracy by 20–40%."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this prompt to use chain-of-thought reasoning:",
+      "data": {
+        "original": "Should our startup prioritize building a mobile app or a web app first?",
+        "hints": [
+          "Ask the model to consider key factors before deciding",
+          "Prompt it to reason through trade-offs step by step",
+          "Ask for explicit pros/cons before a recommendation"
+        ],
+        "rubric": [
+          "Explicitly asks for step-by-step reasoning or 'think through this'",
+          "Asks the model to consider multiple factors before concluding",
+          "Doesn't just ask for a direct yes/no answer"
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Chain-of-thought prompting is most valuable for which type of task?",
+      "data": {
+        "choices": [
+          "Writing a short tweet",
+          "Translating a sentence to French",
+          "Deciding whether to approve a loan application given multiple financial factors",
+          "Generating a list of baby names"
+        ],
+        "correctIndex": 2,
+        "explanation": "CoT shines for complex multi-factor decisions, math, and logical reasoning. Simple tasks (translation, lists) don't benefit much. The loan application involves weighing multiple variables — exactly where step-by-step reasoning prevents errors."
+      }
+    }
+  ]
+}
