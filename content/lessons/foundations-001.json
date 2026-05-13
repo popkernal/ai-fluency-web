@@ -2,48 +2,48 @@
   "id": "foundations-001",
   "trackId": "foundations",
   "streamId": "foundations",
-  "title": "What You Can Do With AI Right Now",
+  "title": "What Is AI, Actually?",
   "estimatedMinutes": 5,
   "xpReward": 35,
   "sections": [
     {
       "type": "explanation",
-      "content": "## People are already using AI to get an edge at work\n\nYou don't need to understand how AI works to start benefiting from it. Millions of people are already using it every day for real, practical tasks — and the gap between people who use it well and people who don't is growing fast.\n\nHere's what that looks like in practice:\n\n**Writing and communication** — first drafts of emails, reports, and proposals. Rewriting something that sounds too stiff or too casual. Summarising a long thread into three bullet points.\n\n**Thinking and research** — brainstorming ideas when you're stuck. Getting a quick explanation of an unfamiliar concept. Stress-testing an argument by asking AI to push back on it.\n\n**Work tasks** — turning messy notes into a structured document. Writing a template you can reuse. Reformatting data or drafting a meeting agenda from a rough outline.\n\nThe people getting the most value aren't treating AI like a search engine or a magic oracle. They're treating it like a fast, always-available collaborator who needs clear direction.\n\nA few key behaviours make a big difference. The rest of this track will walk you through them — but the best place to start is just trying things."
+      "content": "## AI is a tool that predicts what comes next\n\nAt its core, a modern AI like Claude or ChatGPT is a very sophisticated pattern matcher. It was trained on an enormous amount of text — books, websites, articles, code, conversations — and learned to predict what words typically follow other words in any given context.\n\nWhen you type a question, AI doesn't 'think' the way a human does. It calculates the most useful, coherent, contextually appropriate continuation of your text. That sounds simple, but because it's seen so much human knowledge, the results can be remarkably useful.\n\n**What this means in practice:**\n\nAI is genuinely good at tasks that involve language: explaining things, drafting content, answering questions, translating between formats, summarising, writing code. These are all, at some level, pattern-matching problems.\n\nAI is less reliable when tasks require real-world facts it wasn't trained on, live information (it has a knowledge cutoff date), precise calculations, or logical reasoning over many steps.\n\n**The most important mental model:** Think of AI as a very well-read collaborator who can help you work faster and think more clearly — but who sometimes confidently states things that aren't quite right. Your job is to direct it, evaluate its output, and catch its mistakes."
     },
     {
       "type": "example",
-      "bad": "Jordan tried ChatGPT once to write an email, thought the result was generic, and hasn't touched it since.",
-      "good": "Morgan uses AI every morning as a first-draft collaborator. She pastes in her rough notes, tells AI who she's writing for and what she wants the reader to do, gets a draft in 30 seconds, and edits from there. She estimates it saves her 90 minutes a day.",
-      "explanation": "The difference isn't the tool — it's the approach. Morgan gives context, stays in control of the output, and treats AI as a starting point rather than a finished product. Jordan used it like a vending machine, got a mediocre result, and gave up. You'll learn exactly what Morgan is doing differently throughout this track."
+      "bad": "Dan treats AI like a search engine. He asks it factual questions, takes the answers at face value, and pastes them directly into his work. When a client catches an error in a statistic Claude hallucinated, Dan is embarrassed and stops using AI altogether.",
+      "good": "Priya treats AI like a first draft. She uses it to write structures, draft arguments, and generate options quickly — then she fact-checks anything important, edits the output in her own voice, and takes responsibility for the final result. Her output is faster and better than before.",
+      "explanation": "The difference is understanding what AI is and isn't. It's a powerful drafting tool, not an oracle. Priya gets the speed benefit while staying in control. Dan trusted it too much in the wrong places."
     },
     {
       "type": "exercise",
       "exerciseType": "multiple_choice",
-      "prompt": "You need to summarise a 30-page internal report into a one-page brief for your manager. What's the right approach with AI?",
+      "prompt": "A colleague says AI 'knows everything' because it can answer almost any question. What's the most accurate correction?",
       "data": {
         "choices": [
-          "Paste the report into AI, give clear instructions about length and audience, then review and edit the output",
-          "Ask AI to write a summary without giving it the report, since it probably already knows the content",
-          "Ask AI to write a summary, then publish it immediately without reviewing",
-          "Summarise it yourself first, then ask AI to make it sound better"
+          "AI learned patterns from training data — it's very broad but can be wrong, especially on specifics, recent events, or precise facts",
+          "AI does know everything — it was trained on the entire internet",
+          "AI only knows what you tell it in the conversation",
+          "AI knows everything except things that happened after 2020"
         ],
         "correctIndex": 0,
-        "explanation": "Pasting the actual content and giving AI clear instructions — length, audience, focus — is exactly the right approach. AI needs the source material to summarise it accurately. Reviewing the output before using it is essential practice, since AI can occasionally miss nuance or misread emphasis."
+        "explanation": "AI generates responses based on patterns in its training data. It can be confidently wrong — especially about specific statistics, citations, recent events, or niche topics. 'Hallucination' is the term for when AI produces plausible-sounding but inaccurate information. This is why reviewing AI output matters, especially for anything factual."
       }
     },
     {
       "type": "exercise",
       "exerciseType": "multiple_choice",
-      "prompt": "Which of these tasks is AI least reliable for on its own, without any additional verification?",
+      "prompt": "Which of these tasks is AI most reliably suited for without additional fact-checking?",
       "data": {
         "choices": [
-          "Drafting a professional bio from bullet points you provide",
-          "Explaining what a P&L statement is",
-          "Confirming a company's current share price",
-          "Suggesting five subject lines for a marketing email"
+          "Rewriting a paragraph to be clearer and more concise",
+          "Telling you today's stock price for a company",
+          "Calculating your exact tax liability for this year",
+          "Providing citations for a research paper"
         ],
-        "correctIndex": 2,
-        "explanation": "AI models don't have live internet access by default. They can't retrieve real-time data like stock prices, today's news, or current weather. Asking for a current share price will either produce a stale figure or a hallucinated one. The other tasks — drafting, explaining concepts, generating options — are exactly where AI excels."
+        "correctIndex": 0,
+        "explanation": "Rewriting for clarity is a language task — exactly what AI is built for. Stock prices require live data AI doesn't have. Tax calculations require precision and current rules. Citations are a known hallucination risk — AI will invent plausible-sounding references. Use AI confidently for language work; verify anything requiring live data or precise facts."
       }
     }
   ]
