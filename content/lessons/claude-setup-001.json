@@ -1,0 +1,50 @@
+{
+  "id": "claude-setup-001",
+  "trackId": "claude-setup",
+  "streamId": "foundations",
+  "title": "Claude.ai: Your Starting Point",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## The simplest way to start: just open Claude.ai\n\nClaude.ai is the web interface for Claude — available at claude.ai in any browser, and as an app on iOS and Android. No setup, no API keys, no configuration. You sign up and start chatting.\n\nThis is where most people begin, and for good reason. The chat interface is fast, flexible, and handles the vast majority of everyday tasks:\n\n- Drafting and editing documents\n- Answering questions and explaining concepts\n- Brainstorming and thinking through problems\n- Writing and reviewing code\n- Summarising long content\n\n**The free tier** gives you a generous number of messages per day using Claude Haiku — a fast, capable model. When you need more depth on complex tasks, Claude Sonnet and Opus are available on paid plans.\n\n**One conversation = one context window.** Each chat starts fresh. Claude doesn't remember previous conversations unless you use Projects (covered in lesson 3). This is important to understand — if you start a new chat, Claude has no memory of what you discussed before."
+    },
+    {
+      "type": "example",
+      "bad": "Priya opens a new Claude chat every time she has a question, pastes the same background information repeatedly, and wonders why responses feel generic.",
+      "good": "Tom keeps a single long chat open for his current project. He gave Claude the full context at the start — what he's building, who it's for, what decisions have been made — and now every follow-up response is precise and relevant without re-explaining anything.",
+      "explanation": "Within a single conversation, Claude remembers everything you've said. Use this. Start conversations with context, keep related questions in the same chat, and only start a new chat when you're genuinely starting something new. Projects (lesson 3) take this even further for ongoing work."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're working on a strategy document and have been chatting with Claude for 20 messages. You close the browser and reopen Claude the next day. What will Claude remember?",
+      "data": {
+        "choices": [
+          "Nothing — each session starts fresh unless you use Projects",
+          "Everything from previous sessions, because Claude learns from your conversations",
+          "Only your account details and preferences",
+          "The last 5 messages from your previous chat"
+        ],
+        "correctIndex": 0,
+        "explanation": "Standard Claude chats don't persist between sessions. When you close and reopen, Claude starts with a blank slate. Your previous conversation is still in your chat history (you can scroll back to it), but Claude won't have that context in a new chat. Projects solve this for ongoing work."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "What's the best way to get consistently relevant responses when working on a multi-day project in Claude chat?",
+      "data": {
+        "choices": [
+          "Start each new chat with a brief summary of your project context",
+          "Use a different AI tool that has persistent memory",
+          "Only ask Claude simple questions that don't need context",
+          "Send the same prompt multiple times until the response improves"
+        ],
+        "correctIndex": 0,
+        "explanation": "Since Claude doesn't carry context between chats, the practical fix is to paste a short project brief at the start of each new session — a few sentences on what you're working on, key decisions already made, and what you need. This takes 30 seconds and dramatically improves every response."
+      }
+    }
+  ]
+}

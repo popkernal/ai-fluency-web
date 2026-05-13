@@ -1,0 +1,35 @@
+{
+  "id": "claude-setup-002",
+  "trackId": "claude-setup",
+  "streamId": "foundations",
+  "title": "Chat vs. Canvas: Choosing Your Mode",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## Two modes, two very different jobs\n\nClaude has two main ways to work with content: **chat** and **canvas** (sometimes called artifacts or documents). Understanding which to use saves a lot of back-and-forth.\n\n**Chat mode** is conversational. You ask, Claude responds. Great for:\n- Getting explanations and answers\n- Brainstorming and thinking out loud\n- Asking follow-up questions\n- Quick one-off tasks\n\n**Canvas / artifact mode** creates a persistent document alongside the chat. When Claude produces a piece of writing, code, or a structured document, it often opens in a separate panel you can edit directly. Great for:\n- Writing long-form documents (reports, proposals, emails)\n- Code files you want to refine iteratively\n- Tables, plans, or structured content you'll keep editing\n- Anything you want to copy out and use directly\n\n**The key difference:** in chat, the response is a message. In canvas, the output is a document you co-edit. You can ask Claude to revise specific sections, expand a paragraph, or change the tone — and it updates the document directly rather than producing a whole new response.\n\nOn Claude.ai, artifacts open automatically when Claude detects you're producing something document-like. You can also ask explicitly: *\"Write this as a document\"* or *\"Put this in a canvas.\"*"
+    },
+    {
+      "type": "example",
+      "bad": "Sarah asks Claude to write a 10-point onboarding guide. Claude produces it in chat. She asks for changes, Claude pastes the whole thing again. After 4 rounds of edits she has 4 versions of the document cluttering her chat.",
+      "good": "James asks Claude to write the same onboarding guide. It opens in a canvas. He asks Claude to expand point 3, shorten point 7, and change the tone to be less formal. Claude edits the document directly each time. James ends up with one clean document he copies straight into Notion.",
+      "explanation": "Canvas mode is purpose-built for iterative document work. It keeps your output clean, makes edits targeted, and means you always have one current version rather than hunting through chat for the latest draft."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You want to write a quarterly report for your team. Which approach will be most efficient?",
+      "data": {
+        "choices": [
+          "Ask Claude to create the report as a document/artifact so you can refine it iteratively",
+          "Ask Claude to write each section in separate chat messages and paste them together yourself",
+          "Use chat mode and copy the final message into a Word doc",
+          "Ask Claude to email you the finished report"
+        ],
+        "correctIndex": 0,
+        "explanation": "For any substantial document, canvas/artifact mode is the right tool. It keeps everything in one editable document and lets you ask for targeted changes without re-generating the whole thing each time."
+      }
+    }
+  ]
+}

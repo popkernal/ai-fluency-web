@@ -12,7 +12,7 @@ const STREAMS: Stream[] = [
     id: 'foundations',
     title: 'Foundations',
     description: 'Build a solid understanding of AI concepts and prompting fundamentals.',
-    trackIds: ['foundations', 'prompting'],
+    trackIds: ['foundations', 'claude-setup', 'prompting'],
   },
   {
     id: 'application',

@@ -1,0 +1,45 @@
+{
+  "id": "claude-setup-003",
+  "trackId": "claude-setup",
+  "streamId": "foundations",
+  "title": "Claude Projects: Your Persistent Workspace",
+  "estimatedMinutes": 6,
+  "xpReward": 40,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## Projects give Claude a permanent memory for your work\n\nProjects are folders inside Claude.ai that persist across sessions. When you work inside a Project, Claude remembers everything in it — your uploaded files, your instructions, and the full conversation history — every time you come back.\n\nThis changes how Claude works for ongoing projects. Instead of re-explaining your context at the start of every chat, you set it up once and Claude always has it.\n\n**What a Project contains:**\n\n**Project instructions** — a system prompt that runs in every conversation. Use this for: who you are, what this project is, the tone you want, recurring rules (\"always respond in bullet points\", \"we use British English\", \"never suggest X\").\n\n**Uploaded files** — documents, PDFs, spreadsheets, code files. Claude can reference these in every conversation. Good examples: a brand guidelines doc, a competitor analysis, your team's style guide, a data dictionary.\n\n**Conversation history** — all your chats within the project stay accessible and in-context.\n\n**When to create a Project:**\n- Any ongoing work that spans multiple sessions\n- When you're working with a specific document or dataset repeatedly\n- When you want consistent behaviour (tone, format, constraints) across all responses\n- Team workstreams where you want a shared AI workspace\n\n**When a regular chat is fine:**\n- One-off tasks\n- Quick questions\n- Anything self-contained"
+    },
+    {
+      "type": "example",
+      "bad": "Every time Lena starts a new chat for her client account, she pastes in: the client's name, their industry, their brand tone, their target audience, and the campaign brief. It takes 3 minutes and she still forgets things.",
+      "good": "Lena created a Project for the client. The project instructions contain everything Claude needs to know. She uploaded the brand guidelines and campaign brief as files. Now every chat she opens in that project starts with Claude already fully briefed. She just dives straight into the work.",
+      "explanation": "Projects eliminate the 're-briefing tax' — the time you waste re-explaining the same context over and over. The setup takes 10 minutes once and pays off every session after."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "You're writing a book and want Claude to help you develop chapters over several weeks. What's the best setup?",
+      "data": {
+        "choices": [
+          "Create a Project, add your outline and style notes to the instructions, and upload any reference material",
+          "Start a new chat each session and paste your outline at the beginning",
+          "Use Claude's memory feature in standard chat",
+          "Ask Claude to summarise each session so you can paste it into the next one"
+        ],
+        "correctIndex": 0,
+        "explanation": "A Project is exactly right here. You set up your book outline, character notes, style preferences, and any research once. Every session after that, Claude has the full picture. You can focus on writing, not re-briefing."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "spot_the_error",
+      "prompt": "Read these Project instructions someone wrote for a marketing project. What's the most significant problem?",
+      "data": {
+        "text": "You are a helpful assistant. Please help me with marketing tasks. Be creative and professional. Always give good answers.",
+        "errorDescription": "The instructions are too vague to be useful",
+        "explanation": "Good project instructions are specific: who the user is, what the project is, the brand voice, the target audience, any constraints. 'Be helpful and professional' tells Claude nothing it doesn't already know. Better: 'You are helping [Name], a B2B SaaS marketer at [Company]. Our audience is mid-market HR managers. We write in a direct, no-jargon tone. Always suggest a subject line when writing emails.'"
+      }
+    }
+  ]
+}

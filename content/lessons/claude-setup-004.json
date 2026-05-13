@@ -1,0 +1,35 @@
+{
+  "id": "claude-setup-004",
+  "trackId": "claude-setup",
+  "streamId": "foundations",
+  "title": "Claude vs. ChatGPT vs. Gemini: What's the Difference?",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## They're all large language models. The differences matter at the edges.\n\nChatGPT (OpenAI), Claude (Anthropic), and Gemini (Google) all do roughly the same thing: they're large language models that generate text responses to prompts. For most everyday tasks — drafting, summarising, explaining, coding — any of them will do fine.\n\nWhere they differ:\n\n**Claude** tends to be stronger at long-document work, nuanced writing, following complex instructions precisely, and reasoning through ambiguous problems. It has a very large context window, meaning you can paste in long documents without it losing track. It's also designed to be direct about uncertainty — Claude will tell you when it doesn't know something rather than confidently guessing.\n\n**ChatGPT** has a large ecosystem: plugins, image generation (DALL-E), voice mode, and deep integration with Microsoft products. GPT-4o is fast and highly capable. It also has browsing and code execution built in on paid plans.\n\n**Gemini** is deeply integrated with Google's tools — Google Docs, Gmail, Drive. If your workflow lives in Google Workspace, Gemini has native integrations that the others don't. Gemini 1.5 Pro has one of the largest context windows available.\n\n**The practical answer:** Most people should pick one and get good at it. The skills transfer. Getting excellent at prompting Claude makes you better at using ChatGPT, and vice versa. Don't spend time switching between them — depth beats breadth."
+    },
+    {
+      "type": "example",
+      "bad": "Marcus spends 20 minutes every morning deciding which AI to use for each task — ChatGPT for writing, Gemini for research, Claude for coding. He reads Reddit threads about which model is 'best' instead of actually using any of them well.",
+      "good": "Yuki picked Claude as her primary tool three months ago. She knows its strengths, has built up Projects for her main workstreams, and rarely switches. When she occasionally tries another model, she notices she gets better results from Claude because she knows exactly how to prompt it.",
+      "explanation": "Tool familiarity compounds. The more you use one tool, the better your prompts get, the more useful patterns you develop, the faster you work. Switching constantly resets this. Pick a primary tool and go deep."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple_choice",
+      "prompt": "Your company uses Google Workspace (Docs, Gmail, Drive) for everything. Which AI tool would give you the most seamless workflow integration?",
+      "data": {
+        "choices": [
+          "Gemini, due to its native Google Workspace integrations",
+          "Claude, because it has the best writing quality",
+          "ChatGPT, because it's the most popular",
+          "It makes no difference — all AI tools integrate equally with all platforms"
+        ],
+        "correctIndex": 0,
+        "explanation": "Gemini's native integration with Google Workspace means you can use AI directly inside Docs, Gmail, and Sheets without copy-pasting. If your workflow is Google-first, this integration advantage is real. That said, you can still use Claude or ChatGPT effectively alongside Google Workspace — it just requires more manual copy-paste."
+      }
+    }
+  ]
+}

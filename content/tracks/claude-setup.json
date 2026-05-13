@@ -1,0 +1,15 @@
+{
+  "id": "claude-setup",
+  "streamId": "foundations",
+  "title": "Getting Set Up with Claude",
+  "description": "Learn the different ways to use Claude — from quick chat to full projects — and set yourself up to get the most out of every session.",
+  "color": "#F59E0B",
+  "lessonIds": [
+    "claude-setup-001",
+    "claude-setup-002",
+    "claude-setup-003",
+    "claude-setup-004",
+    "claude-setup-005"
+  ],
+  "requiredTrackIds": []
+}

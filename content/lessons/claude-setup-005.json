@@ -1,0 +1,30 @@
+{
+  "id": "claude-setup-005",
+  "trackId": "claude-setup",
+  "streamId": "foundations",
+  "title": "Formatting Your Prompts with Markdown",
+  "estimatedMinutes": 5,
+  "xpReward": 35,
+  "sections": [
+    {
+      "type": "explanation",
+      "content": "## Markdown makes your prompts — and Claude's responses — much cleaner\n\nMarkdown is a simple formatting language. Claude understands it natively in both directions: you can use it in your prompts to structure what you're asking, and Claude uses it in responses to make output more readable.\n\n**Useful markdown in prompts:**\n\n`## Section headers` — break a long prompt into clear sections (Context, Task, Constraints, Format)\n\n`**Bold**` — emphasise the key instruction in a complex prompt\n\n`- Bullet lists` — when you have multiple requirements or examples, lists are clearer than long paragraphs\n\n` ```code blocks``` ` — paste code or technical content in a code block so Claude knows it's code, not prose\n\n**Structuring longer prompts:**\n\nFor simple questions, plain text is fine. For complex requests, structure helps:\n\n```\n## Context\nI'm a product manager writing a feature announcement for our engineering team.\n\n## Task\nWrite a 3-paragraph internal announcement for the new search feature shipping next week.\n\n## Requirements\n- Technical but not jargon-heavy\n- Mention the impact on load times\n- End with a link placeholder for the full spec\n```\n\nThis structure tells Claude exactly what it needs to know and leaves no room for ambiguity. You'll get a much more usable first draft."
+    },
+    {
+      "type": "example",
+      "bad": "Write me an announcement for the new search feature it's going out next week its for the engineering team and should mention the load time improvements and link to the spec",
+      "good": "## Context\nAudience: internal engineering team. Tone: technical but clear.\n\n## Task\nWrite a 3-paragraph feature announcement for our new search functionality shipping next week.\n\n## Must include\n- What changed and why\n- Load time improvement (we went from 800ms to 120ms)\n- Placeholder for link to full spec doc",
+      "explanation": "The structured version takes 15 extra seconds to write and produces a response that needs far fewer revisions. Every element of the task is explicit. Claude doesn't have to guess at the audience, format, or required details."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "rewrite",
+      "prompt": "Rewrite this vague prompt using markdown structure (Context, Task, Requirements) to make it clear and specific.",
+      "data": {
+        "original": "write something about our product for the website homepage it should be good and professional and explain what we do",
+        "rubric": "The rewritten prompt should use markdown headers to separate Context, Task, and Requirements. Context should specify the audience and tone. Task should describe the output format (e.g. headline + 2-3 sentences). Requirements should include at least 2 specific constraints about what to include or avoid.",
+        "exampleAnswer": "## Context\nAudience: potential customers visiting our website for the first time. Tone: clear, confident, not salesy.\n\n## Task\nWrite a homepage hero section: one headline (max 10 words) and 2-3 sentences of body copy explaining what we do and who it's for.\n\n## Requirements\n- Focus on the customer benefit, not our features\n- Avoid jargon and buzzwords like 'innovative' or 'cutting-edge'\n- End with a clear value statement"
+      }
+    }
+  ]
+}
